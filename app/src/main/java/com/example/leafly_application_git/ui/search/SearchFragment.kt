@@ -12,20 +12,19 @@ import com.example.leafly_application_git.R
 
 class SearchFragment : Fragment() {
 
-    private lateinit var homeViewModel: SearchViewModel
+    private lateinit var searchViewModel: SearchViewModel
 
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
-        homeViewModel =
-                ViewModelProviders.of(this).get(SearchViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        searchViewModel = ViewModelProviders.of(this).get(SearchViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_search, container, false)
+
         val textView: TextView = root.findViewById(R.id.text_search)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+
+        searchViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
         return root
     }
 }
