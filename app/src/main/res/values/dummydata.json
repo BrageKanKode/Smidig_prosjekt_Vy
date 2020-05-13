@@ -1,0 +1,24 @@
+{
+  "trip": {
+    "id": 1,
+    "fronLocation": "Oslo",
+    "toLocation": "Fredrikstad",
+    "price": 124,
+    "miljopoeng": 124
+  },
+  "trip": {
+    "id": 2,
+    "fronLocation": "Jessheim",
+    "toLocation": "Sarpsborg",
+    "price": 215,
+    "miljopoeng": 215
+  },
+  "trip": {
+    "id": 3,
+    "fronLocation": "Lillestrøm",
+    "toLocation": "Lysaker",
+    "price": 75,
+    "miljooeng": 75
+  }
+
+}
