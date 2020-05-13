@@ -8,7 +8,7 @@
     tools:context=".fragments.trips.TripsFragment">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_trips"
         android:layout_width="318dp"
         android:layout_height="230dp"
         android:layout_marginStart="32dp"
@@ -27,10 +27,11 @@
         android:layout_width="114dp"
         android:layout_height="78dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo_trips"
         android:src="@drawable/ic_vy_logo_final_primary"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintEnd_toEndOf="@+id/view_trips"
+        app:layout_constraintStart_toStartOf="@+id/view_trips"
+        app:layout_constraintTop_toTopOf="@+id/view_trips" />
 
     <TextView
         android:id="@+id/text_view_trips_title"
@@ -41,20 +42,29 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/pt_sans"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view_trips"
+        app:layout_constraintStart_toStartOf="@+id/view_trips"
         app:layout_constraintTop_toBottomOf="@+id/image_view_" />
 
     <TextView
         android:id="@+id/text_view_ingen_reiser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
         android:text="@string/ingen_reiser"
         app:fontFamily="@font/pt_sans"
         app:layout_constraintStart_toStartOf="@+id/text_view_trips_title"
         app:layout_constraintTop_toBottomOf="@+id/text_view_trips_title" />
+
+    <TextView
+        android:id="@+id/text_view_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_text"
+        app:layout_constraintBottom_toBottomOf="@+id/view_trips"
+        app:layout_constraintStart_toEndOf="@+id/text_view_ingen_reiser"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_ingen_reiser" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
