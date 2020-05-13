@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.PaymentActivity
+import com.example.leafly_application_git.activities.TravelDetailsActivity
 import kotlinx.android.synthetic.main.fragment_search.view.*
 
 class SearchFragment : Fragment() {
@@ -26,11 +27,13 @@ class SearchFragment : Fragment() {
 //            textView.text = it
 //        })
 
+
         root.btnVidere.setOnClickListener {
             requireActivity().startActivity(
-                Intent(requireActivity(), PaymentActivity::class.java)
+                Intent(requireActivity(), TravelDetailsActivity::class.java)
             )
         }
+
 
         return root
     }
