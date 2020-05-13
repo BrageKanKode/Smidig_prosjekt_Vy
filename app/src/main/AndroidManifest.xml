@@ -30,10 +30,10 @@
         </activity>
 
         <activity
-            android:name=".activities.search.PaymentActivity">
+            android:name=".activities.search.PaymentActivity" android:label="@string/payment_label">
         </activity>
         <activity
-            android:name=".activities.search.TravelDetailsActivity">
+            android:name=".activities.search.TravelDetailsActivity" android:label="@string/trip_detail_label">
         </activity>
 
         <activity android:name=".activities.search.SplashScreenPaymentActivity"
@@ -41,13 +41,13 @@
         </activity>
 
         <activity
-            android:name=".activities.search.ConfirmationActivity">
+            android:name=".activities.search.ConfirmationActivity" android:label="@string/finished_purchase_label">
         </activity>
         <activity
-            android:name=".activities.miljopoints.MembershipBenefitsActivity">
+            android:name=".activities.miljopoints.MembershipBenefitsActivity" android:label="@string/member_benefits_label">
         </activity>
         <activity
-            android:name=".activities.miljopoints.UsePointsActivity">
+            android:name=".activities.miljopoints.UsePointsActivity" android:label="@string/use_points_label">
         </activity>
 
         <meta-data
