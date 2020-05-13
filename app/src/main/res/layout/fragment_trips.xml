@@ -27,7 +27,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:lineSpacingExtra="8sp"
-        android:text="@string/title_trips"
+        android:text="@string/trip_title_info"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/pt_sans"
