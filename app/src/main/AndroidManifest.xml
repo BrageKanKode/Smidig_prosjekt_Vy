@@ -28,6 +28,10 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.PaymentActivity">
+        </activity>
     </application>
 
 </manifest>
