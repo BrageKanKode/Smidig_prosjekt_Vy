@@ -87,6 +87,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="@string/trips_avbestilte_reiser"
+        android:textStyle="bold"
+        app:fontFamily="@font/pt_sans"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/view2" />
@@ -124,6 +126,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="@string/text_trips_complete"
+        android:textStyle="bold"
+        app:fontFamily="@font/pt_sans"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
