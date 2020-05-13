@@ -19,4 +19,10 @@
     <string name="finished_purchase_label">Takk for kjøpet!</string>
     <string name="use_points_label">Bruk poeng</string>
     <string name="member_benefits_label">Medlemsfordeler</string>
+    <string name="use_points_link_to_during_trip">Under reisen</string>
+    <string name="use_points_link_to_donate">Gi til miljøet</string>
+    <string name="use_points_link_to_point_shop">Poeng Shop</string>
+    <string name="donate_label">Gi til Miljøet</string>
+    <string name="during_trip_label">Under reisen</string>
+    <string name="points_shop_label">Poeng Shop</string>
 </resources>

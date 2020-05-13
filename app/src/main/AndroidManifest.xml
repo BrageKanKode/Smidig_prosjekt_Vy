@@ -50,6 +50,23 @@
             android:name=".activities.miljopoints.UsePointsActivity" android:label="@string/use_points_label">
         </activity>
 
+        <activity
+            android:name=".activities.miljopoints.use.DuringTripActivity" android:label="@string/during_trip_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.UsePointsActivity"/>
+
+        </activity>
+        <activity
+            android:name=".activities.miljopoints.use.DonateActivity" android:label="@string/donate_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.UsePointsActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.miljopoints.use.PointShopActivity" android:label="@string/points_shop_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.UsePointsActivity"/>
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
