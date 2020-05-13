@@ -1,13 +1,13 @@
-package com.example.leafly_application_git.ui.fragments
+package com.example.leafly_application_git.fragments.miljopoints
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class TripsViewModel : ViewModel() {
+class MiljopointsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is trips Fragment"
+        value = "This is Miljopoints Fragment"
     }
     val text: LiveData<String> = _text
 }

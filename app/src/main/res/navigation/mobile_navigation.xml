@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.leafly_application_git.ui.search.SearchFragment"
+        android:name="com.example.leafly_application_git.fragments.search.SearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/navigation_trips"
-        android:name="com.example.leafly_application_git.ui.fragments.TripsFragment"
+        android:name="com.example.leafly_application_git.fragments.trips.TripsFragment"
         android:label="@string/title_trips"
         tools:layout="@layout/fragment_trips" />
 
     <fragment
         android:id="@+id/navigation_miljopoints"
-        android:name="com.example.leafly_application_git.ui.miljopoints.MiljopointsFragment"
+        android:name="com.example.leafly_application_git.fragments.miljopoints.MiljopointsFragment"
         android:label="@string/title_miljopoints"
         tools:layout="@layout/fragment_miljopoints" />
 </navigation>

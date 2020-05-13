@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.ui.search
+package com.example.leafly_application_git.fragments.trips
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,21 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 
-class SearchFragment : Fragment() {
+class TripsFragment : Fragment() {
 
-    private lateinit var searchViewModel: SearchViewModel
+    private lateinit var tripsViewModel: TripsViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        searchViewModel = ViewModelProviders.of(this).get(SearchViewModel::class.java)
+        tripsViewModel = ViewModelProviders.of(this).get(TripsViewModel::class.java)
 
-        val root = inflater.inflate(R.layout.fragment_search, container, false)
+        val root = inflater.inflate(R.layout.fragment_trips, container, false)
 
-        val textView: TextView = root.findViewById(R.id.text_search)
+        val textView: TextView = root.findViewById(R.id.text_trips)
 
-        searchViewModel.text.observe(viewLifecycleOwner, Observer {
+        tripsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
-
         return root
     }
 }

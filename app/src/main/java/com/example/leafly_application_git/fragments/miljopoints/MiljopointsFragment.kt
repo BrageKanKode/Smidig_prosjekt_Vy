@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.ui.miljopoints
+package com.example.leafly_application_git.fragments.miljopoints
 
 import android.os.Bundle
 import android.view.LayoutInflater
