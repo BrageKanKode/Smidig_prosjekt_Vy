@@ -17,5 +17,134 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView_point_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Din saldo: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_search_vylogo" />
+
+    <TextView
+        android:id="@+id/textView_point_total_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Totalt opptjent:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_point_currency" />
+
+    <TextView
+        android:id="@+id/textView_point_memberlevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Medlemsnivå:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_point_total_currency" />
+
+    <View
+        android:id="@+id/view_use_points"
+        android:layout_width="253dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="24dp"
+        android:background="#c7c9c7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_point_memberlevel" />
+
+    <View
+        android:id="@+id/view_member_benefits"
+        android:layout_width="253dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="16dp"
+        android:background="#c7c9c7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_use_points" />
+
+    <TextView
+        android:id="@+id/textView_use_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bruk Poeng"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_use_points"
+        app:layout_constraintStart_toStartOf="@+id/view_use_points"
+        app:layout_constraintTop_toTopOf="@+id/view_use_points" />
+
+    <ImageView
+        android:id="@+id/imageView_use_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toBottomOf="@+id/view_use_points"
+        app:layout_constraintStart_toStartOf="@+id/view_use_points"
+        app:layout_constraintTop_toBottomOf="@+id/textView_use_points" />
+
+    <TextView
+        android:id="@+id/textView_use_points_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/use_points_info"
+        app:layout_constraintBottom_toBottomOf="@+id/view_use_points"
+        app:layout_constraintEnd_toEndOf="@+id/view_use_points"
+        app:layout_constraintStart_toEndOf="@+id/imageView_use_points"
+        app:layout_constraintTop_toBottomOf="@+id/textView_use_points" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@android:drawable/ic_menu_info_details"
+        app:layout_constraintBottom_toBottomOf="@+id/view_member_benefits"
+        app:layout_constraintStart_toStartOf="@+id/view_member_benefits"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Medlemsfordeler"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_member_benefits"
+        app:layout_constraintStart_toStartOf="@+id/view_member_benefits"
+        app:layout_constraintTop_toTopOf="@+id/view_member_benefits" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/member_benefits_info"
+        app:layout_constraintBottom_toBottomOf="@+id/view_member_benefits"
+        app:layout_constraintEnd_toEndOf="@+id/view_member_benefits"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

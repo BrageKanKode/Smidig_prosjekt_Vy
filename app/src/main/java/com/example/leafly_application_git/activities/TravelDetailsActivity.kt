@@ -12,6 +12,9 @@ class TravelDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_travel_details)
 
+
+
+
         btnToPayment.setOnClickListener {
             openNewActivity()
         }
