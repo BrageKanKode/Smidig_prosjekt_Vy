@@ -3,7 +3,7 @@
     <string name="title_search">Søk</string>
     <string name="title_trips">Dine Reiser</string>
     <string name="trip_title_info">Her vil du finne dine reiser og biletter</string>
-    <string name="ingen_reiser">Du har ikke kjøpt noen billetter enda.</string>
+    <string name="ingen_reiser">Du har ikke kjøpt noen billetter enda</string>
     <string name="title_miljopoints">Miljøpoeng</string>
     <string name="todo">TODO</string>
     <string name="logo_trips">VyLogo trips</string>
