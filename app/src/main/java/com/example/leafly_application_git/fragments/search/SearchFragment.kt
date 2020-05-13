@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
@@ -27,6 +28,8 @@ class SearchFragment : Fragment() {
 //        })
 
 
+        //Hides actionbar
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         root.btnVidere.setOnClickListener {
             requireActivity().startActivity(
                 Intent(requireActivity(), TravelDetailsActivity::class.java)
