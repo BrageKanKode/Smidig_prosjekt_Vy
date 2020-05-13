@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.activities
+package com.example.leafly_application_git.activities.miljopoints
 
 import android.content.Intent
 import android.os.Bundle

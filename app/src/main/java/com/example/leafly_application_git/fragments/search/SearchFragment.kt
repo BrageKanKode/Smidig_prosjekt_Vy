@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.PaymentActivity
-import com.example.leafly_application_git.activities.TravelDetailsActivity
+import com.example.leafly_application_git.activities.search.TravelDetailsActivity
 import kotlinx.android.synthetic.main.fragment_search.view.*
 
 class SearchFragment : Fragment() {

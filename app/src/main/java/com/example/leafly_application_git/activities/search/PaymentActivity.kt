@@ -1,11 +1,10 @@
-package com.example.leafly_application_git.activities
+package com.example.leafly_application_git.activities.search
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import kotlinx.android.synthetic.main.activity_payment.*
-import kotlinx.android.synthetic.main.activity_travel_details.*
 
 class PaymentActivity : AppCompatActivity() {
 

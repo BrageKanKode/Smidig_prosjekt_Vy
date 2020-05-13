@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.MembershipBenefitsActivity
-import com.example.leafly_application_git.activities.UsePointsActivity
+import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
+import com.example.leafly_application_git.activities.miljopoints.UsePointsActivity
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 
 class MiljopointsFragment : Fragment() {

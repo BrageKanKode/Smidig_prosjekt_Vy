@@ -30,24 +30,24 @@
         </activity>
 
         <activity
-            android:name=".activities.PaymentActivity">
+            android:name=".activities.search.PaymentActivity">
         </activity>
         <activity
-            android:name=".activities.TravelDetailsActivity">
+            android:name=".activities.search.TravelDetailsActivity">
         </activity>
 
-        <activity android:name=".activities.SplashScreenPaymentActivity"
+        <activity android:name=".activities.search.SplashScreenPaymentActivity"
             android:theme="@style/SplashTheme">
         </activity>
 
         <activity
-            android:name=".activities.ConfirmationActivity">
+            android:name=".activities.search.ConfirmationActivity">
         </activity>
         <activity
-            android:name=".activities.MembershipBenefitsActivity">
+            android:name=".activities.miljopoints.MembershipBenefitsActivity">
         </activity>
         <activity
-            android:name=".activities.UsePointsActivity">
+            android:name=".activities.miljopoints.UsePointsActivity">
         </activity>
 
         <meta-data
