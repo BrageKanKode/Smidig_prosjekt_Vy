@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Leafly_Application_git</string>
     <string name="title_search">Søk</string>
-    <string name="title_trips">Dine Reiser</string>
+    <string name="title_trips">Her vil du finne dine reiser og biletter.</string>
+    <string name="ingen_reiser">Du har ikke kjøpt noen billetter enda.</string>
     <string name="title_miljopoints">Miljøpoeng</string>
+    <string name="todo">TODO</string>
 </resources>
