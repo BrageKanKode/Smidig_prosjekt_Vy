@@ -37,5 +37,6 @@ class UsePointsActivity : AppCompatActivity() {
     fun toPointShop() {
         val intent = Intent(this, PointShopActivity::class.java)
         startActivity(intent)
+
     }
 }
