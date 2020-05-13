@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.ui.trips
+package com.example.leafly_application_git.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

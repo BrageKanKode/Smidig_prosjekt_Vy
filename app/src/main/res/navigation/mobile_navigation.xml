@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_trips"
-        android:name="com.example.leafly_application_git.ui.trips.TripsFragment"
+        android:name="com.example.leafly_application_git.ui.fragments.TripsFragment"
         android:label="@string/title_trips"
         tools:layout="@layout/fragment_trips" />
 

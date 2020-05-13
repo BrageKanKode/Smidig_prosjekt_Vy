@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.ui.trips
+package com.example.leafly_application_git.ui.fragments
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

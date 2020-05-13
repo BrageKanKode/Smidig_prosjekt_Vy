@@ -1,9 +1,10 @@
-package com.example.leafly_application_git
+package com.example.leafly_application_git.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.leafly_application_git.R
 
 
 class SplashScreenActivity : AppCompatActivity() {
