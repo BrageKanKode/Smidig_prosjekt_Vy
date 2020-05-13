@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.activities.miljopoints.use
+package com.example.leafly_application_git.activities.miljopoints.usePoints
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

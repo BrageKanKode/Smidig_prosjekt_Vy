@@ -51,20 +51,32 @@
         </activity>
 
         <activity
-            android:name=".activities.miljopoints.use.DuringTripActivity" android:label="@string/during_trip_label">
+            android:name=".activities.miljopoints.usePoints.DuringTripActivity" android:label="@string/during_trip_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.UsePointsActivity"/>
 
         </activity>
         <activity
-            android:name=".activities.miljopoints.use.DonateActivity" android:label="@string/donate_label">
+            android:name=".activities.miljopoints.usePoints.DonateActivity" android:label="@string/donate_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.UsePointsActivity"/>
         </activity>
         <activity
-            android:name=".activities.miljopoints.use.PointShopActivity" android:label="@string/points_shop_label">
+            android:name=".activities.miljopoints.usePoints.PointShopActivity" android:label="@string/points_shop_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.UsePointsActivity"/>
+        </activity>
+
+
+        <activity
+            android:name=".activities.miljopoints.usePoints.saveTheWorld.PlantTreeActivity" android:label="@string/plant_a_tree_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.usePoints.DonateActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.miljopoints.usePoints.saveTheWorld.CleanOceanActivity" android:label="@string/clean_the_ocean_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.usePoints.DonateActivity"/>
         </activity>
 
         <meta-data

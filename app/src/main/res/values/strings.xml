@@ -25,4 +25,8 @@
     <string name="donate_label">Gi til Miljøet</string>
     <string name="during_trip_label">Under reisen</string>
     <string name="points_shop_label">Poeng Shop</string>
+    <string name="donate_link_to_plant_tree">Plant et tre</string>
+    <string name="donate_link_to_save_the_ocean">Rydd plast i havet</string>
+    <string name="plant_a_tree_label">Plant et tre</string>
+    <string name="clean_the_ocean_label">Rydd plast i havet</string>
 </resources>
