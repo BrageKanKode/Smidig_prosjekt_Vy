@@ -43,6 +43,12 @@
         <activity
             android:name=".activities.ConfirmationActivity">
         </activity>
+        <activity
+            android:name=".activities.MembershipBenefitsActivity">
+        </activity>
+        <activity
+            android:name=".activities.UsePointsActivity">
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
