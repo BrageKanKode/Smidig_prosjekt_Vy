@@ -8,4 +8,7 @@
     <string name="todo">TODO</string>
     <string name="logo_trips">VyLogo trips</string>
     <string name="test_text">test_text</string>
+    <string name="trips_avbestilte_reiser">Avbestilte reiser</string>
+    <string name="text_trips_complete">Fullførte Reiser</string>
+    <string name="arrow">arrow</string>
 </resources>
