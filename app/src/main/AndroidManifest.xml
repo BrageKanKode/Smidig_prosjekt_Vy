@@ -36,6 +36,14 @@
             android:name=".activities.TravelDetailsActivity">
         </activity>
 
+        <activity android:name=".activities.SplashScreenPaymentActivity"
+            android:theme="@style/SplashTheme">
+        </activity>
+
+        <activity
+            android:name=".activities.ConfirmationActivity">
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
