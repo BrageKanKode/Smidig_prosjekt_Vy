@@ -34,4 +34,6 @@
     <string name="progression_label">Din progresjon</string>
     <string name="growing_tree_label">Se ditt tre vokse</string>
     <string name="history_label">Poenghistorikk</string>
+    <string name="donate_tree_title">Plant trær med dine Miljøpoeng</string>
+    <string name="donate_ocean_title">Rens havet for plast med dine Miljøpoeng</string>
 </resources>
