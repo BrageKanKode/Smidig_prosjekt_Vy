@@ -39,4 +39,8 @@
     <string name="button_to_plant_a_tree">Med poengene du opptjener kan du gi tilbake til naturen ved å plante trær.</string>
     <string name="button_to_clean_the_ocean">Bruk poengene til å bidra med rydding av plast som blir kastet i havet.</string>
     <string name="read_more">Les mer</string>
+    <string name="welcome_title_miljopoint">Velkommen, <br/> Navn!</string>
+    <string name="scan_title">Scan</string>
+    <string name="use_points_title">Bruk poeng</string>
+    <string name="benefits_title">Medlems-fordeler</string>
 </resources>

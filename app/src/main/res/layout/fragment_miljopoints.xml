@@ -50,101 +50,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_point_total_currency" />
 
-    <View
+    <androidx.cardview.widget.CardView
         android:id="@+id/view_use_points"
-        android:layout_width="253dp"
-        android:layout_height="101dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="#c7c9c7"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="#f2f2f3"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/view_member_benefits"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnToProgression" />
+        app:layout_constraintTop_toBottomOf="@+id/btnToProgression">
 
-    <View
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_use_points"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_shopping_cart_24px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/view_member_benefits"
-        android:layout_width="253dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:background="#c7c9c7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_use_points" />
+        app:cardBackgroundColor="#f2f2f3"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/view_scan_code"
+        app:layout_constraintTop_toBottomOf="@+id/btnToProgression">
 
-    <TextView
-        android:id="@+id/textView_use_points_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bruk Poeng"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_use_points"
-        app:layout_constraintStart_toStartOf="@+id/view_use_points"
-        app:layout_constraintTop_toTopOf="@+id/view_use_points" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView_use_points"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@android:drawable/ic_menu_add"
-        app:layout_constraintBottom_toBottomOf="@+id/view_use_points"
-        app:layout_constraintStart_toStartOf="@+id/view_use_points"
-        app:layout_constraintTop_toBottomOf="@+id/textView_use_points_title" />
-
-    <TextView
-        android:id="@+id/textView_use_points_info"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/use_points_info"
-        app:layout_constraintBottom_toBottomOf="@+id/view_use_points"
-        app:layout_constraintEnd_toEndOf="@+id/view_use_points"
-        app:layout_constraintStart_toEndOf="@+id/imageView_use_points"
-        app:layout_constraintTop_toBottomOf="@+id/textView_use_points_title" />
-
-    <ImageView
-        android:id="@+id/imageView_benefits_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@android:drawable/ic_menu_info_details"
-        app:layout_constraintBottom_toBottomOf="@+id/view_member_benefits"
-        app:layout_constraintStart_toStartOf="@+id/view_member_benefits"
-        app:layout_constraintTop_toBottomOf="@+id/textView_benefit_title" />
-
-    <TextView
-        android:id="@+id/textView_benefit_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Medlemsfordeler"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_member_benefits"
-        app:layout_constraintStart_toStartOf="@+id/view_member_benefits"
-        app:layout_constraintTop_toTopOf="@+id/view_member_benefits" />
-
-    <TextView
-        android:id="@+id/textView_benefits_info"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/member_benefits_info"
-        app:layout_constraintBottom_toBottomOf="@+id/view_member_benefits"
-        app:layout_constraintEnd_toEndOf="@+id/view_member_benefits"
-        app:layout_constraintStart_toEndOf="@+id/imageView_benefits_icon"
-        app:layout_constraintTop_toBottomOf="@+id/textView_benefit_title" />
+            <ImageView
+                android:id="@+id/imageView_benefits"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_local_florist_24px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btnToProgression"
@@ -155,6 +121,78 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_point_memberlevel" />
+
+    <TextView
+        android:id="@+id/textView_welcome_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome_title_miljopoint"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView_search_vylogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_scan_code"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#c7c9c7"
+        app:cardBackgroundColor="#f2f2f3"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToProgression">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_scan"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_fullscreen_24px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView_use_points_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/use_points_title"
+        app:layout_constraintEnd_toEndOf="@+id/view_use_points"
+        app:layout_constraintStart_toStartOf="@+id/view_use_points"
+        app:layout_constraintTop_toBottomOf="@+id/view_use_points" />
+
+    <TextView
+        android:id="@+id/textView_benefits_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/benefits_title"
+        app:layout_constraintEnd_toEndOf="@+id/view_member_benefits"
+        app:layout_constraintStart_toStartOf="@+id/view_member_benefits"
+        app:layout_constraintTop_toBottomOf="@+id/view_member_benefits" />
+
+    <TextView
+        android:id="@+id/textView_scan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/scan_title"
+        app:layout_constraintEnd_toEndOf="@+id/view_scan_code"
+        app:layout_constraintStart_toStartOf="@+id/view_scan_code"
+        app:layout_constraintTop_toBottomOf="@+id/view_scan_code" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
