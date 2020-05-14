@@ -12,7 +12,7 @@ class MembershipBenefitsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_membership_benefits)
 
-        //TODO: endre på verdiene til medlemsnivåer
+
         val listHeader = listOf("Frø", "Spire", "Tre")
 
         val froList = listOf("Gratis Internett", "Tilgang til automat-varer")
