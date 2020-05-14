@@ -12,19 +12,21 @@ class MembershipBenefitsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_membership_benefits)
 
-        val listHeader = listOf("numbers", "fruits")
+        //TODO: endre på verdiene til medlemsnivåer
+        val listHeader = listOf("Frø", "Spire", "Tre")
 
-        val numbersList = listOf("One", "Two", "Three", "Four")
-        val fruitList = listOf("apple", "orange", "banana")
+        val froList = listOf("Gratis Internett", "Tilgang til automat-varer")
+        val spireList = listOf("Gratis Internett", "Tilgang til underholdning", "1 Gratis kaffe i måneden")
+        val treList = listOf("Raskere internett tilgang", "Game-zone", "Stille sone", "Gratis E-bøker", "2 gratis kaffe i måneden")
 
         val listChild = HashMap<String, List<String>>()
-        listChild.put(listHeader[0], numbersList)
-        listChild.put(listHeader[1], fruitList)
+        listChild.put(listHeader[0], froList)
+        listChild.put(listHeader[1], spireList)
+        listChild.put(listHeader[2], treList)
 
         val expandableListAdapter = ExpandableListAdapter(this, listHeader, listChild)
 
         expandable_list_view.setAdapter(expandableListAdapter)
-
 
     }
 
