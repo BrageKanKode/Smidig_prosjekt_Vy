@@ -48,24 +48,24 @@
 
         </activity>
         <activity
-            android:name=".activities.miljopoints.UsePointsActivity" android:label="@string/use_points_label" android:launchMode="singleTop">
+            android:name=".activities.miljopoints.usePoints.UsePointsActivity" android:label="@string/use_points_label" android:launchMode="singleTop">
         </activity>
 
         <activity
             android:name=".activities.miljopoints.usePoints.DuringTripActivity" android:label="@string/during_trip_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.UsePointsActivity"/>
+                android:value=".activities.miljopoints.usePoints.UsePointsActivity"/>
 
         </activity>
         <activity
             android:name=".activities.miljopoints.usePoints.DonateActivity" android:label="@string/donate_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.UsePointsActivity"/>
+                android:value=".activities.miljopoints.usePoints.UsePointsActivity"/>
         </activity>
         <activity
             android:name=".activities.miljopoints.usePoints.PointShopActivity" android:label="@string/points_shop_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.UsePointsActivity"/>
+                android:value=".activities.miljopoints.usePoints.UsePointsActivity"/>
         </activity>
 
 
@@ -78,6 +78,22 @@
             android:name=".activities.miljopoints.usePoints.saveTheWorld.CleanOceanActivity" android:label="@string/clean_the_ocean_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.usePoints.DonateActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activities.miljopoints.progression.ProgressionActivity" android:label="@string/progression_label">
+        </activity>
+
+        <activity
+            android:name=".activities.miljopoints.progression.GrowingTreeActivity" android:label="@string/growing_tree_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.progression.ProgressionActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activities.miljopoints.progression.HistoryActivity" android:label="@string/history_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.progression.ProgressionActivity"/>
         </activity>
 
         <meta-data

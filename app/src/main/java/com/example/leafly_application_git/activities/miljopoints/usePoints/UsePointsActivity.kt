@@ -1,12 +1,9 @@
-package com.example.leafly_application_git.activities.miljopoints
+package com.example.leafly_application_git.activities.miljopoints.usePoints
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.miljopoints.usePoints.DonateActivity
-import com.example.leafly_application_git.activities.miljopoints.usePoints.DuringTripActivity
-import com.example.leafly_application_git.activities.miljopoints.usePoints.PointShopActivity
 import kotlinx.android.synthetic.main.activity_use_points.*
 
 class UsePointsActivity : AppCompatActivity() {

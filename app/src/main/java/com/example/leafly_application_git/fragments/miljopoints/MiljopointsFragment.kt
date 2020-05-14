@@ -10,7 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
-import com.example.leafly_application_git.activities.miljopoints.UsePointsActivity
+import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
+import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 
 
@@ -43,6 +44,14 @@ class MiljopointsFragment : Fragment() {
                 Intent(requireActivity(), MembershipBenefitsActivity::class.java)
             )
         }
+
+        root.btnToProgression.setOnClickListener {
+            requireActivity().startActivity(
+                Intent(requireActivity(), ProgressionActivity::class.java)
+            )
+        }
+
+
         return root
     }
 }

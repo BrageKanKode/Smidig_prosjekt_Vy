@@ -31,5 +31,7 @@
     <string name="clean_the_ocean_label">Rydd plast i havet</string>
     <string name="membership_level">Medlemsnivå</string>
     <string name="membership_details_text">Her kan du se hva slags fordeler du får med de forskjellige nivåene av medlemskap</string>
-
+    <string name="progression_label">Din progresjon</string>
+    <string name="growing_tree_label">Se ditt tre vokse</string>
+    <string name="history_label">Poenghistorikk</string>
 </resources>
