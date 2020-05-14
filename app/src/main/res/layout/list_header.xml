@@ -12,6 +12,7 @@
         android:paddingTop="10dp"
         android:textColor="#00957a"
         android:paddingBottom="10dp"
+        android:icon="@drawable/ic_eco_black_18dp"
         android:textSize="20sp" />
 
 </LinearLayout>
