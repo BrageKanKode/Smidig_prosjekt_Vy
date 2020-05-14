@@ -34,6 +34,9 @@
     <string name="progression_label">Din progresjon</string>
     <string name="growing_tree_label">Se ditt tre vokse</string>
     <string name="history_label">Poenghistorikk</string>
-    <string name="donate_tree_title">Plant trær med dine Miljøpoeng</string>
-    <string name="donate_ocean_title">Rens havet for plast med dine Miljøpoeng</string>
+    <string name="donate_tree_title">Plant et tre</string>
+    <string name="donate_ocean_title">Rydd plast i havet</string>
+    <string name="button_to_plant_a_tree">Med poengene du opptjener kan du gi tilbake til naturen ved å plante trær.</string>
+    <string name="button_to_clean_the_ocean">Bruk poengene til å bidra med rydding av plast som blir kastet i havet.</string>
+    <string name="read_more">Les mer</string>
 </resources>
