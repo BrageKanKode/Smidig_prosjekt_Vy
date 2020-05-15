@@ -34,6 +34,9 @@
             android:name=".activities.search.PaymentActivity" android:label="@string/payment_label" android:launchMode="singleTop">
         </activity>
         <activity
+            android:name=".activities.search.SelectTravelActivity" android:label="@string/payment_label" android:launchMode="singleTop">
+        </activity>
+        <activity
             android:name=".activities.search.TravelDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
         </activity>
 
