@@ -1,13 +1,13 @@
-package com.example.leafly_application_git.fragments.trips
+package com.example.leafly_application_git.fragments.main_page.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class TripsViewModel : ViewModel() {
+class SearchViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is trips Fragment"
+        value = "This is home search Fragment"
     }
     val text: LiveData<String> = _text
 }

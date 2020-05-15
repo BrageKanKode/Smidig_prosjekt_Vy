@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B4FFFFFF"
-    tools:context=".fragments.trips.TripsFragment">
+    tools:context=".fragments.main_page.trips.TripsFragment">
 
     <View
         android:id="@+id/view_trips"

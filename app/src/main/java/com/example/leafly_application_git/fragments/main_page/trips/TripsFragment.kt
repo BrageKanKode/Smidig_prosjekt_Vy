@@ -1,16 +1,13 @@
-package com.example.leafly_application_git.fragments.trips
+package com.example.leafly_application_git.fragments.main_page.trips
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
-import java.io.InputStream
 
 class TripsFragment : Fragment() {
 

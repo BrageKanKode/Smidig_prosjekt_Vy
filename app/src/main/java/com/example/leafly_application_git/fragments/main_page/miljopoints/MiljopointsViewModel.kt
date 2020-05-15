@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.fragments.miljopoints
+package com.example.leafly_application_git.fragments.main_page.miljopoints
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

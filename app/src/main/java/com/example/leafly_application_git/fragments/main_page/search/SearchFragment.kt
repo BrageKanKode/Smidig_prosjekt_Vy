@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.fragments.search
+package com.example.leafly_application_git.fragments.main_page.search
 
 import android.content.Intent
 import android.os.Bundle
