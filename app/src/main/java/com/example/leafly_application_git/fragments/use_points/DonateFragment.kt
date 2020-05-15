@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld.CleanOceanActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld.PlantTreeActivity
 import kotlinx.android.synthetic.main.fragment_donate.view.*
-import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 
 class DonateFragment : Fragment() {
 

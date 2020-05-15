@@ -1,14 +1,11 @@
 package com.example.leafly_application_git.activities.miljopoints.usePoints
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.fragments.MyPagerAdapter
-import com.example.leafly_application_git.fragments.MyPagerAdapterUsedPoints
+import com.example.leafly_application_git.fragments.use_points.UsePointsTabAdapter
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_use_points.*
 
 class UsePointsActivity : AppCompatActivity() {
 
@@ -31,7 +28,11 @@ class UsePointsActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setText("Shop"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = MyPagerAdapterUsedPoints(supportFragmentManager, tabLayout.tabCount)
+        val adapter =
+            UsePointsTabAdapter(
+                supportFragmentManager,
+                tabLayout.tabCount
+            )
         viewPager.adapter = adapter
 
 

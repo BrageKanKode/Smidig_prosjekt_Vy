@@ -4,9 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.fragments.MyPagerAdapter
+import com.example.leafly_application_git.fragments.history.HistoryTabAdapter
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_history.*
 
 class HistoryActivity : AppCompatActivity() {
 
@@ -20,6 +19,8 @@ class HistoryActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        //------------------Tab layout code-------------------------
+
         tabLayout = findViewById<TabLayout>(R.id.tabs)
         viewPager = findViewById<ViewPager>(R.id.view_pager)
 
@@ -27,7 +28,11 @@ class HistoryActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setText("Opptjening"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = MyPagerAdapter(supportFragmentManager, tabLayout.tabCount)
+        val adapter =
+            HistoryTabAdapter(
+                supportFragmentManager,
+                tabLayout.tabCount
+            )
         viewPager.adapter = adapter
 
 
@@ -44,6 +49,8 @@ class HistoryActivity : AppCompatActivity() {
 
             }
         })
+
+        //----------------End of tab code------------------
 
     }
 }
