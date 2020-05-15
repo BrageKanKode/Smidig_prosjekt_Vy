@@ -22,4 +22,6 @@
         android:name="com.example.leafly_application_git.fragments.main_page.miljopoints.MiljopointsFragment"
         android:label="@string/title_miljopoints"
         tools:layout="@layout/fragment_miljopoints" />
+
+
 </navigation>
