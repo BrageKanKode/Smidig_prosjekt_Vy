@@ -1,6 +1,9 @@
 package com.example.leafly_application_git.activities
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -14,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
@@ -26,5 +30,28 @@ class MainActivity : AppCompatActivity() {
         ))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
+
+
+    //Does not run with readJson(), need to be fixed.
+
+    /*
+    //FileName
+    val fileName = cacheDir.absolutePath+"/dummydata.json"
+
+    private fun readJSONfromFile(f:String) {
+
+        //Creating a new Gson object to read data
+        var gson = Gson()
+        //Read the PostJSON.json file
+        val bufferedReader: BufferedReader = File(f).bufferedReader()
+        // Read the text from buffferReader and store in String variable
+        val inputString = bufferedReader.use { it.readText() }
+
+        //Convert the Json File to Gson Object
+        var post = gson.fromJson(inputString, Location::class.java)
+
+        }
+     */
 }
