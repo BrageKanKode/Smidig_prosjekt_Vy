@@ -16,6 +16,7 @@ import com.example.leafly_application_git.R
 class DuringTripFragment : Fragment() {
 
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val root = inflater.inflate(R.layout.fragment_during_trip, container, false)
@@ -26,6 +27,9 @@ class DuringTripFragment : Fragment() {
 
 
     }
+
+
+
 
 
 }

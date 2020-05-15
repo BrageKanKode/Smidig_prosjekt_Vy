@@ -15,6 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:onClick="onTap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_buy_coffee">
@@ -74,6 +75,7 @@
         android:layout_marginTop="75dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:onClick="onTap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -123,4 +125,5 @@
                 app:srcCompat="@drawable/ic_arrow_right_alt_24px" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
