@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.leafly_application_git">
 
     <application
@@ -84,6 +85,17 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.progression.ProgressionActivity"/>
         </activity>
+
+        <activity
+            android:name=".activities.miljopoints.scan.ScanActivity" android:label="@string/scan_label">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
 
         <meta-data
             android:name="preloaded_fonts"

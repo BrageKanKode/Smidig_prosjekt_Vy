@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.leafly_application_git"
-        minSdkVersion 15
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -38,6 +38,10 @@ android {
 
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -56,4 +60,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
 }
