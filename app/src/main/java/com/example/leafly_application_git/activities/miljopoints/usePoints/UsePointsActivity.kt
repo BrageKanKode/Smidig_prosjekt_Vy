@@ -51,31 +51,5 @@ class UsePointsActivity : AppCompatActivity() {
 
         //----------------End of tab code------------------
 
-        /*
-        btnToDuringTrip.setOnClickListener {
-            toDuringTrip()
-        }
-        btnToDonate.setOnClickListener {
-            toDonate()
-        }
-        btnToPointShop.setOnClickListener {
-            toPointShop()
-        }
-
-         */
-    }
-
-    fun toDuringTrip() {
-        val intent = Intent(this, DuringTripActivity::class.java)
-        startActivity(intent)
-    }
-    fun toDonate() {
-        val intent = Intent(this, DonateActivity::class.java)
-        startActivity(intent)
-    }
-    fun toPointShop() {
-        val intent = Intent(this, PointShopActivity::class.java)
-        startActivity(intent)
-
     }
 }
