@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.BaseAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.leafly_application_git.R
@@ -22,4 +23,5 @@ class ShopFragment : Fragment() {
 
         return root
     }
+
 }

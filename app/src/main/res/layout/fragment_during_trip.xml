@@ -6,74 +6,121 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/GridLayout_during_trip"
-        android:layout_width="400dp"
-        android:layout_height="520dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_buy_food_drinks"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:columnCount="3"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_buy_coffee">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip1"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#f2f2f3"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            app:cardCornerRadius="10dp"
-            app:layout_column="0"
-            app:layout_row="0" />
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right_alt_24px" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip2"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+            <TextView
+                android:id="@+id/textView_buy_food_drinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/during_trip_food_drinks"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView_arrow1"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip3"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+            <ImageView
+                android:id="@+id/imageView_arrow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_restaurant_24px" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip4"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_buy_coffee"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip5"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip6"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
-    </androidx.gridlayout.widget.GridLayout>
+            <TextView
+                android:id="@+id/textView_buy_coffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/during_trip_coffee"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView_coffee_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_coffee_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_local_cafe_24px" />
+
+            <ImageView
+                android:id="@+id/imageView_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right_alt_24px" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

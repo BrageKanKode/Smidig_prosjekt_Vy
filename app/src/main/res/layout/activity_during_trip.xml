@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/GridLayout_during_trip"
+        android:id="@+id/GridLayout_shop_items"
         android:layout_width="400dp"
         android:layout_height="520dp"
         android:layout_marginStart="8dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip1"
+            android:id="@+id/view_shop_item1"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
@@ -34,7 +34,7 @@
             app:layout_row="0" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip2"
+            android:id="@+id/view_shop_item2"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
@@ -43,7 +43,7 @@
             app:cardCornerRadius="10dp" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip3"
+            android:id="@+id/view_shop_item3"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
@@ -52,7 +52,7 @@
             app:cardCornerRadius="10dp" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip4"
+            android:id="@+id/view_shop_item4"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
@@ -61,7 +61,7 @@
             app:cardCornerRadius="10dp" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip5"
+            android:id="@+id/view_shop_item5"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
@@ -70,7 +70,7 @@
             app:cardCornerRadius="10dp" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/view_during_trip6"
+            android:id="@+id/view_shop_item6"
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
