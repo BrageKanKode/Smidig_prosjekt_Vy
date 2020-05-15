@@ -1,20 +1,16 @@
 package com.example.leafly_application_git.fragments.main_page.miljopoints
 
-import android.R.attr
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
-import com.example.leafly_application_git.activities.miljopoints.scan.ScanActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
@@ -56,15 +52,16 @@ class MiljopointsFragment : Fragment() {
             )
         }
         root.view_scan_code.setOnClickListener {
-            requireActivity().startActivity(
-                Intent(requireActivity(), ScanActivity::class.java)
-            )
+            scanFromFragment()
         }
-
-
-
 
 
         return root
     }
+
+    fun scanFromFragment() {
+        IntentIntegrator.forSupportFragment(this).initiateScan();
+    }
+
+
 }

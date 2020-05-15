@@ -90,15 +90,12 @@
         </activity>
 
         <activity
-            android:name=".activities.miljopoints.scan.ScanActivity" android:label="@string/scan_label">
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity"/>
         </activity>
-
-        <activity
-            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:screenOrientation="fullSensor"
-            tools:replace="screenOrientation" />
 
         <meta-data
             android:name="preloaded_fonts"
