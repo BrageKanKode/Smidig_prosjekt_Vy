@@ -4,21 +4,21 @@
     "fronLocation": "Oslo",
     "toLocation": "Fredrikstad",
     "price": "124",
-    "miljopoeng": "124"
+    "miljoPoeng": "124"
   },
   {
     "id": "2",
     "fronLocation": "Jessheim",
     "toLocation": "Sarpsborg",
     "price": "215",
-    "miljopoeng": "215"
+    "miljoPoeng": "215"
   },
   {
     "id": "3",
     "fronLocation": "Lillestrøm",
     "toLocation": "Lysaker",
     "price": "75",
-    "miljooeng": "75"
+    "miljoPoeng": "75"
   }
 
 ]

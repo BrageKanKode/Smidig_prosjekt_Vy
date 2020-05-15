@@ -16,7 +16,11 @@ import java.io.InputStream
 
 class SelectTravelActivity : AppCompatActivity() {
 
-    var arr = arrayListOf<String>()
+    var arrFrom = arrayListOf<String>()
+    var arrTo = arrayListOf<String>()
+    var arrPrice = arrayListOf<String>()
+    var arrPoints = arrayListOf<String>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,9 +51,14 @@ class SelectTravelActivity : AppCompatActivity() {
             for (i in 0 until jarr.length()) {
 
                 var jobj = jarr.getJSONObject(i)
-                arr.add(jobj.getString("fronLocation"))
+                arrFrom.add(jobj.getString("fronLocation"))
+                //These 3 does not work, but do not interfeer.
+                arrTo.add(jobj.getString("toLocation"))
+                arrPrice.add(jobj.getString("price"))
+                arrPoints.add(jobj.getString("miljoPoeng"))
+
             }
-            var adapt = ArrayAdapter(this, android.R.layout.simple_list_item_1, arr)
+            var adapt = ArrayAdapter(this, android.R.layout.simple_list_item_1, arrFrom)
             json_List.adapter = adapt
 
         } catch (e: IOException) {
