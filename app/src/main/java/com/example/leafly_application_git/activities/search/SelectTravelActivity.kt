@@ -1,17 +1,14 @@
 package com.example.leafly_application_git.activities.search
 
-import android.app.Application
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.data.Json
+import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_choose_trip.*
-import org.json.JSONArray
-import java.io.File
-import java.io.IOException
 import java.io.InputStream
 
 class SelectTravelActivity : AppCompatActivity() {
@@ -28,6 +25,7 @@ class SelectTravelActivity : AppCompatActivity() {
 
         readJson()
 
+        RecyclerView_main.layoutManager = LinearLayoutManager(this)
 
         dummyBtn.setOnClickListener {
             openNewActivity()
@@ -38,37 +36,30 @@ class SelectTravelActivity : AppCompatActivity() {
 
         var json: String? = null
 
-        //val fileName = File("dummydata.json")
+        val inputStream : InputStream? = assets.open("dummydata.json")
+        val gson = GsonBuilder().create()
 
-        try {
+        json = inputStream?.bufferedReader().use { it?.readText() }
 
-            //val inputStream : InputStream? = context?.assets?.open("dummydata.json")
-            val inputStream: InputStream = assets.open("dummydata.json")
-            json = inputStream.bufferedReader().use { it.readText() }
+        val location = gson.fromJson(json, Json::class.java)
 
 
-            var jarr = JSONArray(json)
-            for (i in 0 until jarr.length()) {
+        RecyclerView_main.adapter = SelectTravelAdapter(location)
 
-                var jobj = jarr.getJSONObject(i)
-                arrFrom.add(jobj.getString("fronLocation"))
-                //These 3 does not work, but do not interfeer.
-                arrTo.add(jobj.getString("toLocation"))
-                arrPrice.add(jobj.getString("price"))
-                arrPoints.add(jobj.getString("miljoPoeng"))
-
-            }
-            var adapt = ArrayAdapter(this, android.R.layout.simple_list_item_1, arrFrom)
-            json_List.adapter = adapt
-
-        } catch (e: IOException) {
-            println(e)
+        runOnUiThread {
+            RecyclerView_main.adapter =
+                SelectTravelAdapter(
+                    location
+                )
         }
+
     }
+
 
     fun openNewActivity() {
         val intent = Intent(this, TravelDetailsActivity::class.java)
         startActivity(intent)
     }
 }
+
 
