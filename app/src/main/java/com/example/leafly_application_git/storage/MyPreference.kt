@@ -7,6 +7,7 @@ class MyPreference(context: Context) {
     val PREFERENCE_NAME = "SharedPreferenceExample"
     val PREFERENCE_CURRENCY = "Currency"
     val PREFERENCE_PROGRESS = "Progress"
+    val PREFERENCE_TOTAL_CURRENCY = "TotalCurrency"
     val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
 
     fun getCurrency() : Int{
@@ -19,6 +20,15 @@ class MyPreference(context: Context) {
         editor.apply()
     }
 
+    fun getTotalCollected() : Int {
+        return preference.getInt(PREFERENCE_TOTAL_CURRENCY, 0)
+    }
+
+    fun setTotalCurrency(count : Int) {
+        val editor = preference.edit()
+        editor.putInt(PREFERENCE_PROGRESS, count)
+        editor.apply()
+    }
 
     fun getProgress() : Int {
         return preference.getInt(PREFERENCE_PROGRESS, 0)

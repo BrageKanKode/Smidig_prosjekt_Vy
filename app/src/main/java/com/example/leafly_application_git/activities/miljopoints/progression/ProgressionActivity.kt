@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.storage.MyPreference
 import kotlinx.android.synthetic.main.activity_progression.*
-import kotlinx.android.synthetic.main.fragment_miljopoints.*
 
 class ProgressionActivity : AppCompatActivity() {
 
@@ -23,9 +22,7 @@ class ProgressionActivity : AppCompatActivity() {
             toHistory()
         }
 
-        val mypreference = MyPreference(this)
-        var currency = mypreference.getCurrency()
-        textView_total_points.text = currency.toString()
+
     }
 
     fun toGrowingTree() {
@@ -43,6 +40,11 @@ class ProgressionActivity : AppCompatActivity() {
         val mypreference = MyPreference(this)
 
         val progress = mypreference.getProgress()
+        val total = mypreference.getTotalCollected()
+        var currency = mypreference.getCurrency()
+
+        textView_total_collected.text = total.toString()
+        textView_current_currency.text = currency.toString()
 
         progressBar2.incrementProgressBy(progress)
     }

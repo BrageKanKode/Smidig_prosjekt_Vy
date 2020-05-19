@@ -21,6 +21,7 @@ class CleanOceanActivity : AppCompatActivity() {
 
         textview_currency_show.text = currency.toString()
 
+
         btn_do_clean_ocean.setOnClickListener {
             currency += 50
             progress += 3

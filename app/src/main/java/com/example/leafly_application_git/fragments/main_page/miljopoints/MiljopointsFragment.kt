@@ -72,6 +72,9 @@ class MiljopointsFragment : Fragment() {
         val mypreference = MyPreference(context!!.applicationContext)
 
         val progress = mypreference.getProgress()
+        val currency = mypreference.getCurrency()
+
+        progressbar_point_value.text = currency.toString()
 
         progressBar.incrementProgressBy(progress)
     }
