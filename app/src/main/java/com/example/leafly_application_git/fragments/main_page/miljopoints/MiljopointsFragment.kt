@@ -76,7 +76,7 @@ class MiljopointsFragment : Fragment() {
 
         progressbar_point_value.text = currency.toString()
 
-        progressBar.incrementProgressBy(progress)
+        progressBar.setProgress(progress)
     }
 
 
