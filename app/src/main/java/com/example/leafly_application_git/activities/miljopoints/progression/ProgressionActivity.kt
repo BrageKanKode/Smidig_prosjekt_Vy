@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.storage.MyPreference
 import kotlinx.android.synthetic.main.activity_progression.*
 
 class ProgressionActivity : AppCompatActivity() {
@@ -20,6 +21,10 @@ class ProgressionActivity : AppCompatActivity() {
         btnToHistory.setOnClickListener {
             toHistory()
         }
+
+        val mypreference = MyPreference(this)
+        var currency = mypreference.getCurrency()
+        textView_total_points.text = currency.toString()
     }
 
     fun toGrowingTree() {
