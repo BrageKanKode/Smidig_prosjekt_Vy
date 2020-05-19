@@ -30,20 +30,11 @@ class MiljopointsFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
 
-        /*
-
-            val preferences = this.activity!!.getSharedPreferences("pref", Context.MODE_PRIVATE)
-            val mypreference = MyPreference(context!!)
-
-            val progress = preferences.getInt("Progress", 0)
-
-            progressBar.incrementProgressBy(progress)
-
-         */
-
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
+
+        //CONNECTED TO MiljopointsViewModel
 //        val textView: TextView = root.findViewById(R.id.text_miljopoints)
 //
 //        miljopointsViewModel.text.observe(viewLifecycleOwner, Observer {
@@ -72,6 +63,18 @@ class MiljopointsFragment : Fragment() {
 
 
         return root
+    }
+
+
+    //to update progress bar
+    override fun onResume() {
+        super.onResume()
+        val mypreference = MyPreference(context!!.applicationContext)
+
+        val progress = mypreference.getProgress()
+
+        progressBar.incrementProgressBy(progress)
+
     }
 
 

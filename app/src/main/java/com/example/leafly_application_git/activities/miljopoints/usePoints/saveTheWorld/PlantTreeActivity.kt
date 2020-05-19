@@ -19,17 +19,16 @@ class PlantTreeActivity : AppCompatActivity() {
         val mypreference = MyPreference(this)
         var currency = mypreference.getCurrency()
 
-        val progress = mypreference.getProgress()
+        var progress = mypreference.getProgress()
 
         textview_currency_show.text = currency.toString()
 
         btn_do_plant_tree.setOnClickListener {
             currency -= 50
-            progress + 3
+            progress += 3
             mypreference.setCurrency(currency)
             textview_currency_show.text = currency.toString()
             mypreference.setProgress(progress)
-            //progressBar.incrementProgressBy(3)
         }
     }
 }

@@ -17,13 +17,16 @@ class CleanOceanActivity : AppCompatActivity() {
         val mypreference = MyPreference(this)
         var currency = mypreference.getCurrency()
 
+        var progress = mypreference.getProgress()
+
         textview_currency_show.text = currency.toString()
 
         btn_do_clean_ocean.setOnClickListener {
             currency += 50
+            progress += 3
             mypreference.setCurrency(currency)
             textview_currency_show.text = currency.toString()
-            //progressBar.incrementProgressBy(3)
+            mypreference.setProgress(progress)
         }
     }
 }
