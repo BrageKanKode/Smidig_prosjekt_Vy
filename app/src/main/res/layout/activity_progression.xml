@@ -51,7 +51,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/textView_total_collected"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="insert points here"
@@ -65,7 +65,9 @@
 
             <ProgressBar
                 android:id="@+id/progressBar2"
-                style="?android:attr/progressBarStyle"
+                style="?android:progressBarStyleHorizontal"
+                android:progress="1"
+                android:progressDrawable="@drawable/circle"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginStart="16dp"
@@ -94,7 +96,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView_total_points"
+                        android:id="@+id/textView_current_currency"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="insert points here"

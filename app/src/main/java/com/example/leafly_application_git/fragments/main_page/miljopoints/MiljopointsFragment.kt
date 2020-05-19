@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.fragments.main_page.miljopoints
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,13 +13,16 @@ import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
+import com.example.leafly_application_git.storage.MyPreference
 import com.google.zxing.integration.android.IntentIntegrator
+import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 
 
 class MiljopointsFragment : Fragment() {
 
     private lateinit var miljopointsViewModel: MiljopointsViewModel
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -29,6 +33,8 @@ class MiljopointsFragment : Fragment() {
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
+
+        //CONNECTED TO MiljopointsViewModel
 //        val textView: TextView = root.findViewById(R.id.text_miljopoints)
 //
 //        miljopointsViewModel.text.observe(viewLifecycleOwner, Observer {
@@ -58,6 +64,21 @@ class MiljopointsFragment : Fragment() {
 
         return root
     }
+
+
+    //to update progress bar
+    override fun onResume() {
+        super.onResume()
+        val mypreference = MyPreference(context!!.applicationContext)
+
+        val progress = mypreference.getProgress()
+        val currency = mypreference.getCurrency()
+
+        progressbar_point_value.text = currency.toString()
+
+        progressBar.setProgress(progress)
+    }
+
 
     fun scanFromFragment() {
         IntentIntegrator.forSupportFragment(this).initiateScan();
