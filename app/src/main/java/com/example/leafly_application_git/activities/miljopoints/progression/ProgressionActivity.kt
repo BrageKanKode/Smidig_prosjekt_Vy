@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.storage.MyPreference
 import kotlinx.android.synthetic.main.activity_progression.*
+import kotlinx.android.synthetic.main.fragment_miljopoints.*
 
 class ProgressionActivity : AppCompatActivity() {
 
@@ -34,5 +35,15 @@ class ProgressionActivity : AppCompatActivity() {
     fun toHistory() {
         val intent = Intent(this, HistoryActivity::class.java)
         startActivity(intent)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val mypreference = MyPreference(this)
+
+        val progress = mypreference.getProgress()
+
+        progressBar2.incrementProgressBy(progress)
     }
 }

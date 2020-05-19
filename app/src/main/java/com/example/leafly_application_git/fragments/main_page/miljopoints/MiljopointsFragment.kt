@@ -74,7 +74,6 @@ class MiljopointsFragment : Fragment() {
         val progress = mypreference.getProgress()
 
         progressBar.incrementProgressBy(progress)
-
     }
 
 
