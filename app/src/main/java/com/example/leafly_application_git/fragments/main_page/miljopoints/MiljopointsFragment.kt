@@ -1,12 +1,11 @@
 package com.example.leafly_application_git.fragments.main_page.miljopoints
 
-import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -14,10 +13,10 @@ import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
+import com.example.leafly_application_git.storage.MyPreference
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
-import kotlinx.android.synthetic.main.fragment_miljopoints.view.progressBar
 
 
 class MiljopointsFragment : Fragment() {
@@ -31,10 +30,16 @@ class MiljopointsFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
 
+        /*
 
-        root.incrementProgressionBtn.setOnClickListener {
-            progressBar.incrementProgressBy(3)
-        }
+            val preferences = this.activity!!.getSharedPreferences("pref", Context.MODE_PRIVATE)
+            val mypreference = MyPreference(context!!)
+
+            val progress = preferences.getInt("Progress", 0)
+
+            progressBar.incrementProgressBy(progress)
+
+         */
 
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()

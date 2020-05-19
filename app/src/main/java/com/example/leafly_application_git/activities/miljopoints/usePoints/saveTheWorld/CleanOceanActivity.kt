@@ -23,6 +23,7 @@ class CleanOceanActivity : AppCompatActivity() {
             currency += 50
             mypreference.setCurrency(currency)
             textview_currency_show.text = currency.toString()
+            //progressBar.incrementProgressBy(3)
         }
     }
 }
