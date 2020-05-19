@@ -11,10 +11,8 @@
         android:layout_width="400dp"
         android:layout_height="520dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:columnCount="3"
+        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
@@ -22,59 +20,173 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/view_shop_item1"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
             android:layout_margin="10dp"
             app:cardBackgroundColor="#f2f2f3"
 
             app:cardCornerRadius="10dp"
             app:layout_column="0"
-            app:layout_row="0" />
+            app:layout_row="0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_dplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_dplay_logo_2019" />
+
+                <TextView
+                    android:id="@+id/textView_dplay_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/dplay_title"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView_dplay" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/view_shop_item2"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_netflix_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_netflix_2015_logo" />
+
+                <TextView
+                    android:id="@+id/textView_netflix_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/netflix_title"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView_netflix_logo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/view_shop_item3"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_odeon_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_odeon_logo" />
+
+                <TextView
+                    android:id="@+id/textView_odeon_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/odeon_title"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView_odeon_logo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/view_shop_item4"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/view_shop_item5"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/view_shop_item6"
-            android:layout_width="113dp"
-            android:layout_height="100dp"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp" />
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
     </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
