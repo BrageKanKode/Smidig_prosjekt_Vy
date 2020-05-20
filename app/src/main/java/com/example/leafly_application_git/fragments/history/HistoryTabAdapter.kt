@@ -10,9 +10,9 @@ class HistoryTabAdapter(fm: FragmentManager, internal var totalTabs: Int) : Frag
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
-                EarnedPointsFragment()
+                UsedPointsFragment()
             }
-            else -> UsedPointsFragment()
+            else -> EarnedPointsFragment()
         }
     }
 

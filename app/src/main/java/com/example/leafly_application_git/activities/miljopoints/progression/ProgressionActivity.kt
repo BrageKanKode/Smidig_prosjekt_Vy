@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.storage.MyPreference
 import kotlinx.android.synthetic.main.activity_progression.*
+import kotlinx.android.synthetic.main.activity_progression.textView_total_collected
 
 class ProgressionActivity : AppCompatActivity() {
 
@@ -21,6 +22,7 @@ class ProgressionActivity : AppCompatActivity() {
         btnToHistory.setOnClickListener {
             toHistory()
         }
+
 
 
     }
@@ -43,9 +45,11 @@ class ProgressionActivity : AppCompatActivity() {
         val total = mypreference.getTotalCollected()
         var currency = mypreference.getCurrency()
 
+        textView_progressbar_status.text = progress.toString()
+
         textView_total_collected.text = total.toString()
         textView_current_currency.text = currency.toString()
 
-        progressBar2.incrementProgressBy(progress)
+        progressBar2.setProgress(progress)
     }
 }
