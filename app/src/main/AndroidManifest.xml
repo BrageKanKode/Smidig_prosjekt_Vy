@@ -93,6 +93,14 @@
                 android:value=".activities.miljopoints.progression.ProgressionActivity"/>
         </activity>
 
+        <activity android:name=".activities.authentication.SignUpActivity" android:label="Sign Up">
+
+        </activity>
+
+        <activity android:name=".activities.authentication.LoginActivity" android:label="Log in">
+
+        </activity>
+
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

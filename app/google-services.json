@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "301413142589",
+    "firebase_url": "https://smidig09.firebaseio.com",
+    "project_id": "smidig09",
+    "storage_bucket": "smidig09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301413142589:android:db56f82d8d44571bfb5a54",
+        "android_client_info": {
+          "package_name": "com.example.leafly_application_git"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301413142589-ckvimrrk58u2go83akt6tnu8id33r73c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_l9KXqmB8_4jOp4V-_XBr-QmyZaM3VNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301413142589-ckvimrrk58u2go83akt6tnu8id33r73c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
