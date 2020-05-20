@@ -1,15 +1,12 @@
 package com.example.leafly_application_git.fragments.main_page.miljopoints
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.SignUpActivity
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
@@ -30,6 +27,8 @@ class MiljopointsFragment : Fragment() {
 
         miljopointsViewModel = ViewModelProviders.of(this).get(MiljopointsViewModel::class.java)
 
+
+
         val root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
 
         //Shows actionbar
@@ -39,6 +38,10 @@ class MiljopointsFragment : Fragment() {
 
 
         setHasOptionsMenu(true);
+
+
+
+        //Firebase test
 
 
         //CONNECTED TO MiljopointsViewModel

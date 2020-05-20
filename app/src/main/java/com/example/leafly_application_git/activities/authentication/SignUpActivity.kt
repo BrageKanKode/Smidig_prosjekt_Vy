@@ -3,6 +3,9 @@ package com.example.leafly_application_git.activities.authentication
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
@@ -10,6 +13,7 @@ import com.example.leafly_application_git.activities.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_signup.*
+import java.util.zip.Inflater
 
 class SignUpActivity : AppCompatActivity(){
 
@@ -62,7 +66,7 @@ class SignUpActivity : AppCompatActivity(){
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 
-        val user = User(uid, editText_username_signup.text.toString())
+        val user = User(uid, editText_username_signup.text.toString(), 300)
 
         ref.setValue(user)
             .addOnSuccessListener {
@@ -73,7 +77,28 @@ class SignUpActivity : AppCompatActivity(){
                 startActivity(intent)
             }
     }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.home_menu, menu)
+        return true
+
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.redirect_home_btn -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
 
 
-class User(val uid: String, val username: String)
+class User(val uid: String, val username: String, val balance: Int)
