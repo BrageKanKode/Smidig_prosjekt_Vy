@@ -24,9 +24,9 @@ class ChooseTravelActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_select_time)
 
-        recyclerView_time_select.layoutManager = LinearLayoutManager(this)
-
         fetchJson()
+
+        recyclerView_time_select.layoutManager = LinearLayoutManager(this)
 
         fromLocation = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
         toLocation = intent.getStringExtra(CustomViewHolder.TO_LOCATION_KEY)
@@ -53,7 +53,7 @@ class ChooseTravelActivity : AppCompatActivity() {
 
         runOnUiThread {
             recyclerView_time_select.adapter =
-                SelectTravelAdapter(
+                ChooseTravelAdapter(
                     time
                 )
         }

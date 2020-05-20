@@ -24,7 +24,6 @@ class ChooseTravelAdapter (val json: Json): RecyclerView.Adapter<Custom>() {
 
     override fun onBindViewHolder(holder: Custom, position: Int) {
 
-
         val row = json.times.get(position)
         holder.view.textView_From.text = CustomViewHolder.FROM_LOCATION_KEY
         holder.view.textView_to.text = CustomViewHolder.TO_LOCATION_KEY
@@ -36,6 +35,6 @@ class ChooseTravelAdapter (val json: Json): RecyclerView.Adapter<Custom>() {
 
 }
 
-class Custom(val view: View, var time: Times? = null): RecyclerView.ViewHolder(view) {
+class Custom(val view: View, var json: Json? = null): RecyclerView.ViewHolder(view) {
 
 }
