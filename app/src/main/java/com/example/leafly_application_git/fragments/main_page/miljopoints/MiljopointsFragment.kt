@@ -49,16 +49,6 @@ class MiljopointsFragment : Fragment() {
 //        })
 
 
-        //Redirect to signup page
-
-        val uid = FirebaseAuth.getInstance().uid
-        if (uid !== null){
-            root.button_redirect_to_signup.visibility = View.GONE
-        }
-        root.button_redirect_to_signup.setOnClickListener {
-            requireActivity().startActivity(Intent(requireActivity(), SignUpActivity::class.java))
-        }
-
         root.view_use_points.setOnClickListener {
             requireActivity().startActivity(
                 Intent(requireActivity(), UsePointsActivity::class.java)
@@ -104,8 +94,9 @@ class MiljopointsFragment : Fragment() {
         when(item.itemId){
             R.id.sign_out_menu -> {
                 FirebaseAuth.getInstance().signOut()
-                val intent = Intent(this.context, MainActivity::class.java)
-                startActivity(intent)
+                requireActivity().startActivity(
+                    Intent(requireActivity(), SignUpActivity::class.java)
+                )
             }
 
         }
