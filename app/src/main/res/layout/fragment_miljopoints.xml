@@ -27,7 +27,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="#c7c9c7"
-        app:cardBackgroundColor="#f2f2f3"
+        app:cardBackgroundColor="#CBEAE4"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toStartOf="@+id/view_member_benefits"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="#c7c9c7"
-        app:cardBackgroundColor="#f2f2f3"
+        app:cardBackgroundColor="#CBEAE4"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toStartOf="@+id/view_scan_code"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
@@ -100,7 +100,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="#c7c9c7"
-        app:cardBackgroundColor="#f2f2f3"
+        app:cardBackgroundColor="#CBEAE4"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
