@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.activities.search.CustomViewHolder
 import com.example.leafly_application_git.activities.search.SelectTravelAdapter
 import com.example.leafly_application_git.data.Json
 import com.google.gson.GsonBuilder
@@ -13,12 +14,24 @@ import java.io.InputStream
 
 class ChooseTravelActivity : AppCompatActivity() {
 
+    var fromLocation: String? = null
+    var toLocation: String? = null
+    var priceLocation: String? = null
+    var pointsLocation: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_select_time)
 
         recyclerView_time_select.layoutManager = LinearLayoutManager(this)
+
+        fetchJson()
+
+        fromLocation = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
+        toLocation = intent.getStringExtra(CustomViewHolder.TO_LOCATION_KEY)
+        priceLocation = intent.getStringExtra(CustomViewHolder.PRICE_KEY)
+        pointsLocation = intent.getStringExtra(CustomViewHolder.MILJO_POENG_KEY)
 
     }
 
@@ -36,9 +49,10 @@ class ChooseTravelActivity : AppCompatActivity() {
 
 
         //RecyclerView_main.adapter = SelectTravelAdapter(location)
+        recyclerView_time_select.adapter = ChooseTravelAdapter(time)
 
         runOnUiThread {
-            RecyclerView_main.adapter =
+            recyclerView_time_select.adapter =
                 SelectTravelAdapter(
                     time
                 )

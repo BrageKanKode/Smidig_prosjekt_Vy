@@ -33,6 +33,10 @@
         <activity
             android:name=".activities.search.PaymentActivity" android:label="@string/payment_label" android:launchMode="singleTop">
         </activity>
+
+        <activity
+            android:name=".activities.trip.ChooseTravelActivity" android:label="@string/payment_label" android:launchMode="singleTop">
+        </activity>
         <activity
             android:name=".activities.search.SelectTravelActivity" android:label="@string/payment_label" android:launchMode="singleTop">
         </activity>

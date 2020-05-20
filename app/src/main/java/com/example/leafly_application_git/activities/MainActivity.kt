@@ -1,9 +1,6 @@
 package com.example.leafly_application_git.activities
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -33,25 +30,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
-    //Does not run with readJson(), need to be fixed.
-
-    /*
-    //FileName
-    val fileName = cacheDir.absolutePath+"/dummydata.json"
-
-    private fun readJSONfromFile(f:String) {
-
-        //Creating a new Gson object to read data
-        var gson = Gson()
-        //Read the PostJSON.json file
-        val bufferedReader: BufferedReader = File(f).bufferedReader()
-        // Read the text from buffferReader and store in String variable
-        val inputString = bufferedReader.use { it.readText() }
-
-        //Convert the Json File to Gson Object
-        var post = gson.fromJson(inputString, Location::class.java)
-
-        }
-     */
 }
