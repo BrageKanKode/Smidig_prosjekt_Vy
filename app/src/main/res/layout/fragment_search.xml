@@ -7,31 +7,29 @@
     tools:context=".fragments.main_page.search.SearchFragment">
 
 
-
     <ImageView
         android:id="@+id/imageView_search_vylogo"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_width="96dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        app:srcCompat="@drawable/ic_vy_logo_final_primary"
+        android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/ic_vy_logo_final_primary" />
 
     <TextView
         android:id="@+id/textView_search_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="God dag, NAVN ETTERNAVN"
+        android:text="God dag, NAVN"
         android:textColor="#000000"
         android:textSize="36sp"
         android:textStyle="bold"
         app:fontFamily="@font/pt_sans"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_search_vylogo"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView_search_vylogo" />
 
 
     <Button
@@ -41,5 +39,13 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <SearchView
+        android:layout_width="378dp"
+        android:layout_height="62dp"
+        android:queryHint="Hvor reiser du fra?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_search_welcome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
