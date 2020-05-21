@@ -50,7 +50,7 @@ class MiljopointsFragment : Fragment() {
 
         //Firebase test
 
-        fetchUser()
+        //fetchUser()
 
 
         //CONNECTED TO MiljopointsViewModel
@@ -93,6 +93,8 @@ class MiljopointsFragment : Fragment() {
             startActivity(intent)
 
             //requireActivity().startActivity(Intent(requireActivity(), SignUpActivity::class.java))
+        } else {
+            fetchUser()
         }
     }
 
@@ -106,9 +108,9 @@ class MiljopointsFragment : Fragment() {
         when(item.itemId){
             R.id.sign_out_menu -> {
                 FirebaseAuth.getInstance().signOut()
-                requireActivity().startActivity(
-                    Intent(requireActivity(), SignUpActivity::class.java)
-                )
+                val intent = Intent(this.context, SignUpActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
 
         }
@@ -118,7 +120,12 @@ class MiljopointsFragment : Fragment() {
     //to update progress bar
     override fun onResume() {
         super.onResume()
-        fetchUser()
+
+        val uid = FirebaseAuth.getInstance().uid
+        if (uid != null){
+            fetchUser()
+
+        }
     }
 
 
@@ -131,7 +138,7 @@ class MiljopointsFragment : Fragment() {
         val menuListener = object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
-                textView_welcome_title.text = "Velkommen, " + user?.username
+                textView_welcome_title.text = user?.username
                 progressbar_point_value.text = user?.balance.toString()
 
                 progressBar.setProgress(user!!.progress)
