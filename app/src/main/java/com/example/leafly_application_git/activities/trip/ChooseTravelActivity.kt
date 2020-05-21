@@ -30,7 +30,7 @@ class ChooseTravelActivity : AppCompatActivity() {
     }
 
 
-    fun fetchJson(from: String, to: String, price: String, points: String) {
+    private fun fetchJson(from: String, to: String, price: String, points: String) {
 
         var json: String? = null
 
