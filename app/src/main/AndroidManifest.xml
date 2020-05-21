@@ -44,6 +44,10 @@
             android:name=".activities.search.TravelDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
         </activity>
 
+        <activity
+            android:name=".activities.trip.TravelDetailActivity" android:label="detaljer" android:launchMode="singleTop">
+        </activity>
+
         <activity android:name=".activities.search.SplashScreenPaymentActivity"
             android:theme="@style/SplashTheme">
         </activity>
