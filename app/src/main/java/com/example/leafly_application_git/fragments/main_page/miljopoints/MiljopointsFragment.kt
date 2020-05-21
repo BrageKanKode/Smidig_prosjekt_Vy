@@ -2,7 +2,6 @@ package com.example.leafly_application_git.fragments.main_page.miljopoints
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -13,12 +12,11 @@ import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
-import com.example.leafly_application_git.storage.MyPreference
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.*
-import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*

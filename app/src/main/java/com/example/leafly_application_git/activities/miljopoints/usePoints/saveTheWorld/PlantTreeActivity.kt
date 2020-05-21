@@ -5,15 +5,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
-import com.example.leafly_application_git.storage.MyPreference
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
 import kotlinx.android.synthetic.main.activity_plant_a_tree.*
-import kotlinx.android.synthetic.main.activity_plant_a_tree.textview_currency_show
 
 class PlantTreeActivity : AppCompatActivity() {
 
@@ -56,15 +53,21 @@ class PlantTreeActivity : AppCompatActivity() {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
                 var progress = user?.progress
+                val treePrice = 50
                 textview_currency_show.text = balance.toString()
 
                 btn_do_plant_tree.setOnClickListener {
-                    balance = balance?.minus(50)
+
+                    if(balance!! > treePrice){
+                    balance = balance?.plus(50)
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
 
                     progress = progress?.minus(1)
                     ref.child("/progress").setValue(progress)
+                    } else {
+                        Toast.makeText(this@PlantTreeActivity, "You need more more money fool", Toast.LENGTH_LONG).show()
+                    }
                 }
 
 
