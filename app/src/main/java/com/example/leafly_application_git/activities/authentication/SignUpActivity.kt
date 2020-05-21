@@ -66,7 +66,7 @@ class SignUpActivity : AppCompatActivity(){
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 
-        val user = User(uid, editText_username_signup.text.toString(), 300)
+        val user = User(uid, editText_username_signup.text.toString(), 300, 0)
 
         ref.setValue(user)
             .addOnSuccessListener {
@@ -101,6 +101,6 @@ class SignUpActivity : AppCompatActivity(){
 }
 
 
-class User(val uid: String, val username: String, val balance: Int){
-    constructor() : this("", "", 0)
+class User(val uid: String, val username: String, val balance: Int, val progress: Int){
+    constructor() : this("", "", 0, 0)
 }

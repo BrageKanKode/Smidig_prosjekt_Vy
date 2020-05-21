@@ -10,8 +10,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.search.SelectTravelActivity
 import com.example.leafly_application_git.activities.search.TravelDetailsActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.view.*
 import org.json.JSONArray
@@ -22,6 +29,8 @@ import java.io.InputStream
 class SearchFragment : Fragment() {
 
     private lateinit var searchViewModel: SearchViewModel
+
+    internal var user: User? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,6 +47,7 @@ class SearchFragment : Fragment() {
 //            textView.text = it
 //        })
 
+        displayUsername()
 
         //Hides actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
@@ -48,6 +58,23 @@ class SearchFragment : Fragment() {
         }
 
         return root
+    }
+
+
+    private fun displayUsername(){
+        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val menuListener = object : ValueEventListener {
+            override fun onDataChange(p0: DataSnapshot) {
+                user = p0.getValue(User::class.java)
+                textView_search_welcome.text = "God dag, " + user?.username
+
+            }
+
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        }
+        ref.addListenerForSingleValueEvent(menuListener)
     }
 
 }
