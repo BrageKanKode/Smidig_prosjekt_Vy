@@ -13,6 +13,9 @@ class ConfirmationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirmation)
 
+        //Shows actionbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         btnToHome.setOnClickListener {
             openNewActivity()

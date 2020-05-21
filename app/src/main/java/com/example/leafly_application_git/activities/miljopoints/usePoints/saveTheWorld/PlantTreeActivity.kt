@@ -20,29 +20,12 @@ class PlantTreeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_plant_a_tree)
 
+        //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         decrementBalance()
 
-//        val mypreference = MyPreference(this)
-//        var currency = mypreference.getCurrency()
-//        var progress = mypreference.getProgress()
 //
-//        textview_currency_show.text = currency.toString()
-//
-//        btn_do_plant_tree.setOnClickListener {
-//
-//            if(currency > 50) {
-//                currency -= 50
-//                progress += 3
-//                mypreference.setCurrency(currency)
-//                textview_currency_show.text = currency.toString()
-//                mypreference.setProgress(progress)
-//            } else {
-//                val toast = Toast.makeText(this, "Not enough currency", Toast.LENGTH_LONG)
-//                toast.show()
-//            }
-//        }
     }
 
 
@@ -58,7 +41,7 @@ class PlantTreeActivity : AppCompatActivity() {
 
                 btn_do_plant_tree.setOnClickListener {
 
-                    if(balance!! > treePrice){
+                    if(balance!! >= treePrice){
                     balance = balance?.minus(50)
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)

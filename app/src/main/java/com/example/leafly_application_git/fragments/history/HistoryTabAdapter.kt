@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 
 class HistoryTabAdapter(fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
 
+    //Chooses what file each tab is connected to
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
@@ -16,6 +17,7 @@ class HistoryTabAdapter(fm: FragmentManager, internal var totalTabs: Int) : Frag
         }
     }
 
+    //Amount of tabs shown
     override fun getCount(): Int {
         return 2
     }

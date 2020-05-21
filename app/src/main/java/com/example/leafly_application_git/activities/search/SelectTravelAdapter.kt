@@ -1,14 +1,12 @@
 package com.example.leafly_application_git.activities.search
 
 import android.content.Intent
-import android.inputmethodservice.Keyboard
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.trip.ChooseTravelActivity
-import com.example.leafly_application_git.activities.trip.ChooseTravelAdapter
 import com.example.leafly_application_git.data.Features
 import com.example.leafly_application_git.data.Json
 import kotlinx.android.synthetic.main.choose_trip_place_row.view.*
@@ -40,6 +38,8 @@ class SelectTravelAdapter (val json: Json): RecyclerView.Adapter<CustomViewHolde
 
 }
 
+
+//Sends information to ChooseTravelActivity
 class CustomViewHolder(val customView: View, var features: Features? = null): RecyclerView.ViewHolder(customView) {
 
     companion object {

@@ -10,6 +10,7 @@ class PointShopActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_point_shop)
 
+        //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
     }

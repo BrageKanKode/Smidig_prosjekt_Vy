@@ -17,6 +17,7 @@ class HistoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
 
+        //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         //------------------Tab layout code-------------------------

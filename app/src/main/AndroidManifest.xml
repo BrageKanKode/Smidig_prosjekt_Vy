@@ -22,6 +22,7 @@
 
 
 
+        <!-- Main page with bottom navigation bar -->
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name" android:launchMode="singleTop">
@@ -30,33 +31,57 @@
             </intent-filter>
         </activity>
 
+        <!-- Payment page -->
         <activity
             android:name=".activities.search.PaymentActivity" android:label="@string/payment_label" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.search.TravelDetailsActivity"/>
         </activity>
 
+
+
+        <!-- Select travel page -->
         <activity
-            android:name=".activities.trip.ChooseTravelActivity" android:label="@string/payment_label" android:launchMode="singleTop">
+            android:name=".activities.search.SelectTravelActivity" android:label="@string/choose_from" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
         </activity>
+
+        <!-- Select travel time page -->
         <activity
-            android:name=".activities.search.SelectTravelActivity" android:label="@string/payment_label" android:launchMode="singleTop">
+            android:name=".activities.trip.ChooseTravelActivity" android:label="@string/choose_time" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.search.PaymentActivity"/>
         </activity>
+
+        <!-- Travel details page -->
         <activity
             android:name=".activities.search.TravelDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.search.PaymentActivity"/>
         </activity>
 
+        <!-- Payment Splashscreen -->
         <activity android:name=".activities.search.SplashScreenPaymentActivity"
             android:theme="@style/SplashTheme">
         </activity>
 
+        <!-- Payment comfirmation -->
         <activity
             android:name=".activities.search.ConfirmationActivity" android:label="@string/finished_purchase_label" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
         </activity>
+
+        <!-- Membership benefits overview -->
         <activity
             android:name=".activities.miljopoints.MembershipBenefitsActivity" android:label="@string/member_benefits_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity"/>
 
         </activity>
+
+        <!-- Use points activity with fragments attatched -->
         <activity
             android:name=".activities.miljopoints.usePoints.UsePointsActivity" android:label="@string/use_points_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
@@ -64,43 +89,50 @@
         </activity>
 
 
+        <!-- Plant a tree page -->
         <activity
             android:name=".activities.miljopoints.usePoints.saveTheWorld.PlantTreeActivity" android:label="@string/plant_a_tree_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.usePoints.UsePointsActivity"/>
         </activity>
+
+        <!-- Clean the ocean page -->
         <activity
             android:name=".activities.miljopoints.usePoints.saveTheWorld.CleanOceanActivity" android:label="@string/clean_the_ocean_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.usePoints.UsePointsActivity"/>
         </activity>
 
+        <!-- Progression details page -->
         <activity
             android:name=".activities.miljopoints.progression.ProgressionActivity" android:label="@string/progression_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity"/>
         </activity>
 
+        <!-- See the tree grow page -->
         <activity
             android:name=".activities.miljopoints.progression.GrowingTreeActivity" android:label="@string/growing_tree_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.progression.ProgressionActivity"/>
         </activity>
 
+        <!-- History activity with fragments attached -->
         <activity
             android:name=".activities.miljopoints.progression.HistoryActivity" android:label="@string/history_label">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.miljopoints.progression.ProgressionActivity"/>
         </activity>
 
+        <!-- Sign up page -->
         <activity android:name=".activities.authentication.SignUpActivity" android:label="Sign Up">
-
         </activity>
 
+        <!-- Log in page -->
         <activity android:name=".activities.authentication.LoginActivity" android:label="Log in">
-
         </activity>
 
+        <!-- QR code page -->
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

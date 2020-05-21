@@ -4,14 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
-import com.example.leafly_application_git.storage.MyPreference
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
-import kotlinx.android.synthetic.main.fragment_miljopoints.*
 
 class CleanOceanActivity : AppCompatActivity() {
 
@@ -21,27 +19,10 @@ class CleanOceanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clean_the_ocean)
 
+        //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         incrementBalance()
-
-
-//        val mypreference = MyPreference(this)
-//        var currency = mypreference.getCurrency()
-//
-//
-//        var progress = mypreference.getProgress()
-//
-//        textview_currency_show.text = currency.toString()
-//
-//
-//        btn_do_clean_ocean.setOnClickListener {
-//            currency += 50
-//            progress += 3
-//            mypreference.setCurrency(currency)
-//            textview_currency_show.text = currency.toString()
-//            mypreference.setProgress(progress)
-//        }
     }
 
 

@@ -12,6 +12,9 @@ class PaymentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
 
+        //Shows actionbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         btnPay.setOnClickListener {
             openNewActivity()
         }

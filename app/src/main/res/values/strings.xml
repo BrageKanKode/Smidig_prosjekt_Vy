@@ -12,6 +12,8 @@
     <!--________________________________Search tab__________________________________-->
     <string name="title_search">Søk</string>
     <string name="payment_label">Betaling</string>
+    <string name="choose_from">Velg reise</string>
+    <string name="choose_time">Velg tidspunkt</string>
     <string name="trip_detail_label">Detaljer om turen</string>
     <string name="finished_purchase_label">Takk for kjøpet!</string>
 

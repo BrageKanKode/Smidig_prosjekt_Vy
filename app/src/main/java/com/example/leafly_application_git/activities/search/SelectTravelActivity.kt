@@ -2,7 +2,6 @@ package com.example.leafly_application_git.activities.search
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
@@ -16,6 +15,9 @@ class SelectTravelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_trip)
+
+        //Shows actionbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         readJson()
 
