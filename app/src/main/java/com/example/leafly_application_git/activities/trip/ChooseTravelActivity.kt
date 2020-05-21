@@ -5,38 +5,32 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.search.CustomViewHolder
-import com.example.leafly_application_git.activities.search.SelectTravelAdapter
 import com.example.leafly_application_git.data.Json
 import com.google.gson.GsonBuilder
-import kotlinx.android.synthetic.main.activity_choose_trip.*
 import kotlinx.android.synthetic.main.activity_select_time.*
 import java.io.InputStream
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class ChooseTravelActivity : AppCompatActivity() {
 
-    var fromLocation: String? = null
-    var toLocation: String? = null
-    var priceLocation: String? = null
-    var pointsLocation: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_select_time)
 
-        fetchJson()
+        val from: String = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
+        val to: String = intent.getStringExtra(CustomViewHolder.TO_LOCATION_KEY)
+        val price: String = intent.getStringExtra(CustomViewHolder.PRICE_KEY)
+        val points: String = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
+        fetchJson(from, to, price, points)
 
         recyclerView_time_select.layoutManager = LinearLayoutManager(this)
-
-        fromLocation = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
-        toLocation = intent.getStringExtra(CustomViewHolder.TO_LOCATION_KEY)
-        priceLocation = intent.getStringExtra(CustomViewHolder.PRICE_KEY)
-        pointsLocation = intent.getStringExtra(CustomViewHolder.MILJO_POENG_KEY)
 
     }
 
 
-    fun fetchJson() {
+    fun fetchJson(from: String, to: String, price: String, points: String) {
 
         var json: String? = null
 
@@ -47,14 +41,13 @@ class ChooseTravelActivity : AppCompatActivity() {
 
         val time = gson.fromJson(json, Json::class.java)
 
-
         //RecyclerView_main.adapter = SelectTravelAdapter(location)
-        recyclerView_time_select.adapter = ChooseTravelAdapter(time)
+        recyclerView_time_select.adapter = ChooseTravelAdapter(time, from,to,price,points)
 
         runOnUiThread {
             recyclerView_time_select.adapter =
                 ChooseTravelAdapter(
-                    time
+                    time, to, from, price, points
                 )
         }
     }

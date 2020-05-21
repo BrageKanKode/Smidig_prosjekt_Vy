@@ -13,12 +13,6 @@ import java.io.InputStream
 
 class SelectTravelActivity : AppCompatActivity() {
 
-    var arrFrom = arrayListOf<String>()
-    var arrTo = arrayListOf<String>()
-    var arrPrice = arrayListOf<String>()
-    var arrPoints = arrayListOf<String>()
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_trip)

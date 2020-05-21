@@ -5,12 +5,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.search.CustomViewHolder
 import com.example.leafly_application_git.data.Json
-import com.example.leafly_application_git.data.Times
 import kotlinx.android.synthetic.main.list_choose_time_row.view.*
 
-class ChooseTravelAdapter (val json: Json): RecyclerView.Adapter<Custom>() {
+class ChooseTravelAdapter (val json: Json, val from: String, val to: String, val price: String, val points: String): RecyclerView.Adapter<Custom>() {
+
+    private val fromData = from;
+    private val toData = to;
+    private val priceData = price;
+    private val pointsData = price;
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Custom {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.list_choose_time_row, parent, false)
@@ -25,10 +29,11 @@ class ChooseTravelAdapter (val json: Json): RecyclerView.Adapter<Custom>() {
     override fun onBindViewHolder(holder: Custom, position: Int) {
 
         val row = json.times.get(position)
-        holder.view.textView_From.text = CustomViewHolder.FROM_LOCATION_KEY
-        holder.view.textView_to.text = CustomViewHolder.TO_LOCATION_KEY
-        holder.view.textView_price.text = CustomViewHolder.PRICE_KEY
-        holder.view.textView_points.text = CustomViewHolder.MILJO_POENG_KEY
+        holder.view.textView_From.text = fromData
+        holder.view.textView_to.text = toData
+        holder.view.textView_price.text = priceData
+        holder.view.textView_points.text = pointsData
+
         holder.view.textView_time_arrival.text = row.arrival
         holder.view.textView_time_departure.text = row.departure
     }
@@ -36,5 +41,12 @@ class ChooseTravelAdapter (val json: Json): RecyclerView.Adapter<Custom>() {
 }
 
 class Custom(val view: View, var json: Json? = null): RecyclerView.ViewHolder(view) {
+
+    init {
+        view.setOnClickListener{
+            //val intent = Intent(view.context, )
+            //Need to add new activity on click for redirect.
+        }
+    }
 
 }
