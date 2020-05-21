@@ -38,8 +38,6 @@
                 android:value=".activities.search.TravelDetailsActivity"/>
         </activity>
 
-
-
         <!-- Select travel page -->
         <activity
             android:name=".activities.search.SelectTravelActivity" android:label="@string/choose_from" android:launchMode="singleTop">
@@ -52,6 +50,13 @@
             android:name=".activities.trip.ChooseTravelActivity" android:label="@string/choose_time" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.search.PaymentActivity"/>
+        </activity>
+
+
+        <activity
+            android:name=".activities.trip.TravelDetailActivity" android:label="detaljer" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.trip.ChooseTravelActivity"/>
         </activity>
 
         <!-- Travel details page -->
