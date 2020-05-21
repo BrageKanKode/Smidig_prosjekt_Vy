@@ -51,12 +51,16 @@ class CleanOceanActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
+                var progress = user?.progress
                 textview_currency_show.text = balance.toString()
 
                 btn_do_clean_ocean.setOnClickListener {
                     balance = balance?.plus(50)
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
+
+                    progress = progress?.plus(3)
+                    ref.child("/progress").setValue(progress)
                 }
 
 

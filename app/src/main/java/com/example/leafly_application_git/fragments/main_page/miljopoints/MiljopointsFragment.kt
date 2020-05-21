@@ -134,6 +134,8 @@ class MiljopointsFragment : Fragment() {
                 textView_welcome_title.text = "Velkommen, " + user?.username
                 progressbar_point_value.text = user?.balance.toString()
 
+                progressBar.setProgress(user!!.progress)
+
             }
 
             override fun onCancelled(p0: DatabaseError) {

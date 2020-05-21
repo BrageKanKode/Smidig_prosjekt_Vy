@@ -55,12 +55,16 @@ class PlantTreeActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
+                var progress = user?.progress
                 textview_currency_show.text = balance.toString()
 
                 btn_do_plant_tree.setOnClickListener {
                     balance = balance?.minus(50)
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
+
+                    progress = progress?.minus(3)
+                    ref.child("/progress").setValue(progress)
                 }
 
 
