@@ -36,8 +36,6 @@ class ProgressionActivity : AppCompatActivity() {
             toHistory()
         }
 
-
-
     }
 
     fun toGrowingTree() {
