@@ -39,16 +39,13 @@ class MiljopointsFragment : Fragment() {
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
+
+        //Checks if user is logged in
         verifyIfUserIsLoggedIn()
 
 
         setHasOptionsMenu(true);
 
-
-
-        //Firebase test
-
-        //fetchUser()
 
 
         //CONNECTED TO MiljopointsViewModel
@@ -83,19 +80,21 @@ class MiljopointsFragment : Fragment() {
         return root
     }
 
+    //Checks with the Firebase Authentication if user is logged in or not
     private fun verifyIfUserIsLoggedIn(){
         val uid = FirebaseAuth.getInstance().uid
+        //If user is not logged in, then launch the signup ativity
         if (uid == null){
             val intent = Intent(this.context, SignUpActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
-
-            //requireActivity().startActivity(Intent(requireActivity(), SignUpActivity::class.java))
+            //If user is logged in, fetch the correct user
         } else {
             fetchUser()
         }
     }
 
+    //Menu button to sign out user
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.auth_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
@@ -115,7 +114,7 @@ class MiljopointsFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    //to update progress bar
+    //to update progress bar and other user details
     override fun onResume() {
         super.onResume()
 
@@ -126,20 +125,24 @@ class MiljopointsFragment : Fragment() {
     }
 
 
+
     fun scanFromFragment() {
         IntentIntegrator.forSupportFragment(this).initiateScan();
     }
 
+    //Function to fetch the correct user from the Firebase Database, also to get the details that is saved within the chosen user
     private fun fetchUser(){
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
+                //To display the username
                 textView_welcome_title.text = user?.username
                 progressbar_point_value.text = user?.balance.toString()
 
                 progressBar.setProgress(user!!.progress)
 
+                //Siple if/else to level up user when certain amount of progress is achieved
                 if (user?.progress!! >= 33){
                     textView_level_points.text = "Spire"
                 }

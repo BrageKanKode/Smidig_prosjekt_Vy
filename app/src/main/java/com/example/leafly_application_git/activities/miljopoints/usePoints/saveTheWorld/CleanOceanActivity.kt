@@ -23,9 +23,12 @@ class CleanOceanActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         incrementBalance()
+
+
     }
 
 
+    //Function to increment the users balance and progress when purchased from Firebase
     private fun incrementBalance(){
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
