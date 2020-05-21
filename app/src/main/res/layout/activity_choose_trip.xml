@@ -18,25 +18,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_vy_logo_final_primary" />
 
-    <Button
-        android:id="@+id/dummyBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView_main"
         android:layout_width="409dp"
         android:layout_height="408dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/dummyBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_view_choose_trip"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_view_choose_trip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

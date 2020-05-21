@@ -23,9 +23,6 @@ class SelectTravelActivity : AppCompatActivity() {
 
         RecyclerView_main.layoutManager = LinearLayoutManager(this)
 
-        dummyBtn.setOnClickListener {
-            openNewActivity()
-        }
     }
 
     fun readJson() {
