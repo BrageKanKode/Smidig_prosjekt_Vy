@@ -59,11 +59,11 @@ class PlantTreeActivity : AppCompatActivity() {
                 btn_do_plant_tree.setOnClickListener {
 
                     if(balance!! > treePrice){
-                    balance = balance?.plus(50)
+                    balance = balance?.minus(50)
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
 
-                    progress = progress?.minus(1)
+                    progress = progress?.plus(1)
                     ref.child("/progress").setValue(progress)
                     } else {
                         Toast.makeText(this@PlantTreeActivity, "You need more more money fool", Toast.LENGTH_LONG).show()

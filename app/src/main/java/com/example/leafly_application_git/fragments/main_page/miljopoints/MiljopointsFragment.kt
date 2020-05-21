@@ -122,7 +122,6 @@ class MiljopointsFragment : Fragment() {
         val uid = FirebaseAuth.getInstance().uid
         if (uid != null){
             fetchUser()
-
         }
     }
 
@@ -132,7 +131,7 @@ class MiljopointsFragment : Fragment() {
     }
 
     private fun fetchUser(){
-        val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)

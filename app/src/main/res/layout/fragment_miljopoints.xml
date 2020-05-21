@@ -253,7 +253,6 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:indeterminate="false"
-                    android:progress="33"
                     android:progressDrawable="@drawable/circle"
                     android:indeterminateDrawable="@drawable/circle"
                     android:rotation="90"
