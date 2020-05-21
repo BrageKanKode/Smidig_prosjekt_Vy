@@ -14,6 +14,7 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
 import kotlinx.android.synthetic.main.activity_progression.*
 import kotlinx.android.synthetic.main.activity_progression.textView_total_collected
+import kotlinx.android.synthetic.main.fragment_miljopoints.*
 
 class ProgressionActivity : AppCompatActivity() {
 
@@ -53,18 +54,6 @@ class ProgressionActivity : AppCompatActivity() {
 
         displayCurrentBalance()
 
-//        val mypreference = MyPreference(this)
-//
-//        val progress = mypreference.getProgress()
-//        val total = mypreference.getTotalCollected()
-//        var currency = mypreference.getCurrency()
-//
-//        textView_progressbar_status.text = progress.toString()
-//
-//        textView_total_collected.text = total.toString()
-//        textView_current_currency.text = currency.toString()
-//
-//        progressBar2.setProgress(progress)
     }
 
 
@@ -76,6 +65,8 @@ class ProgressionActivity : AppCompatActivity() {
                 var balance = user?.balance
                 textView_current_currency.text = balance.toString()
 
+                textView_progressbar_status.text = user?.progress.toString()
+                progressBar2.setProgress(user!!.progress)
             }
 
             override fun onCancelled(p0: DatabaseError) {
