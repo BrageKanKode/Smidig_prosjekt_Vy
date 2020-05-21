@@ -101,4 +101,6 @@ class SignUpActivity : AppCompatActivity(){
 }
 
 
-class User(val uid: String, val username: String, val balance: Int)
+class User(val uid: String, val username: String, val balance: Int){
+    constructor() : this("", "", 0)
+}

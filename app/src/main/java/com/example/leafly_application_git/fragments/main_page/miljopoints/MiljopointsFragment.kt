@@ -2,17 +2,23 @@ package com.example.leafly_application_git.fragments.main_page.miljopoints
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.SignUpActivity
+import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.example.leafly_application_git.storage.MyPreference
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
+import com.google.firebase.ktx.Firebase
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
@@ -22,6 +28,7 @@ class MiljopointsFragment : Fragment() {
 
     private lateinit var miljopointsViewModel: MiljopointsViewModel
 
+    internal var user: User? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -42,6 +49,8 @@ class MiljopointsFragment : Fragment() {
 
 
         //Firebase test
+
+        fetchUser()
 
 
         //CONNECTED TO MiljopointsViewModel
@@ -109,19 +118,29 @@ class MiljopointsFragment : Fragment() {
     //to update progress bar
     override fun onResume() {
         super.onResume()
-        val mypreference = MyPreference(context!!.applicationContext)
-
-        val progress = mypreference.getProgress()
-        val currency = mypreference.getCurrency()
-
-        progressbar_point_value.text = currency.toString()
-
-        progressBar.setProgress(progress)
+        fetchUser()
     }
 
 
     fun scanFromFragment() {
         IntentIntegrator.forSupportFragment(this).initiateScan();
+    }
+
+    private fun fetchUser(){
+        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val menuListener = object : ValueEventListener{
+            override fun onDataChange(p0: DataSnapshot) {
+                user = p0.getValue(User::class.java)
+                textView_welcome_title.text = "Velkommen, " + user?.username
+                progressbar_point_value.text = user?.balance.toString()
+
+            }
+
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        }
+        ref.addListenerForSingleValueEvent(menuListener)
     }
 
 
