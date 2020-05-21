@@ -18,19 +18,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_vy_logo_final_primary" />
 
+
     <TextView
         android:id="@+id/textView_search_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="God dag, NAVN"
+        android:layout_marginTop="8dp"
         android:textColor="#000000"
-        android:textSize="36sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:fontFamily="@font/pt_sans"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_search_vylogo" />
-
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <Button
         android:id="@+id/btnVidere"
@@ -40,12 +39,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <SearchView
-        android:layout_width="378dp"
-        android:layout_height="62dp"
-        android:queryHint="Hvor reiser du fra?"
-        app:layout_constraintEnd_toEndOf="parent"
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="God dag"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_search_welcome" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_search_vylogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

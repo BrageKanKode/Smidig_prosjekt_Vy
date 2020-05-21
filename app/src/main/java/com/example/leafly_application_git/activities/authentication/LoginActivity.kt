@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.MainActivity
@@ -36,7 +37,8 @@ class LoginActivity: AppCompatActivity() {
                     startActivity(intent)
                 }
                 .addOnFailureListener{
-                    Log.d("Login", "Failed to create user: ${it.message}")
+                    Log.d("Login", "Failed to login user: ${it.message}")
+                    Toast.makeText(this, "Failed to login user: ${it.message}", Toast.LENGTH_SHORT).show()
                 }
         }
 

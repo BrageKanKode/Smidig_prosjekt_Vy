@@ -49,6 +49,12 @@ class SearchFragment : Fragment() {
 
         //displayUsername()
 
+
+        val uid = FirebaseAuth.getInstance().uid
+        if (uid != null){
+            displayUsername()
+        }
+
         //Hides actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         root.btnVidere.setOnClickListener {
@@ -61,21 +67,21 @@ class SearchFragment : Fragment() {
     }
 
 
-//    private fun displayUsername(){
-//        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
-//        val menuListener = object : ValueEventListener {
-//            override fun onDataChange(p0: DataSnapshot) {
-//                user = p0.getValue(User::class.java)
-//                textView_search_welcome.text = "God dag, " + user?.username
-//
-//            }
-//
-//            override fun onCancelled(p0: DatabaseError) {
-//                TODO("Not yet implemented")
-//            }
-//        }
-//        ref.addListenerForSingleValueEvent(menuListener)
-//    }
+    private fun displayUsername(){
+        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val menuListener = object : ValueEventListener {
+            override fun onDataChange(p0: DataSnapshot) {
+                user = p0.getValue(User::class.java)
+                textView_search_welcome.text = user?.username
+
+            }
+
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        }
+        ref.addListenerForSingleValueEvent(menuListener)
+    }
 
 }
 
