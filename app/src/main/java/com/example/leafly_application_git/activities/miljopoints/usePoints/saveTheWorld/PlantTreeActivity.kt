@@ -63,7 +63,7 @@ class PlantTreeActivity : AppCompatActivity() {
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
 
-                    progress = progress?.minus(3)
+                    progress = progress?.minus(1)
                     ref.child("/progress").setValue(progress)
                 }
 

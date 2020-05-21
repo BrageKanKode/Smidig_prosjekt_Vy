@@ -61,10 +61,12 @@ class ProgressionActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
+
                 textView_current_currency.text = balance.toString()
 
                 textView_progressbar_status.text = user?.progress.toString()
                 progressBar2.setProgress(user!!.progress)
+
             }
 
             override fun onCancelled(p0: DatabaseError) {

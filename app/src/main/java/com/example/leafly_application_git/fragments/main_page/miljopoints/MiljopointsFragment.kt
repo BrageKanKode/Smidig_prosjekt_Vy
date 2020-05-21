@@ -134,7 +134,7 @@ class MiljopointsFragment : Fragment() {
     }
 
     private fun fetchUser(){
-        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
@@ -142,6 +142,15 @@ class MiljopointsFragment : Fragment() {
                 progressbar_point_value.text = user?.balance.toString()
 
                 progressBar.setProgress(user!!.progress)
+
+                if (user?.progress!! >= 33){
+                    textView_level_points.text = "Spire"
+                }
+
+                if (user?.progress!! >= 66){
+                    textView_level_points.text = "Tre"
+                }
+
 
             }
 

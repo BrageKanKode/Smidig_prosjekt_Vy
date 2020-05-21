@@ -59,8 +59,9 @@ class CleanOceanActivity : AppCompatActivity() {
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
 
-                    progress = progress?.plus(3)
+                    progress = progress?.plus(1)
                     ref.child("/progress").setValue(progress)
+
                 }
 
 

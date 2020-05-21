@@ -224,7 +224,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/textView_level_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
