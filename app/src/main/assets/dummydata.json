@@ -26,8 +26,8 @@
   "times": [
     {
       "nr": "1",
-      "departure": "1234",
-      "arrival": "2345"
+      "departure": "12:34",
+      "arrival": "23:45"
     },
     {
       "nr": "2",
