@@ -13,7 +13,7 @@ import com.example.leafly_application_git.activities.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_signup.*
-import java.lang.reflect.Array
+import java.util.HashMap
 
 
 class SignUpActivity : AppCompatActivity(){
@@ -76,7 +76,7 @@ class SignUpActivity : AppCompatActivity(){
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 
         //Setting what should be saved under user table in database -- id, username, balance and progress
-        val user = User(uid, editText_username_signup.text.toString(), 300, 0, null, null)
+        val user = User(uid, editText_username_signup.text.toString(), 300, 0)
 
         ref.setValue(user)
             .addOnSuccessListener {
@@ -113,6 +113,6 @@ class SignUpActivity : AppCompatActivity(){
 
 
 //User class that connects user to firebase database
-class User(val uid: String, val username: String, val balance: Int, val progress: Int, val usedHistory: Array?, val earnedHistory: Array?){
-    constructor() : this("", "", 0, 0, null, null)
+class User(val uid: String, val username: String, val balance: Int, val progress: Int){
+    constructor() : this("", "", 0, 0)
 }

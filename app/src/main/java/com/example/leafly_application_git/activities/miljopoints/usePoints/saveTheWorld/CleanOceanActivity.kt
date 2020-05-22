@@ -36,6 +36,7 @@ class CleanOceanActivity : AppCompatActivity() {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
                 var progress = user?.progress
+                var usedHistory = "Kjøpt 1L av vannrensing"
                 textview_currency_show.text = balance.toString()
 
                 btn_do_clean_ocean.setOnClickListener {
@@ -45,6 +46,9 @@ class CleanOceanActivity : AppCompatActivity() {
 
                     progress = progress?.plus(1)
                     ref.child("/progress").setValue(progress)
+
+                    var refUsedHistory = ref.child("/usedHistory")
+                    refUsedHistory.push().setValue(usedHistory)
 
                 }
 
