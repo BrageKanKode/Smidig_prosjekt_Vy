@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.fragment_used_points.*
 
 class UsedPointsFragment : Fragment() {
 
@@ -36,11 +37,19 @@ class UsedPointsFragment : Fragment() {
 
 
     private fun displayPurchases(){
-        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid).child("/usedHistory")
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
 
+
+                val newRef = ref.child("/usedHistory")
+                p0.key
+                Log.d("Tag", p0.ref.child("/usedHistory").toString())
+                Log.d("Tag", p0.getValue().toString())
+
+
+                textView_display_ocean.text = p0.getValue().toString()
 
 //                val snapshotIterator: Iterable<DataSnapshot> = p0.getChildren()
 //                val iterator = snapshotIterator.iterator()
