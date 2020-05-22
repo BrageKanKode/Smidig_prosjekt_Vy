@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.search.payment
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -27,12 +28,13 @@ class ConfirmationAdapter (
         return 1
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewConfirmation, position: Int) {
 
-        holder.view.textView_confirmation_from.text = departure
-        holder.view.textView_confirmation_to.text = arrival
-        holder.view.textView_confirmation_departure_time.text = departureTime
-        holder.view.textView_confirmation_price.text = price
+        holder.view.textView_confirmation_from.text = "Fra $departure til $arrival"
+        holder.view.textView_confirmation_departure_time.text = "I dag, $departureTime"
+        holder.view.textView_confirmation_price1.text = "$price,-"
+        holder.view.textView_confirmation_price2.text = "$price ,-"
         holder.view.textView_confirmation_points.text = points
     }
 

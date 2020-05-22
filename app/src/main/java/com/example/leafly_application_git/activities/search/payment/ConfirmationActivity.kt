@@ -4,14 +4,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
-import kotlinx.android.synthetic.main.activity_select_time.*
+import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class ConfirmationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select_time)
+        setContentView(R.layout.activity_confirmation_recycler)
 
         //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -23,7 +23,7 @@ class ConfirmationActivity : AppCompatActivity() {
         val points: String = intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)
         dataPassClass(departure ,arrival ,departureTime ,price ,points)
 
-        recyclerView_time_select.layoutManager = LinearLayoutManager(this)
+        recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
     }
 
     private fun dataPassClass(departure: String,
@@ -32,10 +32,10 @@ class ConfirmationActivity : AppCompatActivity() {
                               price: String,
                               points: String){
 
-        recyclerView_time_select.adapter = ConfirmationAdapter(departure, arrival, departureTime, price, points)
+        recycler_view_confirmation.adapter = ConfirmationAdapter(departure, arrival, departureTime, price, points)
 
         runOnUiThread{
-            recyclerView_time_select.adapter =
+            recycler_view_confirmation.adapter =
                 ConfirmationAdapter(departure, arrival, departureTime, price, points)
         }
     }
