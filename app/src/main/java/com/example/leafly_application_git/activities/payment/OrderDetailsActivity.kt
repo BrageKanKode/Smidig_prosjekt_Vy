@@ -7,7 +7,7 @@ import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.search.PaymentActivity
 import kotlinx.android.synthetic.main.activity_travel_order_details.*
 
-class TravelDetailsActivity : AppCompatActivity() {
+class OrderDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?)  {
         super.onCreate(savedInstanceState)

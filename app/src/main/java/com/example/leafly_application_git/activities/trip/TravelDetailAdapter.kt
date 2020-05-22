@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.payment.TravelDetailsActivity
+import com.example.leafly_application_git.activities.payment.OrderDetailsActivity
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
 
 class TravelDetailAdapter(
@@ -71,7 +71,7 @@ class ViewTravelDetails(val view: View,
         view.button_til_bestilling.setOnClickListener{
 
 
-            val intent = Intent(view.context, TravelDetailsActivity:: class.java)
+            val intent = Intent(view.context, OrderDetailsActivity:: class.java)
 
             intent.putExtra(DEPARTURE_KEY,departure)
             intent.putExtra(ARRIVAL_KEY, arrival)

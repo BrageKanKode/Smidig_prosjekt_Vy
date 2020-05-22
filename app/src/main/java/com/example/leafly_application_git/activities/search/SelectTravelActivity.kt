@@ -1,11 +1,9 @@
 package com.example.leafly_application_git.activities.search
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.payment.TravelDetailsActivity
 import com.example.leafly_application_git.data.Json
 import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_choose_trip.*
@@ -26,7 +24,7 @@ class SelectTravelActivity : AppCompatActivity() {
 
     }
 
-    fun readJson() {
+    private fun readJson() {
 
         var json: String? = null
 
@@ -47,12 +45,6 @@ class SelectTravelActivity : AppCompatActivity() {
                 )
         }
 
-    }
-
-
-    fun openNewActivity() {
-        val intent = Intent(this, TravelDetailsActivity::class.java)
-        startActivity(intent)
     }
 }
 
