@@ -9,14 +9,14 @@ import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.trip.ChooseTravelActivity
 import com.example.leafly_application_git.data.Features
 import com.example.leafly_application_git.data.Json
-import kotlinx.android.synthetic.main.choose_trip_place_row.view.*
+import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
 
 class SelectTravelAdapter (val json: Json): RecyclerView.Adapter<CustomViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val customView = layoutInflater.inflate(R.layout.choose_trip_place_row, parent, false)
+        val customView = layoutInflater.inflate(R.layout.list_choose_trip_place_row, parent, false)
 
         return CustomViewHolder(customView)
     }
