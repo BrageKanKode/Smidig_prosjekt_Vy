@@ -34,6 +34,7 @@
     <string name="voksen">Voksen</string>
     <string name="ticket_icon">ticket icon</string>
     <string name="leaf_image">leafe image</string>
+    <string name="checkicon">checkicon</string>
 
     <!--________________________________MiljoPoints_________________________________-->
     <string name="title_miljopoints">Miljøpoeng</string>
