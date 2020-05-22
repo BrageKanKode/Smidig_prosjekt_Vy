@@ -37,19 +37,20 @@ class UsedPointsFragment : Fragment() {
 
 
     private fun displayPurchases(){
-        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid).child("/usedHistory")
+        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid).child("/usedHistory/")
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
 
 
                 val newRef = ref.child("/usedHistory")
-                p0.key
                 Log.d("Tag", p0.ref.child("/usedHistory").toString())
-                Log.d("Tag", p0.getValue().toString())
+                Log.d("Tag", p0.value.toString())
 
 
-                textView_display_ocean.text = p0.getValue().toString()
+                textView_display_ocean.text = p0.value.toString()
+
+
 
 //                val snapshotIterator: Iterable<DataSnapshot> = p0.getChildren()
 //                val iterator = snapshotIterator.iterator()

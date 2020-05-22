@@ -39,15 +39,18 @@ class PlantTreeActivity : AppCompatActivity() {
                 var balance = user?.balance
                 var progress = user?.progress
                 val treePrice = 50
+                var usedHistory = "Du har reddet et tre!"
                 textview_currency_show.text = balance.toString()
 
                 btn_do_plant_tree.setOnClickListener {
 
-                    if(balance!! >= treePrice){
-                    balance = balance?.minus(50)
-                    textview_currency_show.text = balance.toString()
-                    ref.child("/balance").setValue(balance)
+                    if (balance!! >= treePrice) {
+                        balance = balance?.minus(50)
+                        textview_currency_show.text = balance.toString()
+                        ref.child("/balance").setValue(balance)
 
+                        var refUsedHistory = ref.child("/usedHistory")
+                        refUsedHistory.push().setValue(usedHistory)
 
                         progress = progress?.plus(1)
                         ref.child("/progress").setValue(progress)
