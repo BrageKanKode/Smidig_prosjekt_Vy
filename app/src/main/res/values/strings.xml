@@ -29,6 +29,11 @@
     <string name="trips_avbestilte_reiser">Avbestilte reiser</string>
     <string name="trip_title_info">Her vil du finne dine reiser og biletter</string>
     <string name="ingen_reiser">Du har ikke kjøpt noen billetter enda</string>
+    <string name="total_pris">Totalpris</string>
+    <string name="points_achieved">Miljøpoeng oppnåd:</string>
+    <string name="voksen">Voksen</string>
+    <string name="ticket_icon">ticket icon</string>
+    <string name="leaf_image">leafe image</string>
 
     <!--________________________________MiljoPoints_________________________________-->
     <string name="title_miljopoints">Miljøpoeng</string>
