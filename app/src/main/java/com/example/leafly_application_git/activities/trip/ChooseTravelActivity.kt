@@ -22,7 +22,7 @@ class ChooseTravelActivity : AppCompatActivity() {
         val from: String = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
         val to: String = intent.getStringExtra(CustomViewHolder.TO_LOCATION_KEY)
         val price: String = intent.getStringExtra(CustomViewHolder.PRICE_KEY)
-        val points: String = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
+        val points: String = intent.getStringExtra(CustomViewHolder.MILJO_POENG_KEY)
         fetchJson(from, to, price, points)
 
         recyclerView_time_select.layoutManager = LinearLayoutManager(this)

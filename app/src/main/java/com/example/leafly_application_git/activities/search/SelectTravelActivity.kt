@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.activities.payment.TravelDetailsActivity
 import com.example.leafly_application_git.data.Json
 import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_choose_trip.*

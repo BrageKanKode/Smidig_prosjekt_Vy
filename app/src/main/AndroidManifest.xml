@@ -35,7 +35,7 @@
         <activity
             android:name=".activities.search.PaymentActivity" android:label="@string/payment_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.search.TravelDetailsActivity"/>
+                android:value=".activities.payment.TravelDetailsActivity"/>
         </activity>
 
         <!-- Select travel page -->
@@ -62,7 +62,7 @@
 
         <!-- Travel details page -->
         <activity
-            android:name=".activities.search.TravelDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
+            android:name=".activities.payment.TravelDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.search.PaymentActivity"/>
         </activity>
@@ -74,7 +74,7 @@
 
         <!-- Payment comfirmation -->
         <activity
-            android:name=".activities.search.ConfirmationActivity" android:label="@string/finished_purchase_label" android:launchMode="singleTop">
+            android:name=".activities.payment.ConfirmationActivity" android:label="@string/finished_purchase_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity"/>
         </activity>

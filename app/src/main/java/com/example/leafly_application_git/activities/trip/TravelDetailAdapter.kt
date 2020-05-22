@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.search.TravelDetailsActivity
+import com.example.leafly_application_git.activities.payment.TravelDetailsActivity
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
 
 class TravelDetailAdapter(
