@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.activities.payment
+package com.example.leafly_application_git.activities.search.payment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

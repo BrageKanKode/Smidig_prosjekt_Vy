@@ -31,12 +31,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Payment page -->
-        <activity
-            android:name=".activities.search.PaymentActivity" android:label="@string/payment_label" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.payment.OrderDetailsActivity"/>
-        </activity>
+
 
         <!-- Select travel page -->
         <activity
@@ -47,34 +42,36 @@
 
         <!-- Select travel time page -->
         <activity
-            android:name=".activities.trip.ChooseTravelActivity" android:label="@string/choose_time" android:launchMode="singleTop">
+            android:name="com.example.leafly_application_git.activities.search.trip.SelectTimeActivity" android:label="@string/choose_time" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.search.PaymentActivity"/>
+                android:value=".activities.search.SelectTravelActivity"/>
+
         </activity>
 
 
         <!-- Travel details page -->
         <activity
-            android:name=".activities.trip.TravelDetailActivity" android:label="detaljer" android:launchMode="singleTop">
+            android:name="com.example.leafly_application_git.activities.search.trip.TravelDetailActivity" android:label="@string/title_travel_details" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.trip.ChooseTravelActivity"/>
+                android:value="com.example.leafly_application_git.activities.search.trip.SelectTimeActivity"/>
         </activity>
 
-        <!-- Travel details page -->
+        <!-- Payment page -->
         <activity
-            android:name=".activities.payment.OrderDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
+            android:name="com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity" android:label="@string/order_detail_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.search.PaymentActivity"/>
+                android:value="com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity"/>
+
         </activity>
 
         <!-- Payment Splashscreen -->
-        <activity android:name=".activities.payment.SplashScreenPaymentActivity"
+        <activity android:name="com.example.leafly_application_git.activities.search.payment.SplashScreenPaymentActivity"
             android:theme="@style/SplashTheme">
         </activity>
 
         <!-- Payment comfirmation -->
         <activity
-            android:name=".activities.payment.ConfirmationActivity" android:label="@string/finished_purchase_label" android:launchMode="singleTop">
+            android:name="com.example.leafly_application_git.activities.search.payment.ConfirmationActivity" android:label="@string/finished_purchase_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity"/>
         </activity>

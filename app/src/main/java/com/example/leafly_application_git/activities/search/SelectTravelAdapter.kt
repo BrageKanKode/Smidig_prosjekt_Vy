@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.trip.ChooseTravelActivity
+import com.example.leafly_application_git.activities.search.trip.SelectTimeActivity
 import com.example.leafly_application_git.data.Features
 import com.example.leafly_application_git.data.Json
 import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
@@ -52,7 +52,7 @@ class CustomViewHolder(val customView: View, var features: Features? = null): Re
     init {
         customView.setOnClickListener{
 
-            val intent = Intent(customView.context, ChooseTravelActivity::class.java)
+            val intent = Intent(customView.context, SelectTimeActivity::class.java)
 
             intent.putExtra(FROM_LOCATION_KEY, features?.fronLocation)
             intent.putExtra(TO_LOCATION_KEY, features?.toLocation)

@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.activities.trip
+package com.example.leafly_application_git.activities.search.trip
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_select_time.*
 import java.io.InputStream
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
-class ChooseTravelActivity : AppCompatActivity() {
+class SelectTimeActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

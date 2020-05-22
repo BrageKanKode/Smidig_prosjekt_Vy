@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.activities.trip
+package com.example.leafly_application_git.activities.search.trip
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

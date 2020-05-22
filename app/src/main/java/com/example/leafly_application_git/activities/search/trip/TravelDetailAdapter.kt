@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.activities.trip
+package com.example.leafly_application_git.activities.search.trip
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.payment.OrderDetailsActivity
+import com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
 
 class TravelDetailAdapter(
