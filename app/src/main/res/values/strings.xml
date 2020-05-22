@@ -16,6 +16,8 @@
     <string name="choose_time">Velg tidspunkt</string>
     <string name="trip_detail_label">Detaljer om turen</string>
     <string name="finished_purchase_label">Takk for kjøpet!</string>
+    <string name="choose_trips_points_overview">Du oppnår </string>
+    <string name="choose_trips_points_overview2"> miljøpoeng poeng av denne reisen </string>
 
 
     <!--________________________________Your travels________________________________-->
