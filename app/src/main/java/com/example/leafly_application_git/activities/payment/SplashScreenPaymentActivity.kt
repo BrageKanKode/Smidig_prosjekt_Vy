@@ -1,11 +1,10 @@
-package com.example.leafly_application_git.activities.search
+package com.example.leafly_application_git.activities.payment
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.payment.ConfirmationActivity
 
 class SplashScreenPaymentActivity : AppCompatActivity() {
 

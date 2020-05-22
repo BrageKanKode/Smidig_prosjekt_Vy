@@ -68,7 +68,7 @@
         </activity>
 
         <!-- Payment Splashscreen -->
-        <activity android:name=".activities.search.SplashScreenPaymentActivity"
+        <activity android:name=".activities.payment.SplashScreenPaymentActivity"
             android:theme="@style/SplashTheme">
         </activity>
 
