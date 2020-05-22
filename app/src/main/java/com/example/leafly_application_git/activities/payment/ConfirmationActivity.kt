@@ -1,29 +1,42 @@
 package com.example.leafly_application_git.activities.payment
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.MainActivity
-import kotlinx.android.synthetic.main.activity_confirmation.*
+import kotlinx.android.synthetic.main.activity_select_time.*
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class ConfirmationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_confirmation)
+        setContentView(R.layout.activity_select_time)
 
         //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        val departure: String = intent.getStringExtra(SplashScreenPaymentActivity.FROM_KEY)
+        val arrival: String = intent.getStringExtra(SplashScreenPaymentActivity.TO_KEY)
+        val departureTime: String = intent.getStringExtra(SplashScreenPaymentActivity.DEPARTURE_TIME_KEY)
+        val price: String = intent.getStringExtra(SplashScreenPaymentActivity.PRICE_KEY)
+        val points: String = intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)
+        dataPassClass(departure ,arrival ,departureTime ,price ,points)
 
-        btnToHome.setOnClickListener {
-            openNewActivity()
-        }
+        recyclerView_time_select.layoutManager = LinearLayoutManager(this)
     }
 
-    fun openNewActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+    private fun dataPassClass(departure: String,
+                              arrival: String,
+                              departureTime: String,
+                              price: String,
+                              points: String){
+
+        recyclerView_time_select.adapter = ConfirmationAdapter(departure, arrival, departureTime, price, points)
+
+        runOnUiThread{
+            recyclerView_time_select.adapter =
+                ConfirmationAdapter(departure, arrival, departureTime, price, points)
+        }
     }
 }

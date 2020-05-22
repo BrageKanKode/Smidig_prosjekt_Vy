@@ -69,6 +69,7 @@ class ViewOrderDetails(
             intent.putExtra(DETAILS_PRICE_KEY, price)
             intent.putExtra(DETAILS_POINTS_KEY, points)
 
+
             view.context.startActivity(intent)
         }
     }

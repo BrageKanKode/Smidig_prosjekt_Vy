@@ -11,7 +11,7 @@ import com.example.leafly_application_git.data.Features
 import com.example.leafly_application_git.data.Json
 import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
 
-class SelectTravelAdapter (val json: Json): RecyclerView.Adapter<CustomViewHolder>() {
+class SelectTravelAdapter (private val json: Json): RecyclerView.Adapter<CustomViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
@@ -27,7 +27,7 @@ class SelectTravelAdapter (val json: Json): RecyclerView.Adapter<CustomViewHolde
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
 
-        val value = json.features.get(position)
+        val value = json.features[position]
         holder.customView.textView_choose_trip_from?.text = value.fronLocation
         holder.customView.textView_choose_trip_to?.text = value.toLocation
         holder.customView.textView_choose_trip_price?.text = value.price
@@ -43,10 +43,10 @@ class SelectTravelAdapter (val json: Json): RecyclerView.Adapter<CustomViewHolde
 class CustomViewHolder(val customView: View, var features: Features? = null): RecyclerView.ViewHolder(customView) {
 
     companion object {
-        val FROM_LOCATION_KEY = "FROM_LOCATION_KEY"
-        val TO_LOCATION_KEY = "TO_LOCATION"
-        val PRICE_KEY = "PRICE"
-        val MILJO_POENG_KEY = "MILJOPOENG"
+        const val FROM_LOCATION_KEY = "FROM_LOCATION_KEY"
+        const val TO_LOCATION_KEY = "TO_LOCATION"
+        const val PRICE_KEY = "PRICE"
+        const val MILJO_POENG_KEY = "MILJOPOENG"
     }
 
     init {

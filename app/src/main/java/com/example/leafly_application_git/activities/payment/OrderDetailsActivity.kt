@@ -1,14 +1,11 @@
 package com.example.leafly_application_git.activities.payment
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.search.PaymentActivity
 import com.example.leafly_application_git.activities.trip.ViewTravelDetails
 import kotlinx.android.synthetic.main.activity_select_time.*
-import kotlinx.android.synthetic.main.activity_travel_order_details.*
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class OrderDetailsActivity : AppCompatActivity() {

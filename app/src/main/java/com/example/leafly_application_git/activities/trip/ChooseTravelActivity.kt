@@ -32,7 +32,7 @@ class ChooseTravelActivity : AppCompatActivity() {
 
     private fun fetchJson(from: String, to: String, price: String, points: String) {
 
-        var json: String? = null
+        val json: String?
 
         val inputStream : InputStream? = assets.open("dummydata.json")
         val gson = GsonBuilder().create()
