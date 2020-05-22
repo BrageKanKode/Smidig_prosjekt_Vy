@@ -35,7 +35,7 @@
         <activity
             android:name=".activities.search.PaymentActivity" android:label="@string/payment_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.payment.TravelDetailsActivity"/>
+                android:value=".activities.payment.OrderDetailsActivity"/>
         </activity>
 
         <!-- Select travel page -->
@@ -62,13 +62,13 @@
 
         <!-- Travel details page -->
         <activity
-            android:name=".activities.payment.TravelDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
+            android:name=".activities.payment.OrderDetailsActivity" android:label="@string/trip_detail_label" android:launchMode="singleTop">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.search.PaymentActivity"/>
         </activity>
 
         <!-- Payment Splashscreen -->
-        <activity android:name=".activities.search.SplashScreenPaymentActivity"
+        <activity android:name=".activities.payment.SplashScreenPaymentActivity"
             android:theme="@style/SplashTheme">
         </activity>
 
