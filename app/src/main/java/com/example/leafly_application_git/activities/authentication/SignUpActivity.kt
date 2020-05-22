@@ -22,11 +22,12 @@ class SignUpActivity : AppCompatActivity(){
         setContentView(R.layout.activity_signup)
 
 
+        //Button to register a new user, calls on performRegister
         button_register.setOnClickListener {
             performRegister()
         }
 
-
+        //Button to redirect to Login page
         textView_already_have_account.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
@@ -34,6 +35,7 @@ class SignUpActivity : AppCompatActivity(){
     }
 
 
+    //Function to register new user to Firebase, and authenticate their details
     private fun performRegister(){
         Log.d("Register", "Register")
 
@@ -45,6 +47,7 @@ class SignUpActivity : AppCompatActivity(){
         }
 
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+                //Checks if registration is complete
             .addOnCompleteListener{
                 if(!it.isSuccessful) return@addOnCompleteListener
 
@@ -53,19 +56,25 @@ class SignUpActivity : AppCompatActivity(){
                 Log.d("Signup", "Successfully logged in created user with uid: ${it.result?.user?.uid}")
 
             }
+
+                //Checks if registration was success and the calls on a method to save the given user to the Firebase database
             .addOnSuccessListener {
                 saveUserToFirebaseDatabase()
             }
+
+                //Checks if registration fails
             .addOnFailureListener{
                 Log.d("Signup", "Failed to create user: ${it.message}")
                 Toast.makeText(this, "Failed to create user: ${it.message}", Toast.LENGTH_SHORT).show()
             }
     }
 
+    //Function to save user to Firebase database
     private fun saveUserToFirebaseDatabase(){
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 
+        //Setting what should be saved under user table in database -- id, username, balance and progress
         val user = User(uid, editText_username_signup.text.toString(), 300, 0)
 
         ref.setValue(user)
@@ -79,6 +88,7 @@ class SignUpActivity : AppCompatActivity(){
     }
 
 
+    //Options menu that redirects you to home menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.home_menu, menu)
@@ -101,6 +111,7 @@ class SignUpActivity : AppCompatActivity(){
 }
 
 
+//User class that connects user to firebase database
 class User(val uid: String, val username: String, val balance: Int, val progress: Int){
     constructor() : this("", "", 0, 0)
 }

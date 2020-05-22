@@ -29,8 +29,10 @@ class PlantTreeActivity : AppCompatActivity() {
     }
 
 
-    private fun decrementBalance(){
-        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+    //Function to decrement balance and increment progress when purchased from Firebase
+    private fun decrementBalance() {
+        var ref = FirebaseDatabase.getInstance().getReference("/users")
+            .child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
@@ -46,10 +48,15 @@ class PlantTreeActivity : AppCompatActivity() {
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
 
-                    progress = progress?.plus(1)
-                    ref.child("/progress").setValue(progress)
+
+                        progress = progress?.plus(1)
+                        ref.child("/progress").setValue(progress)
                     } else {
-                        Toast.makeText(this@PlantTreeActivity, "You need more more money fool", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            this@PlantTreeActivity,
+                            "You need more more money fool",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 }
 

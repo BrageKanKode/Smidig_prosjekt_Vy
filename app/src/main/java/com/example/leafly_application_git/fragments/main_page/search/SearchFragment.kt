@@ -41,9 +41,9 @@ class SearchFragment : Fragment() {
 //            textView.text = it
 //        })
 
-        //displayUsername()
 
 
+        //If user is logged in, display username in search fragment
         val uid = FirebaseAuth.getInstance().uid
         if (uid != null){
             displayUsername()

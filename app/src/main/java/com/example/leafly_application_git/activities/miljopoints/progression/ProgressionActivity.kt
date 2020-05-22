@@ -50,6 +50,7 @@ class ProgressionActivity : AppCompatActivity() {
     }
 
 
+    //Displays users balance and progress from firebase
     //Gets data from firebase
     private fun displayCurrentBalance(){
         val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
@@ -66,7 +67,6 @@ class ProgressionActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
             }
         }
         ref.addListenerForSingleValueEvent(menuListener)
