@@ -72,13 +72,27 @@
     <string name="netflix_title">Netflix abbonement</string>
     <string name="dplay_title">Dplay abbonement</string>
     <string name="odeon_title">Kinobiletter</string>
-    <string name="videre">Gå videre</string>
     <string name="til_betaling">Fullfør betaling</string>
     <string name="confirmation_message">Takk for kjøpet!</string>
     <string name="hjem">Hjem</string>
     <string name="rectangle">rectangle</string>
     <string name="enviorment_points">Miljøpoeng</string>
     <string name="vipps_logo_option">Vipps logo option</string>
+    <string name="traing_point_svg">traing point svg</string>
+    <string name="end_point_svg">End Point svg</string>
+    <string name="line_logo_svg">line logo svg</string>
+    <string name="wifi_svg">wifi svg</string>
+    <string name="accesabillity_svg">accesabillity svg</string>
+    <string name="silent_vagon_svg">silent vagon svg</string>
+    <string name="food_and_drinks_svg">food and drinks svg</string>
+    <string name="arrival">arrival</string>
+    <string name="departure">departure</string>
+    <string name="departure_time">departure time</string>
+    <string name="arrival_time">arrival time</string>
+    <string name="_1_voksen">1 Voksen</string>
+    <string name="price">price</string>
+    <string name="videre">Gå videre</string>
+    <string name="points">points</string>
 
 
 </resources>

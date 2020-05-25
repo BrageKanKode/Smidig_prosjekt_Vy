@@ -7,7 +7,7 @@ import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.search.CustomViewHolder
 import com.example.leafly_application_git.data.Json
 import com.google.gson.GsonBuilder
-import kotlinx.android.synthetic.main.activity_select_time.*
+import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
 import java.io.InputStream
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -17,7 +17,7 @@ class SelectTimeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_select_time)
+        setContentView(R.layout.activity_confirmation_recycler)
 
         val from: String = intent.getStringExtra(CustomViewHolder.FROM_LOCATION_KEY)
         val to: String = intent.getStringExtra(CustomViewHolder.TO_LOCATION_KEY)
@@ -25,7 +25,7 @@ class SelectTimeActivity : AppCompatActivity() {
         val points: String = intent.getStringExtra(CustomViewHolder.MILJO_POENG_KEY)
         fetchJson(from, to, price, points)
 
-        recyclerView_time_select.layoutManager = LinearLayoutManager(this)
+        recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
 
     }
 
@@ -42,10 +42,10 @@ class SelectTimeActivity : AppCompatActivity() {
         val time = gson.fromJson(json, Json::class.java)
 
         //RecyclerView_main.adapter = SelectTravelAdapter(location)
-        recyclerView_time_select.adapter = ChooseTravelAdapter(time, from,to,price,points)
+        recycler_view_confirmation.adapter = ChooseTravelAdapter(time, from,to,price,points)
 
         runOnUiThread {
-            recyclerView_time_select.adapter =
+            recycler_view_confirmation.adapter =
                 ChooseTravelAdapter(
                     time, to, from, price, points
                 )
