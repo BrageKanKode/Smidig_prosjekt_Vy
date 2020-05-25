@@ -94,8 +94,8 @@ class UsedPointsFragment : Fragment() {
         //rendering out each row
         @SuppressLint("ViewHolder")
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val rootView: View = LayoutInflater.from(mContext).inflate(R.layout.fragment_used_points, parent, false)
-            val usedPointsList = rootView.findViewById<TextView>(R.id.textView_display_single_purchase)
+            val rootView: View = LayoutInflater.from(mContext).inflate(R.layout.used_history_row, parent, false)
+            val usedPointsList = rootView.findViewById<TextView>(R.id.textView_display_new_item)
 
             Log.d("TAG", usedPointsList.toString())
 
