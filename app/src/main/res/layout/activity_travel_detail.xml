@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#EDECEC">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="416dp"
         android:layout_height="342dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -153,6 +154,42 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView_detail_silence_volum"
                 app:srcCompat="@drawable/ic_restaurant_24px" />
 
+            <View
+                android:id="@+id/view_travel_detail_green_line"
+                android:layout_width="5dp"
+                android:layout_height="212dp"
+                android:background="#3A846F"
+                app:layout_constraintBottom_toTopOf="@+id/imageView_detail_point"
+                app:layout_constraintEnd_toStartOf="@+id/imageView_detail_wifi"
+                app:layout_constraintHorizontal_bias="0.573"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_travel_detail_train_logo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView_travel_detail_small_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/line"
+                app:layout_constraintStart_toEndOf="@+id/view_travel_detail_green_line"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_detail_wifi"
+                app:srcCompat="@drawable/ic_line_21" />
+
+            <TextView
+                android:id="@+id/textView_travel_detail_number_of_stops"
+                android:layout_width="60dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="#DADADA"
+                android:fontFamily="@font/sf_display"
+                android:text="@string/number_of_stops"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView_travel_detail_small_line"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_detail_wifi" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -237,7 +274,7 @@
         app:cardBackgroundColor="@color/colorLightGreen"
         app:layout_constraintBottom_toTopOf="@+id/cardView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -265,6 +302,32 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_eco_black_18dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#040303">
+
+            <TextView
+                android:id="@+id/textView_travel_detail_i_dag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_text"
+                android:text="@string/i_dag"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

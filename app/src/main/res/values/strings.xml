@@ -93,6 +93,9 @@
     <string name="price">price</string>
     <string name="videre">Gå videre</string>
     <string name="points">points</string>
+    <string name="fra_oslo_s_til_fredrikstad">Fra Oslo s til fredrikstad</string>
+    <string name="i_dag">I dag</string>
+    <string name="number_of_stops">4 stopp</string>
 
 
 </resources>
