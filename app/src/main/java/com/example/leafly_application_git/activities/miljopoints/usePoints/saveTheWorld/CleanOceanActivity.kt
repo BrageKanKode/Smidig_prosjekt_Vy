@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
+import kotlinx.android.synthetic.main.used_history_row.*
 
 class CleanOceanActivity : AppCompatActivity() {
 
@@ -52,6 +54,8 @@ class CleanOceanActivity : AppCompatActivity() {
 
                     var refUsedHistory = ref.child("/usedHistory")
                     refUsedHistory.push().setValue(usedHistory)
+
+
                     } else {
                         Toast.makeText(this@CleanOceanActivity, "You need more money, fool!", Toast.LENGTH_LONG).show()
                     }
