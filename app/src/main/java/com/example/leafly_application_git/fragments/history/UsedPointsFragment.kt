@@ -36,8 +36,6 @@ class UsedPointsFragment : Fragment() {
 
 
 
-        displayPurchases()
-
         val usedHistoryList = ArrayList<String>()
 
 
@@ -78,14 +76,6 @@ class UsedPointsFragment : Fragment() {
 
     private class MyCustomAdapter(context: Context, usedHistoryList: ArrayList<String>): BaseAdapter() {
 
-
-
-        //////
-
-
-
-
-        /////
         private val mContext: Context = context
         private var mUsedHistoryList: ArrayList<String> = usedHistoryList
 
@@ -119,28 +109,5 @@ class UsedPointsFragment : Fragment() {
 
 
 
-    private fun displayPurchases(){
-        //                val newRef = ref.child("/usedHistory")
-//                Log.d("Tag", p0.ref.child("/usedHistory").toString())
-//                Log.d("Tag", p0.value.toString())
-//
-//
-//                textView_display_ocean.text = p0.value.toString()
-
-
-
-//                val snapshotIterator: Iterable<DataSnapshot> = p0.getChildren()
-//                val iterator = snapshotIterator.iterator()
-//
-//                while (iterator.hasNext()) {
-//                    Log.i("TAG", "Value = " + iterator.next().child("/usedHistory").value)
-//                }
-
-//                var usedHistory = "Kjøpt 1L av vannrensing"
-//
-//                var refUsedHistory = ref.child("/usedHistory")
-//                refUsedHistory.push().key(usedHistory)
-
-    }
 }
 

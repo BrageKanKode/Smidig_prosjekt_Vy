@@ -70,7 +70,7 @@ class ConfirmationActivity : AppCompatActivity() {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
                 var progress = user?.progress
-                var earnedHistory = "Kjøpt 1L av vannrensing"
+                var earnedHistory = "Kjøp av billett"
 
                 balance = balance?.plus(points.toInt())
                 textView_confirmation_points.text = balance.toString()
