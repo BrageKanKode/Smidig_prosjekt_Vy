@@ -16,9 +16,8 @@
         android:text="@string/confirmation_message"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_outline_check"
+        app:layout_constraintStart_toStartOf="@+id/imageView_outline_check"
         app:layout_constraintTop_toBottomOf="@+id/imageView_outline_check" />
 
     <Button
@@ -44,9 +43,7 @@
         android:fontFamily="@font/sf_text"
         android:text="@string/fra_oslo_s_til_fredrikstad"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_bekreftelse"
         app:layout_constraintTop_toBottomOf="@+id/textView_bekreftelse" />
 
     <TextView
@@ -106,14 +103,12 @@
         android:id="@+id/textView_string_confirmation_person_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/sf_text"
         android:text="@string/voksen"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.241"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_travelType1" />
+        app:layout_constraintStart_toStartOf="@+id/textView_confirmation_travelType1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_confirmation_line_two" />
 
     <TextView
         android:id="@+id/textView_confirmation_travelType2"
@@ -129,13 +124,13 @@
         android:id="@+id/textView_string_confirmation_totalpris"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_display"
         android:text="@string/total_pris"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView_confirmation_travelType2"
-        app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_travelType2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_confirmation_line_three" />
 
     <TextView
         android:id="@+id/textView_confirmation_price2"
@@ -203,11 +198,10 @@
         android:id="@+id/imageView_confirmation_line_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/line"
-        app:layout_constraintBottom_toTopOf="@+id/textView_string_confirmation_person_text"
         app:layout_constraintStart_toStartOf="@+id/textView_confirmation_travelType1"
         app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_travelType1"
-        app:layout_constraintVertical_bias="0.421"
         app:srcCompat="@drawable/ic_line" />
 
     <ImageView
@@ -225,8 +219,8 @@
         android:id="@+id/imageView_confirmation_line_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/line"
-        app:layout_constraintBottom_toTopOf="@+id/textView_string_confirmation_totalpris"
         app:layout_constraintStart_toStartOf="@+id/textView_confirmation_travelType2"
         app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_travelType2"
         app:srcCompat="@drawable/ic_line" />
