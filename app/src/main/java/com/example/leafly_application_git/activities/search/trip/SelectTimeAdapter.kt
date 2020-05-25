@@ -33,7 +33,7 @@ class ChooseTravelAdapter (private val json: Json, from: String, to: String, pri
         val data = json.times.get(position)
         holder.view.textView_From.text = fromData
         holder.view.textView_to.text = toData
-        holder.view.textView_price.text = priceData
+        holder.view.textView_price_one.text = priceData
         holder.view.textView_points.text = pointsData
 
         holder.view.textView_time_arrival.text = data.arrival

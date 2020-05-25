@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView_price"
+                android:id="@+id/textView_price_one"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -151,8 +151,8 @@
                 android:layout_marginStart="5dp"
                 android:text="Kr"
                 android:textColor="@color/colorBlack"
-                app:layout_constraintBottom_toBottomOf="@+id/textView_price"
-                app:layout_constraintStart_toEndOf="@+id/textView_price" />
+                app:layout_constraintBottom_toBottomOf="@+id/textView_price_one"
+                app:layout_constraintStart_toEndOf="@+id/textView_price_one" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

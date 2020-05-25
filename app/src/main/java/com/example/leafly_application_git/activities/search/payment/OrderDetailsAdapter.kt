@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.search.payment
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -26,13 +27,14 @@ class OrderDetailsAdapter(
         return 1
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewOrderDetails, position: Int) {
 
-        holder.view.textView_from.text = departure
-        holder.view.textView_to.text = arrival
-        holder.view.textView_departure_time.text = departureTime
-        holder.view.textView_price.text = price
-        holder.view.textView_points.text = points
+        holder.view.textView_from.text = "Fra $departure til $arrival"
+        holder.view.textView_departure_time.text = "I dag, $departureTime"
+        holder.view.textView_price_one.text = "$price,-"
+        holder.view.textView_price_two.text = "$price,-"
+        holder.view.textView_points.text = "du oppnår $points miljøpoeng for denne reisen"
 
         holder.departure = departure
         holder.arrival = arrival

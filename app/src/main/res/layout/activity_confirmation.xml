@@ -12,19 +12,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/pt_sans"
+        android:fontFamily="@font/sf_display"
         android:text="@string/confirmation_message"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_outline_check" />
 
     <Button
         android:id="@+id/btnToHome"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#00957A"
         android:text="@string/hjem"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,10 +41,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/pt_sans"
+        android:fontFamily="@font/sf_text"
+        android:text="Fra Oslo s til fredrikstad"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_bekreftelse" />
 
@@ -48,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/pt_sans"
+        android:fontFamily="@font/sf_text"
         app:layout_constraintStart_toStartOf="@+id/textView_confirmation_from"
         app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_from" />
 
@@ -72,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_done_outline_24px_outlined" />
+        app:srcCompat="@drawable/ic_done_outline_greem_24px" />
 
     <ImageView
         android:id="@+id/imageView_ticet_icon"
@@ -84,13 +90,14 @@
         app:layout_constraintEnd_toStartOf="@+id/textView_confirmation_from"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_vector" />
+        app:srcCompat="@drawable/ic_billett_pluss" />
 
     <TextView
         android:id="@+id/textView_confirmation_travelType1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_text"
         android:text="@string/enkeltbillet"
         app:layout_constraintStart_toStartOf="@+id/textView_confirmation_departure_time"
         app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_departure_time" />
@@ -100,11 +107,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:fontFamily="@font/pt_sans"
+        android:fontFamily="@font/sf_text"
         android:text="@string/voksen"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_travelType1" />
 
@@ -113,6 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_text"
         android:text="@string/enkeltbillet"
         app:layout_constraintStart_toStartOf="@+id/textView_string_confirmation_person_text"
         app:layout_constraintTop_toBottomOf="@+id/textView_string_confirmation_person_text" />
@@ -122,6 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:fontFamily="@font/sf_display"
         android:text="@string/total_pris"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -134,7 +143,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/textView_string_confirmation_totalpris"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintStart_toEndOf="@+id/textView_string_confirmation_totalpris" />
 
     <androidx.cardview.widget.CardView
@@ -142,7 +151,7 @@
         android:layout_width="409dp"
         android:layout_height="37dp"
         android:layout_marginTop="24dp"
-        app:cardBackgroundColor="#B3DFB4"
+        app:cardBackgroundColor="#CBEAE4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_string_confirmation_totalpris">
@@ -152,16 +161,17 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView_string_points_text"
+                android:id="@+id/textView_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/pt_sans"
+                android:fontFamily="@font/sf_display"
                 android:text="@string/points_achieved"
+                android:textColor="#00685E"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.364"
+                app:layout_constraintHorizontal_bias="0.332"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.454" />
@@ -172,21 +182,53 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pt_sans"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/textView_string_points_text"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_points"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.537"
-                app:layout_constraintStart_toEndOf="@+id/textView_string_points_text" />
+                app:layout_constraintHorizontal_bias="0.61"
+                app:layout_constraintStart_toEndOf="@+id/textView_points" />
 
             <ImageView
-                android:id="@+id/imageView16"
+                android:id="@+id/imageView_travel_order_leaf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="@string/leaf_image"
-                app:layout_constraintBottom_toBottomOf="@+id/textView_string_points_text"
-                app:layout_constraintEnd_toStartOf="@+id/textView_string_points_text"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_points"
+                app:layout_constraintEnd_toStartOf="@+id/textView_points"
                 app:srcCompat="@drawable/ic_eco_black_18dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView_confirmation_line_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/line"
+        app:layout_constraintBottom_toTopOf="@+id/textView_string_confirmation_person_text"
+        app:layout_constraintStart_toStartOf="@+id/textView_confirmation_travelType1"
+        app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_travelType1"
+        app:layout_constraintVertical_bias="0.421"
+        app:srcCompat="@drawable/ic_line" />
+
+    <ImageView
+        android:id="@+id/imageView_confirmation_line_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/line"
+        app:layout_constraintBottom_toTopOf="@+id/textView_confirmation_from"
+        app:layout_constraintStart_toStartOf="@+id/textView_bekreftelse"
+        app:layout_constraintTop_toBottomOf="@+id/textView_bekreftelse"
+        app:layout_constraintVertical_bias="0.516"
+        app:srcCompat="@drawable/ic_line" />
+
+    <ImageView
+        android:id="@+id/imageView_confirmation_line_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/line"
+        app:layout_constraintBottom_toTopOf="@+id/textView_string_confirmation_totalpris"
+        app:layout_constraintStart_toStartOf="@+id/textView_confirmation_travelType2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_travelType2"
+        app:srcCompat="@drawable/ic_line" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
