@@ -69,14 +69,17 @@ class ConfirmationActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
+                var totalEarned = user?.totalEarned
                 var progress = user?.progress
                 var earnedHistory = "Kjøp av billett - fra ${intent.getStringExtra(SplashScreenPaymentActivity.FROM_KEY)} til ${intent.getStringExtra(SplashScreenPaymentActivity.TO_KEY)} \nMottok ${intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)} miljøpoeng"
 
                 balance = balance?.plus(points.toInt())
+                totalEarned = totalEarned?.plus(points.toInt())
                 textView_confirmation_points.text = balance.toString()
-                ref.child("/balance").setValue(balance)
-
                 progress = progress?.plus(1)
+
+                ref.child("/balance").setValue(balance)
+                ref.child("/totalEarned").setValue(totalEarned)
                 ref.child("/progress").setValue(progress)
 
                 var refEarnedHistory = ref.child("/earnedHistory")

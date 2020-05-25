@@ -62,7 +62,8 @@ class ProgressionActivity : AppCompatActivity() {
                 textView_current_currency.text = balance.toString()
 
                 textView_progressbar_status.text = user?.progress.toString()
-                progressBar2.setProgress(user!!.progress)
+                progressBar2.progress = user!!.progress
+                textView_total_collected.text = user?.totalEarned.toString()
 
             }
 
