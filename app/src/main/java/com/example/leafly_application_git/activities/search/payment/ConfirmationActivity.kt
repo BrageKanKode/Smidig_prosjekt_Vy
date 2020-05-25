@@ -4,10 +4,20 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.activities.authentication.User
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
+import kotlinx.android.synthetic.main.activity_confirmation.*
 import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class ConfirmationActivity : AppCompatActivity() {
+
+    internal var user: User? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +34,8 @@ class ConfirmationActivity : AppCompatActivity() {
         dataPassClass(departure ,arrival ,departureTime ,price ,points)
 
         recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
+
+        incrementBalance(points)
     }
 
     private fun dataPassClass(departure: String,
@@ -38,5 +50,38 @@ class ConfirmationActivity : AppCompatActivity() {
             recycler_view_confirmation.adapter =
                 ConfirmationAdapter(departure, arrival, departureTime, price, points)
         }
+    }
+
+
+    //Function to increment the users balance and progress when purchased from Firebase
+    private fun incrementBalance(points: String){
+        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val menuListener = object : ValueEventListener {
+            override fun onDataChange(p0: DataSnapshot) {
+                user = p0.getValue(User::class.java)
+                var balance = user?.balance
+                var progress = user?.progress
+                var earnedHistory = "Kjøpt 1L av vannrensing"
+
+                balance = balance?.plus(points.toInt())
+                textView_string_points_text.text = balance.toString()
+                ref.child("/balance").setValue(balance)
+
+                progress = progress?.plus(1)
+                ref.child("/progress").setValue(progress)
+
+                var refEarnedHistory = ref.child("/earnedHistory")
+                refEarnedHistory.push().setValue(earnedHistory)
+
+
+
+
+            }
+
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        }
+        ref.addListenerForSingleValueEvent(menuListener)
     }
 }

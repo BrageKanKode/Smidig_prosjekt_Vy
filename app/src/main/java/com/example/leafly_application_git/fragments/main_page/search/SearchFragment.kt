@@ -66,7 +66,7 @@ class SearchFragment : Fragment() {
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
-                textView_search_welcome.text = user?.username
+                textView_search_welcome?.text = user?.username
 
             }
 

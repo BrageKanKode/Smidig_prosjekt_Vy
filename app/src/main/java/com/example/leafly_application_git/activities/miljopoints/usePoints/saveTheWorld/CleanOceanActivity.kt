@@ -22,14 +22,14 @@ class CleanOceanActivity : AppCompatActivity() {
         //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        incrementBalance()
+        decrementBalance()
 
 
     }
 
 
     //Function to increment the users balance and progress when purchased from Firebase
-    private fun incrementBalance(){
+    private fun decrementBalance(){
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
@@ -40,7 +40,7 @@ class CleanOceanActivity : AppCompatActivity() {
                 textview_currency_show.text = balance.toString()
 
                 btn_do_clean_ocean.setOnClickListener {
-                    balance = balance?.plus(50)
+                    balance = balance?.minus(50)
                     textview_currency_show.text = balance.toString()
                     ref.child("/balance").setValue(balance)
 
