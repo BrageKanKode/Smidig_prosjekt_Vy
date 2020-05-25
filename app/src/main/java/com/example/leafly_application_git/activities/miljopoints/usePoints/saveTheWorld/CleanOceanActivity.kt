@@ -38,7 +38,7 @@ class CleanOceanActivity : AppCompatActivity() {
                 var balance = user?.balance
                 var progress = user?.progress
                 val cleanOceanPrice = 50
-                var usedHistory = "Kjøpt 1L av vannrensing"
+                var usedHistory = "Kjøpt 1L av vannrensing \nFor $cleanOceanPrice miljøpoeng"
                 textview_currency_show.text = balance.toString()
 
                 btn_do_clean_ocean.setOnClickListener {

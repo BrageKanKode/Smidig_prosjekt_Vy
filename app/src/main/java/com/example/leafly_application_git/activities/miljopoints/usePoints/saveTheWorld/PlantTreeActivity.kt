@@ -39,7 +39,7 @@ class PlantTreeActivity : AppCompatActivity() {
                 var balance = user?.balance
                 var progress = user?.progress
                 val treePrice = 50
-                var usedHistory = "Du har reddet et tre!"
+                var usedHistory = "Du har reddet et tre! \nFor $treePrice miljøpoeng"
                 textview_currency_show.text = balance.toString()
 
                 btn_do_plant_tree.setOnClickListener {
