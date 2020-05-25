@@ -57,7 +57,7 @@ class PlantTreeActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(
                             this@PlantTreeActivity,
-                            "You need more more money fool",
+                            "You need more more money, fool!",
                             Toast.LENGTH_LONG
                         ).show()
                     }
