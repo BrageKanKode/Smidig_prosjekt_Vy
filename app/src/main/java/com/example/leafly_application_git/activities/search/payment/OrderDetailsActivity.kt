@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.search.trip.ViewTravelDetails
+import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
 import kotlinx.android.synthetic.main.activity_select_time.*
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -12,7 +13,7 @@ class OrderDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?)  {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select_time)
+        setContentView(R.layout.activity_confirmation_recycler)
 
         //Shows actionbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -24,7 +25,7 @@ class OrderDetailsActivity : AppCompatActivity() {
         val points: String = intent.getStringExtra(ViewTravelDetails.DETAILS_POINTS_KEY)
         dataPassClass(departure ,arrival ,departureTime ,price ,points)
 
-        recyclerView_time_select.layoutManager = LinearLayoutManager(this)
+        recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
     }
 
     private fun dataPassClass(departure: String,
@@ -33,10 +34,10 @@ class OrderDetailsActivity : AppCompatActivity() {
                               price: String,
                               points: String){
 
-        recyclerView_time_select.adapter = OrderDetailsAdapter(departure, arrival, departureTime, price, points)
+        recycler_view_confirmation.adapter = OrderDetailsAdapter(departure, arrival, departureTime, price, points)
 
         runOnUiThread{
-            recyclerView_time_select.adapter =
+            recycler_view_confirmation.adapter =
                 OrderDetailsAdapter(departure, arrival, departureTime, price, points)
         }
     }

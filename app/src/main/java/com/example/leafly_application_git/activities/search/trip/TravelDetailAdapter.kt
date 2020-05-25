@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.search.trip
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -29,14 +30,15 @@ class TravelDetailAdapter(
         return 1
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewTravelDetails, position: Int) {
 
         holder.view.textView_departure.text = departure
         holder.view.textView_arrival.text = arrival
         holder.view.textView_departure_time.text = departureTime
         holder.view.textView_arrival_time.text = arrivalTime
-        holder.view.textView_details_price.text = price
-        holder.view.textView_details_points.text = points
+        holder.view.textView_details_price.text = "$price kr"
+        holder.view.textView_details_points.text ="Du oppnår $points miljøpoeng av denne reisen"
 
         holder.departure = departure
         holder.arrival = arrival
