@@ -71,7 +71,7 @@
         android:id="@+id/imageView_outline_check"
         android:layout_width="64dp"
         android:layout_height="52.8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/checkicon"
         android:fillColor="#DADADA"
         app:layout_constraintEnd_toEndOf="parent"
