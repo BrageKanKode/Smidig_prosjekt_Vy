@@ -82,9 +82,6 @@ class ConfirmationActivity : AppCompatActivity() {
                 var refEarnedHistory = ref.child("/earnedHistory")
                 refEarnedHistory.push().setValue(earnedHistory)
 
-
-
-
             }
 
             override fun onCancelled(p0: DatabaseError) {

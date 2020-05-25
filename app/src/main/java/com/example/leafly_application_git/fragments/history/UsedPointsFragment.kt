@@ -25,8 +25,6 @@ import com.google.firebase.database.ValueEventListener
 class UsedPointsFragment : Fragment() {
 
 
-    internal var user: User? = null
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val root = inflater.inflate(R.layout.fragment_used_points, container, false)
