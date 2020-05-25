@@ -74,7 +74,6 @@
         android:id="@+id/cardView4"
         android:layout_width="409dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="2dp"
         app:cardBackgroundColor="#FDFDFD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,6 +109,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/button_til_bestilling"
                 android:layout_width="199dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="62dp"
@@ -129,7 +129,6 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/button_til_bestilling"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Gå videre"

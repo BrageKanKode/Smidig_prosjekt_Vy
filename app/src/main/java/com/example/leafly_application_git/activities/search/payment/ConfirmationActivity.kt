@@ -35,7 +35,9 @@ class ConfirmationActivity : AppCompatActivity() {
 
         recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
 
-        incrementBalance(points)
+        if(verifyIfUserIsLoggedIn()){
+            incrementBalance(points)
+        }
     }
 
     private fun dataPassClass(departure: String,
@@ -52,6 +54,13 @@ class ConfirmationActivity : AppCompatActivity() {
         }
     }
 
+    //Checks with the Firebase Authentication if user is logged in or not
+    private fun verifyIfUserIsLoggedIn(): Boolean {
+        val uid = FirebaseAuth.getInstance().uid
+        //If user is not logged in, then return null
+        return uid != null
+    }
+
 
     //Function to increment the users balance and progress when purchased from Firebase
     private fun incrementBalance(points: String){
@@ -64,7 +73,7 @@ class ConfirmationActivity : AppCompatActivity() {
                 var earnedHistory = "Kjøpt 1L av vannrensing"
 
                 balance = balance?.plus(points.toInt())
-                textView_string_points_text.text = balance.toString()
+                textView_confirmation_points.text = balance.toString()
                 ref.child("/balance").setValue(balance)
 
                 progress = progress?.plus(1)

@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.activities.MainActivity
+import com.example.leafly_application_git.activities.authentication.LoginActivity
 import com.example.leafly_application_git.activities.authentication.SignUpActivity
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
@@ -20,6 +22,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
+import kotlinx.android.synthetic.main.fragment_not_logged_in.view.*
 
 
 class MiljopointsFragment : Fragment() {
@@ -34,14 +37,54 @@ class MiljopointsFragment : Fragment() {
 
 
 
-        val root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
+        var root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
 
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
 
         //Checks if user is logged in
-        verifyIfUserIsLoggedIn()
+        if(verifyIfUserIsLoggedIn()) {
+            //--------------If logged in --------------
+            fetchUser()
+
+            //Define these buttons
+            root.view_use_points.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), UsePointsActivity::class.java)
+                )
+            }
+            root.view_member_benefits.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), MembershipBenefitsActivity::class.java)
+                )
+            }
+
+            root.btnToProgression.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), ProgressionActivity::class.java)
+                )
+            }
+            root.view_scan_code.setOnClickListener {
+                scanFromFragment()
+            }
+        } else {
+            //--------------If not logged in --------------
+            //Change the fragment layout displayed
+            root = inflater.inflate(R.layout.fragment_not_logged_in, container, false)
+
+            //Define these buttons
+            root.btn_to_sign_up.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), SignUpActivity::class.java)
+                )
+            }
+            root.btn_to_log_in.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), LoginActivity::class.java)
+                )
+            }
+        }
 
 
         setHasOptionsMenu(true);
@@ -56,47 +99,23 @@ class MiljopointsFragment : Fragment() {
 //        })
 
 
-        root.view_use_points.setOnClickListener {
-            requireActivity().startActivity(
-                Intent(requireActivity(), UsePointsActivity::class.java)
-            )
-        }
-        root.view_member_benefits.setOnClickListener {
-            requireActivity().startActivity(
-                Intent(requireActivity(), MembershipBenefitsActivity::class.java)
-            )
-        }
-
-        root.btnToProgression.setOnClickListener {
-            requireActivity().startActivity(
-                Intent(requireActivity(), ProgressionActivity::class.java)
-            )
-        }
-        root.view_scan_code.setOnClickListener {
-            scanFromFragment()
-        }
 
 
         return root
     }
 
     //Checks with the Firebase Authentication if user is logged in or not
-    private fun verifyIfUserIsLoggedIn(){
+    private fun verifyIfUserIsLoggedIn(): Boolean {
         val uid = FirebaseAuth.getInstance().uid
-        //If user is not logged in, then launch the signup ativity
-        if (uid == null){
-            val intent = Intent(this.context, SignUpActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            //If user is logged in, fetch the correct user
-        } else {
-            fetchUser()
-        }
+        //If user is not logged in, then return null
+        return uid != null
     }
 
     //Menu button to sign out user
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.auth_menu, menu)
+        if(verifyIfUserIsLoggedIn()){
+            inflater.inflate(R.menu.auth_menu, menu)
+        }
         super.onCreateOptionsMenu(menu, inflater)
     }
 
@@ -105,7 +124,7 @@ class MiljopointsFragment : Fragment() {
         when(item.itemId){
             R.id.sign_out_menu -> {
                 FirebaseAuth.getInstance().signOut()
-                val intent = Intent(this.context, SignUpActivity::class.java)
+                val intent = Intent(this.context, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
             }

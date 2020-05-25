@@ -129,10 +129,14 @@
 
         <!-- Sign up page -->
         <activity android:name=".activities.authentication.SignUpActivity" android:label="Sign Up">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
         </activity>
 
         <!-- Log in page -->
         <activity android:name=".activities.authentication.LoginActivity" android:label="Log in">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
         </activity>
 
         <!-- QR code page -->

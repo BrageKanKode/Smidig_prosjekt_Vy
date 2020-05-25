@@ -53,24 +53,4 @@ class LoginActivity: AppCompatActivity() {
         }
     }
 
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.home_menu, menu)
-        return true
-
-    }
-
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when(item.itemId){
-            R.id.redirect_home_btn -> {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-            }
-
-        }
-        return super.onOptionsItemSelected(item)
-    }
 }
