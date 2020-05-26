@@ -1,6 +1,5 @@
 package com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -13,8 +12,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.textview_currency_show
-import kotlinx.android.synthetic.main.activity_plant_a_tree.*
-import kotlinx.android.synthetic.main.used_history_row.*
 
 class CleanOceanActivity : AppCompatActivity() {
 
@@ -77,7 +74,7 @@ class CleanOceanActivity : AppCompatActivity() {
                 textView_clean_ocean_amount.text = cleanAmount.toString()
                 textView_total_ocean_sum.text = totalCleanSum.toString()
 
-                btn_clean_ocean_minus.setOnClickListener {
+                btn_clean_ocean_btn_plus.setOnClickListener {
                     if(cleanAmount > 1) {
                         cleanAmount--
                         textView_clean_ocean_amount.text = cleanAmount.toString()
@@ -86,7 +83,7 @@ class CleanOceanActivity : AppCompatActivity() {
                     }
                 }
 
-                btn_clean_ocean_plus.setOnClickListener {
+                btn_clean_ocean_btn_minus.setOnClickListener {
                     if(balance!! >= totalCleanSum + cleanOceanPrice){
                         cleanAmount++
                         textView_clean_ocean_amount.text = cleanAmount.toString()

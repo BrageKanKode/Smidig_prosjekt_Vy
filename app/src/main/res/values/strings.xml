@@ -121,6 +121,7 @@
     <string name="rydd_plast_dialog">Bruk poengene til å bidra med rydding av plast som blir kastet i havet.</string>
     <string name="velg_antall_kg">Velg antall (kg)</string>
     <string name="rydd_x_antall_kilo_plast">Rydd X antall Kilo plast</string>
+    <string name="ocean">ocean</string>
 
 
 </resources>
