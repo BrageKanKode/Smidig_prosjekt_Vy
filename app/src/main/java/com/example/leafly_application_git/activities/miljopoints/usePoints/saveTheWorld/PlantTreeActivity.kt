@@ -46,16 +46,15 @@ class PlantTreeActivity : AppCompatActivity() {
 
                 btn_do_plant_tree.setOnClickListener {
 
+                    balance = balance?.minus(totalTreeSum)
+                    textview_currency_show.text = balance.toString()
+                    ref.child("/balance").setValue(balance)
 
-                balance = balance?.minus(totalTreeSum)
-                textview_currency_show.text = balance.toString()
-                ref.child("/balance").setValue(balance)
+                    var refUsedHistory = ref.child("/usedHistory")
+                    refUsedHistory.push().setValue(usedHistory)
 
-                var refUsedHistory = ref.child("/usedHistory")
-                refUsedHistory.push().setValue(usedHistory)
-
-                progress = progress?.plus(1 + treeAmount)
-                ref.child("/progress").setValue(progress)
+                    progress = progress?.plus(1 + treeAmount)
+                    ref.child("/progress").setValue(progress)
 
                 }
 

@@ -82,7 +82,7 @@ class ConfirmationActivity : AppCompatActivity() {
                 var balance = user?.balance
                 var totalEarned = user?.totalEarned
                 var progress = user?.progress
-                var earnedHistory = "Kjøp av billett - fra ${intent.getStringExtra(SplashScreenPaymentActivity.FROM_KEY)} til ${intent.getStringExtra(SplashScreenPaymentActivity.TO_KEY)} \nMottok ${intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)} miljøpoeng"
+                val earnedHistory = "Kjøp av billett - fra ${intent.getStringExtra(SplashScreenPaymentActivity.FROM_KEY)} til ${intent.getStringExtra(SplashScreenPaymentActivity.TO_KEY)} \nMottok ${intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)} miljøpoeng"
 
                 balance = balance?.plus(points.toInt())
                 totalEarned = totalEarned?.plus(points.toInt())
@@ -94,7 +94,7 @@ class ConfirmationActivity : AppCompatActivity() {
                 ref.child("/totalEarned").setValue(totalEarned)
                 ref.child("/progress").setValue(progress)
 
-                var refEarnedHistory = ref.child("/earnedHistory")
+                val refEarnedHistory = ref.child("/earnedHistory")
                 refEarnedHistory.push().setValue(earnedHistory)
 
             }
