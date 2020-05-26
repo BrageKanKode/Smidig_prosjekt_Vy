@@ -209,7 +209,7 @@ class ShopFragment : Fragment() {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.odeon_dialog, null)
             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
-                .setTitle("Odeon - Kinobilett")
+                .setTitle("Odeon - 2 for 1 Kinobillett")
                 .setView(mDialogView)
 
             val mAlertDialog = mBuilder.show()
@@ -219,7 +219,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textView_price_odeon.text = "Pris: $odeonPurchasePrice"
-            mDialogView.textView_odeon_dialog.text = "1 Kinobilett"
+            mDialogView.textView_odeon_dialog.text = "Odeon tilbyr at du kan bruke poeng for å få tilsendt en kupong. Denne kan brukes for å få 2 billetter til prisen av 1 i enten nettbutikken eller fysisk på kino i alle deres saler"
 
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
