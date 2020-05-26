@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_popup_logo"
+        android:layout_width="77dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/leaf_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vector_leaf" />
+
+    <TextView
+        android:id="@+id/textView_text_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/betal_med"
+        android:textColor="#3A846F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_popup_logo" />
+
+    <TextView
+        android:id="@+id/textView_text_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/title_miljopoints"
+        android:textColor="#3A846F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView_text_first"
+        app:layout_constraintStart_toStartOf="@+id/textView_text_first"
+        app:layout_constraintTop_toBottomOf="@+id/textView_text_first" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView9"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#CBEAE4"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_text_second"
+        app:layout_constraintStart_toStartOf="@+id/textView_text_second"
+        app:layout_constraintTop_toBottomOf="@+id/textView_text_second">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_price_in_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_display"
+                android:text="18000"
+                android:textColor="#3A846F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_leaf_numbersomething"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/line"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_price_in_points"
+                app:layout_constraintEnd_toStartOf="@+id/textView_price_in_points"
+                app:srcCompat="@drawable/ic_vector_leaf" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView_from_to_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/fra_oslo_s_til_fredrikstad"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/cardView9"
+        app:layout_constraintTop_toBottomOf="@+id/cardView9" />
+
+    <ImageView
+        android:id="@+id/imageView_popupp_line"
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/line"
+        app:layout_constraintEnd_toEndOf="@+id/textView_from_to_values"
+        app:layout_constraintStart_toStartOf="@+id/textView_from_to_values"
+        app:layout_constraintTop_toBottomOf="@+id/textView_from_to_values"
+        app:srcCompat="@drawable/ic_line" />
+
+    <TextView
+        android:id="@+id/textView_your_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/din_saldo"
+        app:layout_constraintStart_toStartOf="@+id/imageView_popupp_line"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_popupp_line" />
+
+    <TextView
+        android:id="@+id/textView_after_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/etter_kj_p"
+        app:layout_constraintStart_toStartOf="@+id/textView_your_saldo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_your_saldo" />
+
+    <Button
+        android:id="@+id/button_pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#41927B"
+        android:text="@string/betal"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_after_purchase"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_current_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="27605"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_popupp_line"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_popupp_line" />
+
+    <TextView
+        android:id="@+id/textView_new_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="9605"
+        app:layout_constraintEnd_toEndOf="@+id/textView_current_saldo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_current_saldo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -105,6 +105,10 @@
     <string name="buy_returbillett">Kjøp returbillett</string>
     <string name="_25_mai">25 mai</string>
     <string name="velg">Velg</string>
+    <string name="betal_med">Betal med</string>
+    <string name="betal">Betal</string>
+    <string name="din_saldo">Din saldo</string>
+    <string name="etter_kj_p">Etter kjøp</string>
 
 
 </resources>

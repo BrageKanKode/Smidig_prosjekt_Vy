@@ -56,11 +56,8 @@ class ShopFragment : Fragment() {
 
             val dplayPurchasePrice = 100
 
-
-
             mDialogView.textView_price_dplay.text = "Pris: $dplayPurchasePrice"
             mDialogView.textView_dplay_dialog_dplay.text = "1 måned gratis Dplay"
-
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
