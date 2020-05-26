@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView_netflix_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/textView_price_netflix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textView_netflix_dialog"
+        app:layout_constraintStart_toStartOf="@+id/textView_netflix_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/textView_netflix_dialog"
+
+        />
+
+    <TextView
+        android:id="@+id/textView_currency_netflix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textView_price_netflix"
+        app:layout_constraintStart_toStartOf="@+id/textView_price_netflix"
+        app:layout_constraintTop_toBottomOf="@+id/textView_price_netflix"
+        />
+
+    <Button
+        android:id="@+id/button_buy_netflix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kjøp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_currency_netflix"
+        app:layout_constraintStart_toStartOf="@+id/textView_currency_netflix"
+        app:layout_constraintTop_toBottomOf="@+id/textView_currency_netflix"
+
+        />
+
+
+    <Button
+        android:id="@+id/button_cancel_netflix_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Avbryt"
+        app:layout_constraintEnd_toEndOf="@+id/button_buy_netflix"
+        app:layout_constraintStart_toStartOf="@+id/button_buy_netflix"
+        app:layout_constraintTop_toBottomOf="@+id/button_buy_netflix"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
