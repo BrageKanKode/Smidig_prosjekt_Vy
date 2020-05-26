@@ -10,41 +10,183 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="166dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="186dp"
-        android:layout_marginBottom="334dp"
-        android:text="Clean the ocean"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/rydd_plast_i_havet"
+        android:textColor="@color/colorBlack"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
 
     <TextView
         android:id="@+id/textView_top_text_string_disponibelt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Currency:"
-        app:layout_constraintBottom_toTopOf="@+id/btn_do_clean_ocean"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/progression_disponibelt"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textview_currency_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_top_text_string_disponibelt"
         app:layout_constraintTop_toTopOf="@+id/textView_top_text_string_disponibelt" />
 
     <Button
         android:id="@+id/btn_do_clean_ocean"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Clean the ocean"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/rydd_x_antall_kilo_plast"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="182dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/rydd_plast_dialog"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_clean_ocean_minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="74dp"
+        app:cardBackgroundColor="#E1D9D9"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_clean_ocean_amount"
+        app:layout_constraintStart_toEndOf="@+id/textView_clean_ocean_amount"
+        app:layout_constraintTop_toTopOf="@+id/textView_clean_ocean_amount">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_remove_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minus"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_clean_ocean_plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="74dp"
+        android:backgroundTint="#E1D9D9"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_clean_ocean_amount"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pluss"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/velg_antall_kg"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView_clean_ocean_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_display"
+        android:text="1"
+        android:textColor="@color/colorBlack"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_clean_ocean_plus"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btn_clean_ocean_plus" />
+
+    <TextView
+        android:id="@+id/textView_total_amount_ocean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/totalsum"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_do_clean_ocean"
+        app:layout_constraintStart_toStartOf="@+id/btn_do_clean_ocean" />
+
+    <TextView
+        android:id="@+id/textView_total_ocean_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_do_clean_ocean"
+        app:layout_constraintEnd_toEndOf="@+id/btn_do_clean_ocean" />
+
+    <ImageView
+        android:id="@+id/imageView_leaf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/leaf_image"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_total_ocean_sum"
+        app:layout_constraintEnd_toStartOf="@+id/textView_total_ocean_sum"
+        app:layout_constraintTop_toTopOf="@+id/textView_total_ocean_sum"
+        app:srcCompat="@drawable/ic_vector_leaf" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
