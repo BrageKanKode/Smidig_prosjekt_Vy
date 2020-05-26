@@ -69,6 +69,11 @@ class SearchFragment : Fragment() {
                 ref.child("/balance").setValue(balance)
 
                 }
+                root.btn_cheat_pull.setOnClickListener {
+                balance = balance?.minus(10000)
+                ref.child("/balance").setValue(balance)
+
+                }
             }
 
             override fun onCancelled(p0: DatabaseError) {

@@ -12,6 +12,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
+import kotlinx.android.synthetic.main.activity_clean_the_ocean.textview_currency_show
+import kotlinx.android.synthetic.main.activity_plant_a_tree.*
 import kotlinx.android.synthetic.main.used_history_row.*
 
 class CleanOceanActivity : AppCompatActivity() {
@@ -40,26 +42,56 @@ class CleanOceanActivity : AppCompatActivity() {
                 var balance = user?.balance
                 var progress = user?.progress
                 val cleanOceanPrice = 50
+                var cleanAmount = 1
+                var totalCleanSum = cleanOceanPrice
                 var usedHistory = "Kjøpt 1L av vannrensing \nFor $cleanOceanPrice miljøpoeng"
                 textview_currency_show.text = balance.toString()
 
                 btn_do_clean_ocean.setOnClickListener {
                     if(balance!! >= cleanOceanPrice) {
-                    balance = balance?.minus(cleanOceanPrice)
-                    textview_currency_show.text = balance.toString()
-                    ref.child("/balance").setValue(balance)
+                        balance = balance?.minus(cleanOceanPrice)
+                        textview_currency_show.text = balance.toString()
+                        ref.child("/balance").setValue(balance)
 
-                    progress = progress?.plus(1)
-                    ref.child("/progress").setValue(progress)
+                        progress = progress?.plus(1 + cleanAmount)
+                        ref.child("/progress").setValue(progress)
 
-                    var refUsedHistory = ref.child("/usedHistory")
-                    refUsedHistory.push().setValue(usedHistory)
+                        val refUsedHistory = ref.child("/usedHistory")
+                        refUsedHistory.push().setValue(usedHistory)
+
+
+                        cleanAmount = 1
+                        totalCleanSum = cleanOceanPrice
+                        textView_clean_ocean_amount.text = cleanAmount.toString()
+                        textView_total_clean_sum.text = totalCleanSum.toString()
 
 
                     } else {
                         Toast.makeText(this@CleanOceanActivity, "You need more money, fool!", Toast.LENGTH_LONG).show()
                     }
 
+                }
+
+
+                textView_clean_ocean_amount.text = cleanAmount.toString()
+                textView_total_clean_sum.text = totalCleanSum.toString()
+
+                btn_clean_ocean_minus.setOnClickListener {
+                    if(cleanAmount > 1) {
+                        cleanAmount--
+                        textView_clean_ocean_amount.text = cleanAmount.toString()
+                        totalCleanSum -= cleanOceanPrice
+                        textView_total_clean_sum.text = totalCleanSum.toString()
+                    }
+                }
+
+                btn_clean_ocean_plus.setOnClickListener {
+                    if(balance!! >= totalCleanSum + cleanOceanPrice){
+                        cleanAmount++
+                        textView_clean_ocean_amount.text = cleanAmount.toString()
+                        totalCleanSum += cleanOceanPrice
+                        textView_total_clean_sum.text = totalCleanSum.toString()
+                    }
                 }
 
 

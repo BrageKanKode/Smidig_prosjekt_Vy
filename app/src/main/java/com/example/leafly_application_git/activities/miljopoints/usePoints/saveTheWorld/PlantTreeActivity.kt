@@ -46,17 +46,31 @@ class PlantTreeActivity : AppCompatActivity() {
 
                 btn_do_plant_tree.setOnClickListener {
 
-                    balance = balance?.minus(totalTreeSum)
-                    textview_currency_show.text = balance.toString()
-                    ref.child("/balance").setValue(balance)
+                    if (balance!! >= totalTreeSum) {
+                        balance = balance?.minus(totalTreeSum)
+                        textview_currency_show.text = balance.toString()
+                        ref.child("/balance").setValue(balance)
 
-                    var refUsedHistory = ref.child("/usedHistory")
-                    refUsedHistory.push().setValue(usedHistory)
+                        val refUsedHistory = ref.child("/usedHistory")
+                        refUsedHistory.push().setValue(usedHistory)
 
-                    progress = progress?.plus(1 + treeAmount)
-                    ref.child("/progress").setValue(progress)
+                        progress = progress?.plus(1 + treeAmount)
+                        ref.child("/progress").setValue(progress)
 
+                        treeAmount = 1
+                        totalTreeSum = treePrice
+                        textView_plant_tree_amount.text = treeAmount.toString()
+                        textView_total_tree_sum.text = totalTreeSum.toString()
+                    } else {
+                        Toast.makeText(
+                            this@PlantTreeActivity,
+                            "You need more more money, fool!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
                 }
+
+
 
 
                 textView_plant_tree_amount.text = treeAmount.toString()
@@ -66,7 +80,7 @@ class PlantTreeActivity : AppCompatActivity() {
                     if(treeAmount > 1) {
                         treeAmount--
                         textView_plant_tree_amount.text = treeAmount.toString()
-                        totalTreeSum -= 50
+                        totalTreeSum -= treePrice
                         textView_total_tree_sum.text = totalTreeSum.toString()
                     }
                 }
@@ -75,7 +89,7 @@ class PlantTreeActivity : AppCompatActivity() {
                     if(balance!! >= totalTreeSum + treePrice){
                         treeAmount++
                         textView_plant_tree_amount.text = treeAmount.toString()
-                        totalTreeSum += 50
+                        totalTreeSum += treePrice
                         textView_total_tree_sum.text = totalTreeSum.toString()
                     }
                 }

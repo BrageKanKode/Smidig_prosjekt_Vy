@@ -60,18 +60,18 @@
         android:layout_marginTop="96dp"
         android:layout_marginEnd="171dp"
         android:layout_marginBottom="258dp"
-        android:text="cheat mode"
+        android:text="add 10k"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_search_welcome" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <Button
+        android:id="@+id/btn_cheat_pull"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:text="+ 10 000 points"
+        android:layout_marginTop="32dp"
+        android:text="Pull 10k"
         app:layout_constraintStart_toStartOf="@+id/btn_cheat"
         app:layout_constraintTop_toBottomOf="@+id/btn_cheat" />
 
