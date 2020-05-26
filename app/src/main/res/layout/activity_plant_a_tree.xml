@@ -10,44 +10,176 @@
         android:id="@+id/textView_total_collected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="216dp"
-        android:layout_marginEnd="213dp"
-        android:layout_marginRight="213dp"
-        android:layout_marginBottom="368dp"
-        android:text="Plant a tree"
+        android:text="Plant et tre"
+        android:textColor="@color/colorBlack"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171" />
 
     <Button
         android:id="@+id/btn_do_plant_tree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="236dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="Plant a Tree"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Currency:"
-        app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/progression_disponibelt"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textview_currency_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.74"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Totalsum:"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
+        app:layout_constraintStart_toStartOf="@+id/btn_do_plant_tree" />
+
+    <TextView
+        android:id="@+id/textView_total_tree_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
+        app:layout_constraintEnd_toEndOf="@+id/btn_do_plant_tree" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_total_tree_sum"
+        app:layout_constraintEnd_toStartOf="@+id/textView_total_tree_sum"
+        app:layout_constraintTop_toTopOf="@+id/textView_total_tree_sum"
+        app:srcCompat="@drawable/ic_vector_leaf" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="225dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="16dp"
+        android:text="Med poengene du opptjener kan du gi tilbake til naturen ved å plante trær."
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_total_collected"
+        app:layout_constraintTop_toBottomOf="@+id/textView_total_collected" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Velg antall"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_plant_tree_minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="74dp"
+        app:cardBackgroundColor="@color/common_google_signin_btn_text_light_default"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_plant_tree_amount"
+        app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_plant_tree_plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="74dp"
+        app:cardBackgroundColor="@color/common_google_signin_btn_text_light_default"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_plant_tree_amount"
+        app:layout_constraintStart_toEndOf="@+id/textView_plant_tree_amount"
+        app:layout_constraintTop_toTopOf="@+id/textView_plant_tree_amount">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView_plant_tree_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/colorBlack"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_plant_tree_minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_plant_tree_minus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

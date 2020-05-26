@@ -39,27 +39,45 @@ class PlantTreeActivity : AppCompatActivity() {
                 var balance = user?.balance
                 var progress = user?.progress
                 val treePrice = 50
+                var treeAmount = 1
+                var totalTreeSum = treePrice
                 var usedHistory = "Du har reddet et tre! \nFor $treePrice miljøpoeng"
                 textview_currency_show.text = balance.toString()
 
                 btn_do_plant_tree.setOnClickListener {
 
-                    if (balance!! >= treePrice) {
-                        balance = balance?.minus(50)
-                        textview_currency_show.text = balance.toString()
-                        ref.child("/balance").setValue(balance)
 
-                        var refUsedHistory = ref.child("/usedHistory")
-                        refUsedHistory.push().setValue(usedHistory)
+                balance = balance?.minus(totalTreeSum)
+                textview_currency_show.text = balance.toString()
+                ref.child("/balance").setValue(balance)
 
-                        progress = progress?.plus(1)
-                        ref.child("/progress").setValue(progress)
-                    } else {
-                        Toast.makeText(
-                            this@PlantTreeActivity,
-                            "You need more more money, fool!",
-                            Toast.LENGTH_LONG
-                        ).show()
+                var refUsedHistory = ref.child("/usedHistory")
+                refUsedHistory.push().setValue(usedHistory)
+
+                progress = progress?.plus(1 + treeAmount)
+                ref.child("/progress").setValue(progress)
+
+                }
+
+
+                textView_plant_tree_amount.text = treeAmount.toString()
+                textView_total_tree_sum.text = totalTreeSum.toString()
+
+                btn_plant_tree_minus.setOnClickListener {
+                    if(treeAmount > 1) {
+                        treeAmount--
+                        textView_plant_tree_amount.text = treeAmount.toString()
+                        totalTreeSum -= 50
+                        textView_total_tree_sum.text = totalTreeSum.toString()
+                    }
+                }
+
+                btn_plant_tree_plus.setOnClickListener {
+                    if(balance!! >= totalTreeSum + treePrice){
+                        treeAmount++
+                        textView_plant_tree_amount.text = treeAmount.toString()
+                        totalTreeSum += 50
+                        textView_total_tree_sum.text = totalTreeSum.toString()
                     }
                 }
 
