@@ -75,7 +75,6 @@ class ConfirmationActivity : AppCompatActivity() {
 
                 balance = balance?.plus(points.toInt())
                 totalEarned = totalEarned?.plus(points.toInt())
-                textView_confirmation_points.text = balance.toString()
                 progress = progress?.plus(1)
 
                 ref.child("/balance").setValue(balance)
