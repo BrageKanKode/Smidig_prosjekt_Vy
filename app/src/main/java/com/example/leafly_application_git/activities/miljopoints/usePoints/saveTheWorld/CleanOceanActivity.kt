@@ -63,7 +63,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         cleanAmount = 1
                         totalCleanSum = cleanOceanPrice
                         textView_clean_ocean_amount.text = cleanAmount.toString()
-                        textView_total_clean_sum.text = totalCleanSum.toString()
+                        textView_total_ocean_sum.text = totalCleanSum.toString()
 
 
                     } else {
@@ -74,14 +74,14 @@ class CleanOceanActivity : AppCompatActivity() {
 
 
                 textView_clean_ocean_amount.text = cleanAmount.toString()
-                textView_total_clean_sum.text = totalCleanSum.toString()
+                textView_total_ocean_sum.text = totalCleanSum.toString()
 
                 btn_clean_ocean_minus.setOnClickListener {
                     if(cleanAmount > 1) {
                         cleanAmount--
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         totalCleanSum -= cleanOceanPrice
-                        textView_total_clean_sum.text = totalCleanSum.toString()
+                        textView_total_ocean_sum.text = totalCleanSum.toString()
                     }
                 }
 
@@ -90,7 +90,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         cleanAmount++
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         totalCleanSum += cleanOceanPrice
-                        textView_total_clean_sum.text = totalCleanSum.toString()
+                        textView_total_ocean_sum.text = totalCleanSum.toString()
                     }
                 }
 
