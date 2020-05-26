@@ -76,7 +76,6 @@ class EarnedPointsFragment : Fragment() {
 
         override fun getCount(): Int {
             return mEarnedHistoryList.size
-
         }
 
         override fun getItemId(position: Int): Long {

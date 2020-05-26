@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_dplay_dialog_dplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_buy_dplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kjøp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_currency_dplay"
+        app:layout_constraintStart_toStartOf="@+id/textView_currency_dplay"
+        app:layout_constraintTop_toBottomOf="@+id/textView_currency_dplay" />
+
+    <TextView
+        android:id="@+id/textView_price_dplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textView_dplay_dialog_dplay"
+        app:layout_constraintStart_toStartOf="@+id/textView_dplay_dialog_dplay"
+        app:layout_constraintTop_toBottomOf="@+id/textView_dplay_dialog_dplay" />
+
+    <TextView
+        android:id="@+id/textView_currency_dplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textView_price_dplay"
+        app:layout_constraintStart_toStartOf="@+id/textView_price_dplay"
+        app:layout_constraintTop_toBottomOf="@+id/textView_price_dplay" />
+
+    <Button
+        android:id="@+id/button_cancel_dplay_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Avbryt"
+        app:layout_constraintEnd_toEndOf="@+id/button_buy_dplay"
+        app:layout_constraintStart_toStartOf="@+id/button_buy_dplay"
+        app:layout_constraintTop_toBottomOf="@+id/button_buy_dplay" />
+</androidx.constraintlayout.widget.ConstraintLayout>
