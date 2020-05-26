@@ -66,6 +66,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         textView_total_ocean_sum.text = totalCleanSum.toString()
 
 
+
                     } else {
                         Toast.makeText(this@CleanOceanActivity, "You need more money, fool!", Toast.LENGTH_LONG).show()
                     }

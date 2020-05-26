@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textview_voi_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textview_price_voi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textview_voi_dialog"
+        app:layout_constraintStart_toStartOf="@+id/textview_voi_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/textview_voi_dialog"
+        />
+
+    <TextView
+        android:id="@+id/textview_voi_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textview_price_voi"
+        app:layout_constraintStart_toStartOf="@+id/textview_price_voi"
+        app:layout_constraintTop_toBottomOf="@+id/textview_price_voi"
+
+        />
+
+    <Button
+        android:id="@+id/button_buy_voi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kjøp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_voi_currency"
+        app:layout_constraintStart_toStartOf="@+id/textview_voi_currency"
+        app:layout_constraintTop_toBottomOf="@+id/textview_voi_currency"
+
+        />
+
+    <Button
+        android:id="@+id/button_cancel_voi_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Avbryt"
+        app:layout_constraintEnd_toEndOf="@+id/button_buy_voi"
+        app:layout_constraintStart_toStartOf="@+id/button_buy_voi"
+        app:layout_constraintTop_toBottomOf="@+id/button_buy_voi"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

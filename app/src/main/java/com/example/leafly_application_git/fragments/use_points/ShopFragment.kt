@@ -23,8 +23,11 @@ import kotlinx.android.synthetic.main.dplay_dialog.*
 import kotlinx.android.synthetic.main.dplay_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_shop.*
 import kotlinx.android.synthetic.main.fragment_shop.view.*
+import kotlinx.android.synthetic.main.narvesen_dialog.view.*
 import kotlinx.android.synthetic.main.netflix_dialog.view.*
 import kotlinx.android.synthetic.main.odeon_dialog.view.*
+import kotlinx.android.synthetic.main.starbucks_dialog.view.*
+import kotlinx.android.synthetic.main.voi_dialog.view.*
 
 class ShopFragment : Fragment() {
 
@@ -281,6 +284,240 @@ class ShopFragment : Fragment() {
 
 
 
+
+        root.view_shop_item4.setOnClickListener {
+            val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
+                .inflate(R.layout.narvesen_dialog, null)
+            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                .setTitle("Narvesen - Gratis Baguette")
+                .setView(mDialogView)
+
+            val mAlertDialog = mBuilder.show()
+
+            val narvesenPurchasePrice = 150
+
+
+
+            mDialogView.textview_price_narvesen.text = "Pris: $narvesenPurchasePrice"
+            mDialogView.textview_narvesen_dialog.text = "Få en gratis baguette fra en Narvesen"
+
+
+            var ref = FirebaseDatabase.getInstance().getReference("/users")
+                .child(FirebaseAuth.getInstance().currentUser!!.uid)
+            val menuListener = object : ValueEventListener {
+                override fun onDataChange(p0: DataSnapshot) {
+                    user = p0.getValue(User::class.java)
+                    var balance = user?.balance
+                    var progress = user?.progress
+                    var usedHistory =
+                        "Du fikk gratis baguette fra Narvesen\nFor $narvesenPurchasePrice miljøpoeng"
+                    mDialogView.textview_currency_narvesen.text = "Saldo: " + balance.toString()
+
+
+                    mDialogView.button_buy_narvsesen.setOnClickListener {
+
+                        if (balance!! >= narvesenPurchasePrice) {
+                            balance = balance?.minus(narvesenPurchasePrice)
+                            mDialogView.textview_currency_narvesen.text = balance.toString()
+                            ref.child("/balance").setValue(balance)
+
+                            progress = progress?.plus(1)
+                            ref.child("/progress").setValue(progress)
+
+                            var refUsedHistory = ref.child("/usedHistory")
+                            refUsedHistory.push().setValue(usedHistory)
+
+                            Toast.makeText(
+                                activity as UsePointsActivity,
+                                usedHistory + " Ny saldo: " + balance.toString(),
+                                Toast.LENGTH_LONG
+                            ).show()
+
+                            mAlertDialog.dismiss()
+
+
+                        } else {
+                            Toast.makeText(
+                                activity as UsePointsActivity,
+                                "You need more money, fool!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+
+                    }
+
+                }
+
+                override fun onCancelled(p0: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            }
+            ref.addListenerForSingleValueEvent(menuListener)
+            ///
+
+
+            mDialogView.button_cancel_narvesen_payment.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
+
+        }
+
+
+
+        root.view_shop_item5.setOnClickListener {
+            val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
+                .inflate(R.layout.starbucks_dialog, null)
+            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                .setTitle("Starbucks - Valgfri Gratis Kaffe")
+                .setView(mDialogView)
+
+            val mAlertDialog = mBuilder.show()
+
+            val starbucksPurchasePrice = 200
+
+
+
+            mDialogView.textview_price_starbucks.text = "Pris: $starbucksPurchasePrice"
+            mDialogView.textview_starbucks_dialog.text = "Velg en valgfri kaffe fra Starbucks"
+
+
+            var ref = FirebaseDatabase.getInstance().getReference("/users")
+                .child(FirebaseAuth.getInstance().currentUser!!.uid)
+            val menuListener = object : ValueEventListener {
+                override fun onDataChange(p0: DataSnapshot) {
+                    user = p0.getValue(User::class.java)
+                    var balance = user?.balance
+                    var progress = user?.progress
+                    var usedHistory =
+                        "Du valgte en gratis, valgfri kaffe fra Starbucks\nFor $starbucksPurchasePrice miljøpoeng"
+                    mDialogView.textview_currency_starbucks.text = "Saldo: " + balance.toString()
+
+
+                    mDialogView.button_buy_starbucks.setOnClickListener {
+
+                        if (balance!! >= starbucksPurchasePrice) {
+                            balance = balance?.minus(starbucksPurchasePrice)
+                            mDialogView.textview_currency_starbucks.text = balance.toString()
+                            ref.child("/balance").setValue(balance)
+
+                            progress = progress?.plus(1)
+                            ref.child("/progress").setValue(progress)
+
+                            var refUsedHistory = ref.child("/usedHistory")
+                            refUsedHistory.push().setValue(usedHistory)
+
+                            Toast.makeText(
+                                activity as UsePointsActivity,
+                                usedHistory + " Ny saldo: " + balance.toString(),
+                                Toast.LENGTH_LONG
+                            ).show()
+
+                            mAlertDialog.dismiss()
+
+
+                        } else {
+                            Toast.makeText(
+                                activity as UsePointsActivity,
+                                "You need more money, fool!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+
+                    }
+
+                }
+
+                override fun onCancelled(p0: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            }
+            ref.addListenerForSingleValueEvent(menuListener)
+            ///
+
+
+            mDialogView.button_cancel_starbucks_payment.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
+
+        }
+
+
+        root.view_shop_item6.setOnClickListener {
+            val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
+                .inflate(R.layout.voi_dialog, null)
+            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                .setTitle("Voi - 15 Minutter Gratis")
+                .setView(mDialogView)
+
+            val mAlertDialog = mBuilder.show()
+
+            val voiPurchasePrice = 500
+
+
+
+            mDialogView.textview_price_voi.text = "Pris: $voiPurchasePrice"
+            mDialogView.textview_voi_dialog.text = "Få 15 minutter med gratis bruk med en av Voi sine sparkesykler"
+
+
+            var ref = FirebaseDatabase.getInstance().getReference("/users")
+                .child(FirebaseAuth.getInstance().currentUser!!.uid)
+            val menuListener = object : ValueEventListener {
+                override fun onDataChange(p0: DataSnapshot) {
+                    user = p0.getValue(User::class.java)
+                    var balance = user?.balance
+                    var progress = user?.progress
+                    var usedHistory =
+                        "Du får 15 minutter med gratis bruk av Voi sparkesykkel\nFor $voiPurchasePrice miljøpoeng"
+                    mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
+
+
+                    mDialogView.button_buy_voi.setOnClickListener {
+
+                        if (balance!! >= voiPurchasePrice) {
+                            balance = balance?.minus(voiPurchasePrice)
+                            mDialogView.textview_voi_currency.text = balance.toString()
+                            ref.child("/balance").setValue(balance)
+
+                            progress = progress?.plus(1)
+                            ref.child("/progress").setValue(progress)
+
+                            var refUsedHistory = ref.child("/usedHistory")
+                            refUsedHistory.push().setValue(usedHistory)
+
+                            Toast.makeText(
+                                activity as UsePointsActivity,
+                                usedHistory + " Ny saldo: " + balance.toString(),
+                                Toast.LENGTH_LONG
+                            ).show()
+
+                            mAlertDialog.dismiss()
+
+
+                        } else {
+                            Toast.makeText(
+                                activity as UsePointsActivity,
+                                "You need more money, fool!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+
+                    }
+
+                }
+
+                override fun onCancelled(p0: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            }
+            ref.addListenerForSingleValueEvent(menuListener)
+            ///
+
+
+            mDialogView.button_cancel_voi_purchase.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
+
+        }
 
 
     return root
