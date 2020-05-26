@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
+import kotlinx.android.synthetic.main.activity_travel_detail.view.textView_departure_time
+import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
 
 class TravelDetailAdapter(
     private val departure: String,
@@ -23,7 +26,25 @@ class TravelDetailAdapter(
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.activity_travel_detail, parent, false)
 
+        if(!verifyIfUserIsLoggedIn()){
+            removeStuff(view)
+        }
+
         return ViewTravelDetails(view)
+    }
+
+    //Checks with the Firebase Authentication if user is logged in or not
+    private fun verifyIfUserIsLoggedIn(): Boolean {
+        val uid = FirebaseAuth.getInstance().uid
+        //If user is not logged in, then return null
+        return uid != null
+    }
+
+    private fun removeStuff(view: View) {
+        view.textView_details_points.visibility = View.GONE
+        view.imageView_detail_leaf_green.visibility = View.GONE
+        view.cardView5.visibility = View.GONE
+
     }
 
     override fun getItemCount(): Int {
@@ -66,6 +87,21 @@ class ViewTravelDetails(val view: View,
         const val DETAILS_PRICE_KEY = "DETAIL_PRICE"
         const val DETAILS_POINTS_KEY = "DETAIL_POINTS"
 
+
+    }
+
+    //Checks with the Firebase Authentication if user is logged in or not
+    private fun verifyIfUserIsLoggedIn(): Boolean {
+        val uid = FirebaseAuth.getInstance().uid
+        //If user is not logged in, then return null
+        return uid != null
+    }
+
+    private fun removeStuff(view: View) {
+        //linearLayout.removeView(view.textView_points)
+        view.textView_points.visibility = View.GONE
+        view.imageView_travel_order_leaf.visibility = View.GONE
+        view.cardView_confirmation.visibility = View.GONE
 
     }
 

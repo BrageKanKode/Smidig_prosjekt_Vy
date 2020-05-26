@@ -8,7 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.data.Json
 import com.example.leafly_application_git.data.Times
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.list_choose_time_row.*
 import kotlinx.android.synthetic.main.list_choose_time_row.view.*
+import kotlinx.android.synthetic.main.list_choose_time_row.view.cardView2
+import kotlinx.android.synthetic.main.list_choose_time_row.view.imageView10
+import kotlinx.android.synthetic.main.list_choose_time_row.view.textView18
+import kotlinx.android.synthetic.main.list_choose_time_row.view.textView22
+import kotlinx.android.synthetic.main.list_choose_time_row.view.textView_points
 
 class ChooseTravelAdapter (private val json: Json, from: String, to: String, price: String, points: String): RecyclerView.Adapter<Custom>() {
 
@@ -21,11 +28,31 @@ class ChooseTravelAdapter (private val json: Json, from: String, to: String, pri
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.list_choose_time_row, parent, false)
 
+        if(!verifyIfUserIsLoggedIn()){
+            removeStuff(view)
+        }
+
         return Custom(view)
     }
 
     override fun getItemCount(): Int {
         return 3
+    }
+
+    //Checks with the Firebase Authentication if user is logged in or not
+    private fun verifyIfUserIsLoggedIn(): Boolean {
+        val uid = FirebaseAuth.getInstance().uid
+        //If user is not logged in, then return null
+        return uid != null
+    }
+
+    private fun removeStuff(view: View) {
+        view.textView22.visibility = View.GONE
+        view.textView_points.visibility = View.GONE
+        view.textView18.visibility = View.GONE
+        view.imageView10.visibility = View.GONE
+        view.cardView2.visibility = View.GONE
+
     }
 
     override fun onBindViewHolder(holder: Custom, position: Int) {

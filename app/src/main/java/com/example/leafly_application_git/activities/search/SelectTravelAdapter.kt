@@ -9,6 +9,8 @@ import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.search.trip.SelectTimeActivity
 import com.example.leafly_application_git.data.Features
 import com.example.leafly_application_git.data.Json
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.list_choose_time_row.view.*
 import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
 
 class SelectTravelAdapter (private val json: Json): RecyclerView.Adapter<CustomViewHolder>() {
@@ -18,11 +20,31 @@ class SelectTravelAdapter (private val json: Json): RecyclerView.Adapter<CustomV
         val layoutInflater = LayoutInflater.from(parent.context)
         val customView = layoutInflater.inflate(R.layout.list_choose_trip_place_row, parent, false)
 
+        if(!verifyIfUserIsLoggedIn()){
+            removeStuff(customView)
+        }
+
         return CustomViewHolder(customView)
     }
 
     override fun getItemCount(): Int {
         return 3
+    }
+
+    //Checks with the Firebase Authentication if user is logged in or not
+    private fun verifyIfUserIsLoggedIn(): Boolean {
+        val uid = FirebaseAuth.getInstance().uid
+        //If user is not logged in, then return null
+        return uid != null
+    }
+
+    private fun removeStuff(view: View) {
+        view.textView20.visibility = View.GONE
+        view.textView_choose_trip_point.visibility = View.GONE
+        view.textView17.visibility = View.GONE
+        view.imageView7.visibility = View.GONE
+        view.cardView.visibility = View.GONE
+
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {

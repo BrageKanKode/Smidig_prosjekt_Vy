@@ -1,6 +1,11 @@
 package com.example.leafly_application_git.activities.search.payment
 
 import android.os.Bundle
+import android.view.View
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
@@ -10,14 +15,15 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
 import kotlinx.android.synthetic.main.activity_confirmation.*
 import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
+
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class ConfirmationActivity : AppCompatActivity() {
 
     internal var user: User? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +39,17 @@ class ConfirmationActivity : AppCompatActivity() {
         val points: String = intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)
         dataPassClass(departure ,arrival ,departureTime ,price ,points)
 
+
         recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
+
+
 
         if(verifyIfUserIsLoggedIn()){
             incrementBalance(points)
         }
     }
+
+
 
     private fun dataPassClass(departure: String,
                               arrival: String,
@@ -76,6 +87,8 @@ class ConfirmationActivity : AppCompatActivity() {
                 balance = balance?.plus(points.toInt())
                 totalEarned = totalEarned?.plus(points.toInt())
                 progress = progress?.plus(1)
+
+
 
                 ref.child("/balance").setValue(balance)
                 ref.child("/totalEarned").setValue(totalEarned)

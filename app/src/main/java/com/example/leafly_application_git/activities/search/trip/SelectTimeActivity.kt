@@ -8,6 +8,7 @@ import com.example.leafly_application_git.activities.search.CustomViewHolder
 import com.example.leafly_application_git.data.Json
 import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
+
 import java.io.InputStream
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -25,9 +26,13 @@ class SelectTimeActivity : AppCompatActivity() {
         val points: String = intent.getStringExtra(CustomViewHolder.MILJO_POENG_KEY)
         fetchJson(from, to, price, points)
 
+
+
         recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
 
     }
+
+
 
 
     private fun fetchJson(from: String, to: String, price: String, points: String) {

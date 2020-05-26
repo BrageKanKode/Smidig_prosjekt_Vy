@@ -7,7 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_confirmation.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
+import kotlinx.android.synthetic.main.activity_travel_order_overview.view.cardView_confirmation
+import kotlinx.android.synthetic.main.activity_travel_order_overview.view.imageView_travel_order_leaf
+import kotlinx.android.synthetic.main.activity_travel_order_overview.view.textView_points
 
 class OrderDetailsAdapter(
     private val departure: String,
@@ -20,6 +25,10 @@ class OrderDetailsAdapter(
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.activity_travel_order_overview, parent, false)
 
+
+        if(!verifyIfUserIsLoggedIn()){
+            removeStuff(view)
+        }
         return ViewOrderDetails(view)
     }
 
@@ -43,6 +52,19 @@ class OrderDetailsAdapter(
         holder.points = points
 
     }
+}
+
+//Checks with the Firebase Authentication if user is logged in or not
+private fun verifyIfUserIsLoggedIn(): Boolean {
+    val uid = FirebaseAuth.getInstance().uid
+    //If user is not logged in, then return null
+    return uid != null
+}
+
+private fun removeStuff(view: View) {
+    view.textView_points.visibility = View.GONE
+    view.imageView_travel_order_leaf.visibility = View.GONE
+    view.cardView_confirmation.visibility = View.GONE
 
 }
 
