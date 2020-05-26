@@ -10,15 +10,15 @@
         android:id="@+id/textView_total_collected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Plant et tre"
+        android:text="@string/plant_et_tre"
         android:textColor="@color/colorBlack"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintVertical_bias="0.18" />
 
     <Button
         android:id="@+id/btn_do_plant_tree"
@@ -26,13 +26,13 @@
         android:layout_height="52dp"
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/colorPrimary"
-        android:text="Plant a Tree"
+        android:text="@string/plant_a_tree"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textView_top_text_string_disponibelt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -55,15 +55,15 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.74"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
+        app:layout_constraintStart_toEndOf="@+id/textView_top_text_string_disponibelt"
+        app:layout_constraintTop_toTopOf="@+id/textView_top_text_string_disponibelt" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_total_amount_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Totalsum:"
+        android:text="@string/totalsum"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -81,36 +81,37 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_do_plant_tree" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/imageView_plant_leaf"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/leaf_image"
         app:layout_constraintBottom_toBottomOf="@+id/textView_total_tree_sum"
         app:layout_constraintEnd_toStartOf="@+id/textView_total_tree_sum"
         app:layout_constraintTop_toTopOf="@+id/textView_total_tree_sum"
         app:srcCompat="@drawable/ic_vector_leaf" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="225dp"
-        android:layout_height="82dp"
+        android:id="@+id/textView_prefix_text_string"
+        android:layout_width="215dp"
+        android:layout_height="78dp"
         android:layout_marginTop="16dp"
-        android:text="Med poengene du opptjener kan du gi tilbake til naturen ved å plante trær."
+        android:text="@string/plant_a_tree_dialog"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView_total_collected"
         app:layout_constraintTop_toBottomOf="@+id/textView_total_collected" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/textView_prefixed_string_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Velg antall"
+        android:text="@string/velg_antall"
         android:textColor="@color/colorBlack"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/textView_total_amount_three"
+        app:layout_constraintStart_toStartOf="@+id/textView_prefix_text_string"
+        app:layout_constraintTop_toBottomOf="@+id/textView_prefix_text_string"
         app:layout_constraintVertical_bias="0.26" />
 
     <androidx.cardview.widget.CardView
@@ -122,17 +123,17 @@
         app:cardBackgroundColor="@color/common_google_signin_btn_text_light_default"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toStartOf="@+id/textView_plant_tree_amount"
-        app:layout_constraintTop_toBottomOf="@+id/textView24">
+        app:layout_constraintTop_toBottomOf="@+id/textView_prefixed_string_number">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView34"
+                android:id="@+id/textView_remove_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:text="@string/minus"
                 android:textColor="@color/colorBlack"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -158,10 +159,10 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView35"
+                android:id="@+id/textView_add_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
+                android:text="@string/pluss"
                 android:textColor="@color/colorBlack"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -182,4 +183,82 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_plant_tree_minus" />
+
+    <ImageView
+        android:id="@+id/imageView_background_forrest"
+        android:layout_width="181dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/tree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_currency_show"
+        app:srcCompat="@drawable/ic_hill_green_background" />
+
+    <ImageView
+        android:id="@+id/imageView_stem_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/tree"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_background_forrest"
+        app:layout_constraintStart_toStartOf="@+id/imageView_background_forrest"
+        app:layout_constraintTop_toTopOf="@+id/textView_prefix_text_string"
+        app:srcCompat="@drawable/ic_tree_stem" />
+
+    <ImageView
+        android:id="@+id/imageView_stem_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/tree"
+        app:layout_constraintStart_toEndOf="@+id/imageView_stem_one"
+        app:layout_constraintTop_toTopOf="@+id/imageView_stem_one"
+        app:srcCompat="@drawable/ic_tree_stem" />
+
+    <ImageView
+        android:id="@+id/imageView_stem_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/tree"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_two"
+        app:layout_constraintStart_toEndOf="@+id/imageView_stem_two"
+        app:srcCompat="@drawable/ic_tree_stem" />
+
+    <ImageView
+        android:id="@+id/imageView_three_top_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/tree"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_one"
+        app:layout_constraintStart_toEndOf="@+id/textView_prefix_text_string"
+        app:srcCompat="@drawable/ic_tree_top_one" />
+
+    <ImageView
+        android:id="@+id/imageView_three_top_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/tree"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_three"
+        app:layout_constraintStart_toEndOf="@+id/imageView_three_top_one"
+        app:srcCompat="@drawable/ic_tree_top_three" />
+
+    <ImageView
+        android:id="@+id/imageView_three_top_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/tree"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_two"
+        app:layout_constraintStart_toEndOf="@+id/textView_prefix_text_string"
+        app:srcCompat="@drawable/ic_tree_top_two" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

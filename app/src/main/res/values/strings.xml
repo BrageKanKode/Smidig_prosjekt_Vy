@@ -109,6 +109,14 @@
     <string name="betal">Betal</string>
     <string name="din_saldo">Din saldo</string>
     <string name="etter_kj_p">Etter kjøp</string>
+    <string name="tree">Tree</string>
+    <string name="pluss">+</string>
+    <string name="minus">-</string>
+    <string name="plant_a_tree_dialog">Med poengene du opptjener kan du gi tilbake til naturen ved å plante trær.</string>
+    <string name="velg_antall">Velg antall</string>
+    <string name="totalsum">Totalsum:</string>
+    <string name="plant_a_tree">Plant a Tree</string>
+    <string name="plant_et_tre">Plant et tre</string>
 
 
 </resources>
