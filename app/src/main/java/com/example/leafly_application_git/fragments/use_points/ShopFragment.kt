@@ -150,7 +150,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var progress = user?.progress
-                    var usedHistory =
+                    val usedHistory =
                         "Du kjøpte Netflix abbonement \nFor $netflixPurchasePrice miljøpoeng"
                     mDialogView.textView_currency_netflix.text = "Saldo: " + balance.toString()
 
@@ -302,14 +302,14 @@ class ShopFragment : Fragment() {
             mDialogView.textview_narvesen_dialog.text = "Få en gratis baguette fra en Narvesen"
 
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var progress = user?.progress
-                    var usedHistory =
+                    val usedHistory =
                         "Du fikk gratis baguette fra Narvesen\nFor $narvesenPurchasePrice miljøpoeng"
                     mDialogView.textview_currency_narvesen.text = "Saldo: " + balance.toString()
 
@@ -324,7 +324,7 @@ class ShopFragment : Fragment() {
                             progress = progress?.plus(1)
                             ref.child("/progress").setValue(progress)
 
-                            var refUsedHistory = ref.child("/usedHistory")
+                            val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
                             Toast.makeText(
@@ -381,14 +381,14 @@ class ShopFragment : Fragment() {
             mDialogView.textview_starbucks_dialog.text = "Velg en valgfri kaffe fra Starbucks"
 
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var progress = user?.progress
-                    var usedHistory =
+                    val usedHistory =
                         "Du valgte en gratis, valgfri kaffe fra Starbucks\nFor $starbucksPurchasePrice miljøpoeng"
                     mDialogView.textview_currency_starbucks.text = "Saldo: " + balance.toString()
 
@@ -403,7 +403,7 @@ class ShopFragment : Fragment() {
                             progress = progress?.plus(1)
                             ref.child("/progress").setValue(progress)
 
-                            var refUsedHistory = ref.child("/usedHistory")
+                            val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
                             Toast.makeText(
@@ -459,14 +459,14 @@ class ShopFragment : Fragment() {
             mDialogView.textview_voi_dialog.text = "Få 15 minutter med gratis bruk med en av Voi sine sparkesykler"
 
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var progress = user?.progress
-                    var usedHistory =
+                    val usedHistory =
                         "Du får 15 minutter med gratis bruk av Voi sparkesykkel\nFor $voiPurchasePrice miljøpoeng"
                     mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
 
@@ -481,7 +481,7 @@ class ShopFragment : Fragment() {
                             progress = progress?.plus(1)
                             ref.child("/progress").setValue(progress)
 
-                            var refUsedHistory = ref.child("/usedHistory")
+                            val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
                             Toast.makeText(

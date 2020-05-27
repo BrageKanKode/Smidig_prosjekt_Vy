@@ -35,11 +35,11 @@ class ProgressionActivity : AppCompatActivity() {
     }
 
     //buttons to new activities
-    fun toGrowingTree() {
+    private fun toGrowingTree() {
         val intent = Intent(this, GrowingTreeActivity::class.java)
         startActivity(intent)
     }
-    fun toHistory() {
+    private fun toHistory() {
         val intent = Intent(this, HistoryActivity::class.java)
         startActivity(intent)
     }

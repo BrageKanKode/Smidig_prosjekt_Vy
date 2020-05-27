@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.incrementProgress
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -54,7 +55,7 @@ class PlantTreeActivity : AppCompatActivity() {
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)
 
-                        progress = progress?.plus(1 + treeAmount)
+                        progress = progress?.plus(incrementProgress(25))
                         ref.child("/progress").setValue(progress)
 
                         treeAmount = 1
@@ -69,9 +70,6 @@ class PlantTreeActivity : AppCompatActivity() {
                         ).show()
                     }
                 }
-
-
-
 
                 textView_plant_tree_amount.text = treeAmount.toString()
                 textView_total_tree_sum.text = totalTreeSum.toString()
@@ -93,9 +91,9 @@ class PlantTreeActivity : AppCompatActivity() {
                         textView_total_tree_sum.text = totalTreeSum.toString()
                     }
                 }
-
-
             }
+
+
 
             override fun onCancelled(p0: DatabaseError) {
                 TODO("Not yet implemented")

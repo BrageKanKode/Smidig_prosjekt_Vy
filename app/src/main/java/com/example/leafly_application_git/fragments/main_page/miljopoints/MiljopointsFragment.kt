@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.LoginActivity
 import com.example.leafly_application_git.activities.authentication.SignUpActivity
@@ -102,13 +103,6 @@ class MiljopointsFragment : Fragment() {
 
 
         return root
-    }
-
-    //Checks with the Firebase Authentication if user is logged in or not
-    private fun verifyIfUserIsLoggedIn(): Boolean {
-        val uid = FirebaseAuth.getInstance().uid
-        //If user is not logged in, then return null
-        return uid != null
     }
 
     //Menu button to sign out user

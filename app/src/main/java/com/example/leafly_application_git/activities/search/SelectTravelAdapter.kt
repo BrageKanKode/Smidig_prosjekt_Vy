@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.search.trip.SelectTimeActivity
 import com.example.leafly_application_git.data.Features
 import com.example.leafly_application_git.data.Json
@@ -29,13 +30,6 @@ class SelectTravelAdapter (private val json: Json): RecyclerView.Adapter<CustomV
 
     override fun getItemCount(): Int {
         return 3
-    }
-
-    //Checks with the Firebase Authentication if user is logged in or not
-    private fun verifyIfUserIsLoggedIn(): Boolean {
-        val uid = FirebaseAuth.getInstance().uid
-        //If user is not logged in, then return null
-        return uid != null
     }
 
     private fun removeStuff(view: View) {

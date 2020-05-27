@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -138,13 +139,6 @@ class OrderDetailsAdapter(
         holder.points = points
 
     }
-}
-
-//Checks with the Firebase Authentication if user is logged in or not
-private fun verifyIfUserIsLoggedIn(): Boolean {
-    val uid = FirebaseAuth.getInstance().uid
-    //If user is not logged in, then return null
-    return uid != null
 }
 
 private fun removeStuff(view: View) {

@@ -50,12 +50,7 @@ class ConfirmationAdapter (
 
 }
 
-//Checks with the Firebase Authentication if user is logged in or not
-private fun verifyIfUserIsLoggedIn(): Boolean {
-    val uid = FirebaseAuth.getInstance().uid
-    //If user is not logged in, then return null
-    return uid != null
-}
+
 
 /*
 private fun removeStuff(view: View) {

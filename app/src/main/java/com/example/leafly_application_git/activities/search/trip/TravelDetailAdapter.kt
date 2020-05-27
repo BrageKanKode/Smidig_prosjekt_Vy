@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
@@ -33,12 +34,7 @@ class TravelDetailAdapter(
         return ViewTravelDetails(view)
     }
 
-    //Checks with the Firebase Authentication if user is logged in or not
-    private fun verifyIfUserIsLoggedIn(): Boolean {
-        val uid = FirebaseAuth.getInstance().uid
-        //If user is not logged in, then return null
-        return uid != null
-    }
+
 
     private fun removeStuff(view: View) {
         view.textView_details_points.visibility = View.GONE

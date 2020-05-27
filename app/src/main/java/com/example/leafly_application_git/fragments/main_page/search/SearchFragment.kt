@@ -58,7 +58,7 @@ class SearchFragment : Fragment() {
         }
 
 
-
+/*
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
@@ -82,6 +82,8 @@ class SearchFragment : Fragment() {
         }
         ref.addListenerForSingleValueEvent(menuListener)
 
+
+ */
 
         return root
     }
