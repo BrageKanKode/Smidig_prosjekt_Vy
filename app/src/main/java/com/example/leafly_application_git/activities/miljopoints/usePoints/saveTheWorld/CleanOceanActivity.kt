@@ -52,7 +52,7 @@ class CleanOceanActivity : AppCompatActivity() {
                 textView_clean_ocean_amount.text = cleanAmount.toString()
                 textView_total_ocean_sum.text = totalCleanSum.toString()
 
-                btn_clean_ocean_btn_plus.setOnClickListener {
+                btn_clean_ocean_btn_minus.setOnClickListener {
                     if(cleanAmount > 1) {
                         cleanAmount--
                         textView_clean_ocean_amount.text = cleanAmount.toString()
@@ -61,7 +61,7 @@ class CleanOceanActivity : AppCompatActivity() {
                     }
                 }
 
-                btn_clean_ocean_btn_minus.setOnClickListener {
+                btn_clean_ocean_btn_plus.setOnClickListener {
                     if(balance!! >= totalCleanSum + cleanOceanPrice){
                         cleanAmount++
                         textView_clean_ocean_amount.text = cleanAmount.toString()
