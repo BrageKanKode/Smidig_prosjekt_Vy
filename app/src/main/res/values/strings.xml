@@ -45,7 +45,7 @@
     <string name="membership_level">Medlemsnivå</string>
     <string name="welcome_title_miljopoint">Velkommen, <br/> Navn!</string>
     <string name="benefits_title">Medlems-fordeler</string>
-    <string name="scan_title">Scan</string>
+    <string name="scan_title">Scan Kode</string>
     <string name="use_points_title">Bruk poeng</string>
     <string name="button_to_plant_a_tree">Med poengene du opptjener kan du gi tilbake til naturen ved å plante trær.</string>
     <string name="plant_a_tree_label">Plant et tre</string>

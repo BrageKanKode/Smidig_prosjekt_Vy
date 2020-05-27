@@ -19,15 +19,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/view_use_points"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
         android:background="#c7c9c7"
-        app:cardBackgroundColor="@color/colorLightGreen"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintEnd_toStartOf="@+id/view_member_benefits"
+        app:cardBackgroundColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
@@ -35,46 +32,113 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView_use_points"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/shopping_cart"
-                android:src="@drawable/ic_shopping_cart_24px"
+            <TextView
+                android:id="@+id/textView_scan_code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sf_display"
+                android:text="@string/scan_title"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cardView11"
+                app:layout_constraintStart_toStartOf="@+id/cardView11"
+                app:layout_constraintTop_toBottomOf="@+id/cardView11" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView11"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:cardBackgroundColor="#CBEAE4"
+                app:cardCornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.238">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_bar_code_scanner"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:contentDescription="@string/scan_icon"
+                        android:src="@drawable/ic_scan_icon_24px"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/view_member_benefits"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
         android:background="#c7c9c7"
         app:cardBackgroundColor="@color/colorLightGreen"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintEnd_toStartOf="@+id/view_scan_code"
+        app:layout_constraintStart_toEndOf="@+id/view_use_points"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
 
-            <ImageView
-                android:id="@+id/imageView_benefits"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/flower_icon"
-                android:src="@drawable/ic_local_florist_24px"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView12"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="#CBEAE4"
+                app:cardCornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.511"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.29">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_shopping_cart_image"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:contentDescription="@string/shopping_cart"
+                        android:src="@drawable/ic_local_grocery_store_24px"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView_use_points_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sf_display"
+                android:text="@string/use_points_title"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cardView12"
+                app:layout_constraintStart_toStartOf="@+id/cardView12"
+                app:layout_constraintTop_toBottomOf="@+id/cardView12" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -94,71 +158,65 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/view_scan_code"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="#c7c9c7"
-        app:cardBackgroundColor="@color/colorLightGreen"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/view_member_benefits"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView_scan"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/scan_icon"
-                android:src="@drawable/ic_fullscreen_24px"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView13"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="#CBEAE4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.511"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.29">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_florist_image"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:contentDescription="@string/flower_icon"
+                        android:src="@drawable/ic_local_florist_24px"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView_advantage_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sf_display"
+                android:text="@string/fordeler"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cardView13"
+                app:layout_constraintStart_toStartOf="@+id/cardView13"
+                app:layout_constraintTop_toBottomOf="@+id/cardView13" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textView_use_points_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_display"
-        android:text="@string/use_points_title"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_use_points"
-        app:layout_constraintStart_toStartOf="@+id/view_use_points"
-        app:layout_constraintTop_toBottomOf="@+id/view_use_points" />
-
-    <TextView
-        android:id="@+id/textView_benefits_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_display"
-        android:text="@string/benefits_title"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_member_benefits"
-        app:layout_constraintStart_toStartOf="@+id/view_member_benefits"
-        app:layout_constraintTop_toBottomOf="@+id/view_member_benefits" />
-
-    <TextView
-        android:id="@+id/textView_scan_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_display"
-        android:text="@string/scan_title"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_scan_code"
-        app:layout_constraintStart_toStartOf="@+id/view_scan_code"
-        app:layout_constraintTop_toBottomOf="@+id/view_scan_code" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_welcome_progress_bar_info"
