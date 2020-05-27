@@ -7,10 +7,11 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView_check_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/checkicon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,20 +22,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Takk for ditt bidrag!"
-        android:textColor="#000000"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/takk_for_ditt_bidrag"
+        android:textColor="@color/colorBlack"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView_check_icon"
+        app:layout_constraintStart_toStartOf="@+id/imageView_check_icon"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_check_icon" />
 
     <TextView
         android:id="@+id/textView4_thanks_tree_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Gratulerer! Du har plantet X antall trær!"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/gratulerer_du_har_plantet_x_antall_tr_r"
         app:layout_constraintEnd_toEndOf="@+id/textView_thanks_tree"
         app:layout_constraintStart_toStartOf="@+id/textView_thanks_tree"
         app:layout_constraintTop_toBottomOf="@+id/textView_thanks_tree" />
@@ -45,8 +48,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="#41927B"
-        android:text="Gå til dine kjøp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/g_til_dine_kj_p"
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView4_thanks_tree_info"
         app:layout_constraintStart_toStartOf="@+id/textView4_thanks_tree_info"
         app:layout_constraintTop_toBottomOf="@+id/textView4_thanks_tree_info" />
@@ -58,7 +63,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="#FFFFFF"
-        android:text="Fortsett å handle"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/fortsett_handle"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_see_my_purchases_tree"
         app:layout_constraintStart_toStartOf="@+id/button_see_my_purchases_tree"
@@ -70,6 +78,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/close_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_clear_24px" />
