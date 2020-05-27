@@ -107,7 +107,7 @@ class ShopFragment : Fragment() {
 
                             val mAlertDialog = mBuilder.show()
 
-                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                            mDialogView2.button_purchase_keep_shopping_shop.setOnClickListener {
                                 mAlertDialog.dismiss()
                             }
 
@@ -208,7 +208,7 @@ class ShopFragment : Fragment() {
 
                             val mAlertDialog = mBuilder.show()
 
-                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                            mDialogView2.button_purchase_keep_shopping_shop.setOnClickListener {
                                 mAlertDialog.dismiss()
                             }
 
@@ -306,7 +306,7 @@ class ShopFragment : Fragment() {
 
                             val mAlertDialog = mBuilder.show()
 
-                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                            mDialogView2.button_purchase_keep_shopping_shop.setOnClickListener {
                                 mAlertDialog.dismiss()
                             }
 
@@ -405,7 +405,7 @@ class ShopFragment : Fragment() {
 
                             val mAlertDialog = mBuilder.show()
 
-                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                            mDialogView2.button_purchase_keep_shopping_shop.setOnClickListener {
                                 mAlertDialog.dismiss()
                             }
 
@@ -503,7 +503,7 @@ class ShopFragment : Fragment() {
 
                             val mAlertDialog = mBuilder.show()
 
-                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                            mDialogView2.button_purchase_keep_shopping_shop.setOnClickListener {
                                 mAlertDialog.dismiss()
                             }
 
@@ -601,7 +601,7 @@ class ShopFragment : Fragment() {
 
                             val mAlertDialog = mBuilder.show()
 
-                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                            mDialogView2.button_purchase_keep_shopping_shop.setOnClickListener {
                                 mAlertDialog.dismiss()
                             }
 

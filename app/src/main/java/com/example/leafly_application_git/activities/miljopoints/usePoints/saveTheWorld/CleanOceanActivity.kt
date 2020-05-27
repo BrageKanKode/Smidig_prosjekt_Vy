@@ -1,10 +1,14 @@
 package com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
+import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -12,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.textview_currency_show
+import kotlinx.android.synthetic.main.purchase_confirmation_clean_ocean_dialog.view.*
+import kotlinx.android.synthetic.main.purchase_tree_confirmation.view.*
 
 class CleanOceanActivity : AppCompatActivity() {
 
@@ -62,6 +68,29 @@ class CleanOceanActivity : AppCompatActivity() {
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         textView_total_ocean_sum.text = totalCleanSum.toString()
 
+
+                        //Opens new alertdialog with confirmation of purchase
+                        val mDialogView2 = LayoutInflater.from(this@CleanOceanActivity)
+                            .inflate(R.layout.purchase_confirmation_clean_ocean_dialog, null)
+                        val mBuilder = AlertDialog.Builder(this@CleanOceanActivity)
+                            .setView(mDialogView2)
+
+                        //mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount antall trær!"
+
+                        val mAlertDialog = mBuilder.show()
+
+                        mDialogView2.button_redirect_to_purchase_ocean.setOnClickListener {
+                            val intent = Intent(this@CleanOceanActivity, HistoryActivity::class.java)
+                            startActivity(intent)
+                        }
+
+                        mDialogView2.button_keep_shopping_ocean.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+
+                        mDialogView2.imageView_ocean_confirmation_close.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
 
 
                     } else {
