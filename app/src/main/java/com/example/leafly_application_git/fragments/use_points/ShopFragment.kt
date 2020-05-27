@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.fragments.use_points
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,8 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
+import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.PointShopActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
+import com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld.PlantTreeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -21,11 +24,15 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
 import kotlinx.android.synthetic.main.dplay_dialog.*
 import kotlinx.android.synthetic.main.dplay_dialog.view.*
+import kotlinx.android.synthetic.main.fragment_donate.view.*
 import kotlinx.android.synthetic.main.fragment_shop.*
 import kotlinx.android.synthetic.main.fragment_shop.view.*
 import kotlinx.android.synthetic.main.narvesen_dialog.view.*
 import kotlinx.android.synthetic.main.netflix_dialog.view.*
 import kotlinx.android.synthetic.main.odeon_dialog.view.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.view.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.view.imageView_close_purchase_dialog
 import kotlinx.android.synthetic.main.starbucks_dialog.view.*
 import kotlinx.android.synthetic.main.voi_dialog.view.*
 
@@ -52,7 +59,6 @@ class ShopFragment : Fragment() {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.dplay_dialog, null)
             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
-                .setTitle("Dplay Abbonement")
                 .setView(mDialogView)
 
             val mAlertDialog = mBuilder.show()
@@ -74,7 +80,9 @@ class ShopFragment : Fragment() {
                     mDialogView.textView_currency_dplay.text = "Saldo: " + balance.toString()
 
 
+                    mDialogView.button_buy_dplay.setText("Kjøp for $dplayPurchasePrice poeng")
                     mDialogView.button_buy_dplay.setOnClickListener {
+
 
                         if (balance!! >= dplayPurchasePrice) {
                             balance = balance?.minus(dplayPurchasePrice)
@@ -87,13 +95,38 @@ class ShopFragment : Fragment() {
                             var refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
-                            Toast.makeText(
-                                activity as UsePointsActivity,
-                                usedHistory + " Ny saldo: " + balance.toString(),
-                                Toast.LENGTH_LONG
-                            ).show()
+//                            Toast.makeText(
+//                                activity as UsePointsActivity,
+//                                usedHistory + " Ny saldo: " + balance.toString(),
+//                                Toast.LENGTH_LONG
+//                            ).show()
 
                             mAlertDialog.dismiss()
+
+
+
+                            //Opens new alertdialog with confirmation of purchase
+                            val mDialogView2 = LayoutInflater.from(activity as UsePointsActivity)
+                                .inflate(R.layout.purchase_done_dialog, null)
+                            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                                .setView(mDialogView2)
+
+                            mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
+
+                            mDialogView2.button_purchase_view_cupon.setOnClickListener {
+                                requireActivity().startActivity(Intent(requireActivity(), HistoryActivity::class.java))
+                            }
+
+
+                            val mAlertDialog = mBuilder.show()
+
+                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
+
+                            mDialogView2.imageView_close_purchase_dialog.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
 
 
                         } else {
@@ -115,10 +148,12 @@ class ShopFragment : Fragment() {
             ref.addListenerForSingleValueEvent(menuListener)
             ///
 
-
-            mDialogView.button_cancel_dplay_payment.setOnClickListener {
+            mDialogView.imageView_dplay_close.setOnClickListener {
                 mAlertDialog.dismiss()
             }
+
+
+
 
         }
 

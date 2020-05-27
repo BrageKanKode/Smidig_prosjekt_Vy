@@ -59,28 +59,28 @@ class SearchFragment : Fragment() {
 
 
 
-        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
-        val menuListener = object : ValueEventListener {
-            override fun onDataChange(p0: DataSnapshot) {
-                var balance = user?.balance
-
-                root.btn_cheat.setOnClickListener {
-                balance = balance?.plus(10000)
-                ref.child("/balance").setValue(balance)
-
-                }
-                root.btn_cheat_pull.setOnClickListener {
-                balance = balance?.minus(10000)
-                ref.child("/balance").setValue(balance)
-
-                }
-            }
-
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        }
-        ref.addListenerForSingleValueEvent(menuListener)
+//        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+//        val menuListener = object : ValueEventListener {
+//            override fun onDataChange(p0: DataSnapshot) {
+//                var balance = user?.balance
+//
+//                root.btn_cheat.setOnClickListener {
+//                balance = balance?.plus(10000)
+//                ref.child("/balance").setValue(balance)
+//
+//                }
+//                root.btn_cheat_pull.setOnClickListener {
+//                balance = balance?.minus(10000)
+//                ref.child("/balance").setValue(balance)
+//
+//                }
+//            }
+//
+//            override fun onCancelled(p0: DatabaseError) {
+//                TODO("Not yet implemented")
+//            }
+//        }
+//        ref.addListenerForSingleValueEvent(menuListener)
 
 
         return root

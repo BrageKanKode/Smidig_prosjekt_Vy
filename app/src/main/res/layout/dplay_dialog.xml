@@ -11,21 +11,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
 
     <Button
         android:id="@+id/button_buy_dplay"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#CBEAE4"
         android:text="Kjøp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_currency_dplay"
-        app:layout_constraintStart_toStartOf="@+id/textView_currency_dplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_currency_dplay" />
 
     <TextView
@@ -48,13 +52,24 @@
         app:layout_constraintStart_toStartOf="@+id/textView_price_dplay"
         app:layout_constraintTop_toBottomOf="@+id/textView_price_dplay" />
 
-    <Button
-        android:id="@+id/button_cancel_dplay_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_dplay_logo_2019" />
+
+    <ImageView
+        android:id="@+id/imageView_dplay_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:text="Avbryt"
-        app:layout_constraintEnd_toEndOf="@+id/button_buy_dplay"
-        app:layout_constraintStart_toStartOf="@+id/button_buy_dplay"
-        app:layout_constraintTop_toBottomOf="@+id/button_buy_dplay" />
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_clear_24px" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
