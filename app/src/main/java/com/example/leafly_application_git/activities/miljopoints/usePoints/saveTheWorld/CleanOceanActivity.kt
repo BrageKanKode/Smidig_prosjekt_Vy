@@ -46,7 +46,6 @@ class CleanOceanActivity : AppCompatActivity() {
                 val cleanOceanPrice = 50
                 var cleanAmount = 1
                 var totalCleanSum = cleanOceanPrice
-                var usedHistory = "Kjøpt 1L av vannrensing \nFor $cleanOceanPrice miljøpoeng"
                 textview_currency_show.text = balance.toString()
 
 
@@ -78,6 +77,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         textview_currency_show.text = balance.toString()
                         ref.child("/balance").setValue(balance)
 
+                        var usedHistory = "Kjøpt $cleanAmount L av vannrensing \nFor $cleanOceanPrice miljøpoeng"
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)

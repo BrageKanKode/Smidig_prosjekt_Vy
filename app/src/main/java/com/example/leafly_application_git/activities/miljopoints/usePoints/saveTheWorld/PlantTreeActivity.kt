@@ -47,7 +47,7 @@ class PlantTreeActivity : AppCompatActivity() {
                 val treePrice = 50
                 var treeAmount = 1
                 var totalTreeSum = treePrice
-                var usedHistory = "Du har reddet et tre! \nFor $treePrice miljøpoeng"
+
                 textview_currency_show.text = balance.toString()
 
 
@@ -81,6 +81,8 @@ class PlantTreeActivity : AppCompatActivity() {
                         balance = balance?.minus(totalTreeSum)
                         textview_currency_show.text = balance.toString()
                         ref.child("/balance").setValue(balance)
+
+                        var usedHistory = "Du har reddet $treeAmount antall tre! \nFor $treePrice miljøpoeng"
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)
