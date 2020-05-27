@@ -92,10 +92,7 @@ class PlantTreeActivity : AppCompatActivity() {
 
 
 
-                        //treeAmount = 1
-                        totalTreeSum = treePrice
-                        textView_plant_tree_amount.text = treeAmount.toString()
-                        textView_total_tree_sum.text = totalTreeSum.toString()
+
 
                         //Opens new alertdialog with confirmation of purchase
                         val mDialogView2 = LayoutInflater.from(this@PlantTreeActivity)
@@ -104,6 +101,11 @@ class PlantTreeActivity : AppCompatActivity() {
                             .setView(mDialogView2)
 
                         mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount antall trær!"
+
+                        treeAmount = 1
+                        totalTreeSum = treePrice
+                        textView_plant_tree_amount.text = treeAmount.toString()
+                        textView_total_tree_sum.text = totalTreeSum.toString()
 
                         val mAlertDialog = mBuilder.show()
 

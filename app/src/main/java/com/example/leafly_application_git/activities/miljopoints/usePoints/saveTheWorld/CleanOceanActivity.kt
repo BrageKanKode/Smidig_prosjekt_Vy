@@ -83,10 +83,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         refUsedHistory.push().setValue(usedHistory)
 
 
-                        //cleanAmount = 1
-                        totalCleanSum = cleanOceanPrice
-                        textView_clean_ocean_amount.text = cleanAmount.toString()
-                        textView_total_ocean_sum.text = totalCleanSum.toString()
+
 
 
                         //Opens new alertdialog with confirmation of purchase
@@ -96,6 +93,11 @@ class CleanOceanActivity : AppCompatActivity() {
                             .setView(mDialogView2)
 
                         mDialogView2.textView_confirmation_ocean_info.text = "Gratulerer! Du har ryddet $cleanAmount kg fra havet!"
+
+                        cleanAmount = 1
+                        totalCleanSum = cleanOceanPrice
+                        textView_clean_ocean_amount.text = cleanAmount.toString()
+                        textView_total_ocean_sum.text = totalCleanSum.toString()
 
                         val mAlertDialog = mBuilder.show()
 
