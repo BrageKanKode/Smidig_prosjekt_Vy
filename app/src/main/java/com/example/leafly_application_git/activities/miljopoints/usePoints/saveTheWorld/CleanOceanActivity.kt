@@ -77,7 +77,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         textview_currency_show.text = balance.toString()
                         ref.child("/balance").setValue(balance)
 
-                        var usedHistory = "Kjøpt $cleanAmount L av vannrensing \nFor $cleanOceanPrice miljøpoeng"
+                        var usedHistory = "Kjøpt $cleanAmount L av vannrensing \nFor $totalCleanSum miljøpoeng"
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)

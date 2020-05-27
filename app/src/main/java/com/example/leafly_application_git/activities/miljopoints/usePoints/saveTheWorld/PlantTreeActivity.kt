@@ -82,7 +82,9 @@ class PlantTreeActivity : AppCompatActivity() {
                         textview_currency_show.text = balance.toString()
                         ref.child("/balance").setValue(balance)
 
-                        var usedHistory = "Du har reddet $treeAmount antall tre! \nFor $treePrice miljøpoeng"
+
+
+                        var usedHistory = "Du har reddet $treeAmount antall tre! \nFor $totalTreeSum miljøpoeng"
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)
