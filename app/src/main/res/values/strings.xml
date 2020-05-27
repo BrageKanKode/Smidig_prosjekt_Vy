@@ -122,6 +122,8 @@
     <string name="velg_antall_kg">Velg antall (kg)</string>
     <string name="rydd_x_antall_kilo_plast">Rydd X antall Kilo plast</string>
     <string name="ocean">ocean</string>
+    <string name="_100_pr_tre">100 / pr tre</string>
+    <string name="_100_pr_kg">100 / pr kg</string>
 
 
 </resources>
