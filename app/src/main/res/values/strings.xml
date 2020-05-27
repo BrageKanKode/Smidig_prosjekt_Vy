@@ -124,6 +124,8 @@
     <string name="ocean">ocean</string>
     <string name="_100_pr_tre">100 / pr tre</string>
     <string name="_100_pr_kg">100 / pr kg</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
 
 
 </resources>

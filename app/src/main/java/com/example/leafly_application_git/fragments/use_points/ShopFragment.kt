@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -13,24 +12,17 @@ import androidx.fragment.app.Fragment
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
-import com.example.leafly_application_git.activities.miljopoints.usePoints.PointShopActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
-import com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld.PlantTreeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_clean_the_ocean.*
-import kotlinx.android.synthetic.main.dplay_dialog.*
 import kotlinx.android.synthetic.main.dplay_dialog.view.*
-import kotlinx.android.synthetic.main.fragment_donate.view.*
-import kotlinx.android.synthetic.main.fragment_shop.*
 import kotlinx.android.synthetic.main.fragment_shop.view.*
 import kotlinx.android.synthetic.main.narvesen_dialog.view.*
 import kotlinx.android.synthetic.main.netflix_dialog.view.*
 import kotlinx.android.synthetic.main.odeon_dialog.view.*
-import kotlinx.android.synthetic.main.purchase_done_dialog.*
 import kotlinx.android.synthetic.main.purchase_done_dialog.view.*
 import kotlinx.android.synthetic.main.purchase_done_dialog.view.imageView_close_purchase_dialog
 import kotlinx.android.synthetic.main.starbucks_dialog.view.*
@@ -95,11 +87,6 @@ class ShopFragment : Fragment() {
                             var refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
-//                            Toast.makeText(
-//                                activity as UsePointsActivity,
-//                                usedHistory + " Ny saldo: " + balance.toString(),
-//                                Toast.LENGTH_LONG
-//                            ).show()
 
                             mAlertDialog.dismiss()
 
@@ -165,7 +152,6 @@ class ShopFragment : Fragment() {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.netflix_dialog, null)
             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
-                .setTitle("Netflix Abbonement")
                 .setView(mDialogView)
 
             val mAlertDialog = mBuilder.show()
@@ -190,6 +176,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textView_currency_netflix.text = "Saldo: " + balance.toString()
 
 
+                    mDialogView.button_buy_netflix.setText("Kjøp for $netflixPurchasePrice poeng")
                     mDialogView.button_buy_netflix.setOnClickListener {
 
                         if (balance!! >= netflixPurchasePrice) {
@@ -203,13 +190,31 @@ class ShopFragment : Fragment() {
                             var refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
-                            Toast.makeText(
-                                activity as UsePointsActivity,
-                                usedHistory + " Ny saldo: " + balance.toString(),
-                                Toast.LENGTH_LONG
-                            ).show()
 
                             mAlertDialog.dismiss()
+
+                            //Opens new alertdialog with confirmation of purchase
+                            val mDialogView2 = LayoutInflater.from(activity as UsePointsActivity)
+                                .inflate(R.layout.purchase_done_dialog, null)
+                            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                                .setView(mDialogView2)
+
+                            mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
+
+                            mDialogView2.button_purchase_view_cupon.setOnClickListener {
+                                requireActivity().startActivity(Intent(requireActivity(), HistoryActivity::class.java))
+                            }
+
+
+                            val mAlertDialog = mBuilder.show()
+
+                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
+
+                            mDialogView2.imageView_close_purchase_dialog.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
 
 
                         } else {
@@ -231,20 +236,20 @@ class ShopFragment : Fragment() {
             ref.addListenerForSingleValueEvent(menuListener)
             ///
 
-
-            mDialogView.button_cancel_netflix_payment.setOnClickListener {
+            mDialogView.imageView_netflix_close.setOnClickListener {
                 mAlertDialog.dismiss()
             }
+
 
         }
 
 
 
+        //Logic to buy Odeon
         root.view_shop_item3.setOnClickListener {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.odeon_dialog, null)
             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
-                .setTitle("Odeon - 2 for 1 Kinobillett")
                 .setView(mDialogView)
 
             val mAlertDialog = mBuilder.show()
@@ -254,7 +259,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textView_price_odeon.text = "Pris: $odeonPurchasePrice"
-            mDialogView.textView_odeon_dialog.text = "Odeon tilbyr at du kan bruke poeng for å få tilsendt en kupong. Denne kan brukes for å få 2 billetter til prisen av 1 i enten nettbutikken eller fysisk på kino i alle deres saler"
+            mDialogView.textView_odeon_dialog.text = "Få 2 billetter til prisen av 1"
 
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -269,6 +274,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textView_currency_odeon.text = "Saldo: " + balance.toString()
 
 
+                    mDialogView.button_buy_odeon.setText("Kjøp for $odeonPurchasePrice poeng")
                     mDialogView.button_buy_odeon.setOnClickListener {
 
                         if (balance!! >= odeonPurchasePrice) {
@@ -282,13 +288,31 @@ class ShopFragment : Fragment() {
                             var refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
-                            Toast.makeText(
-                                activity as UsePointsActivity,
-                                usedHistory + " Ny saldo: " + balance.toString(),
-                                Toast.LENGTH_LONG
-                            ).show()
 
                             mAlertDialog.dismiss()
+
+                            //Opens new alertdialog with confirmation of purchase
+                            val mDialogView2 = LayoutInflater.from(activity as UsePointsActivity)
+                                .inflate(R.layout.purchase_done_dialog, null)
+                            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                                .setView(mDialogView2)
+
+                            mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
+
+                            mDialogView2.button_purchase_view_cupon.setOnClickListener {
+                                requireActivity().startActivity(Intent(requireActivity(), HistoryActivity::class.java))
+                            }
+
+
+                            val mAlertDialog = mBuilder.show()
+
+                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
+
+                            mDialogView2.imageView_close_purchase_dialog.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
 
 
                         } else {
@@ -311,7 +335,7 @@ class ShopFragment : Fragment() {
             ///
 
 
-            mDialogView.button_cancel_odeon_purchase.setOnClickListener {
+            mDialogView.imageView_odeon_close.setOnClickListener {
                 mAlertDialog.dismiss()
             }
 
@@ -320,11 +344,11 @@ class ShopFragment : Fragment() {
 
 
 
+        //logic to buy narvesen product
         root.view_shop_item4.setOnClickListener {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.narvesen_dialog, null)
             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
-                .setTitle("Narvesen - Gratis Baguette")
                 .setView(mDialogView)
 
             val mAlertDialog = mBuilder.show()
@@ -349,6 +373,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textview_currency_narvesen.text = "Saldo: " + balance.toString()
 
 
+                    mDialogView.button_buy_narvsesen.setText("Kjøp for $narvesenPurchasePrice poeng")
                     mDialogView.button_buy_narvsesen.setOnClickListener {
 
                         if (balance!! >= narvesenPurchasePrice) {
@@ -362,13 +387,31 @@ class ShopFragment : Fragment() {
                             val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
-                            Toast.makeText(
-                                activity as UsePointsActivity,
-                                usedHistory + " Ny saldo: " + balance.toString(),
-                                Toast.LENGTH_LONG
-                            ).show()
 
                             mAlertDialog.dismiss()
+
+                            //Opens new alertdialog with confirmation of purchase
+                            val mDialogView2 = LayoutInflater.from(activity as UsePointsActivity)
+                                .inflate(R.layout.purchase_done_dialog, null)
+                            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                                .setView(mDialogView2)
+
+                            mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
+
+                            mDialogView2.button_purchase_view_cupon.setOnClickListener {
+                                requireActivity().startActivity(Intent(requireActivity(), HistoryActivity::class.java))
+                            }
+
+
+                            val mAlertDialog = mBuilder.show()
+
+                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
+
+                            mDialogView2.imageView_close_purchase_dialog.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
 
 
                         } else {
@@ -391,7 +434,7 @@ class ShopFragment : Fragment() {
             ///
 
 
-            mDialogView.button_cancel_narvesen_payment.setOnClickListener {
+            mDialogView.imageView_narvesen_close.setOnClickListener {
                 mAlertDialog.dismiss()
             }
 
@@ -399,11 +442,11 @@ class ShopFragment : Fragment() {
 
 
 
+        //Logic to purchase starbucks item
         root.view_shop_item5.setOnClickListener {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.starbucks_dialog, null)
             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
-                .setTitle("Starbucks - Valgfri Gratis Kaffe")
                 .setView(mDialogView)
 
             val mAlertDialog = mBuilder.show()
@@ -428,6 +471,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textview_currency_starbucks.text = "Saldo: " + balance.toString()
 
 
+                    mDialogView.button_buy_starbucks.setText("Kjøp for $starbucksPurchasePrice poeng")
                     mDialogView.button_buy_starbucks.setOnClickListener {
 
                         if (balance!! >= starbucksPurchasePrice) {
@@ -441,13 +485,31 @@ class ShopFragment : Fragment() {
                             val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
-                            Toast.makeText(
-                                activity as UsePointsActivity,
-                                usedHistory + " Ny saldo: " + balance.toString(),
-                                Toast.LENGTH_LONG
-                            ).show()
 
                             mAlertDialog.dismiss()
+
+                            //Opens new alertdialog with confirmation of purchase
+                            val mDialogView2 = LayoutInflater.from(activity as UsePointsActivity)
+                                .inflate(R.layout.purchase_done_dialog, null)
+                            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                                .setView(mDialogView2)
+
+                            mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
+
+                            mDialogView2.button_purchase_view_cupon.setOnClickListener {
+                                requireActivity().startActivity(Intent(requireActivity(), HistoryActivity::class.java))
+                            }
+
+
+                            val mAlertDialog = mBuilder.show()
+
+                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
+
+                            mDialogView2.imageView_close_purchase_dialog.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
 
 
                         } else {
@@ -470,18 +532,19 @@ class ShopFragment : Fragment() {
             ///
 
 
-            mDialogView.button_cancel_starbucks_payment.setOnClickListener {
+            mDialogView.imageView_close_starbucks.setOnClickListener {
                 mAlertDialog.dismiss()
             }
 
         }
 
 
+
+        //Logic for purchasing voi item
         root.view_shop_item6.setOnClickListener {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.voi_dialog, null)
             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
-                .setTitle("Voi - 15 Minutter Gratis")
                 .setView(mDialogView)
 
             val mAlertDialog = mBuilder.show()
@@ -491,7 +554,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textview_price_voi.text = "Pris: $voiPurchasePrice"
-            mDialogView.textview_voi_dialog.text = "Få 15 minutter med gratis bruk med en av Voi sine sparkesykler"
+            mDialogView.textview_voi_dialog.text = "15 minutter gratis bruk med en Voi sparkesykkel"
 
 
             val ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -506,6 +569,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
 
 
+                    mDialogView.button_buy_voi.setText("Kjøp for $voiPurchasePrice poeng")
                     mDialogView.button_buy_voi.setOnClickListener {
 
                         if (balance!! >= voiPurchasePrice) {
@@ -519,13 +583,31 @@ class ShopFragment : Fragment() {
                             val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
-                            Toast.makeText(
-                                activity as UsePointsActivity,
-                                usedHistory + " Ny saldo: " + balance.toString(),
-                                Toast.LENGTH_LONG
-                            ).show()
 
                             mAlertDialog.dismiss()
+
+                            //Opens new alertdialog with confirmation of purchase
+                            val mDialogView2 = LayoutInflater.from(activity as UsePointsActivity)
+                                .inflate(R.layout.purchase_done_dialog, null)
+                            val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
+                                .setView(mDialogView2)
+
+                            mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
+
+                            mDialogView2.button_purchase_view_cupon.setOnClickListener {
+                                requireActivity().startActivity(Intent(requireActivity(), HistoryActivity::class.java))
+                            }
+
+
+                            val mAlertDialog = mBuilder.show()
+
+                            mDialogView2.button_purchase_keep_shopping.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
+
+                            mDialogView2.imageView_close_purchase_dialog.setOnClickListener {
+                                mAlertDialog.dismiss()
+                            }
 
 
                         } else {
@@ -548,7 +630,7 @@ class ShopFragment : Fragment() {
             ///
 
 
-            mDialogView.button_cancel_voi_purchase.setOnClickListener {
+            mDialogView.imageView_close_voi.setOnClickListener {
                 mAlertDialog.dismiss()
             }
 
