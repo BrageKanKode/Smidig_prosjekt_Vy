@@ -51,12 +51,21 @@ class SearchFragment : Fragment() {
 
         //Hides actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-        root.btnVidere.setOnClickListener {
+        root.card_view_clickable_search.setOnClickListener {
             requireActivity().startActivity(
                 Intent(requireActivity(), SelectTravelActivity::class.java)
             )
         }
-
+        root.card_view_clickable_stations.setOnClickListener {
+            requireActivity().startActivity(
+                Intent(requireActivity(), SelectTravelActivity::class.java)
+            )
+        }
+        root.card_view_cliclable_speedy.setOnClickListener {
+            requireActivity().startActivity(
+                Intent(requireActivity(), SelectTravelActivity::class.java)
+            )
+        }
 
 /*
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)

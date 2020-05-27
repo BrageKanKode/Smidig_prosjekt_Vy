@@ -13,7 +13,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/vy_logo_splash"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_vy_logo_final_primary" />
@@ -23,29 +23,22 @@
         android:id="@+id/textView_search_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
         app:fontFamily="@font/pt_sans"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <Button
-        android:id="@+id/btnVidere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView_search_fragmen_headline_text"
+        app:layout_constraintStart_toEndOf="@+id/textView_search_fragmen_headline_text"
+        app:layout_constraintTop_toTopOf="@+id/textView_search_fragmen_headline_text" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textView_search_fragmen_headline_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="God dag"
+        android:text="@string/god_dag"
         android:textColor="#000000"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -56,23 +49,157 @@
         android:id="@+id/btn_cheat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="171dp"
-        android:layout_marginBottom="258dp"
         android:text="add 10k"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_search_welcome" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_cheat_pull"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_cheat_pull"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="Pull 10k"
-        app:layout_constraintStart_toStartOf="@+id/btn_cheat"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheat" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_cheat"
+        app:layout_constraintStart_toStartOf="@+id/btn_cheat" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_clickable_search"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:cardBackgroundColor="#DADADA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_search_fragmen_headline_text">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_search_refix_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/sf_text"
+                android:text="@string/hvor_reiser_du_fra"
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView_search_string_stations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/stasjoner_close_by"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/card_view_clickable_search"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_clickable_search" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_clickable_stations"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textView_search_string_stations"
+        app:layout_constraintTop_toBottomOf="@+id/textView_search_string_stations">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_search_city_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/sf_text"
+                android:text="@string/oslo_s"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_search_train_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/train_logo_white"
+                android:src="@drawable/ic_train_white_24px"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_search_city_one"
+                app:layout_constraintEnd_toStartOf="@+id/textView_search_city_one"
+                app:layout_constraintTop_toTopOf="@+id/textView_search_city_one" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView_search_text_string_hurtigvalg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/hurtigvalg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/card_view_clickable_stations"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_clickable_stations" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_cliclable_speedy"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#000000"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="@+id/textView_search_text_string_hurtigvalg"
+        app:layout_constraintTop_toBottomOf="@+id/textView_search_text_string_hurtigvalg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_search_city_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/sf_text"
+                android:text="@string/oslo_s"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_search_train_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/train_logo_white"
+                android:src="@drawable/ic_train_white_24px"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_search_city_two"
+                app:layout_constraintEnd_toStartOf="@+id/textView_search_city_two"
+                app:layout_constraintTop_toTopOf="@+id/textView_search_city_two" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

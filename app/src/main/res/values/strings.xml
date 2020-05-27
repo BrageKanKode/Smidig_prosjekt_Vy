@@ -126,6 +126,12 @@
     <string name="_100_pr_kg">100 / pr kg</string>
     <string name="to">To</string>
     <string name="from">From</string>
+    <string name="god_dag">God dag</string>
+    <string name="hurtigvalg">Hurtigvalg</string>
+    <string name="train_logo_white">train logo white</string>
+    <string name="oslo_s">Oslo S</string>
+    <string name="stasjoner_close_by">Stasjoner i nærheten</string>
+    <string name="hvor_reiser_du_fra">Hvor reiser du fra?</string>
 
 
 </resources>
