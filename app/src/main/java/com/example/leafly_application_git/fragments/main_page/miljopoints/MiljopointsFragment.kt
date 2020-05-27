@@ -156,11 +156,15 @@ class MiljopointsFragment : Fragment() {
                 progressBar.setProgress(user!!.progress.toInt())
 
                 //Siple if/else to level up user when certain amount of progress is achieved
-                if (user?.progress!! >= 33){
+                if (user?.level!! == 1){
+                    textView_level_points.text = "Frø"
+                }
+
+                if (user?.level!! == 2){
                     textView_level_points.text = "Spire"
                 }
 
-                if (user?.progress!! >= 66){
+                if (user?.level!! == 3){
                     textView_level_points.text = "Tre"
                 }
 

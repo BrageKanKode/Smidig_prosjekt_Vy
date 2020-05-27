@@ -66,7 +66,6 @@ class ShopFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
-                    var progress = user?.progress
                     var usedHistory =
                         "Du kjøpte Dplay abbonement \nFor $dplayPurchasePrice miljøpoeng"
                     mDialogView.textView_currency_dplay.text = "Saldo: " + balance.toString()
@@ -81,8 +80,6 @@ class ShopFragment : Fragment() {
                             mDialogView.textView_currency_dplay.text = balance.toString()
                             ref.child("/balance").setValue(balance)
 
-                            progress = progress?.plus(1)
-                            ref.child("/progress").setValue(progress)
 
                             var refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
@@ -170,7 +167,6 @@ class ShopFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
-                    var progress = user?.progress
                     val usedHistory =
                         "Du kjøpte Netflix abbonement \nFor $netflixPurchasePrice miljøpoeng"
                     mDialogView.textView_currency_netflix.text = "Saldo: " + balance.toString()
@@ -184,8 +180,6 @@ class ShopFragment : Fragment() {
                             mDialogView.textView_currency_netflix.text = balance.toString()
                             ref.child("/balance").setValue(balance)
 
-                            progress = progress?.plus(1)
-                            ref.child("/progress").setValue(progress)
 
                             var refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
@@ -268,7 +262,6 @@ class ShopFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
-                    var progress = user?.progress
                     var usedHistory =
                         "Du kjøpte Odeon kinobilett \nFor $odeonPurchasePrice miljøpoeng"
                     mDialogView.textView_currency_odeon.text = "Saldo: " + balance.toString()
@@ -282,8 +275,6 @@ class ShopFragment : Fragment() {
                             mDialogView.textView_currency_odeon.text = balance.toString()
                             ref.child("/balance").setValue(balance)
 
-                            progress = progress?.plus(1)
-                            ref.child("/progress").setValue(progress)
 
                             var refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
@@ -367,7 +358,6 @@ class ShopFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
-                    var progress = user?.progress
                     val usedHistory =
                         "Du fikk gratis baguette fra Narvesen\nFor $narvesenPurchasePrice miljøpoeng"
                     mDialogView.textview_currency_narvesen.text = "Saldo: " + balance.toString()
@@ -381,8 +371,6 @@ class ShopFragment : Fragment() {
                             mDialogView.textview_currency_narvesen.text = balance.toString()
                             ref.child("/balance").setValue(balance)
 
-                            progress = progress?.plus(1)
-                            ref.child("/progress").setValue(progress)
 
                             val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
@@ -465,7 +453,6 @@ class ShopFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
-                    var progress = user?.progress
                     val usedHistory =
                         "Du valgte en gratis, valgfri kaffe fra Starbucks\nFor $starbucksPurchasePrice miljøpoeng"
                     mDialogView.textview_currency_starbucks.text = "Saldo: " + balance.toString()
@@ -478,9 +465,6 @@ class ShopFragment : Fragment() {
                             balance = balance?.minus(starbucksPurchasePrice)
                             mDialogView.textview_currency_starbucks.text = balance.toString()
                             ref.child("/balance").setValue(balance)
-
-                            progress = progress?.plus(1)
-                            ref.child("/progress").setValue(progress)
 
                             val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
@@ -563,7 +547,6 @@ class ShopFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
-                    var progress = user?.progress
                     val usedHistory =
                         "Du får 15 minutter med gratis bruk av Voi sparkesykkel\nFor $voiPurchasePrice miljøpoeng"
                     mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
@@ -577,8 +560,6 @@ class ShopFragment : Fragment() {
                             mDialogView.textview_voi_currency.text = balance.toString()
                             ref.child("/balance").setValue(balance)
 
-                            progress = progress?.plus(1)
-                            ref.child("/progress").setValue(progress)
 
                             val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
