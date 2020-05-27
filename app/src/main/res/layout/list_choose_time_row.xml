@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
-                android:text="From"
+                android:text="@string/from"
                 android:textColor="@color/colorBlack"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:text="To"
+                android:text="@string/to"
                 android:textColor="@color/colorBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +47,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Price"
                 android:textColor="@color/colorBlack"
                 app:layout_constraintEnd_toEndOf="@+id/textView_time_arrival"
                 app:layout_constraintTop_toBottomOf="@+id/textView_time_arrival" />
@@ -57,7 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Arrival"
+                android:text="@string/arrival"
                 android:textColor="@color/colorBlack"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView_to"
@@ -68,7 +67,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Depature"
+                android:text="@string/departure"
                 android:textColor="@color/colorBlack"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="@+id/textView_From"
@@ -91,41 +90,18 @@
                         android:id="@+id/textView_points"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:layout_marginStart="5dp"
-                        android:text="Points"
+                        android:layout_marginStart="8dp"
                         android:textColor="@color/colorPrimaryDark"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView18"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/choose_trips_points_overview"
-                        android:textColor="@color/colorPrimaryDark"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView10"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="5dp"
-                        android:text="@string/choose_trips_points_overview2"
-                        android:textColor="@color/colorPrimaryDark"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView_points"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_row_leaf"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView10"
+                        android:id="@+id/imageView_row_leaf"
                         android:layout_width="25dp"
                         android:layout_height="0dp"
+                        android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -134,24 +110,16 @@
             </androidx.cardview.widget.CardView>
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/imageView_choose_time_row_arrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/line"
                 app:layout_constraintBottom_toBottomOf="@+id/textView_time_arrival"
                 app:layout_constraintEnd_toStartOf="@+id/textView_time_arrival"
                 app:layout_constraintStart_toEndOf="@+id/textView_time_departure"
                 app:layout_constraintTop_toTopOf="@+id/textView_time_departure"
                 app:srcCompat="@drawable/ic_arrow_right_alt_24px" />
 
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="Kr"
-                android:textColor="@color/colorBlack"
-                app:layout_constraintBottom_toBottomOf="@+id/textView_price_one"
-                app:layout_constraintStart_toEndOf="@+id/textView_price_one" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

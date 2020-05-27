@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.search.trip
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -9,12 +10,9 @@ import com.example.leafly_application_git.R
 import com.example.leafly_application_git.data.Json
 import com.example.leafly_application_git.data.Times
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.list_choose_time_row.*
 import kotlinx.android.synthetic.main.list_choose_time_row.view.*
 import kotlinx.android.synthetic.main.list_choose_time_row.view.cardView2
-import kotlinx.android.synthetic.main.list_choose_time_row.view.imageView10
-import kotlinx.android.synthetic.main.list_choose_time_row.view.textView18
-import kotlinx.android.synthetic.main.list_choose_time_row.view.textView22
+import kotlinx.android.synthetic.main.list_choose_time_row.view.imageView_row_leaf
 import kotlinx.android.synthetic.main.list_choose_time_row.view.textView_points
 
 class ChooseTravelAdapter (private val json: Json, from: String, to: String, price: String, points: String): RecyclerView.Adapter<Custom>() {
@@ -47,21 +45,20 @@ class ChooseTravelAdapter (private val json: Json, from: String, to: String, pri
     }
 
     private fun removeStuff(view: View) {
-        view.textView22.visibility = View.GONE
         view.textView_points.visibility = View.GONE
-        view.textView18.visibility = View.GONE
-        view.imageView10.visibility = View.GONE
+        view.imageView_row_leaf.visibility = View.GONE
         view.cardView2.visibility = View.GONE
 
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: Custom, position: Int) {
 
         val data = json.times.get(position)
         holder.view.textView_From.text = fromData
         holder.view.textView_to.text = toData
-        holder.view.textView_price_one.text = priceData
-        holder.view.textView_points.text = pointsData
+        holder.view.textView_price_one.text = "$priceData Kr"
+        holder.view.textView_points.text = "Du oppnår $pointsData miljøpoeng av denne reisen"
 
         holder.view.textView_time_arrival.text = data.arrival
         holder.view.textView_time_departure.text = data.departure
