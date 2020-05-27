@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.TestClass.removeStuff
-import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
+import com.example.leafly_application_git.CombinedFunctionsClass.removeStuff
+import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.data.Json
 import com.example.leafly_application_git.data.Times
 

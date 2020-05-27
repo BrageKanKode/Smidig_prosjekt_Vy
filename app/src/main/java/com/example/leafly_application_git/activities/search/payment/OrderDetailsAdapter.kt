@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.TestClass.removeStuff
-import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
+import com.example.leafly_application_git.CombinedFunctionsClass.removeStuff
+import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -19,8 +19,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
 import kotlinx.android.synthetic.main.payment_with_points_popup.view.*
-import kotlinx.android.synthetic.main.activity_travel_order_overview.view.cardView_confirmation
-import kotlinx.android.synthetic.main.activity_travel_order_overview.view.imageView_travel_order_leaf
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.textView_points
 
 class OrderDetailsAdapter(

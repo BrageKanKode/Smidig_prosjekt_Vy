@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.TestClass
+import com.example.leafly_application_git.CombinedFunctionsClass
+import com.example.leafly_application_git.CombinedFunctionsClass.incrementProgress
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -85,7 +86,7 @@ class ConfirmationActivity : AppCompatActivity() {
 
                 ref.child("/balance").setValue(balance)
                 ref.child("/totalEarned").setValue(totalEarned)
-                TestClass.incrementProgress(25.00)
+                incrementProgress(25.00)
 
                 val refEarnedHistory = ref.child("/earnedHistory")
                 refEarnedHistory.push().setValue(earnedHistory)

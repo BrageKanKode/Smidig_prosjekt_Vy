@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.list_choose_time_row.view.*
 import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
 
 
-object TestClass {
+object CombinedFunctionsClass {
 
     internal var user: User? = null
 
@@ -27,24 +27,25 @@ object TestClass {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var progress = user?.progress
-                var maxXp = 300
+                var level = user?.level
+                val maxXp = 300
 
-                var convertedToPercent = progressAmount.div(maxXp) * 100.00
-                if(convertedToPercent > 100.00){
-                    convertedToPercent = 100.00
-                }
+                val convertedToPercent = progressAmount.div(maxXp) * 100.00
 
 
-                if(convertedToPercent == 100.00){
-                    progress = progress!!.minus(100.00)
+
+                if(progress!! + convertedToPercent >= 100.00){
+                    progress = progress.minus(progress)
+                    level = level!!.plus(1)
+
 
                 } else {
-                    progress = progress!!.plus(convertedToPercent)
+                    progress = progress.plus(convertedToPercent)
                 }
 
 
 
-
+                ref.child("/level").setValue(level)
                 ref.child("/progress").setValue(progress)
 
             }

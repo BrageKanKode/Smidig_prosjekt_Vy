@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
+import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.LoginActivity
 import com.example.leafly_application_git.activities.authentication.SignUpActivity

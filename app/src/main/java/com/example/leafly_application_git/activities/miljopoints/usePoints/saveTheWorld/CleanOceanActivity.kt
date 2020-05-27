@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.TestClass.incrementProgress
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
 import com.google.firebase.auth.FirebaseAuth
