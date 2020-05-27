@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -10,12 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
 
     <TextView
         android:id="@+id/textView_price_odeon"
@@ -41,26 +45,34 @@
 
     <Button
         android:id="@+id/button_buy_odeon"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#CBEAE4"
         android:text="Kjøp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_currency_odeon"
-        app:layout_constraintStart_toStartOf="@+id/textView_currency_odeon"
-        app:layout_constraintTop_toBottomOf="@+id/textView_currency_odeon"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_currency_odeon" />
 
-    <Button
-        android:id="@+id/button_cancel_odeon_purchase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_odeon_logo" />
+
+    <ImageView
+        android:id="@+id/imageView_odeon_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:text="Avbryt"
-        app:layout_constraintEnd_toEndOf="@+id/button_buy_odeon"
-        app:layout_constraintStart_toStartOf="@+id/button_buy_odeon"
-        app:layout_constraintTop_toBottomOf="@+id/button_buy_odeon"
-
-        />
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_clear_24px" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
