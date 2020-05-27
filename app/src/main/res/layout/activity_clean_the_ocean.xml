@@ -255,5 +255,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_ocean" />
 
+    <ImageView
+        android:id="@+id/imageView_ocean_divider_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/line"
+        app:layout_constraintBottom_toTopOf="@+id/btn_do_clean_ocean"
+        app:layout_constraintEnd_toStartOf="@+id/textView_total_ocean_sum"
+        app:layout_constraintStart_toStartOf="@+id/textView_total_amount_ocean"
+        app:layout_constraintTop_toBottomOf="@+id/textView_clean_ocean_amount"
+        app:layout_constraintVertical_bias="0.312"
+        app:srcCompat="@drawable/ic_line" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
