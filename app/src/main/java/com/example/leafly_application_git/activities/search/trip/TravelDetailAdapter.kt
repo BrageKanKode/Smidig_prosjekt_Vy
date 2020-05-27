@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.removeStuff
 import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -28,19 +29,10 @@ class TravelDetailAdapter(
         val view = layoutInflater.inflate(R.layout.activity_travel_detail, parent, false)
 
         if(!verifyIfUserIsLoggedIn()){
-            removeStuff(view)
+            removeStuff(view, "TravelDetails")
         }
 
         return ViewTravelDetails(view)
-    }
-
-
-
-    private fun removeStuff(view: View) {
-        view.textView_details_points.visibility = View.GONE
-        view.imageView_detail_leaf_green.visibility = View.GONE
-        view.cardView5.visibility = View.GONE
-
     }
 
     override fun getItemCount(): Int {

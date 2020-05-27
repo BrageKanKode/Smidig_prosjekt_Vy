@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.removeStuff
 import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
@@ -113,7 +114,7 @@ class OrderDetailsAdapter(
         }
 
         if(!verifyIfUserIsLoggedIn()){
-            removeStuff(view)
+            removeStuff(view, "OrderDetails")
         }
 
         return ViewOrderDetails(view)
@@ -139,13 +140,6 @@ class OrderDetailsAdapter(
         holder.points = points
 
     }
-}
-
-private fun removeStuff(view: View) {
-    view.textView_points.visibility = View.GONE
-    view.imageView_travel_order_leaf.visibility = View.GONE
-    view.cardView_confirmation.visibility = View.GONE
-
 }
 
 class ViewOrderDetails(

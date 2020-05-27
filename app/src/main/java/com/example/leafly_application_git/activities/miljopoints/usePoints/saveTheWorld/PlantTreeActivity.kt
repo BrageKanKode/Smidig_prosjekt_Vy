@@ -38,7 +38,6 @@ class PlantTreeActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
-                var progress = user?.progress
                 val treePrice = 50
                 var treeAmount = 1
                 var totalTreeSum = treePrice
@@ -55,8 +54,8 @@ class PlantTreeActivity : AppCompatActivity() {
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)
 
-                        progress = progress?.plus(incrementProgress(25))
-                        ref.child("/progress").setValue(progress)
+
+
 
                         treeAmount = 1
                         totalTreeSum = treePrice

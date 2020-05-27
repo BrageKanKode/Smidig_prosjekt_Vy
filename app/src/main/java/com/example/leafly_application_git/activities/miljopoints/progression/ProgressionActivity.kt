@@ -31,7 +31,6 @@ class ProgressionActivity : AppCompatActivity() {
         btnToHistory.setOnClickListener {
             toHistory()
         }
-
     }
 
     //buttons to new activities
@@ -62,7 +61,7 @@ class ProgressionActivity : AppCompatActivity() {
                 textView_current_currency.text = balance.toString()
 
                 textView_progressbar_status.text = user?.progress.toString()
-                progressBar2.progress = user!!.progress
+                progressBar2.progress = user!!.progress.toInt()
                 textView_total_collected.text = user?.totalEarned.toString()
 
             }

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import androidx.appcompat.widget.AppCompatTextView
 
-class ExpandableListAdapter(val context: Context, val listOfHeaderData: List<String>, val listOfChildData: HashMap<String, List<String>>) : BaseExpandableListAdapter() {
+class ExpandableListAdapter(val context: Context, private val listOfHeaderData: List<String>, private val listOfChildData: HashMap<String, List<String>>) : BaseExpandableListAdapter() {
 
 
     override fun getGroup(position: Int): Any {
@@ -67,7 +67,7 @@ class ExpandableListAdapter(val context: Context, val listOfHeaderData: List<Str
         val childText = getChild(groupPosition, childPosition) as String
         val view: View = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
 
-        val listItemText = view.findViewById<AppCompatTextView>(R.id.list_item_text) as AppCompatTextView
+        val listItemText = view.findViewById(R.id.list_item_text) as AppCompatTextView
         listItemText.text = childText
 
         return view

@@ -153,7 +153,7 @@ class MiljopointsFragment : Fragment() {
                 textView_welcome_title.text = user?.username
                 progressbar_point_value.text = user?.balance.toString()
 
-                progressBar.setProgress(user!!.progress)
+                progressBar.setProgress(user!!.progress.toInt())
 
                 //Siple if/else to level up user when certain amount of progress is achieved
                 if (user?.progress!! >= 33){

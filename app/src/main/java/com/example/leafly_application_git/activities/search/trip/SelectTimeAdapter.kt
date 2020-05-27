@@ -7,13 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.removeStuff
 import com.example.leafly_application_git.TestClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.data.Json
 import com.example.leafly_application_git.data.Times
-import com.google.firebase.auth.FirebaseAuth
+
 import kotlinx.android.synthetic.main.list_choose_time_row.view.*
-import kotlinx.android.synthetic.main.list_choose_time_row.view.cardView2
-import kotlinx.android.synthetic.main.list_choose_time_row.view.imageView_row_leaf
+
 import kotlinx.android.synthetic.main.list_choose_time_row.view.textView_points
 
 class ChooseTravelAdapter (private val json: Json, from: String, to: String, price: String, points: String): RecyclerView.Adapter<Custom>() {
@@ -28,7 +28,7 @@ class ChooseTravelAdapter (private val json: Json, from: String, to: String, pri
         val view = layoutInflater.inflate(R.layout.list_choose_time_row, parent, false)
 
         if(!verifyIfUserIsLoggedIn()){
-            removeStuff(view)
+            removeStuff(view, "SelectTime")
         }
 
         return Custom(view)
@@ -36,13 +36,6 @@ class ChooseTravelAdapter (private val json: Json, from: String, to: String, pri
 
     override fun getItemCount(): Int {
         return 3
-    }
-
-    private fun removeStuff(view: View) {
-        view.textView_points.visibility = View.GONE
-        view.imageView_row_leaf.visibility = View.GONE
-        view.cardView2.visibility = View.GONE
-
     }
 
     @SuppressLint("SetTextI18n")

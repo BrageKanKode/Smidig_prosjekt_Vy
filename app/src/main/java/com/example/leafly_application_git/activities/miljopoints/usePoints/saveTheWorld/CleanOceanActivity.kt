@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass.incrementProgress
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -37,7 +38,6 @@ class CleanOceanActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
-                var progress = user?.progress
                 val cleanOceanPrice = 50
                 var cleanAmount = 1
                 var totalCleanSum = cleanOceanPrice
@@ -46,12 +46,10 @@ class CleanOceanActivity : AppCompatActivity() {
 
                 btn_do_clean_ocean.setOnClickListener {
                     if(balance!! >= cleanOceanPrice) {
-                        balance = balance?.minus(cleanOceanPrice)
+                        balance = balance?.minus(totalCleanSum)
                         textview_currency_show.text = balance.toString()
                         ref.child("/balance").setValue(balance)
 
-                        progress = progress?.plus(1 + cleanAmount)
-                        ref.child("/progress").setValue(progress)
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)

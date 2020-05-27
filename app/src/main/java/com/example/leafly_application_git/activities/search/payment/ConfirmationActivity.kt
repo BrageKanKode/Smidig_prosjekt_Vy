@@ -1,21 +1,16 @@
 package com.example.leafly_application_git.activities.search.payment
 
 import android.os.Bundle
-import android.view.View
-import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.TestClass
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_confirmation.*
 import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
 
 
@@ -81,18 +76,16 @@ class ConfirmationActivity : AppCompatActivity() {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
                 var totalEarned = user?.totalEarned
-                var progress = user?.progress
                 val earnedHistory = "Kjøp av billett - fra ${intent.getStringExtra(SplashScreenPaymentActivity.FROM_KEY)} til ${intent.getStringExtra(SplashScreenPaymentActivity.TO_KEY)} \nMottok ${intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)} miljøpoeng"
 
                 balance = balance?.plus(points.toInt())
                 totalEarned = totalEarned?.plus(points.toInt())
-                progress = progress?.plus(1)
 
 
 
                 ref.child("/balance").setValue(balance)
                 ref.child("/totalEarned").setValue(totalEarned)
-                ref.child("/progress").setValue(progress)
+                TestClass.incrementProgress(25.00)
 
                 val refEarnedHistory = ref.child("/earnedHistory")
                 refEarnedHistory.push().setValue(earnedHistory)

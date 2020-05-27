@@ -72,7 +72,7 @@ class SignUpActivity : AppCompatActivity(){
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 
         //Setting what should be saved under user table in database -- id, username, balance and progress
-        val user = User(uid, editText_username_signup.text.toString(), 300, 0, 0)
+        val user = User(uid, editText_username_signup.text.toString(), 300, 0.00, 0)
 
         ref.setValue(user)
             .addOnSuccessListener {
@@ -87,6 +87,6 @@ class SignUpActivity : AppCompatActivity(){
 
 
 //User class that connects user to firebase database
-class User(val uid: String, val username: String, val balance: Int, val progress: Int, val totalEarned: Int){
-    constructor() : this("", "", 0, 0, 0)
+class User(val uid: String, val username: String, val balance: Int, val progress: Double, val totalEarned: Int){
+    constructor() : this("", "", 0, 0.00, 0)
 }
