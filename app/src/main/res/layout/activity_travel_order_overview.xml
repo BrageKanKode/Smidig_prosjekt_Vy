@@ -75,7 +75,7 @@
         app:srcCompat="@drawable/ic_line" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/imageView_not_logged_in_arrow_two"
         android:layout_width="49dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
@@ -94,8 +94,8 @@
         android:text="@string/enkeltbillet"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+        app:layout_constraintStart_toEndOf="@+id/imageView_not_logged_in_arrow_two"
+        app:layout_constraintTop_toTopOf="@+id/imageView_not_logged_in_arrow_two" />
 
     <ImageView
         android:id="@+id/imageView_travel_order_line_two"
@@ -104,7 +104,7 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/line"
         app:layout_constraintStart_toStartOf="@+id/imageView_travel_order_line_one"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_not_logged_in_arrow_two"
         app:srcCompat="@drawable/ic_line" />
 
     <TextView

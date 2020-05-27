@@ -61,7 +61,7 @@ class MiljopointsFragment : Fragment() {
                 )
             }
 
-            root.btnToProgression.setOnClickListener {
+            root.card_view_btnToProgression.setOnClickListener {
                 requireActivity().startActivity(
                     Intent(requireActivity(), ProgressionActivity::class.java)
                 )

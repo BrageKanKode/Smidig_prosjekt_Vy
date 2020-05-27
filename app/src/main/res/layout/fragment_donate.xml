@@ -45,6 +45,7 @@
                 android:layout_width="225dp"
                 android:layout_height="83dp"
                 android:layout_marginTop="16dp"
+                android:fontFamily="@font/sf_text"
                 android:text="@string/button_to_plant_a_tree"
                 android:textColor="@color/colorBlack"
                 android:textSize="18sp"
