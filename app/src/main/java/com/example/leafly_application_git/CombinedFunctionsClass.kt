@@ -72,7 +72,7 @@ object CombinedFunctionsClass {
         } else if(activity == "SelectTravel") {
             view.textView_choose_trip_point.visibility = View.GONE
             view.cardView.visibility = View.GONE
-            view.imageView7.visibility = View.GONE
+            view.imageView_choose_trip_leaf.visibility = View.GONE
 
         } else if(activity == "TravelDetails") {
             view.textView_details_points.visibility = View.GONE

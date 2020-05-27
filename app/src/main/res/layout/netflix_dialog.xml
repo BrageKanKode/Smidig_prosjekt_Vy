@@ -11,36 +11,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:fontFamily="@font/sf_display"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_netflix_logo" />
 
     <TextView
         android:id="@+id/textView_price_netflix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:fontFamily="@font/sf_text"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_netflix_dialog"
-        app:layout_constraintStart_toStartOf="@+id/textView_netflix_dialog"
-        app:layout_constraintTop_toBottomOf="@+id/textView_netflix_dialog"
 
-        />
+        app:layout_constraintStart_toStartOf="@+id/textView_netflix_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/textView_netflix_dialog" />
 
     <TextView
         android:id="@+id/textView_currency_netflix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:fontFamily="@font/sf_text"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_price_netflix"
         app:layout_constraintStart_toStartOf="@+id/textView_price_netflix"
-        app:layout_constraintTop_toBottomOf="@+id/textView_price_netflix"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView_price_netflix" />
 
     <Button
         android:id="@+id/button_buy_netflix"
@@ -48,18 +48,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="#CBEAE4"
-        android:text="Kjøp"
+        android:fontFamily="@font/sf_display"
 
+        android:text="@string/buy"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_currency_netflix" />
 
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/imageView_netflix_logo"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/netflix_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -71,6 +74,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/close_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_clear_24px" />

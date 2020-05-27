@@ -145,6 +145,19 @@
     <string name="not_logged_in_dialog">Du må være logget inn for å opptjene og se dine miljøpoeng.</string>
     <string name="fordeler">Fordeler</string>
     <string name="what_is_points">Hva er miljøpoeng?</string>
+    <string name="buy">Kjøp</string>
+    <string name="narvesen_logo">narvesen_logo</string>
+    <string name="close_marker">close marker</string>
+    <string name="odeon_logo">odeon logo</string>
+    <string name="takk_for_ditt_bidrag">Takk for ditt bidrag!</string>
+    <string name="gratulerer_du_har_ryddet_x_kg_plast_i_havet">Gratulerer! Du har Ryddet x kg plast i havet!</string>
+    <string name="g_til_dine_kj_p">Gå til dine kjøp</string>
+    <string name="fortsett_handle">Fortsett å handle</string>
+    <string name="takk_for_ditt_kj_p">Takk for ditt kjøp!</string>
+    <string name="ditt_kj_p_kan_finnes_under_poenghistorikk">Ditt kjøp kan finnes under Poenghistorikk</string>
+    <string name="se_kupong">Se kupong</string>
+    <string name="gratulerer_du_har_plantet_x_antall_tr_r">Gratulerer! Du har plantet X antall trær!</string>
+    <string name="starbucks_logo">starbucks logo</string>
 
 
 </resources>
