@@ -50,6 +50,31 @@ class PlantTreeActivity : AppCompatActivity() {
                 var usedHistory = "Du har reddet et tre! \nFor $treePrice miljøpoeng"
                 textview_currency_show.text = balance.toString()
 
+
+
+                textView_plant_tree_amount.text = treeAmount.toString()
+                textView_total_tree_sum.text = totalTreeSum.toString()
+
+                btn_plant_tree_minus.setOnClickListener {
+                    if(treeAmount > 1) {
+                        treeAmount--
+                        textView_plant_tree_amount.text = treeAmount.toString()
+                        totalTreeSum -= treePrice
+                        textView_total_tree_sum.text = totalTreeSum.toString()
+                    }
+                }
+
+                btn_plant_tree_plus.setOnClickListener {
+                    if(balance!! >= totalTreeSum + treePrice){
+                        treeAmount++
+                        textView_plant_tree_amount.text = treeAmount.toString()
+                        totalTreeSum += treePrice
+                        textView_total_tree_sum.text = totalTreeSum.toString()
+                    }
+                }
+
+
+
                 btn_do_plant_tree.setOnClickListener {
 
                     if (balance!! >= totalTreeSum) {
@@ -63,7 +88,7 @@ class PlantTreeActivity : AppCompatActivity() {
 
 
 
-                        treeAmount = 1
+                        //treeAmount = 1
                         totalTreeSum = treePrice
                         textView_plant_tree_amount.text = treeAmount.toString()
                         textView_total_tree_sum.text = totalTreeSum.toString()
@@ -74,7 +99,7 @@ class PlantTreeActivity : AppCompatActivity() {
                         val mBuilder = AlertDialog.Builder(this@PlantTreeActivity)
                             .setView(mDialogView2)
 
-                        //mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount antall trær!"
+                        mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount antall trær!"
 
                         val mAlertDialog = mBuilder.show()
 
@@ -102,26 +127,6 @@ class PlantTreeActivity : AppCompatActivity() {
                     }
                 }
 
-                textView_plant_tree_amount.text = treeAmount.toString()
-                textView_total_tree_sum.text = totalTreeSum.toString()
-
-                btn_plant_tree_minus.setOnClickListener {
-                    if(treeAmount > 1) {
-                        treeAmount--
-                        textView_plant_tree_amount.text = treeAmount.toString()
-                        totalTreeSum -= treePrice
-                        textView_total_tree_sum.text = totalTreeSum.toString()
-                    }
-                }
-
-                btn_plant_tree_plus.setOnClickListener {
-                    if(balance!! >= totalTreeSum + treePrice){
-                        treeAmount++
-                        textView_plant_tree_amount.text = treeAmount.toString()
-                        totalTreeSum += treePrice
-                        textView_total_tree_sum.text = totalTreeSum.toString()
-                    }
-                }
             }
 
 

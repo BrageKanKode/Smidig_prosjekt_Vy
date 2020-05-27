@@ -49,6 +49,29 @@ class CleanOceanActivity : AppCompatActivity() {
                 var usedHistory = "Kjøpt 1L av vannrensing \nFor $cleanOceanPrice miljøpoeng"
                 textview_currency_show.text = balance.toString()
 
+
+                textView_clean_ocean_amount.text = cleanAmount.toString()
+                textView_total_ocean_sum.text = totalCleanSum.toString()
+
+                btn_clean_ocean_btn_plus.setOnClickListener {
+                    if(cleanAmount > 1) {
+                        cleanAmount--
+                        textView_clean_ocean_amount.text = cleanAmount.toString()
+                        totalCleanSum -= cleanOceanPrice
+                        textView_total_ocean_sum.text = totalCleanSum.toString()
+                    }
+                }
+
+                btn_clean_ocean_btn_minus.setOnClickListener {
+                    if(balance!! >= totalCleanSum + cleanOceanPrice){
+                        cleanAmount++
+                        textView_clean_ocean_amount.text = cleanAmount.toString()
+                        totalCleanSum += cleanOceanPrice
+                        textView_total_ocean_sum.text = totalCleanSum.toString()
+                    }
+                }
+
+
                 btn_do_clean_ocean.setOnClickListener {
                     if(balance!! >= cleanOceanPrice) {
                         balance = balance?.minus(totalCleanSum)
@@ -60,7 +83,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         refUsedHistory.push().setValue(usedHistory)
 
 
-                        cleanAmount = 1
+                        //cleanAmount = 1
                         totalCleanSum = cleanOceanPrice
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         textView_total_ocean_sum.text = totalCleanSum.toString()
@@ -72,7 +95,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         val mBuilder = AlertDialog.Builder(this@CleanOceanActivity)
                             .setView(mDialogView2)
 
-                        //mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount antall trær!"
+                        mDialogView2.textView_confirmation_ocean_info.text = "Gratulerer! Du har ryddet $cleanAmount kg fra havet!"
 
                         val mAlertDialog = mBuilder.show()
 
@@ -97,26 +120,6 @@ class CleanOceanActivity : AppCompatActivity() {
                 }
 
 
-                textView_clean_ocean_amount.text = cleanAmount.toString()
-                textView_total_ocean_sum.text = totalCleanSum.toString()
-
-                btn_clean_ocean_btn_plus.setOnClickListener {
-                    if(cleanAmount > 1) {
-                        cleanAmount--
-                        textView_clean_ocean_amount.text = cleanAmount.toString()
-                        totalCleanSum -= cleanOceanPrice
-                        textView_total_ocean_sum.text = totalCleanSum.toString()
-                    }
-                }
-
-                btn_clean_ocean_btn_minus.setOnClickListener {
-                    if(balance!! >= totalCleanSum + cleanOceanPrice){
-                        cleanAmount++
-                        textView_clean_ocean_amount.text = cleanAmount.toString()
-                        totalCleanSum += cleanOceanPrice
-                        textView_total_ocean_sum.text = totalCleanSum.toString()
-                    }
-                }
 
 
             }
