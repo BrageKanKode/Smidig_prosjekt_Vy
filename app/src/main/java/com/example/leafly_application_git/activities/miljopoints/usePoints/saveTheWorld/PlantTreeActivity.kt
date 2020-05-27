@@ -1,17 +1,24 @@
 package com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.TestClass.incrementProgress
 import com.example.leafly_application_git.activities.authentication.User
+import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
+import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_plant_a_tree.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.view.*
+import kotlinx.android.synthetic.main.purchase_tree_confirmation.view.*
 
 class PlantTreeActivity : AppCompatActivity() {
 
@@ -61,6 +68,32 @@ class PlantTreeActivity : AppCompatActivity() {
                         totalTreeSum = treePrice
                         textView_plant_tree_amount.text = treeAmount.toString()
                         textView_total_tree_sum.text = totalTreeSum.toString()
+
+                        //Opens new alertdialog with confirmation of purchase
+                        val mDialogView2 = LayoutInflater.from(this@PlantTreeActivity)
+                            .inflate(R.layout.purchase_tree_confirmation, null)
+                        val mBuilder = AlertDialog.Builder(this@PlantTreeActivity)
+                            .setView(mDialogView2)
+
+                        //mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount antall trær!"
+
+                        val mAlertDialog = mBuilder.show()
+
+                        mDialogView2.button_see_my_purchases_tree.setOnClickListener {
+                            val intent = Intent(this@PlantTreeActivity, HistoryActivity::class.java)
+                            startActivity(intent)
+                        }
+
+                        mDialogView2.button2_keep_shopping.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+
+                        mDialogView2.imageView_close_confirmation_tree.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+
+
+
                     } else {
                         Toast.makeText(
                             this@PlantTreeActivity,

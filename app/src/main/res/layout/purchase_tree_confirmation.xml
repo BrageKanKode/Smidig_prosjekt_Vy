@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView_check_icon"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -17,55 +17,55 @@
         app:srcCompat="@drawable/ic_done_outline_greem_24px" />
 
     <TextView
-        android:id="@+id/textView_thanks_for_purchase"
+        android:id="@+id/textView_thanks_tree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Takk for ditt kjøp!"
+        android:text="Takk for ditt bidrag!"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_check_icon"
-        app:layout_constraintStart_toStartOf="@+id/imageView_check_icon"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_check_icon" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/textView_thanks_for_purchase_info"
+        android:id="@+id/textView4_thanks_tree_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text='Ditt kjøp kan finnes under "Poenghistorikk"'
-        app:layout_constraintEnd_toEndOf="@+id/textView_thanks_for_purchase"
-        app:layout_constraintStart_toStartOf="@+id/textView_thanks_for_purchase"
-        app:layout_constraintTop_toBottomOf="@+id/textView_thanks_for_purchase" />
+        android:text="Gratulerer! Du har plantet X antall trær!"
+        app:layout_constraintEnd_toEndOf="@+id/textView_thanks_tree"
+        app:layout_constraintStart_toStartOf="@+id/textView_thanks_tree"
+        app:layout_constraintTop_toBottomOf="@+id/textView_thanks_tree" />
 
     <Button
-        android:id="@+id/button_purchase_view_cupon"
+        android:id="@+id/button_see_my_purchases_tree"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="#41927B"
-        android:text="Se kupong"
+        android:text="Gå til dine kjøp"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/textView_thanks_for_purchase_info"
-        app:layout_constraintStart_toStartOf="@+id/textView_thanks_for_purchase_info"
-        app:layout_constraintTop_toBottomOf="@+id/textView_thanks_for_purchase_info" />
+        app:layout_constraintEnd_toEndOf="@+id/textView4_thanks_tree_info"
+        app:layout_constraintStart_toStartOf="@+id/textView4_thanks_tree_info"
+        app:layout_constraintTop_toBottomOf="@+id/textView4_thanks_tree_info" />
 
     <Button
-        android:id="@+id/button_purchase_keep_shopping_shop"
+        android:id="@+id/button2_keep_shopping"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/white"
+        android:background="#FFFFFF"
         android:text="Fortsett å handle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_purchase_view_cupon"
-        app:layout_constraintStart_toStartOf="@+id/button_purchase_view_cupon"
-        app:layout_constraintTop_toBottomOf="@+id/button_purchase_view_cupon" />
+        app:layout_constraintEnd_toEndOf="@+id/button_see_my_purchases_tree"
+        app:layout_constraintStart_toStartOf="@+id/button_see_my_purchases_tree"
+        app:layout_constraintTop_toBottomOf="@+id/button_see_my_purchases_tree" />
 
     <ImageView
-        android:id="@+id/imageView_close_purchase_dialog"
+        android:id="@+id/imageView_close_confirmation_tree"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
@@ -73,4 +73,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_clear_24px" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

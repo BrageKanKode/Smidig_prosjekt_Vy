@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView_check_icon"
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -17,55 +17,57 @@
         app:srcCompat="@drawable/ic_done_outline_greem_24px" />
 
     <TextView
-        android:id="@+id/textView_thanks_for_purchase"
+        android:id="@+id/textView_thanks_ocean"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Takk for ditt kjøp!"
+        android:text="Takk for ditt bidrag!"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_check_icon"
-        app:layout_constraintStart_toStartOf="@+id/imageView_check_icon"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_check_icon" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/textView_thanks_for_purchase_info"
+        android:id="@+id/textView_confirmation_ocean_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text='Ditt kjøp kan finnes under "Poenghistorikk"'
-        app:layout_constraintEnd_toEndOf="@+id/textView_thanks_for_purchase"
-        app:layout_constraintStart_toStartOf="@+id/textView_thanks_for_purchase"
-        app:layout_constraintTop_toBottomOf="@+id/textView_thanks_for_purchase" />
+        android:text="Gratulerer! Du har Ryddet x kg plast i havet!"
+        app:layout_constraintEnd_toEndOf="@+id/textView_thanks_ocean"
+        app:layout_constraintStart_toStartOf="@+id/textView_thanks_ocean"
+        app:layout_constraintTop_toBottomOf="@+id/textView_thanks_ocean" />
 
     <Button
-        android:id="@+id/button_purchase_view_cupon"
+        android:id="@+id/button_redirect_to_purchase_ocean"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="#41927B"
-        android:text="Se kupong"
+        android:text="Gå til dine kjøp"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/textView_thanks_for_purchase_info"
-        app:layout_constraintStart_toStartOf="@+id/textView_thanks_for_purchase_info"
-        app:layout_constraintTop_toBottomOf="@+id/textView_thanks_for_purchase_info" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_confirmation_ocean_info"
+        app:layout_constraintStart_toStartOf="@+id/textView_confirmation_ocean_info"
+        app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_ocean_info" />
 
     <Button
-        android:id="@+id/button_purchase_keep_shopping_shop"
+        android:id="@+id/button_keep_shopping_ocean"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/white"
+        android:background="#FFFFFF"
         android:text="Fortsett å handle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_purchase_view_cupon"
-        app:layout_constraintStart_toStartOf="@+id/button_purchase_view_cupon"
-        app:layout_constraintTop_toBottomOf="@+id/button_purchase_view_cupon" />
+        app:layout_constraintEnd_toEndOf="@+id/button_redirect_to_purchase_ocean"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_redirect_to_purchase_ocean"
+        app:layout_constraintTop_toBottomOf="@+id/button_redirect_to_purchase_ocean"
+        app:layout_constraintVertical_bias="0.498" />
 
     <ImageView
-        android:id="@+id/imageView_close_purchase_dialog"
+        android:id="@+id/imageView_ocean_confirmation_close"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
