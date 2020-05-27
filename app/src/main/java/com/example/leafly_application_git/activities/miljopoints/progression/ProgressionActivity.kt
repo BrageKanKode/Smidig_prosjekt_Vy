@@ -57,13 +57,21 @@ class ProgressionActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 val balance = user?.balance
+                val level = user?.level
 
                 textView_current_currency.text = balance.toString()
 
-                textView_progressbar_status.text = user?.progress.toString()
+                textView_progressbar_status.text = user?.progress?.toInt().toString()
                 progressBar2.progress = user!!.progress.toInt()
                 textView_total_collected.text = user?.totalEarned.toString()
 
+                if (level == 1){
+                    textView_progression_show_level.text = "Frø"
+                } else if (level == 2){
+                    textView_progression_show_level.text = "Spire"
+                } else {
+                    textView_progression_show_level.text = "Tre"
+                }
             }
 
             override fun onCancelled(p0: DatabaseError) {
