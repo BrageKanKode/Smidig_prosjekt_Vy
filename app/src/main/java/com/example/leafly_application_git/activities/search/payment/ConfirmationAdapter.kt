@@ -5,13 +5,9 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.MainActivity
-import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_confirmation.*
-import kotlinx.android.synthetic.main.activity_confirmation.view.*
 import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
 
 class ConfirmationAdapter (
@@ -25,14 +21,6 @@ class ConfirmationAdapter (
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.activity_confirmation_v_2, parent, false)
 
-
-
-        /*
-        if(!verifyIfUserIsLoggedIn()){
-            removeStuff(view)
-        }
-
-         */
         return ViewConfirmation(view)
     }
 
@@ -46,22 +34,9 @@ class ConfirmationAdapter (
         holder.view.textView_new_confirmation_from.text = "Fra $departure til"
         holder.view.textView_new_confirmation_to.text = arrival
         holder.view.textView_new_confirmation_departure_time.text = departureTime
+        holder.view.textView_confirmation_points_new.text = "+ $points"
     }
-
 }
-
-
-
-/*
-private fun removeStuff(view: View) {
-    view.textView_points.visibility = View.GONE
-    view.textView_confirmation_points.visibility = View.GONE
-    view.imageView_travel_order_leaf.visibility = View.GONE
-    view.cardView_confirmation.visibility = View.GONE
-
-}
-
- */
 
 class ViewConfirmation(val view: View): RecyclerView.ViewHolder(view){
     init {

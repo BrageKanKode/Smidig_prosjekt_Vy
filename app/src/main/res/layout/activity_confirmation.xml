@@ -173,7 +173,7 @@
                 app:layout_constraintVertical_bias="0.454" />
 
             <TextView
-                android:id="@+id/textView_confirmation_points"
+                android:id="@+id/textView_confirmation_points_new"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pt_sans"

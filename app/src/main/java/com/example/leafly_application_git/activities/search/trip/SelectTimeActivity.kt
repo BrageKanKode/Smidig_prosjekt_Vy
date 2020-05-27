@@ -33,8 +33,6 @@ class SelectTimeActivity : AppCompatActivity() {
     }
 
 
-
-
     private fun fetchJson(from: String, to: String, price: String, points: String) {
 
         val json: String?

@@ -132,6 +132,7 @@
     <string name="oslo_s">Oslo S</string>
     <string name="stasjoner_close_by">Stasjoner i nærheten</string>
     <string name="hvor_reiser_du_fra">Hvor reiser du fra?</string>
+    <string name="poeng">Miljøpoeng</string>
 
 
 </resources>
