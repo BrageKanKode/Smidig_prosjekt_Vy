@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.main_page.miljopoints.MiljopointsFragment">
 
-    <ImageView
-        android:id="@+id/imageView_search_vylogo"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/logo_trips"
-        android:src="@drawable/ic_vy_logo_final_primary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/view_use_points"
         android:layout_width="120dp"
@@ -223,13 +212,11 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_search_vylogo">
+        app:layout_constraintTop_toBottomOf="@+id/textView_welcome_title">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -365,14 +352,14 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_display"
         android:text="@string/velkommen"
         android:textColor="@color/colorBlack"
         android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView_search_vylogo"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
