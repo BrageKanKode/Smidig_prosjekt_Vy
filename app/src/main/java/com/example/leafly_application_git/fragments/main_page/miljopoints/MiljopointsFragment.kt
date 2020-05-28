@@ -13,6 +13,7 @@ import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.LoginActivity
 import com.example.leafly_application_git.activities.authentication.SignUpActivity
 import com.example.leafly_application_git.activities.authentication.User
+import com.example.leafly_application_git.activities.explanation.ExplanationActivity
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
@@ -51,7 +52,7 @@ class MiljopointsFragment : Fragment() {
             fetchUser()
 
             //Define these buttons
-            root.view_use_points.setOnClickListener {
+            root.card_view_use_points.setOnClickListener {
                 requireActivity().startActivity(
                     Intent(requireActivity(), UsePointsActivity::class.java)
                 )
@@ -67,7 +68,7 @@ class MiljopointsFragment : Fragment() {
                     Intent(requireActivity(), ProgressionActivity::class.java)
                 )
             }
-            root.view_scan_code.setOnClickListener {
+            root.card_view_scanner.setOnClickListener {
                 scanFromFragment()
             }
             root.btn_do_logout.setOnClickListener {
@@ -91,6 +92,11 @@ class MiljopointsFragment : Fragment() {
             root.btn_to_log_in.setOnClickListener {
                 requireActivity().startActivity(
                     Intent(requireActivity(), LoginActivity::class.java)
+                )
+            }
+            root.cardView_fragment_what_are_points.setOnClickListener{
+                requireActivity().startActivity(
+                    Intent(requireActivity(), ExplanationActivity::class.java)
                 )
             }
         }

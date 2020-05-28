@@ -7,7 +7,7 @@
     tools:context=".fragments.main_page.miljopoints.MiljopointsFragment">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/view_use_points"
+        android:id="@+id/card_view_scanner"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginStart="8dp"
@@ -75,7 +75,7 @@
         android:layout_marginTop="32dp"
         android:background="#c7c9c7"
         app:cardBackgroundColor="@color/colorLightGreen"
-        app:layout_constraintStart_toEndOf="@+id/view_use_points"
+        app:layout_constraintStart_toEndOf="@+id/card_view_scanner"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -146,7 +146,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/view_scan_code"
+        android:id="@+id/card_view_use_points"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginStart="16dp"

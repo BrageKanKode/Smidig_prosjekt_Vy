@@ -31,6 +31,37 @@
             </intent-filter>
         </activity>
 
+        <!-- Explanation on points -->
+        <activity
+            android:name=".activities.explanation.ExplanationActivity" android:label="Points Explanation" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activities.explanation.ExplanationQuestionActivity" android:label="@string/hva_kan_jeg_bruke_poengene_p" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activities.explanation.ExplanationEarningActivity" android:label="@string/hvor_mange_poeng_f_r_jeg" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activities.explanation.ExplanationTravelActivity" android:label="@string/reise_med_poengene" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activities.explanation.ExplanationUseActivity" android:label="@string/hvordan_bruke_milj_poeng" android:launchMode="singleTop">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity"/>
+        </activity>
+
 
 
         <!-- Select travel page -->
