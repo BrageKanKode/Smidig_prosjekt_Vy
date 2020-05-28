@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_explanation_travel_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/reise_med_poengene"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_explanation_travel_dialog"
+        android:layout_width="294dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/explanation_travel_dialog"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_travel_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_travel_title" />
+
+    <TextView
+        android:id="@+id/textViewtextView_explanation_travel_good_to_know_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/godt_vite"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_travel_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_travel_dialog" />
+
+    <ImageView
+        android:id="@+id/imageView_good_to_know_arrow_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/closing_bracket"
+        app:layout_constraintStart_toStartOf="@+id/textViewtextView_explanation_travel_good_to_know_title"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtextView_explanation_travel_good_to_know_title"
+        app:srcCompat="@drawable/ic_chevron_right_24px" />
+
+    <TextView
+        android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_one"
+        android:layout_width="326dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/good_to_know_dialog_one"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_one"
+        app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_one" />
+
+    <ImageView
+        android:id="@+id/imageView_good_to_know_arrow_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/closing_bracket"
+        app:layout_constraintStart_toStartOf="@+id/imageView_good_to_know_arrow_one"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_one"
+        app:srcCompat="@drawable/ic_chevron_right_24px" />
+
+    <TextView
+        android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_two"
+        android:layout_width="325dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/good_to_know_dialog_two"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_two"
+        app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_two" />
+
+    <ImageView
+        android:id="@+id/imageView_good_to_know_arrow_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/closing_bracket"
+        app:layout_constraintStart_toStartOf="@+id/imageView_good_to_know_arrow_two"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_two"
+        app:srcCompat="@drawable/ic_chevron_right_24px" />
+
+    <TextView
+        android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_three"
+        android:layout_width="325dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/good_to_know_dialog_three"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_three"
+        app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_three" />
+
+    <ImageView
+        android:id="@+id/imageView_good_to_know_arrow_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/closing_bracket"
+        app:layout_constraintStart_toStartOf="@+id/imageView_good_to_know_arrow_three"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_three"
+        app:srcCompat="@drawable/ic_chevron_right_24px" />
+
+    <TextView
+        android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_four"
+        android:layout_width="323dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/good_to_know_dialog_four"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_four"
+        app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_four" />
+
+    <ImageView
+        android:id="@+id/imageView_good_to_know_arrow_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/closing_bracket"
+        app:layout_constraintStart_toStartOf="@+id/imageView_good_to_know_arrow_four"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_four"
+        app:srcCompat="@drawable/ic_chevron_right_24px" />
+
+    <TextView
+        android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_five"
+        android:layout_width="322dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/good_to_know_dialog_five"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_five"
+        app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_five" />
+
+    <ImageView
+        android:id="@+id/imageView_good_to_know_arrow_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/closing_bracket"
+        app:layout_constraintStart_toStartOf="@+id/imageView_good_to_know_arrow_five"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_five"
+        app:srcCompat="@drawable/ic_chevron_right_24px" />
+
+    <TextView
+        android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_six"
+        android:layout_width="322dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/good_to_know_dialog_six"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_six"
+        app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_six" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_explanation_question_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/hva_kan_jeg_bruke_poengene_p"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_under_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/halve_poenget_med_reise_er_spise_godt"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_title" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_dialog"
+        android:layout_width="309dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/explanation_question_dialog"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_under_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_under_title" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_second_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/explanation_question_second_title"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_dialog" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_title_one"
+        android:layout_width="155dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/oppgradering_av_billett"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_second_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_second_title" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_title_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/mat_og_drikke"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_example_title_one"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_example_title_one" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_title_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/kaffe"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_example_title_two"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_example_title_two" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_title_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/dplay"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_example_title_three"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_example_title_three" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_title_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/odeon_kino"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_example_title_four"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_example_title_four" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_dialog_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/_5_000_poeng"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_one"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_one" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_dialog_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/_1_500_2_400_poeng"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_two"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_two" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_dialog_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/_1_200_poeng"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_three"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_three" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_dialog_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/_5_500_poeng"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_four"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_four" />
+
+    <TextView
+        android:id="@+id/textView_explanation_question_example_dialog_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_text"
+        android:text="@string/_6000_poeng"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_five"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_five" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
