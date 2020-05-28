@@ -68,6 +68,9 @@ object CombinedFunctionsClass {
             view.cardView_confirmation.visibility = View.GONE
             view.textView_points.visibility = View.GONE
             view.imageView_travel_order_leaf.visibility = View.GONE
+            view.imageView_pay_with_points.visibility = View.GONE
+            view.imageView_travel_order_leaf_box.visibility = View.GONE
+            view.textView_travel_order_point_text.visibility = View.GONE
 
         } else if(activity == "SelectTravel") {
             view.textView_choose_trip_point.visibility = View.GONE

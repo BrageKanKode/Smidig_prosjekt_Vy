@@ -222,7 +222,7 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/rectangle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView_travel_order_payment_method_text"
         app:srcCompat="@drawable/ic_rectangle_197" />
 
     <ImageView
@@ -237,7 +237,7 @@
         app:srcCompat="@mipmap/ic_vipps_foreground" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/textView_travel_order_payment_method_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -260,7 +260,7 @@
         app:srcCompat="@drawable/ic_rectangle_197" />
 
     <ImageView
-        android:id="@+id/imageView20"
+        android:id="@+id/imageView_travel_order_leaf_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -272,7 +272,7 @@
         app:srcCompat="@drawable/ic_vector_leaf" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/textView_travel_order_point_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -282,5 +282,5 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView_pay_with_points"
         app:layout_constraintStart_toStartOf="@+id/imageView_pay_with_points"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_travel_order_leaf_box" />
 </androidx.constraintlayout.widget.ConstraintLayout>
