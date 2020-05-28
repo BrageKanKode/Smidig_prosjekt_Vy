@@ -9,7 +9,6 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
-import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.LoginActivity
 import com.example.leafly_application_git.activities.authentication.SignUpActivity
 import com.example.leafly_application_git.activities.authentication.User
@@ -52,12 +51,12 @@ class MiljopointsFragment : Fragment() {
             fetchUser()
 
             //Define these buttons
-            root.card_view_use_points.setOnClickListener {
+            root.cardView_use_points.setOnClickListener {
                 requireActivity().startActivity(
                     Intent(requireActivity(), UsePointsActivity::class.java)
                 )
             }
-            root.view_member_benefits.setOnClickListener {
+            root.card_view_benefits.setOnClickListener {
                 requireActivity().startActivity(
                     Intent(requireActivity(), MembershipBenefitsActivity::class.java)
                 )

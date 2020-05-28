@@ -205,6 +205,30 @@
     <string name="_6000_poeng">6000 poeng</string>
     <string name="_1_200_poeng">1.200 poeng</string>
     <string name="_5_500_poeng">5.500 poeng</string>
+    <string name="se_ditt_tre_vokse">Se ditt tre vokse</string>
+    <string name="back_to_registration">Back to registration</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="poeng_shop">Poeng Shop</string>
+    <string name="prosent_sign">%</string>
+    <string name="insert_points_here">insert points here</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="betaling_p_g_r">Betaling pågår...</string>
+    <string name="dplay_logo">dplay logo</string>
+    <string name="_100">100</string>
+    <string name="odean_logo">odean logo</string>
+    <string name="gratis_baguette">Gratis Baguette</string>
+    <string name="_150">150</string>
+    <string name="valgfri_kaffe">Valgfri Kaffe</string>
+    <string name="_200">200</string>
+    <string name="_15_minutter_gratis">15 Minutter Gratis</string>
+    <string name="voi_logo">voi logo</string>
+    <string name="_500">500</string>
+    <string name="_9605">9605</string>
+    <string name="sign_out">Sign out</string>
 
 
 </resources>

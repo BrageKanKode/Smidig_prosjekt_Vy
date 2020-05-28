@@ -162,7 +162,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
-        android:text="9605"
+        android:text="@string/_9605"
         app:layout_constraintEnd_toEndOf="@+id/textView_current_saldo"
         app:layout_constraintTop_toBottomOf="@+id/textView_current_saldo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

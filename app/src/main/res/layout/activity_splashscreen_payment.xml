@@ -7,10 +7,10 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_splashScreen_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Betaling pågår..."
+        android:text="@string/betaling_p_g_r"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"

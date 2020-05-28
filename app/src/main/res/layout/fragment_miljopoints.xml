@@ -68,7 +68,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/view_member_benefits"
+        android:id="@+id/cardView_use_points"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginStart="16dp"
@@ -146,13 +146,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_use_points"
+        android:id="@+id/card_view_benefits"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:background="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/view_member_benefits"
+        app:layout_constraintStart_toEndOf="@+id/cardView_use_points"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -368,7 +368,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="115dp"
         android:layout_marginTop="24dp"
-        android:text="Sign out"
+        android:text="@string/sign_out"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toTopOf="parent" />

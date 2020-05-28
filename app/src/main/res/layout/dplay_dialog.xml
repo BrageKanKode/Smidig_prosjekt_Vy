@@ -13,13 +13,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
-        android:textColor="#000000"
+        android:fontFamily="@font/sf_text"
+        android:textColor="@color/colorBlack"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_dplay_dialog_logo" />
 
     <Button
         android:id="@+id/button_buy_dplay"
@@ -27,7 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="#CBEAE4"
-        android:text="Kjøp"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/buy"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_currency_dplay" />
@@ -37,7 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:fontFamily="@font/sf_text"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_dplay_dialog_dplay"
         app:layout_constraintStart_toStartOf="@+id/textView_dplay_dialog_dplay"
         app:layout_constraintTop_toBottomOf="@+id/textView_dplay_dialog_dplay" />
@@ -47,16 +50,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:fontFamily="@font/sf_text"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_price_dplay"
         app:layout_constraintStart_toStartOf="@+id/textView_price_dplay"
         app:layout_constraintTop_toBottomOf="@+id/textView_price_dplay" />
 
     <ImageView
-        android:id="@+id/imageView27"
+        android:id="@+id/imageView_dplay_dialog_logo"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/dplay_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -68,6 +73,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/close_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_clear_24px" />

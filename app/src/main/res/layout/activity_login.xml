@@ -12,7 +12,9 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
-        android:text="Log in"
+        android:fontFamily="@font/sf_display"
+        android:text="@string/log_in"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/editText_password_login"
         app:layout_constraintStart_toStartOf="@+id/editText_password_login"
         app:layout_constraintTop_toBottomOf="@+id/editText_password_login" />
@@ -22,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Back to registration"
-        android:textSize="16dp"
+        android:text="@string/back_to_registration"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/button_login"
         app:layout_constraintStart_toStartOf="@+id/button_login"
         app:layout_constraintTop_toBottomOf="@+id/button_login" />
@@ -36,11 +38,12 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editText_password_login"
@@ -48,9 +51,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/editText_email_login"
         app:layout_constraintStart_toStartOf="@+id/editText_email_login"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email_login" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_email_login"
+        android:autofillHints="" />
 </androidx.constraintlayout.widget.ConstraintLayout>
