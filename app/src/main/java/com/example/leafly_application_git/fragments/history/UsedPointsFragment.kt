@@ -20,6 +20,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.used_history_row.view.*
 
 
 class UsedPointsFragment : Fragment() {
@@ -97,9 +98,34 @@ class UsedPointsFragment : Fragment() {
             val rootView: View = LayoutInflater.from(mContext).inflate(R.layout.used_history_row, parent, false)
             val usedPointsList = rootView.findViewById<TextView>(R.id.textView_display_new_item)
 
+
             Log.d("TAG", usedPointsList.toString())
 
             usedPointsList.text = mUsedHistoryList[position]
+
+
+            if (rootView.textView_display_new_item.text.toString().contains("Netflix")){
+                val netflixDrawable = R.drawable.ic_netflix_2015_logo
+                rootView.imageView_used_history_image.setImageResource(netflixDrawable)
+            } else if (rootView.textView_display_new_item.text.toString().contains("Dplay")){
+                val dplayDrawable = R.drawable.ic_dplay_logo_2019
+                rootView.imageView_used_history_image.setImageResource(dplayDrawable)
+            } else if (rootView.textView_display_new_item.text.toString().contains("Odeon")){
+                val odeonDrawable = R.drawable.ic_odeon_logo
+                rootView.imageView_used_history_image.setImageResource(odeonDrawable)
+            } else if (rootView.textView_display_new_item.text.toString().contains("Narvesen")){
+                val narvesenDrawable = R.drawable.ic_narvesen_logo
+                rootView.imageView_used_history_image.setImageResource(narvesenDrawable)
+            } else if (rootView.textView_display_new_item.text.toString().contains("Starbucks")){
+                val starbucksDrawable = R.drawable.ic_starbucks_coffee
+                rootView.imageView_used_history_image.setImageResource(starbucksDrawable)
+            } else if (rootView.textView_display_new_item.text.toString().contains("Voi")){
+                val voiDrawable = R.drawable.ic_logotype_red
+                rootView.imageView_used_history_image.setImageResource(voiDrawable)
+            } else {
+                val standardImage = R.drawable.ic_eco_black_18dp
+                rootView.imageView_used_history_image.setImageResource(standardImage)
+            }
 
             return rootView
         }
