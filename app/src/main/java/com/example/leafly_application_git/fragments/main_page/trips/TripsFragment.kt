@@ -25,7 +25,7 @@ class TripsFragment : Fragment() {
 //        })
 
         //Shows actionbar
-        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         return root
     }

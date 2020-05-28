@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
@@ -41,7 +42,7 @@ class MiljopointsFragment : Fragment() {
         var root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
 
         //Shows actionbar
-        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
 
         //Checks if user is logged in
@@ -68,6 +69,13 @@ class MiljopointsFragment : Fragment() {
             }
             root.view_scan_code.setOnClickListener {
                 scanFromFragment()
+            }
+            root.btn_do_logout.setOnClickListener {
+                FirebaseAuth.getInstance().signOut()
+                val ft : FragmentTransaction = this.fragmentManager!!.beginTransaction()
+                ft.detach(this)
+                ft.attach(this)
+                ft.commit()
             }
         } else {
             //--------------If not logged in --------------
@@ -105,27 +113,6 @@ class MiljopointsFragment : Fragment() {
         return root
     }
 
-    //Menu button to sign out user
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        if(verifyIfUserIsLoggedIn()){
-            inflater.inflate(R.menu.auth_menu, menu)
-        }
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when(item.itemId){
-            R.id.sign_out_menu -> {
-                FirebaseAuth.getInstance().signOut()
-                val intent = Intent(this.context, MainActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-            }
-
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
     //to update progress bar and other user details
     override fun onResume() {
