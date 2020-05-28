@@ -38,7 +38,7 @@ class SelectTravelAdapter (private val json: Json): RecyclerView.Adapter<CustomV
         val value = json.features[position]
         holder.customView.textView_choose_trip_from?.text = value.fronLocation
         holder.customView.textView_choose_trip_to?.text = value.toLocation
-        holder.customView.textView_choose_trip_price?.text = value.price
+        holder.customView.textView_choose_trip_price?.text = "${value.price} kr"
         holder.customView.textView_choose_trip_point?.text = value.miljoPoeng
         val miljopoeng = value.miljoPoeng
         holder.customView.textView_choose_trip_point.text ="Du oppnår $miljopoeng miljøpoeng av denne reisen"
