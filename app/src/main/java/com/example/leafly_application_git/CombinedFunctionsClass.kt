@@ -8,6 +8,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.textView_points
@@ -81,6 +82,10 @@ object CombinedFunctionsClass {
             view.textView_details_points.visibility = View.GONE
             view.imageView_detail_leaf_green.visibility = View.GONE
             view.cardView5.visibility = View.GONE
+        } else if (activity == "Confirmation") {
+            view.imageView_confirmation_leaf.visibility = View.GONE
+            view.textView_confirmation_points_new.visibility = View.GONE
+            view.textView_points_text.visibility = View.GONE
         }
 
 

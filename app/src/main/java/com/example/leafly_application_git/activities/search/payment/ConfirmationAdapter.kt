@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.MainActivity
 import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
@@ -20,6 +21,10 @@ class ConfirmationAdapter (
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewConfirmation {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.activity_confirmation_v_2, parent, false)
+
+        if(!CombinedFunctionsClass.verifyIfUserIsLoggedIn()){
+            CombinedFunctionsClass.removeStuff(view, "Confirmation")
+        }
 
         return ViewConfirmation(view)
     }
