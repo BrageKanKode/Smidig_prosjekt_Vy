@@ -8,12 +8,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_scanner"
-        android:layout_width="120dp"
-        android:layout_height="130dp"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         android:background="#c7c9c7"
         app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/view_member_benefits"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
@@ -37,8 +39,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView11"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 app:cardBackgroundColor="#CBEAE4"
                 app:cardCornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -69,13 +71,13 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_use_points"
-        android:layout_width="120dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
         android:layout_marginTop="32dp"
         android:background="#c7c9c7"
         app:cardBackgroundColor="@color/colorLightGreen"
-        app:layout_constraintStart_toEndOf="@+id/card_view_scanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,8 +87,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView12"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 app:cardBackgroundColor="#CBEAE4"
@@ -147,11 +149,13 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_benefits"
-        android:layout_width="120dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardView_use_points"
         app:layout_constraintTop_toBottomOf="@+id/cardView_welcome_progress_bar_info">
 
@@ -161,8 +165,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView13"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 app:cardCornerRadius="50dp"

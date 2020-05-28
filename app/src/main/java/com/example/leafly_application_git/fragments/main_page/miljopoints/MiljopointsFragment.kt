@@ -39,6 +39,8 @@ class MiljopointsFragment : Fragment() {
 
 
 
+
+
         var root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
 
         //Shows actionbar

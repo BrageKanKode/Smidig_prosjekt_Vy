@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.example.leafly_application_git.CombinedFunctionsClass
+import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.search.SelectTravelActivity
@@ -67,32 +69,32 @@ class SearchFragment : Fragment() {
             )
         }
 
-/*
-        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
-        val menuListener = object : ValueEventListener {
-            override fun onDataChange(p0: DataSnapshot) {
-                var balance = user?.balance
+        if(verifyIfUserIsLoggedIn()){
+            val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+            val menuListener = object : ValueEventListener {
+                override fun onDataChange(p0: DataSnapshot) {
+                    var balance = user?.balance
 
-                root.btn_cheat.setOnClickListener {
-                balance = balance?.plus(10000)
-                ref.child("/balance").setValue(balance)
+                    root.btn_cheat.setOnClickListener {
+                    balance = balance?.plus(10000)
+                    ref.child("/balance").setValue(balance)
 
+                    }
+                    root.btn_cheat_pull.setOnClickListener {
+                    balance = balance?.minus(10000)
+                    ref.child("/balance").setValue(balance)
+
+                    }
                 }
-                root.btn_cheat_pull.setOnClickListener {
-                balance = balance?.minus(10000)
-                ref.child("/balance").setValue(balance)
 
+                override fun onCancelled(p0: DatabaseError) {
+                    TODO("Not yet implemented")
                 }
             }
+            ref.addListenerForSingleValueEvent(menuListener)
 
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
-            }
         }
-        ref.addListenerForSingleValueEvent(menuListener)
 
-
- */
 
         return root
     }
