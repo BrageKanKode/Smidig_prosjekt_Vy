@@ -108,6 +108,11 @@ class SearchFragment : Fragment() {
                         ref.child("/level").setValue(level)
 
                     }
+                    root.btn_cheat_xp_98.setOnClickListener {
+                        progress = 98.00
+                        ref.child("/progress").setValue(progress)
+
+                    }
                 }
 
                 override fun onCancelled(p0: DatabaseError) {

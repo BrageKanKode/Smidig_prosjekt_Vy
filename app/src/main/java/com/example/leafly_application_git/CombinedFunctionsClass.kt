@@ -23,6 +23,8 @@ object CombinedFunctionsClass {
 
     internal var user: User? = null
 
+   internal var leveledUp: Boolean = false
+
 
 
     fun incrementProgress(progressAmount : Double) {
@@ -33,6 +35,7 @@ object CombinedFunctionsClass {
                 var progress = user?.progress
                 var level = user?.level
                 val maxXp = 300
+                leveledUp = false
 
                 val convertedToPercent = progressAmount.div(maxXp) * 100.00
 
@@ -43,6 +46,9 @@ object CombinedFunctionsClass {
                         progress = progress.plus(convertedToPercent)
                         progress = progress.minus(100)
                         level = level.plus(1)
+                        leveledUp = true
+
+
 
 
 
@@ -101,9 +107,8 @@ object CombinedFunctionsClass {
 
     }
 
-    fun levelUp(): Boolean{
-
-        return true
+    fun leveledUp(): Boolean{
+        return leveledUp
     }
 
     //Checks with the Firebase Authentication if user is logged in or not

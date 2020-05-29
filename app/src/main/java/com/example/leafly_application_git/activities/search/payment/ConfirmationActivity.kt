@@ -5,12 +5,11 @@ import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass
+import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass.incrementProgress
-import com.example.leafly_application_git.CombinedFunctionsClass.levelUp
+import com.example.leafly_application_git.CombinedFunctionsClass.leveledUp
 import com.example.leafly_application_git.activities.authentication.User
-import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -48,14 +47,9 @@ class ConfirmationActivity : AppCompatActivity() {
             incrementBalance(points)
         }
 
-        if (levelUp()){
-            val mDialogView = LayoutInflater.from(this)
-                .inflate(R.layout.level_up_dialog, null)
-            val mBuilder = AlertDialog.Builder(this)
-                .setView(mDialogView)
 
-            val mAlertDialog = mBuilder.show()
-        }
+
+
     }
 
 
@@ -97,9 +91,37 @@ class ConfirmationActivity : AppCompatActivity() {
 
 
 
+
+
                 ref.child("/balance").setValue(balance)
                 ref.child("/totalEarned").setValue(totalEarned)
-                incrementProgress(25.00)
+                CombinedFunctionsClass.user = p0.getValue(User::class.java)
+                var progress = CombinedFunctionsClass.user?.progress
+                var level = CombinedFunctionsClass.user?.level
+                val maxXp = 300
+                val progressAmount = 25.00
+
+                incrementProgress(progressAmount)
+
+
+                val convertedToPercent = progressAmount.div(maxXp) * 100.00
+
+                if (level!! < 3) {
+                    if (progress!! + convertedToPercent >= 100.00) {
+                        val mDialogView = LayoutInflater.from(this@ConfirmationActivity)
+                            .inflate(R.layout.level_up_dialog, null)
+                        val mBuilder = AlertDialog.Builder(this@ConfirmationActivity)
+                            .setView(mDialogView)
+
+                        val mAlertDialog = mBuilder.show()
+                    }
+                }
+
+
+
+
+
+
 
                 val refEarnedHistory = ref.child("/earnedHistory")
                 refEarnedHistory.push().setValue(earnedHistory)
