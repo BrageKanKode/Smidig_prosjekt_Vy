@@ -20,7 +20,7 @@
     <string name="choose_trips_points_overview">Du oppnår </string>
     <string name="choose_trips_points_overview2"> miljøpoeng poeng av denne reisen </string>
     <string name="title_travel_details"> Reisedetaljer </string>
-    <string name="enkeltbillet"> EnkelBillett </string>
+    <string name="enkeltbillet"> EnkeltBillett </string>
 
 
     <!--________________________________Your travels________________________________-->
@@ -37,7 +37,7 @@
     <string name="checkicon">checkicon</string>
     <string name="line">separating line</string>
     <string name="travelers">1 reisende</string>
-    <string name="payment_option">hvordan vil du betale?</string>
+    <string name="payment_option">Hvordan vil du betale?</string>
 
     <!--________________________________MiljoPoints_________________________________-->
     <string name="title_miljopoints">Miljøpoeng</string>

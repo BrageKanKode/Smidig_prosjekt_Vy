@@ -51,6 +51,7 @@ class CleanOceanActivity : AppCompatActivity() {
 
                 textView_clean_ocean_amount.text = cleanAmount.toString()
                 textView_total_ocean_sum.text = totalCleanSum.toString()
+                btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
 
                 btn_clean_ocean_btn_minus.setOnClickListener {
                     if(cleanAmount > 1) {
@@ -58,6 +59,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         totalCleanSum -= cleanOceanPrice
                         textView_total_ocean_sum.text = totalCleanSum.toString()
+                        btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
                     }
                 }
 
@@ -67,6 +69,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         totalCleanSum += cleanOceanPrice
                         textView_total_ocean_sum.text = totalCleanSum.toString()
+                        btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
                     }
                 }
 
@@ -98,6 +101,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         totalCleanSum = cleanOceanPrice
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         textView_total_ocean_sum.text = totalCleanSum.toString()
+                        btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
 
                         val mAlertDialog = mBuilder.show()
 

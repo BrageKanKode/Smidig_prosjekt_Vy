@@ -49,6 +49,7 @@ class PlantTreeActivity : AppCompatActivity() {
                 var totalTreeSum = treePrice
 
                 textview_currency_show.text = balance.toString()
+                btn_do_plant_tree.text = "Plant $treeAmount trær"
 
 
 
@@ -61,6 +62,11 @@ class PlantTreeActivity : AppCompatActivity() {
                         textView_plant_tree_amount.text = treeAmount.toString()
                         totalTreeSum -= treePrice
                         textView_total_tree_sum.text = totalTreeSum.toString()
+                        if(treeAmount > 1){
+                            btn_do_plant_tree.text = "Plant $treeAmount trær"
+                        } else {
+                            btn_do_plant_tree.text = "Plant $treeAmount tre"
+                        }
                     }
                 }
 
@@ -70,6 +76,11 @@ class PlantTreeActivity : AppCompatActivity() {
                         textView_plant_tree_amount.text = treeAmount.toString()
                         totalTreeSum += treePrice
                         textView_total_tree_sum.text = totalTreeSum.toString()
+                        if(treeAmount > 1){
+                            btn_do_plant_tree.text = "Plant $treeAmount trær"
+                        } else {
+                            btn_do_plant_tree.text = "Plant $treeAmount tre"
+                        }
                     }
                 }
 
@@ -100,12 +111,14 @@ class PlantTreeActivity : AppCompatActivity() {
                         val mBuilder = AlertDialog.Builder(this@PlantTreeActivity)
                             .setView(mDialogView2)
 
-                        mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount antall trær!"
+                        mDialogView2.textView4_thanks_tree_info.text = "Gratulerer! Du har plantet $treeAmount trær!"
+
 
                         treeAmount = 1
                         totalTreeSum = treePrice
                         textView_plant_tree_amount.text = treeAmount.toString()
                         textView_total_tree_sum.text = totalTreeSum.toString()
+                        btn_do_plant_tree.text = "Plant $treeAmount tre"
 
                         val mAlertDialog = mBuilder.show()
 

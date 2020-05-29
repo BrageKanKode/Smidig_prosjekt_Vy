@@ -38,6 +38,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
         android:text="@string/ditt_kj_p_kan_finnes_under_poenghistorikk"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_thanks_for_purchase"
         app:layout_constraintStart_toStartOf="@+id/textView_thanks_for_purchase"
         app:layout_constraintTop_toBottomOf="@+id/textView_thanks_for_purchase" />

@@ -38,6 +38,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
         android:text="@string/gratulerer_du_har_plantet_x_antall_tr_r"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_thanks_tree"
         app:layout_constraintStart_toStartOf="@+id/textView_thanks_tree"
         app:layout_constraintTop_toBottomOf="@+id/textView_thanks_tree" />

@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/betaling_p_g_r"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="@color/colorBlack"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
