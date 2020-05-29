@@ -548,7 +548,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "Du får 15 minutter med gratis bruk av Voi sparkesykkel\nFor $voiPurchasePrice miljøpoeng"
+                        "15 minutter gratis bruk av Voi\nFor $voiPurchasePrice miljøpoeng"
                     mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
 
 
