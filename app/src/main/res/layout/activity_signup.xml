@@ -47,6 +47,7 @@
         android:fontFamily="@font/sf_text"
         android:text="@string/register"
         android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editText_password_signup"
         app:layout_constraintStart_toStartOf="@+id/editText_password_signup"
         app:layout_constraintTop_toBottomOf="@+id/editText_password_signup" />

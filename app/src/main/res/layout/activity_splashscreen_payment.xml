@@ -10,6 +10,7 @@
         android:id="@+id/textView_splashScreen_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_display"
         android:text="@string/betaling_p_g_r"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="@color/colorBlack"

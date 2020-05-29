@@ -93,6 +93,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_text"
         android:text="@string/fra_oslo_s_til_fredrikstad"
+        android:textColor="@color/colorBlack"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/cardView9"
         app:layout_constraintTop_toBottomOf="@+id/cardView9" />
@@ -115,6 +116,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
         android:text="@string/din_saldo"
+        android:textColor="@color/colorBlack"
         app:layout_constraintStart_toStartOf="@+id/imageView_popupp_line"
         app:layout_constraintTop_toBottomOf="@+id/imageView_popupp_line" />
 
@@ -125,6 +127,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
         android:text="@string/etter_kj_p"
+        android:textColor="@color/colorBlack"
         app:layout_constraintStart_toStartOf="@+id/textView_your_saldo"
         app:layout_constraintTop_toBottomOf="@+id/textView_your_saldo" />
 
@@ -153,6 +156,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
         android:text="27605"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/imageView_popupp_line"
         app:layout_constraintTop_toBottomOf="@+id/imageView_popupp_line" />
 
@@ -163,6 +167,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
         android:text="@string/_9605"
+        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_current_saldo"
         app:layout_constraintTop_toBottomOf="@+id/textView_current_saldo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

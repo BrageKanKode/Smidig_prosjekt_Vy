@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_display"
+        android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,9 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_text"
+        android:textAlignment="center"
         android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/textView_netflix_dialog"
 
+        app:layout_constraintEnd_toEndOf="@+id/textView_netflix_dialog"
         app:layout_constraintStart_toStartOf="@+id/textView_netflix_dialog"
         app:layout_constraintTop_toBottomOf="@+id/textView_netflix_dialog" />
 
@@ -37,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_text"
+        android:textAlignment="center"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/textView_price_netflix"
         app:layout_constraintStart_toStartOf="@+id/textView_price_netflix"
@@ -52,6 +55,8 @@
 
         android:text="@string/buy"
         android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_currency_netflix" />
