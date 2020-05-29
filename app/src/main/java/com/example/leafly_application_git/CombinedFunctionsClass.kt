@@ -35,7 +35,10 @@ object CombinedFunctionsClass {
 
                 if (level!! < 3) {
                     if (progress!! + convertedToPercent >= 100.00) {
-                        progress = progress.minus(progress)
+
+
+                        progress = progress.plus(convertedToPercent)
+                        progress = progress.minus(100)
                         level = level.plus(1)
 
 
