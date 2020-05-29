@@ -125,7 +125,7 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("Voi")){
                 val voiDrawable = R.drawable.ic_logotype_red
                 rootView.imageView_used_history_image.setImageResource(voiDrawable)
-            } else if (rootView.textView_display_new_item.text.toString().contains("reddet et tre")){
+            } else if (rootView.textView_display_new_item.text.toString().contains("tre")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
             } else if (rootView.textView_display_new_item.text.toString().contains("vann")){
