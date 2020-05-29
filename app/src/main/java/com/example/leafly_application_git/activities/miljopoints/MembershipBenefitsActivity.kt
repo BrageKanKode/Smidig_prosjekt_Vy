@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.ExpandableListAdapter
 import com.example.leafly_application_git.R
 import kotlinx.android.synthetic.main.activity_membership_benefits.*
+import kotlinx.android.synthetic.main.list_header.*
+import kotlinx.android.synthetic.main.used_history_row.view.*
 
 class MembershipBenefitsActivity : AppCompatActivity() {
 
@@ -23,6 +25,7 @@ class MembershipBenefitsActivity : AppCompatActivity() {
         listChild.put(listHeader[0], froList)
         listChild.put(listHeader[1], spireList)
         listChild.put(listHeader[2], treList)
+
 
         val expandableListAdapter = ExpandableListAdapter(this, listHeader, listChild)
 
