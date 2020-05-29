@@ -1,8 +1,11 @@
 package com.example.leafly_application_git
 
 
+import android.view.LayoutInflater
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.example.leafly_application_git.activities.authentication.User
+import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -40,6 +43,7 @@ object CombinedFunctionsClass {
                         progress = progress.plus(convertedToPercent)
                         progress = progress.minus(100)
                         level = level.plus(1)
+
 
 
                     } else {
@@ -97,6 +101,10 @@ object CombinedFunctionsClass {
 
     }
 
+    fun levelUp(): Boolean{
+
+        return true
+    }
 
     //Checks with the Firebase Authentication if user is logged in or not
     fun verifyIfUserIsLoggedIn(): Boolean {

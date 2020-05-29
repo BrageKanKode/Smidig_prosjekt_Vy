@@ -1,12 +1,16 @@
 package com.example.leafly_application_git.activities.search.payment
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.CombinedFunctionsClass.incrementProgress
+import com.example.leafly_application_git.CombinedFunctionsClass.levelUp
 import com.example.leafly_application_git.activities.authentication.User
+import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -42,6 +46,15 @@ class ConfirmationActivity : AppCompatActivity() {
 
         if(verifyIfUserIsLoggedIn()){
             incrementBalance(points)
+        }
+
+        if (levelUp()){
+            val mDialogView = LayoutInflater.from(this)
+                .inflate(R.layout.level_up_dialog, null)
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+
+            val mAlertDialog = mBuilder.show()
         }
     }
 
