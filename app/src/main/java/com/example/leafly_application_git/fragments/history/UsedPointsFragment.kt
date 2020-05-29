@@ -128,6 +128,9 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("reddet et tre")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
+            } else if (rootView.textView_display_new_item.text.toString().contains("vann")){
+                val plasticDrawable = R.drawable.ic_plast
+                rootView.imageView_used_history_image.setImageResource(plasticDrawable)
             } else {
                 val standardImage = R.drawable.ic_eco_black_18dp
                 rootView.imageView_used_history_image.setImageResource(standardImage)
