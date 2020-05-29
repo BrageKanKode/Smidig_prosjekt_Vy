@@ -47,6 +47,7 @@ class MiljopointsFragment : Fragment() {
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
 
+
         //Checks if user is logged in
         if(verifyIfUserIsLoggedIn()) {
             //--------------If logged in --------------
@@ -79,6 +80,13 @@ class MiljopointsFragment : Fragment() {
                 ft.attach(this)
                 ft.commit()
             }
+
+            root.cardView_what_is_points.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), ExplanationActivity::class.java)
+                )
+            }
+
         } else {
             //--------------If not logged in --------------
             //Change the fragment layout displayed
