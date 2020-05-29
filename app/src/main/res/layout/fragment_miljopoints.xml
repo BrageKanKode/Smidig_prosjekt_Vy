@@ -11,7 +11,7 @@
         android:layout_width="100dp"
         android:layout_height="110dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="#c7c9c7"
         app:cardBackgroundColor="#FFFFFF"
@@ -73,7 +73,7 @@
         android:id="@+id/cardView_use_points"
         android:layout_width="100dp"
         android:layout_height="110dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:background="#c7c9c7"
         app:cardBackgroundColor="@color/colorLightGreen"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,6 +114,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -152,7 +153,7 @@
         android:layout_width="100dp"
         android:layout_height="110dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,8 +170,8 @@
                 android:layout_height="65dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:cardCornerRadius="50dp"
                 app:cardBackgroundColor="#CBEAE4"
+                app:cardCornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.511"
@@ -378,6 +379,19 @@
         app:layout_constraintStart_toEndOf="@+id/textView_fragment_points_title_text"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView_illustrator_background_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/background_points"
+        android:src="@drawable/ic_illustrasjon_startside"
+        app:layout_constraintBottom_toTopOf="@+id/cardView_what_is_points"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_what_is_points"
         android:layout_width="0dp"
@@ -408,6 +422,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
+                android:contentDescription="@string/arrow"
                 android:src="@drawable/ic_arrow_right_alt_24px"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
