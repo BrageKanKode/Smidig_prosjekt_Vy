@@ -21,6 +21,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.used_history_row.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class UsedPointsFragment : Fragment() {
@@ -104,6 +106,7 @@ class UsedPointsFragment : Fragment() {
             usedPointsList.text = mUsedHistoryList[position]
 
 
+            //Checks what type of item that has been purchased. Displays the corresponding image to each picture
             if (rootView.textView_display_new_item.text.toString().contains("Netflix")){
                 val netflixDrawable = R.drawable.ic_netflix_2015_logo
                 rootView.imageView_used_history_image.setImageResource(netflixDrawable)
@@ -122,6 +125,9 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("Voi")){
                 val voiDrawable = R.drawable.ic_logotype_red
                 rootView.imageView_used_history_image.setImageResource(voiDrawable)
+            } else if (rootView.textView_display_new_item.text.toString().contains("reddet et tre")){
+                val treeDrawable = R.drawable.ic_trer
+                rootView.imageView_used_history_image.setImageResource(treeDrawable)
             } else {
                 val standardImage = R.drawable.ic_eco_black_18dp
                 rootView.imageView_used_history_image.setImageResource(standardImage)
