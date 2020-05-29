@@ -33,22 +33,25 @@ object CombinedFunctionsClass {
 
                 val convertedToPercent = progressAmount.div(maxXp) * 100.00
 
+                if (level!! < 3) {
+                    if (progress!! + convertedToPercent >= 100.00) {
+                        progress = progress.minus(progress)
+                        level = level.plus(1)
 
 
-                if(progress!! + convertedToPercent >= 100.00){
-                    progress = progress.minus(progress)
-                    level = level!!.plus(1)
+                    } else {
+                        progress = progress.plus(convertedToPercent)
+                    }
 
+                    ref.child("/level").setValue(level)
+                    ref.child("/progress").setValue(progress)
 
-                } else {
-                    progress = progress.plus(convertedToPercent)
                 }
 
-
-
-                ref.child("/level").setValue(level)
-                ref.child("/progress").setValue(progress)
-
+                if(level == 3) {
+                    progress = 100.00
+                    ref.child("/progress").setValue(progress)
+                }
             }
 
             override fun onCancelled(p0: DatabaseError) {

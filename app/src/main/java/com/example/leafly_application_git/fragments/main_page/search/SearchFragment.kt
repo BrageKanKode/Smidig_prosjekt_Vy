@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.CombinedFunctionsClass
+import com.example.leafly_application_git.CombinedFunctionsClass.incrementProgress
 import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
@@ -74,15 +75,37 @@ class SearchFragment : Fragment() {
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
                     var balance = user?.balance
+                    var progress = user?.progress
+                    var level = user?.level
 
                     root.btn_cheat.setOnClickListener {
-                    balance = balance?.plus(10000)
-                    ref.child("/balance").setValue(balance)
+                        balance = balance?.plus(10000)
+                        ref.child("/balance").setValue(balance)
 
                     }
                     root.btn_cheat_pull.setOnClickListener {
-                    balance = balance?.minus(10000)
-                    ref.child("/balance").setValue(balance)
+                        balance = balance?.minus(10000)
+                        ref.child("/balance").setValue(balance)
+
+                    }
+                    root.btn_cheat_xp_plus.setOnClickListener {
+                        incrementProgress(25.00)
+                        ref.child("/progress").setValue(progress)
+
+                    }
+                    root.btn_cheat_xp_minus.setOnClickListener {
+                        progress = progress?.minus(10.00)
+                        ref.child("/progress").setValue(progress)
+
+                    }
+                    root.btn_cheat_level_minus.setOnClickListener {
+                        level = level?.minus(1)
+                        ref.child("/level").setValue(level)
+
+                    }
+                    root.btn_cheat_level_plus.setOnClickListener {
+                        level = level?.plus(1)
+                        ref.child("/level").setValue(level)
 
                     }
                 }
