@@ -298,6 +298,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_membership_level" />
 
+            <ImageView
+                android:id="@+id/imageView_display_level_icon"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_clear_24px"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_level_points"
+                app:layout_constraintStart_toEndOf="@+id/textView_level_points"
+                app:layout_constraintTop_toTopOf="@+id/textView_level_points" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="148dp"
                 android:layout_height="144dp"
