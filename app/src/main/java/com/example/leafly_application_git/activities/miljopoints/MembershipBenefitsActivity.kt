@@ -17,9 +17,9 @@ class MembershipBenefitsActivity : AppCompatActivity() {
 
         val listHeader = listOf("Frø", "Spire", "Tre")
 
-        val froList = listOf("Gratis Internett", "Tilgang til automat-varer")
-        val spireList = listOf("Gratis Internett", "Tilgang til underholdning", "1 Gratis kaffe i måneden")
-        val treList = listOf("Raskere internett tilgang", "Game-zone", "Stille sone", "Gratis E-bøker", "2 gratis kaffe i måneden")
+        val froList = listOf("Samle poeng på dine reiser som du kan bruke i appen", "Nyhetsbrev med kampanjer for Miljøshopen", "Registreringsbonus på 300 miljøpoeng")
+        val spireList = listOf("Eksklusive kampanjer for ditt nivå", "Gratis valgfri varmdrikke fra automat", "Gratis toalettbesøk på stasjoner")
+        val treList = listOf("Dobbel hastighet på WiFi", "15% rabatt på setereservasjon", "Gratis parkering på utvalgte stasjoner")
 
         val listChild = HashMap<String, List<String>>()
         listChild.put(listHeader[0], froList)
