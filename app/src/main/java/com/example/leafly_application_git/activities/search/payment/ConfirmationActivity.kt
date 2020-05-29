@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
+import kotlinx.android.synthetic.main.level_up_dialog.*
+import kotlinx.android.synthetic.main.level_up_dialog.view.*
 
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -112,6 +114,8 @@ class ConfirmationActivity : AppCompatActivity() {
                             .inflate(R.layout.level_up_dialog, null)
                         val mBuilder = AlertDialog.Builder(this@ConfirmationActivity)
                             .setView(mDialogView)
+
+                        mDialogView.textView_level_up_congratulations.text = "Gratulerer, du har nådd et nytt level!"
 
                         val mAlertDialog = mBuilder.show()
                     }
