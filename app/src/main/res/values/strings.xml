@@ -161,8 +161,8 @@
     <string name="du_f_r_forskjellige_poeng_avhengig_av_hva_du_kj_per">Du får forskjellige poeng, avhengig av hva du kjøper.</string>
     <string name="her_kan_du_finne_ut_hvordan_du_bruker_dine_oppsamlede_poeng">Her kan du finne ut hvordan du bruker dine oppsamlede poeng.</string>
     <string name="hvordan_bruke_milj_poeng">Hvordan bruke miljøpoeng?</string>
-    <string name="reise_med_poengene">Reise med poengene</string>
-    <string name="informasjon_om_hvordan_du_kan_reise_med_poengene_dine">Informasjon om hvordan du kan reise med poengene dine.</string>
+    <string name="reise_med_poengene">Hva er Miljøpoeng?</string>
+    <string name="informasjon_om_hvordan_du_kan_reise_med_poengene_dine">Informasjon om hva Miljøpoeng er og nyttig informasjon.</string>
     <string name="alt_du_trenger_vite_om_hva_du_kan_bruke_poengene_dine_p">Alt du trenger å vite om hva du kan bruke poengene dine på.</string>
     <string name="hva_kan_jeg_bruke_poengene_p">Hva kan jeg bruke poengene på?</string>
     <string name="niv_basert_poeng">Nivåbasert poeng</string>
@@ -183,7 +183,7 @@
     <string name="rydd_plast">Rydd plast</string>
     <string name="_4_800_poeng">4.800 poeng</string>
     <string name="_5_700_poeng">5.700 poeng</string>
-    <string name="explanation_travel_dialog">Skal du hilse på slektninger og venner, eller planlegger du en fantastisk helg? Du kan bruke Miljøpoengene dine til nye togreiser eller gi bort en poengreise til noen du kjenner!</string>
+    <string name="explanation_travel_dialog">Miljøpoeng er en valuta man kan opptjene ved å bruke Vy sine tjenester. Etter du har kjøpt en reise vil du opptjene poeng som du kan bruke på reiser, tjenester eller diverse varer fra utvalgte samarbeidspartnere i shoppen vår.</string>
     <string name="good_to_know_dialog_three">Poengturer refunderes alltid. Men husk at poengene ikke må ha gått ut på tidspunktet for kansellering!</string>
     <string name="good_to_know_dialog_two">Du kan bare bestille VY-turer for poeng. Å koble reise med fylke eller annen operatør betales med penger.</string>
     <string name="good_to_know_dialog_one">Du må være logget inn for å kjøpe en tur med poeng.</string>

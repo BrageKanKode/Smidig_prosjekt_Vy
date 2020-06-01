@@ -7,6 +7,8 @@
     android:background="#B4FFFFFF"
     tools:context=".fragments.main_page.trips.TripsFragment">
 
+
+
     <View
         android:id="@+id/view_trips"
         android:layout_width="318dp"
