@@ -110,27 +110,35 @@ class UsedPointsFragment : Fragment() {
             if (rootView.textView_display_new_item.text.toString().contains("Netflix")){
                 val netflixDrawable = R.drawable.ic_netflix_2015_logo
                 rootView.imageView_used_history_image.setImageResource(netflixDrawable)
+                rootView.textView_display_used_history_price.text = "-100"
             } else if (rootView.textView_display_new_item.text.toString().contains("Dplay")){
                 val dplayDrawable = R.drawable.ic_dplay_logo_2019
                 rootView.imageView_used_history_image.setImageResource(dplayDrawable)
+                rootView.textView_display_used_history_price.text = "-100"
             } else if (rootView.textView_display_new_item.text.toString().contains("Odeon")){
                 val odeonDrawable = R.drawable.ic_odeon_logo
                 rootView.imageView_used_history_image.setImageResource(odeonDrawable)
+                rootView.textView_display_used_history_price.text = "-200"
             } else if (rootView.textView_display_new_item.text.toString().contains("Narvesen")){
                 val narvesenDrawable = R.drawable.ic_narvesen_logo
                 rootView.imageView_used_history_image.setImageResource(narvesenDrawable)
+                rootView.textView_display_used_history_price.text = "-150"
             } else if (rootView.textView_display_new_item.text.toString().contains("Starbucks")){
                 val starbucksDrawable = R.drawable.ic_starbucks_coffee
+                rootView.textView_display_used_history_price.text = "-200"
                 rootView.imageView_used_history_image.setImageResource(starbucksDrawable)
             } else if (rootView.textView_display_new_item.text.toString().contains("Voi")){
                 val voiDrawable = R.drawable.ic_logotype_red
                 rootView.imageView_used_history_image.setImageResource(voiDrawable)
+                rootView.textView_display_used_history_price.text = "-500"
             } else if (rootView.textView_display_new_item.text.toString().contains("tre")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
+                rootView.textView_display_used_history_price.text = "-100"
             } else if (rootView.textView_display_new_item.text.toString().contains("vann")){
                 val plasticDrawable = R.drawable.ic_plast
                 rootView.imageView_used_history_image.setImageResource(plasticDrawable)
+                rootView.textView_display_used_history_price.text = "-100"
             } else {
                 val standardImage = R.drawable.ic_eco_black_18dp
                 rootView.imageView_used_history_image.setImageResource(standardImage)

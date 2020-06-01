@@ -67,7 +67,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var usedHistory =
-                        "Du kjøpte Dplay abbonement \nFor $dplayPurchasePrice miljøpoeng"
+                        "Du kjøpte Dplay abbonement"
                     mDialogView.textView_currency_dplay.text = "Saldo: " + balance.toString()
 
 
@@ -168,7 +168,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "Du kjøpte Netflix abbonement \nFor $netflixPurchasePrice miljøpoeng"
+                        "Du kjøpte Netflix abbonement"
                     mDialogView.textView_currency_netflix.text = "Saldo: " + balance.toString()
 
 
@@ -263,7 +263,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var usedHistory =
-                        "Du kjøpte Odeon kinobilett \nFor $odeonPurchasePrice miljøpoeng"
+                        "Du kjøpte Odeon 2-for-1 kinobilett"
                     mDialogView.textView_currency_odeon.text = "Saldo: " + balance.toString()
 
 
@@ -359,7 +359,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "Du fikk gratis baguette fra Narvesen\nFor $narvesenPurchasePrice miljøpoeng"
+                        "Du fikk gratis baguette fra Narvesen"
                     mDialogView.textview_currency_narvesen.text = "Saldo: " + balance.toString()
 
 
@@ -454,7 +454,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "Du valgte en gratis, valgfri kaffe fra Starbucks\nFor $starbucksPurchasePrice miljøpoeng"
+                        "Du valgte en gratis, valgfri kaffe fra Starbucks"
                     mDialogView.textview_currency_starbucks.text = "Saldo: " + balance.toString()
 
 
@@ -548,7 +548,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "15 minutter gratis bruk av Voi\nFor $voiPurchasePrice miljøpoeng"
+                        "15 minutter gratis bruk av Voi"
                     mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
 
 
