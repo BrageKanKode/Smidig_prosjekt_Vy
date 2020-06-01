@@ -38,7 +38,7 @@ class EarnedPointsFragment : Fragment() {
             override fun onDataChange(p0: DataSnapshot) {
 
                 for (childSnapshot: DataSnapshot in p0.children){
-                    earnedHistoryList.add(childSnapshot.value.toString())
+                    earnedHistoryList.add(0, childSnapshot.value.toString())
 
                     Log.d("Tag", earnedHistoryList.toString())
 
