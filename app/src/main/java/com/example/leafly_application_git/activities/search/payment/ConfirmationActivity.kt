@@ -115,9 +115,18 @@ class ConfirmationActivity : AppCompatActivity() {
                         val mBuilder = AlertDialog.Builder(this@ConfirmationActivity)
                             .setView(mDialogView)
 
-                        mDialogView.textView_level_up_congratulations.text = "Gratulerer, du har nådd et nytt level!"
+                        if (level == 1){
+                            mDialogView.textView_level_up_congratulations.text = "Du har nådd et nytt level!\n Din nye level: Spire"
+                        } else if (level == 2){
+                            mDialogView.textView_level_up_congratulations.text = "Du har nådd et nytt level!\n Din nye level: Tre"
+                        }
+
 
                         val mAlertDialog = mBuilder.show()
+
+                        mDialogView.imageView_close_level_up.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
                     }
                 }
 
