@@ -50,7 +50,7 @@ class SelectTimeActivity : AppCompatActivity() {
         runOnUiThread {
             recycler_view_confirmation.adapter =
                 ChooseTravelAdapter(
-                    time, to, from, price, points
+                    time, from, to, price, points
                 )
         }
     }
