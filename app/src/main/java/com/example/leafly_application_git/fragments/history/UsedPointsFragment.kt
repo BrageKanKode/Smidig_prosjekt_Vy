@@ -45,7 +45,7 @@ class UsedPointsFragment : Fragment() {
             override fun onDataChange(p0: DataSnapshot) {
 
                 for (childSnapshot: DataSnapshot in p0.children){
-                    usedHistoryList.add(childSnapshot.value.toString())
+                    usedHistoryList.add(0, childSnapshot.value.toString())
 
                     Log.d("Tag", usedHistoryList.toString())
 
