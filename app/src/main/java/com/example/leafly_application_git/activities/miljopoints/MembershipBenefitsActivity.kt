@@ -1,12 +1,12 @@
 package com.example.leafly_application_git.activities.miljopoints
 
 import android.os.Bundle
+import android.widget.ExpandableListView.OnGroupCollapseListener
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.ExpandableListAdapter
 import com.example.leafly_application_git.R
 import kotlinx.android.synthetic.main.activity_membership_benefits.*
-import kotlinx.android.synthetic.main.list_header.*
-import kotlinx.android.synthetic.main.used_history_row.view.*
+
 
 class MembershipBenefitsActivity : AppCompatActivity() {
 
@@ -30,6 +30,8 @@ class MembershipBenefitsActivity : AppCompatActivity() {
         val expandableListAdapter = ExpandableListAdapter(this, listHeader, listChild)
 
         expandable_list_view.setAdapter(expandableListAdapter)
+
+
 
     }
 
