@@ -61,6 +61,8 @@ class UsedPointsFragment : Fragment() {
                     listView.adapter = adapter
                     adapter.notifyDataSetChanged()
 
+
+
                     listView.setOnItemClickListener { parent, view, position, id ->
                         val mDialogView = LayoutInflater.from(activity as HistoryActivity)
                         .inflate(R.layout.cupon_dialog, null)
@@ -199,11 +201,11 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("tre")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
-                rootView.textView_display_used_history_price.text = "-100"
+//                rootView.textView_display_used_history_price.text = "-100"
             } else if (rootView.textView_display_new_item.text.toString().contains("vann")){
                 val plasticDrawable = R.drawable.ic_plast
                 rootView.imageView_used_history_image.setImageResource(plasticDrawable)
-                rootView.textView_display_used_history_price.text = "-100"
+                //rootView.textView_display_used_history_price.text = "-100"
             } else {
                 val standardImage = R.drawable.ic_eco_black_18dp
                 rootView.imageView_used_history_image.setImageResource(standardImage)
