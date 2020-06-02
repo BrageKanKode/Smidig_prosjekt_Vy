@@ -233,6 +233,28 @@
     <string name="membership_benefits_title">Medlemsfordeler</string>
     <string name="membership_benefits_description">Her kan du se hva slags fordeler du får av de forskjellige nivåene av medlemsskap</string>
     <string name="ocean_debri_background">Ocean debri background</string>
+    <string name="during_coffe">Kaffe</string>
+    <string name="during_wrap">Wrap</string>
+    <string name="during_tea">Te</string>
+    <string name="during_sandwich">Sandwich</string>
+    <string name="during_soda">Mineralvann</string>
+    <string name="during_smoothie">Smoothie</string>
+    <string name="during_falafel">Falafel</string>
+    <string name="during_meatcakes">Kjøttkaker</string>
+    <string name="during_oumph">Pulled Oumph</string>
+    <string name="during_curry">Indisk Curry</string>
+    <string name="during_coffe_desc">fra Friele, liten</string>
+    <string name="during_wrap_desc">med gårdskylling og spicy kimchi</string>
+    <string name="during_tea_desc">fra Twinings, liten</string>
+    <string name="during_sandwich_desc">med ost og skinke</string>
+    <string name="during_soda_desc">fra vårt utvalg</string>
+    <string name="during_smoothie_desc">med bringebær og vanilje</string>
+    <string name="during_falafel_desc">med tilbehør</string>
+    <string name="during_meatcakes_desc">i brun saus med tilbehør</string>
+    <string name="during_oumph_desc">med nudler og grønnsaker</string>
+    <string name="during_curry_desc">med kylling og currysaus</string>
+    <string name="during_trip_info">NB! Utvalget på hver togreise kan variere</string>
+
 
 
 </resources>
