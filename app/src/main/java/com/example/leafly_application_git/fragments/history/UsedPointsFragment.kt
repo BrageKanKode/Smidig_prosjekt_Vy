@@ -10,17 +10,24 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
+import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.cupon_dialog.*
+import kotlinx.android.synthetic.main.cupon_dialog.view.*
+import kotlinx.android.synthetic.main.tree_cupon_dialog.view.*
+import kotlinx.android.synthetic.main.used_history_row.*
 import kotlinx.android.synthetic.main.used_history_row.view.*
+import kotlinx.android.synthetic.main.used_history_row.view.textView_display_new_item
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -54,6 +61,59 @@ class UsedPointsFragment : Fragment() {
                     listView.adapter = adapter
                     adapter.notifyDataSetChanged()
 
+                    listView.setOnItemClickListener { parent, view, position, id ->
+                        val mDialogView = LayoutInflater.from(activity as HistoryActivity)
+                        .inflate(R.layout.cupon_dialog, null)
+                        val mBuilder = AlertDialog.Builder(activity as HistoryActivity)
+                            .setView(mDialogView)
+
+
+                        val mDialogView2 = LayoutInflater.from(activity as HistoryActivity).inflate(R.layout.tree_cupon_dialog, null)
+                        fun getRandomString(length: Int) : String {
+                            val allowedChars = ('A'..'Z') + ('a'..'z')
+                            return (1..length)
+                                .map { allowedChars.random() }
+                                .joinToString("")
+                        }
+
+                        mDialogView.textView_cupon_code_example.text = getRandomString(8)
+
+                        if (view.textView_display_new_item.text.toString().contains("Netflix")){
+                            mDialogView.textView_your_cupon_text.text = "Netflix - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "1 måned gratis Netflix abbonnement"
+                        } else if (view.textView_display_new_item.text.toString().contains("Dplay")){
+                            mDialogView.textView_your_cupon_text.text = "Dplay - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "1 måned gratis Dplay abbonnement"
+                        } else if(view.textView_display_new_item.text.toString().contains("Odeon")){
+                            mDialogView.textView_your_cupon_text.text = "Odeon - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "2 for 1 på Odeon kinobilletter"
+                        } else if(view.textView_display_new_item.text.toString().contains("Narvesen")){
+                            mDialogView.textView_your_cupon_text.text = "Narvesen - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "1 gratis baguette hos en Narvesen forhandler"
+                        } else if (view.textView_display_new_item.text.toString().contains("Starbucks")){
+                            mDialogView.textView_your_cupon_text.text = "Starbucks - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "En gratis valgfri kaffe hos en Starbucks forhandler"
+                        } else if(view.textView_display_new_item.text.toString().contains("Voi")) {
+                            mDialogView.textView_your_cupon_text.text = "Voi - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "15 minutter gratis på en Voi sparkesykkel"
+                        } else if (view.textView_display_new_item.text.toString().contains("tre")){
+                            mBuilder.setView(mDialogView2)
+                            mDialogView2.textView_tree_cupon_title.text = "Planting av trær"
+                            mDialogView2.textView_cupon_desc.text = "Planting av trær som hjelper miljøet"
+                        } else if (view.textView_display_new_item.text.toString().contains("vann")){
+                            mBuilder.setView(mDialogView2)
+                            mDialogView2.textView_tree_cupon_title.text = "Rydding av plast"
+                            mDialogView2.textView_cupon_desc.text = "Rydding av plast i havet som hjelper miljøet"
+                        }
+
+                        val mAlertDialog = mBuilder.show()
+                        mDialogView.imageView_close_cupon_dialog.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+
+                    }
+
+
                 }
 
 
@@ -79,6 +139,7 @@ class UsedPointsFragment : Fragment() {
 
         private val mContext: Context = context
         private var mUsedHistoryList: ArrayList<String> = usedHistoryList
+
 
 
         override fun getCount(): Int {
