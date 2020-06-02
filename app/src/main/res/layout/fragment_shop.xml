@@ -27,7 +27,7 @@
             android:layout_margin="10dp"
             app:cardBackgroundColor="#f2f2f3"
 
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="5dp"
             app:layout_column="0"
             app:layout_row="0">
 
@@ -96,7 +96,7 @@
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -162,7 +162,7 @@
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -228,7 +228,7 @@
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -290,7 +290,7 @@
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -354,7 +354,7 @@
             android:layout_margin="10dp"
             android:background="#f2f2f3"
             app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
