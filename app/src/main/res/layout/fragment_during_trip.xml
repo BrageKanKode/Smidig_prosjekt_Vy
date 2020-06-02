@@ -6,65 +6,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_buy_coffee"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:onClick="onTap"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="8dp"
+            app:columnCount="2">
 
-            <TextView
-                android:id="@+id/textView_buy_coffee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/sf_display"
-                android:text="@string/during_trip_coffee"
-                android:textColor="@color/colorBlack"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView_coffee_icon"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#f2f2f3"
 
-            <ImageView
-                android:id="@+id/imageView_coffee_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:contentDescription="@string/cofee"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_local_cafe_24px" />
+                app:cardCornerRadius="5dp"
+                app:layout_column="0"
+                app:layout_row="0" />
 
-            <ImageView
-                android:id="@+id/imageView_during_trip_arrow_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
-                android:contentDescription="@string/arrow"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_arrow_right_alt_24px" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp">
+
+            </androidx.cardview.widget.CardView>
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

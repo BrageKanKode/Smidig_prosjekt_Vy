@@ -25,9 +25,7 @@ class DuringTripFragment : Fragment() {
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
-        root.cardView_buy_coffee.setOnClickListener {
-            scanFromFragment()
-        }
+
 
 
         return root
@@ -36,9 +34,9 @@ class DuringTripFragment : Fragment() {
     }
 
 
-    fun scanFromFragment() {
-        IntentIntegrator.forSupportFragment(this).initiateScan();
-    }
+//    fun scanFromFragment() {
+//        IntentIntegrator.forSupportFragment(this).initiateScan();
+//    }
 
 
 
