@@ -111,6 +111,10 @@ class UsedPointsFragment : Fragment() {
                             mAlertDialog.dismiss()
                         }
 
+                        mDialogView2.imageView_close_tree_ocean_cupon.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+
                     }
 
 
