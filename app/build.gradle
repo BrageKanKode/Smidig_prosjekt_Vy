@@ -17,6 +17,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 
 
     buildTypes {
@@ -71,4 +76,7 @@ dependencies {
 
 
     implementation "com.xwray:groupie:2.1.0"
+
+    //testing
+    testImplementation 'org.robolectric:robolectric:4.3'
 }

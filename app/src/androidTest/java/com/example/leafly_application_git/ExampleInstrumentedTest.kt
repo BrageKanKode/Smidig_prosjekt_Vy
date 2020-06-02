@@ -22,3 +22,4 @@ class ExampleInstrumentedTest {
         assertEquals("com.example.leafly_application_git", appContext.packageName)
     }
 }
+
