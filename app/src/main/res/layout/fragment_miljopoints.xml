@@ -289,11 +289,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
                 android:fontFamily="@font/sf_display"
                 android:text="@string/membership_level_spire"
                 android:textColor="#41927B"
-                android:textSize="36sp"
+                android:textSize="48sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_membership_level" />
@@ -309,13 +308,16 @@
                 app:layout_constraintTop_toTopOf="@+id/textView_level_points" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
                 android:layout_width="148dp"
                 android:layout_height="144dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/card_view_btnToProgression"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView_display_level_icon"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ProgressBar

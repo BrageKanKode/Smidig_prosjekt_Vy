@@ -75,6 +75,7 @@
                     android:text="@string/prosent_sign"
                     android:textColor="#41927B"
                     android:textSize="50sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/textView_progressbar_status"
                     app:layout_constraintStart_toEndOf="@+id/textView_progressbar_status"
                     app:layout_constraintTop_toTopOf="@+id/textView_progressbar_status" />
