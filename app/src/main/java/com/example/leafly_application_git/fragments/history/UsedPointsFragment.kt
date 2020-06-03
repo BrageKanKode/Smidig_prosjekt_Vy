@@ -102,10 +102,12 @@ class UsedPointsFragment : Fragment() {
                             mBuilder.setView(mDialogView2)
                             mDialogView2.textView_tree_cupon_title.text = "Planting av trær"
                             mDialogView2.textView_cupon_desc.text = "Planting av trær som hjelper miljøet"
+                            mDialogView2.textView_tree_info.text = activity?.applicationContext?.resources?.getString(R.string.tree_cupon_info_box)
                         } else if (view.textView_display_new_item.text.toString().contains("vann")){
                             mBuilder.setView(mDialogView2)
                             mDialogView2.textView_tree_cupon_title.text = "Rydding av plast"
                             mDialogView2.textView_cupon_desc.text = "Rydding av plast i havet som hjelper miljøet"
+                            mDialogView2.textView_tree_info.text = activity?.applicationContext?.resources?.getString(R.string.ocean_clean_info_box)
                         }
 
                         val mAlertDialog = mBuilder.show()

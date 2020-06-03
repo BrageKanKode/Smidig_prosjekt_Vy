@@ -258,7 +258,9 @@
     <string name="price_onboard">Pris ombord</string>
     <string name="your_balance">Din saldo</string>
     <string name="scan_with_camera">Scan med kamera</string>
-
+    <string name="shop_info_box">Her finner du en oversikt over våre partnere og deres tilbud</string>
+    <string name="tree_cupon_info_box">Ved å plante et tre har du donert til treplanting i Regnskogen. Takk for ditt viktige bidrag. Les mer om prosessen på: www.example.com</string>
+    <string name="ocean_clean_info_box">Ved å rydde plast i havet har du donert til sjørensing i verdens hav. Takk for ditt viktige bidrag. Les mer om prosessen på: www.example.com</string>
 
 
 </resources>
