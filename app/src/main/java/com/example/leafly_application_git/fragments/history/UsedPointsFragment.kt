@@ -83,9 +83,9 @@ class UsedPointsFragment : Fragment() {
                         if (view.textView_display_new_item.text.toString().contains("Netflix")){
                             mDialogView.textView_your_cupon_text.text = "Netflix - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "3 måneder Netflix abbonnement"
-                        } else if (view.textView_display_new_item.text.toString().contains("Dplay")){
-                            mDialogView.textView_your_cupon_text.text = "Dplay - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "1 måned gratis Dplay abbonnement"
+                        } else if (view.textView_display_new_item.text.toString().contains("Viaplay")){
+                            mDialogView.textView_your_cupon_text.text = "Viaplay - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "Leie av 1 film på Viaplay"
                         } else if(view.textView_display_new_item.text.toString().contains("Odeon")){
                             mDialogView.textView_your_cupon_text.text = "Odeon - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "2 for 1 på Odeon kinobilletter"
@@ -180,10 +180,10 @@ class UsedPointsFragment : Fragment() {
                 val netflixDrawable = R.drawable.ic_netflix_2015_logo
                 rootView.imageView_used_history_image.setImageResource(netflixDrawable)
                 rootView.textView_display_used_history_price.text = "-3300"
-            } else if (rootView.textView_display_new_item.text.toString().contains("Dplay")){
-                val dplayDrawable = R.drawable.ic_dplay_logo_2019
+            } else if (rootView.textView_display_new_item.text.toString().contains("Viaplay")){
+                val dplayDrawable = R.drawable.ic_viaplay
                 rootView.imageView_used_history_image.setImageResource(dplayDrawable)
-                rootView.textView_display_used_history_price.text = "-100"
+                rootView.textView_display_used_history_price.text = "-500"
             } else if (rootView.textView_display_new_item.text.toString().contains("Odeon")){
                 val odeonDrawable = R.drawable.ic_odeon_logo
                 rootView.imageView_used_history_image.setImageResource(odeonDrawable)

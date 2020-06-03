@@ -46,7 +46,7 @@ class ShopFragment : Fragment() {
 
 
 
-        //Buy Dplay button logic
+        //Buy Viaplay button logic
         root.view_shop_item1.setOnClickListener {
             val mDialogView = LayoutInflater.from(activity as UsePointsActivity)
                 .inflate(R.layout.dplay_dialog, null)
@@ -55,10 +55,10 @@ class ShopFragment : Fragment() {
 
             val mAlertDialog = mBuilder.show()
 
-            val dplayPurchasePrice = 100
+            val dplayPurchasePrice = 500
 
             mDialogView.textView_price_dplay.text = "Pris: $dplayPurchasePrice"
-            mDialogView.textView_dplay_dialog_dplay.text = "1 måned gratis Dplay"
+            mDialogView.textView_dplay_dialog_dplay.text = "Leie av 1 film på Viaplay"
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
@@ -67,7 +67,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var usedHistory =
-                        "Du kjøpte Dplay abbonement"
+                        "Du kjøpte 1 film på Viaplay"
                     mDialogView.textView_currency_dplay.text = "Saldo: " + balance.toString()
 
 
