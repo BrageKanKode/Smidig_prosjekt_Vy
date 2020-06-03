@@ -254,6 +254,10 @@
     <string name="during_oumph_desc">med nudler og grønnsaker</string>
     <string name="during_curry_desc">med kylling og currysaus</string>
     <string name="during_trip_info">NB! Utvalget på hver togreise kan variere</string>
+    <string name="qr_info">Denne varen må kjøpes på automat ved å scanne QR-koden ombord.</string>
+    <string name="price_onboard">Pris ombord</string>
+    <string name="your_balance">Din saldo</string>
+    <string name="scan_with_camera">Scan med kamera</string>
 
 
 

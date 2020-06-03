@@ -37,6 +37,7 @@ class HistoryActivity : AppCompatActivity() {
         viewPager.adapter = adapter
 
 
+
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
