@@ -6,421 +6,417 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/GridLayout_shop_items"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_shop_item1"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#f2f2f3"
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/GridLayout_shop_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:columnCount="2">
 
-            app:cardCornerRadius="5dp"
-            app:layout_column="0"
-            app:layout_row="0">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_shop_item1"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#f2f2f3"
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                app:cardCornerRadius="5dp"
+                app:layout_column="0"
+                app:layout_row="0">
 
-                <ImageView
-                    android:id="@+id/imageView_dplay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="@string/dplay_logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_dplay_logo_2019" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView_shop_under_title_one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sf_text"
-                    android:text="@string/dplay_title"
-                    android:textColor="@color/colorBlack"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView_dplay"
-                    app:layout_constraintStart_toStartOf="@+id/imageView_dplay"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView_dplay" />
+                    <ImageView
+                        android:id="@+id/imageView_dplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/dplay_logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_dplay_logo_2019" />
 
-                <ImageView
-                    android:id="@+id/imageView_shop_leaf_one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:contentDescription="@string/leaf_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_one"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_one"
-                    app:srcCompat="@drawable/ic_eco_black_18dp" />
+                    <TextView
+                        android:id="@+id/textView_shop_under_title_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/sf_text"
+                        android:text="@string/dplay_title"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView_dplay"
+                        app:layout_constraintStart_toStartOf="@+id/imageView_dplay"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_dplay" />
 
-                <TextView
-                    android:id="@+id/textView_shop_cost_one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/_100"
-                    android:textColor="@color/colorPrimaryDark"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_one"
-                    app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_one"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_one" />
+                    <ImageView
+                        android:id="@+id/imageView_shop_leaf_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/leaf_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_one"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_one"
+                        app:srcCompat="@drawable/ic_eco_black_18dp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/textView_shop_cost_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/_100"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_one"
+                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_one"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_one" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_shop_item2"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="5dp">
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_shop_item2"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:id="@+id/imageView_netflix_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="@string/netflix_title"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_netflix_2015_logo" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView_shop_under_title_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sf_display"
-                    android:text="@string/netflix_title"
-                    android:textColor="@color/colorBlack"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView_netflix_logo"
-                    app:layout_constraintStart_toStartOf="@+id/imageView_netflix_logo"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView_netflix_logo" />
+                    <ImageView
+                        android:id="@+id/imageView_netflix_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/netflix_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_netflix_2015_logo" />
 
-                <ImageView
-                    android:id="@+id/imageView_shop_leaf_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:contentDescription="@string/leaf_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_two"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_two"
-                    app:srcCompat="@drawable/ic_eco_black_18dp" />
+                    <TextView
+                        android:id="@+id/textView_shop_under_title_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/sf_display"
+                        android:text="@string/netflix_title"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView_netflix_logo"
+                        app:layout_constraintStart_toStartOf="@+id/imageView_netflix_logo"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_netflix_logo" />
 
-                <TextView
-                    android:id="@+id/textView_shop_cost_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/_100"
-                    android:textColor="@color/colorPrimaryDark"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_two"
-                    app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_two"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_two" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:id="@+id/imageView_shop_leaf_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/leaf_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_two"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_two"
+                        app:srcCompat="@drawable/ic_eco_black_18dp" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_shop_item3"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="5dp">
+                    <TextView
+                        android:id="@+id/textView_shop_cost_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/_100"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_two"
+                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_two"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_two" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_shop_item3"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:id="@+id/imageView_odeon_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="@string/odean_logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_odeon_logo" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView_shop_under_title_three"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sf_display"
-                    android:text="@string/odeon_title"
-                    android:textColor="@color/colorBlack"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView_odeon_logo"
-                    app:layout_constraintStart_toStartOf="@+id/imageView_odeon_logo"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView_odeon_logo" />
+                    <ImageView
+                        android:id="@+id/imageView_odeon_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/odean_logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_odeon_logo" />
 
-                <ImageView
-                    android:id="@+id/imageView_shop_leaf_three"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:contentDescription="@string/leaf_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_three"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_three"
-                    app:srcCompat="@drawable/ic_eco_black_18dp" />
+                    <TextView
+                        android:id="@+id/textView_shop_under_title_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/sf_display"
+                        android:text="@string/odeon_title"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView_odeon_logo"
+                        app:layout_constraintStart_toStartOf="@+id/imageView_odeon_logo"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_odeon_logo" />
 
-                <TextView
-                    android:id="@+id/textView_shop_cost_three"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/_200"
-                    android:textColor="@color/colorPrimaryDark"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_three"
-                    app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_three"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_three" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:id="@+id/imageView_shop_leaf_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/leaf_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_three"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_three"
+                        app:srcCompat="@drawable/ic_eco_black_18dp" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_shop_item4"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="5dp">
+                    <TextView
+                        android:id="@+id/textView_shop_cost_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/_200"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_three"
+                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_three"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_three" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_shop_item4"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:id="@+id/imageView21"
-                    android:layout_width="90dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="@string/narvesen_logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_narvesen_logo" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView_shop_under_title_four"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sf_display"
-                    android:text="@string/gratis_baguette"
-                    android:textColor="@color/colorBlack"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView21"
-                    app:layout_constraintStart_toStartOf="@+id/imageView21"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/narvesen_logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_narvesen_logo" />
 
-                <TextView
-                    android:id="@+id/textView_shop_cost_four"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/_150"
-                    android:textColor="@color/colorPrimaryDark"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView21"
-                    app:layout_constraintStart_toStartOf="@+id/imageView21"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_four" />
+                    <TextView
+                        android:id="@+id/textView_shop_under_title_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_display"
+                        android:text="@string/gratis_baguette"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView21"
+                        app:layout_constraintStart_toStartOf="@+id/imageView21"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
 
-                <ImageView
-                    android:id="@+id/imageView_shop_leaf_four"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:contentDescription="@string/leaf_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_four"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_four"
-                    app:srcCompat="@drawable/ic_eco_black_18dp" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/textView_shop_cost_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/_150"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView21"
+                        app:layout_constraintStart_toStartOf="@+id/imageView21"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_four" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_shop_item5"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="5dp">
+                    <ImageView
+                        android:id="@+id/imageView_shop_leaf_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/leaf_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_four"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_four"
+                        app:srcCompat="@drawable/ic_eco_black_18dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_shop_item5"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:id="@+id/imageView_shop_starbucks_logo"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="4dp"
-                    android:contentDescription="@string/starbucks_logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_starbucks_coffee" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView_shop_under_title_five"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:fontFamily="@font/sf_display"
-                    android:text="@string/valgfri_kaffe"
-                    android:textColor="@color/colorBlack"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView_shop_starbucks_logo"
-                    app:layout_constraintStart_toStartOf="@+id/imageView_shop_starbucks_logo"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView_shop_starbucks_logo" />
+                    <ImageView
+                        android:id="@+id/imageView_shop_starbucks_logo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:contentDescription="@string/starbucks_logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_starbucks_coffee" />
 
-                <TextView
-                    android:id="@+id/textView_shop_cost_five"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/_200"
-                    android:textColor="@color/colorPrimaryDark"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_five"
-                    app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_five"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_five" />
+                    <TextView
+                        android:id="@+id/textView_shop_under_title_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/sf_display"
+                        android:text="@string/valgfri_kaffe"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView_shop_starbucks_logo"
+                        app:layout_constraintStart_toStartOf="@+id/imageView_shop_starbucks_logo"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_shop_starbucks_logo" />
 
-                <ImageView
-                    android:id="@+id/imageView_shop_leaf_five"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:contentDescription="@string/leaf_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_five"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_five"
-                    app:srcCompat="@drawable/ic_eco_black_18dp" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/textView_shop_cost_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/_200"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_five"
+                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_five"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_five" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/view_shop_item6"
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_margin="10dp"
-            android:background="#f2f2f3"
-            app:cardBackgroundColor="#f2f2f3"
-            app:cardCornerRadius="5dp">
+                    <ImageView
+                        android:id="@+id/imageView_shop_leaf_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/leaf_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_five"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_five"
+                        app:srcCompat="@drawable/ic_eco_black_18dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_shop_item6"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="#f2f2f3"
+                app:cardBackgroundColor="#f2f2f3"
+                app:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:id="@+id/imageView_shop_voi_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="@string/voi_logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_logotype_red" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView_shop_under_title_six"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/sf_display"
-                    android:text="@string/_15_minutter_gratis"
-                    android:textColor="@color/colorBlack"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView_shop_voi_logo"
-                    app:layout_constraintStart_toStartOf="@+id/imageView_shop_voi_logo"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView_shop_voi_logo" />
+                    <ImageView
+                        android:id="@+id/imageView_shop_voi_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/voi_logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_logotype_red" />
 
-                <TextView
-                    android:id="@+id/textView_shop_cost_six"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/_500"
-                    android:textColor="@color/colorPrimaryDark"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_six"
-                    app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_six"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_six" />
+                    <TextView
+                        android:id="@+id/textView_shop_under_title_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/sf_display"
+                        android:text="@string/_15_minutter_gratis"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView_shop_voi_logo"
+                        app:layout_constraintStart_toStartOf="@+id/imageView_shop_voi_logo"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_shop_voi_logo" />
 
-                <ImageView
-                    android:id="@+id/imageView_shop_leaf_six"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:contentDescription="@string/leaf_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_six"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_six"
-                    app:srcCompat="@drawable/ic_eco_black_18dp" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </androidx.gridlayout.widget.GridLayout>
+                    <TextView
+                        android:id="@+id/textView_shop_cost_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/_500"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_six"
+                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_six"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_six" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="10dp" />
+                    <ImageView
+                        android:id="@+id/imageView_shop_leaf_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/leaf_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_six"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_six"
+                        app:srcCompat="@drawable/ic_eco_black_18dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
