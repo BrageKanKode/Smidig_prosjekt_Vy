@@ -31,6 +31,7 @@ import kotlinx.android.synthetic.main.before_scan_dialog.view.button_scan_dialog
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 import kotlinx.android.synthetic.main.fragment_not_logged_in.view.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.view.*
 
 
 class MiljopointsFragment : Fragment() {
@@ -167,7 +168,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 3200
                         mDialogView.imageView_scanable_image.setImageResource(warmDrinkLogo)
@@ -185,13 +186,20 @@ class MiljopointsFragment : Fragment() {
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
+
+
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -213,7 +221,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 5200
                         mDialogView.imageView_scanable_image.setImageResource(eatLogo)
@@ -230,12 +238,17 @@ class MiljopointsFragment : Fragment() {
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -260,7 +273,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 4200
                         mDialogView.imageView_scanable_image.setImageResource(coldDrinkLogo)
@@ -277,12 +290,17 @@ class MiljopointsFragment : Fragment() {
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -305,7 +323,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 5200
                         mDialogView.imageView_scanable_image.setImageResource(coldDrinkLogo)
@@ -322,12 +340,17 @@ class MiljopointsFragment : Fragment() {
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -350,7 +373,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 13900
                         mDialogView.imageView_scanable_image.setImageResource(eatLogo)
@@ -367,12 +390,17 @@ class MiljopointsFragment : Fragment() {
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -395,7 +423,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 4200
                         mDialogView.imageView_scanable_image.setImageResource(eatLogo)
@@ -412,12 +440,17 @@ class MiljopointsFragment : Fragment() {
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -440,7 +473,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 17900
                         mDialogView.imageView_scanable_image.setImageResource(eatLogo)
@@ -457,12 +490,17 @@ class MiljopointsFragment : Fragment() {
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -485,7 +523,7 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
-                        val mAlertDialog = mBuilder.show()
+                        val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 4200
                         mDialogView.imageView_scanable_image.setImageResource(eatLogo)
@@ -502,12 +540,17 @@ class MiljopointsFragment : Fragment() {
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
                                 mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
                                     if(balance!! >= price) {
                                         mDialogView = LayoutInflater.from(activity as MainActivity)
                                             .inflate(R.layout.purchase_done_dialog, null)
                                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                                             .setView(mDialogView)
                                         val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
