@@ -19,6 +19,7 @@ import com.example.leafly_application_git.activities.explanation.ExplanationActi
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
+import com.example.leafly_application_git.fragments.history.UsedPointsFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -168,6 +169,9 @@ class MiljopointsFragment : Fragment() {
                         var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
+                        val usedHistory =
+                            "Du kjøpte 1 kaffe på togturen"
+
                         val mAlertDialog2 = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 3200
@@ -200,6 +204,129 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                            }
+
+                            override fun onCancelled(p0: DatabaseError) {
+
+                            }
+                        }
+                        ref.addListenerForSingleValueEvent(menuListener)
+                    }
+
+                    "Wrap" -> {
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
+                            .inflate(R.layout.before_scan_dialog, null)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
+                            .setView(mDialogView)
+
+                        val usedHistory =
+                            "Du kjøpte 1 wrap på togturen"
+
+                        val mAlertDialog2 = mBuilder.show()
+                        val getStringRes = activity?.applicationContext?.resources
+                        val price = 3200
+                        mDialogView.imageView_scanable_image.setImageResource(warmDrinkLogo)
+                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_coffe)
+                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_coffe_desc)
+                        mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
+
+
+
+                        val menuListener = object : ValueEventListener {
+                            override fun onDataChange(p0: DataSnapshot) {
+                                user = p0.getValue(User::class.java)
+                                var balance = user?.balance
+
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                            }
+
+                            override fun onCancelled(p0: DatabaseError) {
+
+                            }
+                        }
+                        ref.addListenerForSingleValueEvent(menuListener)
+                    }
+
+                    "Te" -> {
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
+                            .inflate(R.layout.before_scan_dialog, null)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
+                            .setView(mDialogView)
+
+                        val usedHistory =
+                            "Du kjøpte 1 Te på togturen"
+
+                        val mAlertDialog2 = mBuilder.show()
+                        val getStringRes = activity?.applicationContext?.resources
+                        val price = 3200
+                        mDialogView.imageView_scanable_image.setImageResource(warmDrinkLogo)
+                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_coffe)
+                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_coffe_desc)
+                        mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
+
+
+
+                        val menuListener = object : ValueEventListener {
+                            override fun onDataChange(p0: DataSnapshot) {
+                                user = p0.getValue(User::class.java)
+                                var balance = user?.balance
+
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    mAlertDialog2.dismiss()
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                                            mAlertDialog.dismiss()
+                                        }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -234,6 +361,8 @@ class MiljopointsFragment : Fragment() {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
+                                val usedHistory =
+                                    "Du kjøpte 1 sandwich på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -249,6 +378,9 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -286,6 +418,8 @@ class MiljopointsFragment : Fragment() {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
+                                val usedHistory =
+                                    "Du kjøpte 1 brus på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -301,6 +435,9 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -336,6 +473,8 @@ class MiljopointsFragment : Fragment() {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
+                                val usedHistory =
+                                    "Du kjøpte 1 smoothie på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -351,6 +490,11 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
+
+
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -386,6 +530,8 @@ class MiljopointsFragment : Fragment() {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
+                                val usedHistory =
+                                    "Du kjøpte 1 falafel på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -401,6 +547,9 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -436,6 +585,8 @@ class MiljopointsFragment : Fragment() {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
+                                val usedHistory =
+                                    "Du kjøpte 1 kjøttkake middag på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -451,6 +602,9 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -486,6 +640,8 @@ class MiljopointsFragment : Fragment() {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
+                                val usedHistory =
+                                    "Du kjøpte 1 Pulled Oumph på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -501,6 +657,9 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)
@@ -536,6 +695,8 @@ class MiljopointsFragment : Fragment() {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
+                                val usedHistory =
+                                    "Du kjøpte 1 indisk curry på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -551,6 +712,9 @@ class MiljopointsFragment : Fragment() {
                                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                                             mAlertDialog.dismiss()
                                         }
+
+                                        var refUsedHistory = ref.child("/usedHistory")
+                                        refUsedHistory.push().setValue(usedHistory)
 
                                         balance = balance?.minus(price)
                                         ref.child("/balance").setValue(balance)

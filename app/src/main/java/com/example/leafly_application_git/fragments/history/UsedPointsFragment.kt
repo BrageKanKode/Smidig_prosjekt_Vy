@@ -163,6 +163,11 @@ class UsedPointsFragment : Fragment() {
             return mUsedHistoryList[position]
         }
 
+
+        val eatLogo = R.drawable.ic_restaurant_24px
+        val warmDrinkLogo = R.drawable.ic_local_cafe_24px
+        val coldDrinkLogo = R.drawable.ic_local_drink_24px
+
         //rendering out each row
         @SuppressLint("ViewHolder")
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -208,9 +213,36 @@ class UsedPointsFragment : Fragment() {
                 val plasticDrawable = R.drawable.ic_plast
                 rootView.imageView_used_history_image.setImageResource(plasticDrawable)
                 //rootView.textView_display_used_history_price.text = "-100"
-            } else {
-                val standardImage = R.drawable.ic_eco_black_18dp
-                rootView.imageView_used_history_image.setImageResource(standardImage)
+            } else if (rootView.textView_display_new_item.text.toString().contains("kaffe på togturen")){
+                rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            } else if (rootView.textView_display_new_item.text.toString().contains("Wrap")){
+                rootView.imageView_used_history_image.setImageResource(eatLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            } else if (rootView.textView_display_new_item.text.toString().contains("Te")) {
+                rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            }else if (rootView.textView_display_new_item.text.toString().contains("Sandwich")) {
+                rootView.imageView_used_history_image.setImageResource(eatLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            }else if (rootView.textView_display_new_item.text.toString().contains("brus")) {
+                rootView.imageView_used_history_image.setImageResource(coldDrinkLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            }else if (rootView.textView_display_new_item.text.toString().contains("Smoothie")) {
+                rootView.imageView_used_history_image.setImageResource(coldDrinkLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            }else if (rootView.textView_display_new_item.text.toString().contains("Falafel")) {
+                rootView.imageView_used_history_image.setImageResource(eatLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            }else if (rootView.textView_display_new_item.text.toString().contains("kjøttkake")) {
+                rootView.imageView_used_history_image.setImageResource(eatLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            }else if (rootView.textView_display_new_item.text.toString().contains("Pulled Oumph")) {
+                rootView.imageView_used_history_image.setImageResource(eatLogo)
+                rootView.textView_display_used_history_price.text = "-???"
+            }else if (rootView.textView_display_new_item.text.toString().contains("Indisk Curry")) {
+                rootView.imageView_used_history_image.setImageResource(eatLogo)
+                rootView.textView_display_used_history_price.text = "-???"
             }
 
             return rootView
