@@ -63,7 +63,7 @@ class TestTesting {
 
         val carView = com.example.leafly_application_git.R.id.cardView_explanation_travel
 
-        activity.findViewById<View>(carView).performClick();
+        activity.findViewById<View>(carView).performClick()
 
         val expectedIntent = Intent(activity, ExplanationTravelActivity::class.java)
         val actual: Intent = Shadows.shadowOf(RuntimeEnvironment.application).nextStartedActivity

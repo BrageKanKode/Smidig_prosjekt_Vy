@@ -36,11 +36,13 @@ class SignUpActivity : AppCompatActivity(){
     private fun performRegister(){
         Log.d("Register", "Register")
 
+        val username = editText_username_signup.text.toString()
         val email = editText_email_signup.text.toString()
         val password = editText_password_signup.text.toString()
 
-        if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Please enter text and email", Toast.LENGTH_SHORT).show()
+        if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
+            return
         }
 
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)

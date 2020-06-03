@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView14">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <GridLayout
-            android:layout_width="wrap_content"
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/GridLayout_shop_items"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="0dp"
             android:layout_marginEnd="8dp"
-            android:columnCount="2">
+            app:columnCount="2">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item1"
-                android:layout_width="160dp"
+                android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="#f2f2f3"
@@ -94,7 +95,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item2"
-                android:layout_width="160dp"
+                android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
@@ -160,7 +161,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item3"
-                android:layout_width="160dp"
+                android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
@@ -226,7 +227,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item4"
-                android:layout_width="160dp"
+                android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
@@ -288,7 +289,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item5"
-                android:layout_width="160dp"
+                android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
@@ -352,7 +353,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item6"
-                android:layout_width="160dp"
+                android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
@@ -415,38 +416,7 @@
                         app:srcCompat="@drawable/ic_eco_black_18dp" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
-        </GridLayout>
+        </androidx.gridlayout.widget.GridLayout>
     </ScrollView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView14"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="@string/shop_info_box"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

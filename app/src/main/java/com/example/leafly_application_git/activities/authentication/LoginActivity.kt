@@ -24,10 +24,15 @@ class LoginActivity: AppCompatActivity() {
             val password = editText_password_login.text.toString()
             Log.d("Login", "Login")
 
+            if(email.isEmpty() || password.isEmpty()){
+                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             //Authenticating user with FireBase Authentication
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener{
-                    //If not successfull
+                    //If not successful
                     if(!it.isSuccessful) return@addOnCompleteListener
 
                     //else successful

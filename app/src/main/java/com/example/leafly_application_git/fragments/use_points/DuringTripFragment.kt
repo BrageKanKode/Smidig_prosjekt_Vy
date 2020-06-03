@@ -66,7 +66,7 @@ class DuringTripFragment : Fragment() {
             mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_coffe_desc)
             mDialogView.textView_before_scan_price.text = price.toString()
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
@@ -168,7 +168,7 @@ class DuringTripFragment : Fragment() {
             mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_sandwich_desc)
             mDialogView.textView_before_scan_price.text = price.toString()
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
@@ -201,7 +201,7 @@ class DuringTripFragment : Fragment() {
             mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_soda_desc)
             mDialogView.textView_before_scan_price.text = price.toString()
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
@@ -234,7 +234,7 @@ class DuringTripFragment : Fragment() {
             mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_smoothie_desc)
             mDialogView.textView_before_scan_price.text = price.toString()
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
@@ -267,7 +267,7 @@ class DuringTripFragment : Fragment() {
             mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_falafel_desc)
             mDialogView.textView_before_scan_price.text = price.toString()
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
@@ -300,7 +300,7 @@ class DuringTripFragment : Fragment() {
             mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_meatcakes_desc)
             mDialogView.textView_before_scan_price.text = price.toString()
 
-            var ref = FirebaseDatabase.getInstance().getReference("/users")
+            val ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
             val menuListener = object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {

@@ -1,21 +1,9 @@
 package com.example.leafly_application_git
 
-import android.R
-import android.content.Intent
-import android.os.Build
-import android.view.View
-import android.widget.Button
-import com.example.leafly_application_git.activities.authentication.LoginActivity
-import com.example.leafly_application_git.activities.explanation.*
-import kotlinx.android.synthetic.main.activity_explanation_what_are_points.*
+
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.Robolectric
-import org.robolectric.RobolectricTestRunner
-import org.robolectric.RuntimeEnvironment
-import org.robolectric.Shadows.shadowOf
-import org.robolectric.annotation.Config
+
 
 
 /**
