@@ -82,7 +82,7 @@ class UsedPointsFragment : Fragment() {
 
                         if (view.textView_display_new_item.text.toString().contains("Netflix")){
                             mDialogView.textView_your_cupon_text.text = "Netflix - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "1 måned gratis Netflix abbonnement"
+                            mDialogView.textView_display_given_cupon.text = "3 måneder Netflix abbonnement"
                         } else if (view.textView_display_new_item.text.toString().contains("Dplay")){
                             mDialogView.textView_your_cupon_text.text = "Dplay - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "1 måned gratis Dplay abbonnement"
@@ -91,13 +91,13 @@ class UsedPointsFragment : Fragment() {
                             mDialogView.textView_display_given_cupon.text = "2 for 1 på Odeon kinobilletter"
                         } else if(view.textView_display_new_item.text.toString().contains("Narvesen")){
                             mDialogView.textView_your_cupon_text.text = "Narvesen - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "1 gratis baguette hos en Narvesen forhandler"
+                            mDialogView.textView_display_given_cupon.text = "1 gratis pølse hos en Narvesen forhandler"
                         } else if (view.textView_display_new_item.text.toString().contains("Starbucks")){
                             mDialogView.textView_your_cupon_text.text = "Starbucks - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "En gratis valgfri kaffe hos en Starbucks forhandler"
                         } else if(view.textView_display_new_item.text.toString().contains("Voi")) {
                             mDialogView.textView_your_cupon_text.text = "Voi - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "15 minutter gratis på en Voi sparkesykkel"
+                            mDialogView.textView_display_given_cupon.text = "Ingen oppstarts-avgift på en Voi sparkesykkel"
                         } else if (view.textView_display_new_item.text.toString().contains("tre")){
                             mBuilder.setView(mDialogView2)
                             mDialogView2.textView_tree_cupon_title.text = "Planting av trær"
@@ -179,7 +179,7 @@ class UsedPointsFragment : Fragment() {
             if (rootView.textView_display_new_item.text.toString().contains("Netflix")){
                 val netflixDrawable = R.drawable.ic_netflix_2015_logo
                 rootView.imageView_used_history_image.setImageResource(netflixDrawable)
-                rootView.textView_display_used_history_price.text = "-100"
+                rootView.textView_display_used_history_price.text = "-3300"
             } else if (rootView.textView_display_new_item.text.toString().contains("Dplay")){
                 val dplayDrawable = R.drawable.ic_dplay_logo_2019
                 rootView.imageView_used_history_image.setImageResource(dplayDrawable)
@@ -187,19 +187,19 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("Odeon")){
                 val odeonDrawable = R.drawable.ic_odeon_logo
                 rootView.imageView_used_history_image.setImageResource(odeonDrawable)
-                rootView.textView_display_used_history_price.text = "-200"
+                rootView.textView_display_used_history_price.text = "-1350"
             } else if (rootView.textView_display_new_item.text.toString().contains("Narvesen")){
                 val narvesenDrawable = R.drawable.ic_narvesen_logo
                 rootView.imageView_used_history_image.setImageResource(narvesenDrawable)
-                rootView.textView_display_used_history_price.text = "-150"
+                rootView.textView_display_used_history_price.text = "-350"
             } else if (rootView.textView_display_new_item.text.toString().contains("Starbucks")){
                 val starbucksDrawable = R.drawable.ic_starbucks_coffee
-                rootView.textView_display_used_history_price.text = "-200"
+                rootView.textView_display_used_history_price.text = "-450"
                 rootView.imageView_used_history_image.setImageResource(starbucksDrawable)
             } else if (rootView.textView_display_new_item.text.toString().contains("Voi")){
                 val voiDrawable = R.drawable.ic_logotype_red
                 rootView.imageView_used_history_image.setImageResource(voiDrawable)
-                rootView.textView_display_used_history_price.text = "-500"
+                rootView.textView_display_used_history_price.text = "-100"
             } else if (rootView.textView_display_new_item.text.toString().contains("tre")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)

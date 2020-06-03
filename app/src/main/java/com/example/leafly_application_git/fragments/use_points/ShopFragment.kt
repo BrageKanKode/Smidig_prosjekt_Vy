@@ -153,12 +153,12 @@ class ShopFragment : Fragment() {
 
             val mAlertDialog = mBuilder.show()
 
-            val netflixPurchasePrice = 100
+            val netflixPurchasePrice = 3300
 
 
 
             mDialogView.textView_price_netflix.text = "Pris: $netflixPurchasePrice"
-            mDialogView.textView_netflix_dialog.text = "1 måned gratis Netflix"
+            mDialogView.textView_netflix_dialog.text = "3 måneder gratis Netflix"
 
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -168,7 +168,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "Du kjøpte Netflix abbonement"
+                        "Du kjøpte 3 måneder med Netflix"
                     mDialogView.textView_currency_netflix.text = "Saldo: " + balance.toString()
 
 
@@ -248,7 +248,7 @@ class ShopFragment : Fragment() {
 
             val mAlertDialog = mBuilder.show()
 
-            val odeonPurchasePrice = 200
+            val odeonPurchasePrice = 1350
 
 
 
@@ -344,12 +344,12 @@ class ShopFragment : Fragment() {
 
             val mAlertDialog = mBuilder.show()
 
-            val narvesenPurchasePrice = 150
+            val narvesenPurchasePrice = 350
 
 
 
             mDialogView.textview_price_narvesen.text = "Pris: $narvesenPurchasePrice"
-            mDialogView.textview_narvesen_dialog.text = "Få en gratis baguette fra en Narvesen"
+            mDialogView.textview_narvesen_dialog.text = "Få en gratis pølse fra en Narvesen"
 
 
             val ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -359,7 +359,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "Du fikk gratis baguette fra Narvesen"
+                        "Du fikk gratis pølse fra Narvesen"
                     mDialogView.textview_currency_narvesen.text = "Saldo: " + balance.toString()
 
 
@@ -533,12 +533,12 @@ class ShopFragment : Fragment() {
 
             val mAlertDialog = mBuilder.show()
 
-            val voiPurchasePrice = 500
+            val voiPurchasePrice = 100
 
 
 
             mDialogView.textview_price_voi.text = "Pris: $voiPurchasePrice"
-            mDialogView.textview_voi_dialog.text = "15 minutter gratis bruk med en Voi sparkesykkel"
+            mDialogView.textview_voi_dialog.text = "Ingen start-avgift for en Voi-tur"
 
 
             val ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -548,7 +548,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     val usedHistory =
-                        "15 minutter gratis bruk av Voi"
+                        "Ingen start-avgift for en Voi tur"
                     mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
 
 

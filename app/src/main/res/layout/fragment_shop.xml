@@ -23,7 +23,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item1"
                 android:layout_width="160dp"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="#f2f2f3"
 
@@ -65,26 +65,34 @@
                         android:id="@+id/imageView_shop_leaf_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_one"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_one"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:srcCompat="@drawable/ic_eco_black_18dp" />
 
                     <TextView
                         android:id="@+id/textView_shop_cost_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:text="@string/_100"
                         android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_one"
-                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_one"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_one" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView_shop_leaf_one" />
+
+                    <ImageView
+                        android:id="@+id/imageView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_add_24px" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -92,7 +100,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item2"
                 android:layout_width="160dp"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
                 app:cardBackgroundColor="#f2f2f3"
@@ -132,33 +140,41 @@
                         android:id="@+id/imageView_shop_leaf_two"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_two"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_two"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:srcCompat="@drawable/ic_eco_black_18dp" />
 
                     <TextView
                         android:id="@+id/textView_shop_cost_two"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:text="@string/_100"
                         android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_two"
-                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_two"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_two" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView_shop_leaf_two" />
+
+                    <ImageView
+                        android:id="@+id/imageView47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_add_24px" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item3"
                 android:layout_width="160dp"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
                 app:cardBackgroundColor="#f2f2f3"
@@ -198,33 +214,41 @@
                         android:id="@+id/imageView_shop_leaf_three"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_three"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_three"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:srcCompat="@drawable/ic_eco_black_18dp" />
 
                     <TextView
                         android:id="@+id/textView_shop_cost_three"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:text="@string/_200"
                         android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_three"
-                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_three"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_three" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView_shop_leaf_three" />
+
+                    <ImageView
+                        android:id="@+id/imageView48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_add_24px" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item4"
                 android:layout_width="160dp"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
                 app:cardBackgroundColor="#f2f2f3"
@@ -262,31 +286,41 @@
                         android:id="@+id/textView_shop_cost_four"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:text="@string/_150"
                         android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView21"
-                        app:layout_constraintStart_toStartOf="@+id/imageView21"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_four" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView_shop_leaf_four" />
 
                     <ImageView
                         android:id="@+id/imageView_shop_leaf_four"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_four"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_four"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:srcCompat="@drawable/ic_eco_black_18dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_add_24px" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item5"
                 android:layout_width="160dp"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
                 app:cardBackgroundColor="#f2f2f3"
@@ -324,33 +358,41 @@
                         android:id="@+id/textView_shop_cost_five"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="@string/_200"
+                        android:text="450"
                         android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_five"
-                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_five"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_five" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView_shop_leaf_five" />
 
                     <ImageView
                         android:id="@+id/imageView_shop_leaf_five"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_five"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_five"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:srcCompat="@drawable/ic_eco_black_18dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_add_24px" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/view_shop_item6"
                 android:layout_width="160dp"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 android:background="#f2f2f3"
                 app:cardBackgroundColor="#f2f2f3"
@@ -380,6 +422,7 @@
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/sf_display"
                         android:text="@string/_15_minutter_gratis"
+                        android:textAlignment="center"
                         android:textColor="@color/colorBlack"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="@+id/imageView_shop_voi_logo"
@@ -390,26 +433,34 @@
                         android:id="@+id/textView_shop_cost_six"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:text="@string/_500"
                         android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/textView_shop_under_title_six"
-                        app:layout_constraintStart_toStartOf="@+id/textView_shop_under_title_six"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_six" />
+                        app:layout_constraintStart_toEndOf="@+id/imageView_shop_leaf_six" />
 
                     <ImageView
                         android:id="@+id/imageView_shop_leaf_six"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView_shop_cost_six"
-                        app:layout_constraintTop_toBottomOf="@+id/textView_shop_under_title_six"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:srcCompat="@drawable/ic_eco_black_18dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_add_24px" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
         </GridLayout>
