@@ -18,7 +18,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
+import kotlinx.android.synthetic.main.before_scan_dialog.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.*
+import kotlinx.android.synthetic.main.before_scan_dialog.view.imageView_dismiss_scan_dialog
 import kotlinx.android.synthetic.main.cupon_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_donate.view.*
 import kotlinx.android.synthetic.main.fragment_during_trip.view.*
@@ -82,6 +84,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -116,6 +121,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -150,6 +158,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -184,6 +195,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -217,6 +231,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -250,6 +267,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -283,6 +303,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -316,6 +339,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -350,6 +376,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
@@ -384,6 +413,9 @@ class DuringTripFragment : Fragment() {
             }
             ref.addListenerForSingleValueEvent(menuListener)
 
+            mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
 
         }
 
