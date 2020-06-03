@@ -236,33 +236,33 @@
         android:id="@+id/imageView_three_top_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
         android:layout_marginBottom="32dp"
         android:contentDescription="@string/tree"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_one"
-        app:layout_constraintStart_toEndOf="@+id/textView_prefix_text_string"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_stem_one"
+        app:layout_constraintStart_toStartOf="@+id/imageView_stem_one"
         app:srcCompat="@drawable/ic_tree_top_one" />
 
     <ImageView
         android:id="@+id/imageView_three_top_two"
         android:layout_width="41dp"
         android:layout_height="74dp"
-        android:layout_marginStart="4dp"
         android:layout_marginBottom="32dp"
         android:contentDescription="@string/tree"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_three"
-        app:layout_constraintStart_toEndOf="@+id/imageView_three_top_one"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_stem_three"
+        app:layout_constraintStart_toStartOf="@+id/imageView_stem_three"
         app:srcCompat="@drawable/ic_tree_top_three" />
 
     <ImageView
         android:id="@+id/imageView_three_top_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
         android:layout_marginBottom="32dp"
         android:contentDescription="@string/tree"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_two"
-        app:layout_constraintStart_toEndOf="@+id/textView_prefix_text_string"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_stem_two"
+        app:layout_constraintStart_toStartOf="@+id/imageView_stem_two"
         app:srcCompat="@drawable/ic_tree_top_two" />
 
     <ImageView

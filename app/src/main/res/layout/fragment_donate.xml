@@ -42,14 +42,16 @@
 
             <TextView
                 android:id="@+id/textView_donate_forrest_dialog"
-                android:layout_width="225dp"
+                android:layout_width="0dp"
                 android:layout_height="83dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="100dp"
                 android:fontFamily="@font/sf_text"
                 android:text="@string/button_to_plant_a_tree"
                 android:textColor="@color/colorBlack"
                 android:textSize="18sp"
                 app:fontFamily="@font/pt_sans"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView_donate_tree_title"
                 app:layout_constraintTop_toBottomOf="@+id/textView_donate_tree_title" />
 
@@ -191,14 +193,16 @@
 
             <TextView
                 android:id="@+id/textView_donate_ocean_dialog"
-                android:layout_width="227dp"
+                android:layout_width="0dp"
                 android:layout_height="81dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="100dp"
                 android:fontFamily="@font/sf_text"
                 android:text="@string/button_to_clean_the_ocean"
                 android:textColor="@color/colorBlack"
                 android:textSize="18sp"
                 app:fontFamily="@font/pt_sans"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView_donate_ocean_title"
                 app:layout_constraintTop_toBottomOf="@+id/textView_donate_ocean_title" />
 
