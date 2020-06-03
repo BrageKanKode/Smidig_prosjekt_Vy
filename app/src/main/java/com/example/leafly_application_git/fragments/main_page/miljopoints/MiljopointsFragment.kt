@@ -25,7 +25,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
+import kotlinx.android.synthetic.main.before_scan_dialog.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.*
+import kotlinx.android.synthetic.main.before_scan_dialog.view.button_scan_dialog
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 import kotlinx.android.synthetic.main.fragment_not_logged_in.view.*
@@ -148,6 +150,7 @@ class MiljopointsFragment : Fragment() {
         val eatLogo = R.drawable.ic_restaurant_24px
         val warmDrinkLogo = R.drawable.ic_local_cafe_24px
         val coldDrinkLogo = R.drawable.ic_local_drink_24px
+        val btnText = "Betal"
 
         val intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         //If it doesn't recognise a QR code
@@ -159,9 +162,9 @@ class MiljopointsFragment : Fragment() {
                 //If the QR code has a text content of
                 when (intentResult.contents) {
                     "Kaffe" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -171,13 +174,31 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_coffe)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_coffe_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
+
+
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
@@ -187,9 +208,9 @@ class MiljopointsFragment : Fragment() {
                         ref.addListenerForSingleValueEvent(menuListener)
                     }
                     "Sandwich" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -199,13 +220,31 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_sandwich)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_sandwich_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+
+
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
@@ -216,9 +255,9 @@ class MiljopointsFragment : Fragment() {
 
                     }
                     "Mineralvann" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -228,13 +267,29 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_soda)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_soda_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
@@ -245,9 +300,9 @@ class MiljopointsFragment : Fragment() {
 
                     }
                     "Smoothie" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -257,13 +312,29 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_smoothie)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_smoothie_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
@@ -274,9 +345,9 @@ class MiljopointsFragment : Fragment() {
 
                     }
                     "Falafel" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -286,13 +357,29 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_falafel)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_falafel_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
@@ -303,9 +390,9 @@ class MiljopointsFragment : Fragment() {
 
                     }
                     "Kjøttkaker" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -315,13 +402,29 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_meatcakes)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_meatcakes_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
@@ -332,9 +435,9 @@ class MiljopointsFragment : Fragment() {
 
                     }
                     "Pulled Oumph" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -344,13 +447,29 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_oumph)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_oumph_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
@@ -361,9 +480,9 @@ class MiljopointsFragment : Fragment() {
 
                     }
                     "Indisk Curry" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
+                        var mDialogView = LayoutInflater.from(activity as MainActivity)
                             .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
+                        var mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
 
                         val mAlertDialog = mBuilder.show()
@@ -373,13 +492,29 @@ class MiljopointsFragment : Fragment() {
                         mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_curry)
                         mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_curry_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
+                        mDialogView.button_scan_dialog.text = btnText
 
                         val menuListener = object : ValueEventListener {
                             override fun onDataChange(p0: DataSnapshot) {
                                 user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                                var balance = user?.balance
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
+                                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+                                mDialogView.button_scan_dialog.setOnClickListener {
+                                    if(balance!! >= price) {
+                                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                                            .inflate(R.layout.purchase_done_dialog, null)
+                                        mBuilder = AlertDialog.Builder(activity as MainActivity)
+                                            .setView(mDialogView)
+                                        val mAlertDialog = mBuilder.show()
+
+                                        balance = balance?.minus(price)
+                                        ref.child("/balance").setValue(balance)
+                                    } else {
+                                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             }
 
                             override fun onCancelled(p0: DatabaseError) {
