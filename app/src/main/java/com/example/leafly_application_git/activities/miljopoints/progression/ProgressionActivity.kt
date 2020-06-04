@@ -59,11 +59,16 @@ class ProgressionActivity : AppCompatActivity() {
                 val balance = user?.balance
                 val level = user?.level
 
+                var totalEarned = user?.totalEarned.toString()
+                val nextLevelInt = 8200
+                var remainingPointToLevel = nextLevelInt.minus(totalEarned.toInt())
+
                 textView_current_currency.text = balance.toString()
 
                 textView_progressbar_status.text = user?.progress?.toInt().toString()
                 progressBar2.progress = user!!.progress.toInt()
-                textView_total_collected.text = user?.totalEarned.toString()
+                textView_total_collected.text = totalEarned
+                textView_display_remaining_points_to_next_level.text = "Poeng til neste nivå: \n" + remainingPointToLevel.toString()
 
                 if (level == 1){
                     textView_progression_show_level.text = "Frø"
@@ -80,3 +85,4 @@ class ProgressionActivity : AppCompatActivity() {
         ref.addListenerForSingleValueEvent(menuListener)
     }
 }
+

@@ -100,8 +100,8 @@ class ConfirmationActivity : AppCompatActivity() {
                 CombinedFunctionsClass.user = p0.getValue(User::class.java)
                 var progress = CombinedFunctionsClass.user?.progress
                 var level = CombinedFunctionsClass.user?.level
-                val maxXp = 300
-                val progressAmount = 25.00
+                val maxXp = 8200
+                val progressAmount = 50.00
 
                 incrementProgress(progressAmount)
 
