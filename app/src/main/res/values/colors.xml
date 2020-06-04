@@ -13,4 +13,5 @@
     <color name="darkGreen">#3A846F</color>
     <color name="blackShade">#616567</color>
     <color name="darkGrey">#C7C9C7</color>
+    <color name="colorToolbar">#ffffff</color>
 </resources>

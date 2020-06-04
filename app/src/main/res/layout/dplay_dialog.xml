@@ -20,7 +20,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_dplay_dialog_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView53" />
 
     <Button
         android:id="@+id/button_buy_dplay"
@@ -62,17 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_price_dplay" />
 
     <ImageView
-        android:id="@+id/imageView_dplay_dialog_logo"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/dplay_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_dplay_logo_2019" />
-
-    <ImageView
         android:id="@+id/imageView_dplay_close"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -82,5 +71,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_clear_24px" />
+
+    <ImageView
+        android:id="@+id/imageView53"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_viaplay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

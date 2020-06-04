@@ -51,7 +51,8 @@ class LoginActivity: AppCompatActivity() {
 
         //Button that redirects user back to registration
         textView_back_to_registration.setOnClickListener {
-            finish()
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.search.payment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
@@ -43,18 +44,11 @@ class ConfirmationActivity : AppCompatActivity() {
 
         recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
 
-
-
         if(verifyIfUserIsLoggedIn()){
             incrementBalance(points)
         }
 
-
-
-
     }
-
-
 
     private fun dataPassClass(departure: String,
                               arrival: String,
@@ -82,6 +76,7 @@ class ConfirmationActivity : AppCompatActivity() {
     private fun incrementBalance(points: String){
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
@@ -92,16 +87,13 @@ class ConfirmationActivity : AppCompatActivity() {
                 totalEarned = totalEarned?.plus(points.toInt())
 
 
-
-
-
                 ref.child("/balance").setValue(balance)
                 ref.child("/totalEarned").setValue(totalEarned)
                 CombinedFunctionsClass.user = p0.getValue(User::class.java)
                 var progress = CombinedFunctionsClass.user?.progress
                 var level = CombinedFunctionsClass.user?.level
-                val maxXp = 300
-                val progressAmount = 25.00
+                val maxXp = 8200
+                val progressAmount = intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY).toDouble()
 
                 incrementProgress(progressAmount)
 
@@ -116,9 +108,9 @@ class ConfirmationActivity : AppCompatActivity() {
                             .setView(mDialogView)
 
                         if (level == 1){
-                            mDialogView.textView_level_up_congratulations.text = "Du har nådd et nytt level!\n Din nye level: Spire"
+                            mDialogView.textView_level_up_congratulations.text = "Du har nådd et nytt nivå!\n Ditt nye nivå: Spire"
                         } else if (level == 2){
-                            mDialogView.textView_level_up_congratulations.text = "Du har nådd et nytt level!\n Din nye level: Tre"
+                            mDialogView.textView_level_up_congratulations.text = "Du har nådd et nytt nivå!\n Ditt nye nivå: Tre"
                         }
 
 

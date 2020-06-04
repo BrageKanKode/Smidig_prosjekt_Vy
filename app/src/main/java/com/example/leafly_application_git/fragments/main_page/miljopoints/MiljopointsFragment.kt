@@ -4,11 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProviders
+import com.example.leafly_application_git.CombinedFunctionsClass.createPopup
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.MainActivity
@@ -25,7 +25,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.before_scan_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 import kotlinx.android.synthetic.main.fragment_not_logged_in.view.*
@@ -37,13 +36,13 @@ class MiljopointsFragment : Fragment() {
 
     internal var user: User? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         miljopointsViewModel = ViewModelProviders.of(this).get(MiljopointsViewModel::class.java)
-
-
-
-
 
 
         var root = inflater.inflate(R.layout.fragment_miljopoints, container, false)
@@ -52,9 +51,8 @@ class MiljopointsFragment : Fragment() {
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
 
-
         //Checks if user is logged in
-        if(verifyIfUserIsLoggedIn()) {
+        if (verifyIfUserIsLoggedIn()) {
             //--------------If logged in --------------
             fetchUser()
 
@@ -80,7 +78,7 @@ class MiljopointsFragment : Fragment() {
             }
             root.btn_do_logout.setOnClickListener {
                 FirebaseAuth.getInstance().signOut()
-                val ft : FragmentTransaction = this.fragmentManager!!.beginTransaction()
+                val ft: FragmentTransaction = this.fragmentManager!!.beginTransaction()
                 ft.detach(this)
                 ft.attach(this)
                 ft.commit()
@@ -108,9 +106,15 @@ class MiljopointsFragment : Fragment() {
                     Intent(requireActivity(), LoginActivity::class.java)
                 )
             }
-            root.cardView_fragment_what_are_points.setOnClickListener{
+            root.cardView_fragment_what_are_points.setOnClickListener {
                 requireActivity().startActivity(
                     Intent(requireActivity(), ExplanationActivity::class.java)
+                )
+            }
+
+            root.cardView_fragment_membership_benefits.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), MembershipBenefitsActivity::class.java)
                 )
             }
         }
@@ -119,15 +123,12 @@ class MiljopointsFragment : Fragment() {
         setHasOptionsMenu(true);
 
 
-
         //CONNECTED TO MiljopointsViewModel
 //        val textView: TextView = root.findViewById(R.id.text_miljopoints)
 //
 //        miljopointsViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
 //        })
-
-
 
 
         return root
@@ -139,7 +140,7 @@ class MiljopointsFragment : Fragment() {
         super.onResume()
 
         val uid = FirebaseAuth.getInstance().uid
-        if (uid != null){
+        if (uid != null) {
             fetchUser()
         }
     }
@@ -151,249 +152,137 @@ class MiljopointsFragment : Fragment() {
 
         val intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         //If it doesn't recognise a QR code
-        if(intentResult != null) {
+        if (intentResult != null) {
             //If the content of the QR code has anything
-            if(intentResult.contents != null) {
-                val ref = FirebaseDatabase.getInstance().getReference("/users")
-                    .child(FirebaseAuth.getInstance().currentUser!!.uid)
+            if (intentResult.contents != null) {
                 //If the QR code has a text content of
                 when (intentResult.contents) {
                     "Kaffe" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 3200
-                        mDialogView.imageView_scanable_image.setImageResource(warmDrinkLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_coffe)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_coffe_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
+                        createPopup(
+                            320,
+                            warmDrinkLogo,
+                            getStringRes?.getString(R.string.during_coffe),
+                            getStringRes?.getString(R.string.during_coffe_desc),
+                            "kaffe",
+                            activity as MainActivity
+                        )
+                    }
 
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
+                    "Wrap" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        createPopup(
+                            890,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_wrap),
+                            getStringRes?.getString(R.string.during_wrap_desc),
+                            "wrap",
+                            activity as MainActivity
+                        )
+                    }
 
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
+                    "Te" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        createPopup(
+                            320,
+                            warmDrinkLogo,
+                            getStringRes?.getString(R.string.during_tea),
+                            getStringRes?.getString(R.string.during_tea_desc),
+                            "te",
+                            activity as MainActivity
+                        )
                     }
                     "Sandwich" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 5200
-                        mDialogView.imageView_scanable_image.setImageResource(eatLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_sandwich)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_sandwich_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
-
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
-
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
-
+                        createPopup(
+                            890,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_sandwich),
+                            getStringRes?.getString(R.string.during_sandwich_desc),
+                            "sandwich",
+                            activity as MainActivity
+                        )
                     }
                     "Mineralvann" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 4200
-                        mDialogView.imageView_scanable_image.setImageResource(coldDrinkLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_soda)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_soda_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
-
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
-
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
-
+                        createPopup(
+                            420,
+                            coldDrinkLogo,
+                            getStringRes?.getString(R.string.during_soda),
+                            getStringRes?.getString(R.string.during_soda_desc),
+                            "mineralvann",
+                            activity as MainActivity
+                        )
                     }
                     "Smoothie" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 5200
-                        mDialogView.imageView_scanable_image.setImageResource(coldDrinkLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_smoothie)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_smoothie_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
-
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
-
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
-
+                        createPopup(
+                            520,
+                            coldDrinkLogo,
+                            getStringRes?.getString(R.string.during_smoothie),
+                            getStringRes?.getString(R.string.during_smoothie_desc),
+                            "smoothie",
+                            activity as MainActivity
+                        )
                     }
                     "Falafel" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 13900
-                        mDialogView.imageView_scanable_image.setImageResource(eatLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_falafel)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_falafel_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
-
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
-
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
-
+                        createPopup(
+                            1390,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_falafel),
+                            getStringRes?.getString(R.string.during_falafel_desc),
+                            "falafel",
+                            activity as MainActivity
+                        )
                     }
                     "Kjøttkaker" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 4200
-                        mDialogView.imageView_scanable_image.setImageResource(eatLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_meatcakes)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_meatcakes_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
-
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
-
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
-
+                        createPopup(
+                            1690,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_meatcakes),
+                            getStringRes?.getString(R.string.during_meatcakes_desc),
+                            "kjøttkaker",
+                            activity as MainActivity
+                        )
                     }
                     "Pulled Oumph" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 17900
-                        mDialogView.imageView_scanable_image.setImageResource(eatLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_oumph)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_oumph_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
-
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
-
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
-
+                        createPopup(
+                            1790,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_oumph),
+                            getStringRes?.getString(R.string.during_oumph_desc),
+                            "Pulled Oumph",
+                            activity as MainActivity
+                        )
                     }
                     "Indisk Curry" -> {
-                        val mDialogView = LayoutInflater.from(activity as MainActivity)
-                            .inflate(R.layout.before_scan_dialog, null)
-                        val mBuilder = AlertDialog.Builder(activity as MainActivity)
-                            .setView(mDialogView)
-
-                        val mAlertDialog = mBuilder.show()
                         val getStringRes = activity?.applicationContext?.resources
-                        val price = 4200
-                        mDialogView.imageView_scanable_image.setImageResource(eatLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_curry)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_curry_desc)
-                        mDialogView.textView_before_scan_price.text = price.toString()
-
-                        val menuListener = object : ValueEventListener {
-                            override fun onDataChange(p0: DataSnapshot) {
-                                user = p0.getValue(User::class.java)
-                                val balance = user?.balance?.toString()
-
-                                mDialogView.textView_balance_current_before_scan.text = balance
-                            }
-
-                            override fun onCancelled(p0: DatabaseError) {
-
-                            }
-                        }
-                        ref.addListenerForSingleValueEvent(menuListener)
-
-                    } else -> {
-                        Toast.makeText(activity as MainActivity, "Ikke gjenkjent Vy kode", Toast.LENGTH_SHORT).show()
+                        createPopup(
+                            1790,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_curry),
+                            getStringRes?.getString(R.string.during_curry_desc),
+                            "indisk curry",
+                            activity as MainActivity
+                        )
+                    }
+                    else -> {
+                        Toast.makeText(
+                            activity as MainActivity,
+                            "Ikke gjenkjent Vy kode",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
             } else {
-                Toast.makeText(activity as MainActivity, "Ikke gjenkjent QR kode", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    activity as MainActivity,
+                    "Ikke gjenkjent QR kode",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)
@@ -401,15 +290,15 @@ class MiljopointsFragment : Fragment() {
     }
 
 
-
     private fun scanFromFragment() {
         IntentIntegrator.forSupportFragment(this).setBeepEnabled(false).initiateScan()
     }
 
     //Function to fetch the correct user from the Firebase Database, also to get the details that is saved within the chosen user
-    private fun fetchUser(){
-        val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
-        val menuListener = object : ValueEventListener{
+    private fun fetchUser() {
+        val ref = FirebaseDatabase.getInstance().getReference("/users")
+            .child(FirebaseAuth.getInstance().currentUser!!.uid)
+        val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 //To display the username
@@ -419,19 +308,19 @@ class MiljopointsFragment : Fragment() {
                 progressBar.progress = user!!.progress.toInt()
 
                 //Siple if/else to level up user when certain amount of progress is achieved
-                if (user?.level!! == 1){
+                if (user?.level!! == 1) {
                     textView_level_points.text = "Frø"
                     val froDrawable = R.drawable.ic_fro_membership
                     imageView_display_level_icon.setImageResource(froDrawable)
                 }
 
-                if (user?.level!! == 2){
+                if (user?.level!! == 2) {
                     textView_level_points.text = "Spire"
                     val spireDrawable = R.drawable.ic_spire_membership
                     imageView_display_level_icon.setImageResource(spireDrawable)
                 }
 
-                if (user?.level!! == 3){
+                if (user?.level!! == 3) {
                     textView_level_points.text = "Tre"
                     val treDrawable = R.drawable.ic_tre_membership
                     imageView_display_level_icon.setImageResource(treDrawable)

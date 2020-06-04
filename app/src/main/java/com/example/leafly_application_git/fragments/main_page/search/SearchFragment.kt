@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.fragments.main_page.search
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -78,41 +79,41 @@ class SearchFragment : Fragment() {
                     var progress = user?.progress
                     var level = user?.level
 
-                    root.btn_cheat.setOnClickListener {
-                        balance = balance?.plus(10000)
-                        ref.child("/balance").setValue(balance)
-
-                    }
-                    root.btn_cheat_pull.setOnClickListener {
-                        balance = balance?.minus(10000)
-                        ref.child("/balance").setValue(balance)
-
-                    }
-                    root.btn_cheat_xp_plus.setOnClickListener {
-                        incrementProgress(25.00)
-                        ref.child("/progress").setValue(progress)
-
-                    }
-                    root.btn_cheat_xp_minus.setOnClickListener {
-                        progress = progress?.minus(10.00)
-                        ref.child("/progress").setValue(progress)
-
-                    }
-                    root.btn_cheat_level_minus.setOnClickListener {
-                        level = level?.minus(1)
-                        ref.child("/level").setValue(level)
-
-                    }
-                    root.btn_cheat_level_plus.setOnClickListener {
-                        level = level?.plus(1)
-                        ref.child("/level").setValue(level)
-
-                    }
-                    root.btn_cheat_xp_98.setOnClickListener {
-                        progress = 98.00
-                        ref.child("/progress").setValue(progress)
-
-                    }
+//                    root.btn_cheat.setOnClickListener {
+//                        balance = balance?.plus(10000)
+//                        ref.child("/balance").setValue(balance)
+//
+//                    }
+//                    root.btn_cheat_pull.setOnClickListener {
+//                        balance = balance?.minus(10000)
+//                        ref.child("/balance").setValue(balance)
+//
+//                    }
+//                    root.btn_cheat_xp_plus.setOnClickListener {
+//                        incrementProgress(25.00)
+//                        ref.child("/progress").setValue(progress)
+//
+//                    }
+//                    root.btn_cheat_xp_minus.setOnClickListener {
+//                        progress = progress?.minus(10.00)
+//                        ref.child("/progress").setValue(progress)
+//
+//                    }
+//                    root.btn_cheat_level_minus.setOnClickListener {
+//                        level = level?.minus(1)
+//                        ref.child("/level").setValue(level)
+//
+//                    }
+//                    root.btn_cheat_level_plus.setOnClickListener {
+//                        level = level?.plus(1)
+//                        ref.child("/level").setValue(level)
+//
+//                    }
+//                    root.btn_cheat_xp_98.setOnClickListener {
+//                        progress = 98.00
+//                        ref.child("/progress").setValue(progress)
+//
+//                    }
                 }
 
                 override fun onCancelled(p0: DatabaseError) {
@@ -131,9 +132,10 @@ class SearchFragment : Fragment() {
     private fun displayUsername(){
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
-                textView_search_welcome?.text = user?.username
+                textView_search_fragmen_headline_text?.text = "God Dag " + user?.username
 
             }
 

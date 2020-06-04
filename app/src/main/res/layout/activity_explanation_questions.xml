@@ -34,7 +34,7 @@
 
     <TextView
         android:id="@+id/textView_explanation_question_dialog"
-        android:layout_width="309dp"
+        android:layout_width="match_parent"
         android:layout_height="153dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sfprotext_regular"
@@ -124,56 +124,62 @@
 
     <TextView
         android:id="@+id/textView_explanation_question_example_dialog_one"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
+        android:layout_marginEnd="24dp"
         android:text="@string/_5_000_poeng"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_one"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_one" />
 
     <TextView
         android:id="@+id/textView_explanation_question_example_dialog_two"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_1_500_2_400_poeng"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_two"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_one"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_two" />
 
     <TextView
         android:id="@+id/textView_explanation_question_example_dialog_three"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_1_200_poeng"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_three"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_two"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_three" />
 
     <TextView
         android:id="@+id/textView_explanation_question_example_dialog_four"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_5_500_poeng"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_four"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_three"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_four" />
 
     <TextView
         android:id="@+id/textView_explanation_question_example_dialog_five"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_6000_poeng"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_five"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_four"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_five" />
 

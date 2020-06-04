@@ -48,13 +48,16 @@
 
     <TextView
         android:id="@+id/textView_explanation_second_under_title"
-        android:layout_width="374dp"
+        android:layout_width="0dp"
         android:layout_height="37dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sfprotext_regular"
+        android:layout_marginEnd="24dp"
         android:text="@string/gjelder_hvis_du_register_ditt_medlemsnummer_i_forbindelse_med_kj_p"
         android:textColor="@color/mainBlack"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView_explanation_earnings_second_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_explanation_earnings_second_title" />
 
@@ -121,6 +124,7 @@
         android:text="@string/_1_poeng_per_krone_eks_bestillingsgebyr"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_with_vy_title"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_second_under_title"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_with_vy_title" />
 
@@ -129,50 +133,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="223dp" />
+        app:layout_constraintGuide_begin="194dp" />
 
     <TextView
         android:id="@+id/textView_explanation_ordinary_dialog"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_1_poeng_per_krone"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_ordinary_title"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_with_vy_dialog"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_ordinary_title" />
 
     <TextView
         android:id="@+id/textView_explanation_season_sead_dialog"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_48_000_poeng"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_sead_title"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_ordinary_dialog"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_sead_title" />
 
     <TextView
         android:id="@+id/textView_explanation_season_spire_dialog"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_70_000_poeng"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_spire_title"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_season_sead_dialog"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_spire_title" />
 
     <TextView
         android:id="@+id/textView_explanation_season_tre_dialog"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/_81_000_poeng"
         android:textAllCaps="false"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_tre_title"
+        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_season_spire_dialog"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_tre_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>
