@@ -78,41 +78,41 @@ class SearchFragment : Fragment() {
                     var progress = user?.progress
                     var level = user?.level
 
-                    root.btn_cheat.setOnClickListener {
-                        balance = balance?.plus(10000)
-                        ref.child("/balance").setValue(balance)
-
-                    }
-                    root.btn_cheat_pull.setOnClickListener {
-                        balance = balance?.minus(10000)
-                        ref.child("/balance").setValue(balance)
-
-                    }
-                    root.btn_cheat_xp_plus.setOnClickListener {
-                        incrementProgress(25.00)
-                        ref.child("/progress").setValue(progress)
-
-                    }
-                    root.btn_cheat_xp_minus.setOnClickListener {
-                        progress = progress?.minus(10.00)
-                        ref.child("/progress").setValue(progress)
-
-                    }
-                    root.btn_cheat_level_minus.setOnClickListener {
-                        level = level?.minus(1)
-                        ref.child("/level").setValue(level)
-
-                    }
-                    root.btn_cheat_level_plus.setOnClickListener {
-                        level = level?.plus(1)
-                        ref.child("/level").setValue(level)
-
-                    }
-                    root.btn_cheat_xp_98.setOnClickListener {
-                        progress = 98.00
-                        ref.child("/progress").setValue(progress)
-
-                    }
+//                    root.btn_cheat.setOnClickListener {
+//                        balance = balance?.plus(10000)
+//                        ref.child("/balance").setValue(balance)
+//
+//                    }
+//                    root.btn_cheat_pull.setOnClickListener {
+//                        balance = balance?.minus(10000)
+//                        ref.child("/balance").setValue(balance)
+//
+//                    }
+//                    root.btn_cheat_xp_plus.setOnClickListener {
+//                        incrementProgress(25.00)
+//                        ref.child("/progress").setValue(progress)
+//
+//                    }
+//                    root.btn_cheat_xp_minus.setOnClickListener {
+//                        progress = progress?.minus(10.00)
+//                        ref.child("/progress").setValue(progress)
+//
+//                    }
+//                    root.btn_cheat_level_minus.setOnClickListener {
+//                        level = level?.minus(1)
+//                        ref.child("/level").setValue(level)
+//
+//                    }
+//                    root.btn_cheat_level_plus.setOnClickListener {
+//                        level = level?.plus(1)
+//                        ref.child("/level").setValue(level)
+//
+//                    }
+//                    root.btn_cheat_xp_98.setOnClickListener {
+//                        progress = 98.00
+//                        ref.child("/progress").setValue(progress)
+//
+//                    }
                 }
 
                 override fun onCancelled(p0: DatabaseError) {
