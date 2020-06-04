@@ -158,15 +158,6 @@ object CombinedFunctionsClass {
                             .setView(mDialogView)
                         val mAlertDialog = mBuilder.show()
 
-                        /*
-                        mDialogView.button_purchase_view_cupon.setOnClickListener {
-                            requireActivity().startActivity(
-                                Intent(requireActivity(), HistoryActivity::class.java)
-                            )
-                        }
-
-                         */
-
                         mDialogView.button_purchase_view_cupon.setOnClickListener {
                             val intent = Intent (context, HistoryActivity::class.java)
                             context.startActivity(intent)
