@@ -24,10 +24,6 @@ class ProgressionActivity : AppCompatActivity() {
 
         displayCurrentBalance()
 
-
-        btnToGrowingTree.setOnClickListener {
-            toGrowingTree()
-        }
         btnToHistory.setOnClickListener {
             toHistory()
         }

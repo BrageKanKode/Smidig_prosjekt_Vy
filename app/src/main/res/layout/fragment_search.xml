@@ -20,19 +20,6 @@
 
 
     <TextView
-        android:id="@+id/textView_search_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/pt_sans"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_search_fragmen_headline_text"
-        app:layout_constraintStart_toEndOf="@+id/textView_search_fragmen_headline_text"
-        app:layout_constraintTop_toTopOf="@+id/textView_search_fragmen_headline_text" />
-
-    <TextView
         android:id="@+id/textView_search_fragmen_headline_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

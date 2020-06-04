@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.fragments.main_page.search
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -131,9 +132,10 @@ class SearchFragment : Fragment() {
     private fun displayUsername(){
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
-                textView_search_welcome?.text = user?.username
+                textView_search_fragmen_headline_text?.text = "God Dag " + user?.username
 
             }
 
