@@ -44,8 +44,6 @@ class ConfirmationActivity : AppCompatActivity() {
 
         recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
 
-
-
         if(verifyIfUserIsLoggedIn()){
             incrementBalance(points)
         }
@@ -87,9 +85,6 @@ class ConfirmationActivity : AppCompatActivity() {
 
                 balance = balance?.plus(points.toInt())
                 totalEarned = totalEarned?.plus(points.toInt())
-
-
-
 
 
                 ref.child("/balance").setValue(balance)
