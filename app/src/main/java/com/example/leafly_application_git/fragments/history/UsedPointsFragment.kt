@@ -42,8 +42,6 @@ class UsedPointsFragment : Fragment() {
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
 
-
-
         val usedHistoryList = ArrayList<String>()
 
 
@@ -135,6 +133,9 @@ class UsedPointsFragment : Fragment() {
                         }else if (view.textView_display_new_item.text.toString().contains("indisk curry")){
                             mDialogView.textView_your_cupon_text.text = "Indisk Curry - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "Indisk Curry-kupong til togets cafe"
+                        }else if (view.textView_display_new_item.text.toString().contains("Pulled Oumph")){
+                            mDialogView.textView_your_cupon_text.text = "Pulled Oumph - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "Pulled Oumph-kupong til togets cafe"
                         }
 
                         val mAlertDialog = mBuilder.show()
