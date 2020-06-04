@@ -251,7 +251,7 @@ class MiljopointsFragment : Fragment() {
                     }
                     "Mineralvann" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(420, coldDrinkLogo, getStringRes?.getString(R.string.during_soda), getStringRes?.getString(R.string.during_soda_desc), "brus")
+                        createPopup(420, coldDrinkLogo, getStringRes?.getString(R.string.during_soda), getStringRes?.getString(R.string.during_soda_desc), "mineralvann")
                     }
                     "Smoothie" -> {
                         val getStringRes = activity?.applicationContext?.resources

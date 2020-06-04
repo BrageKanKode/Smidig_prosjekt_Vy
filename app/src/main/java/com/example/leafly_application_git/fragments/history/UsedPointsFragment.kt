@@ -101,7 +101,7 @@ class UsedPointsFragment : Fragment() {
                             mDialogView2.textView_tree_cupon_title.text = "Planting av trær"
                             mDialogView2.textView_cupon_desc.text = "Planting av trær som hjelper miljøet"
                             mDialogView2.textView_tree_info.text = activity?.applicationContext?.resources?.getString(R.string.tree_cupon_info_box)
-                        } else if (view.textView_display_new_item.text.toString().contains("vann")){
+                        } else if (view.textView_display_new_item.text.toString().contains("vannrensing")){
                             mBuilder.setView(mDialogView2)
                             mDialogView2.textView_tree_cupon_title.text = "Rydding av plast"
                             mDialogView2.textView_cupon_desc.text = "Rydding av plast i havet som hjelper miljøet"
@@ -118,9 +118,9 @@ class UsedPointsFragment : Fragment() {
                         }else if (view.textView_display_new_item.text.toString().contains("sandwich")){
                             mDialogView.textView_your_cupon_text.text = "Sandwich - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "Sandwich-kupong til en av våre maskiner eller togets cafe"
-                        }else if (view.textView_display_new_item.text.toString().contains("brus")){
-                            mDialogView.textView_your_cupon_text.text = "Brus - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Brus-kupong til en av våre maskiner eller togets cafe"
+                        }else if (view.textView_display_new_item.text.toString().contains("mineralvann")){
+                            mDialogView.textView_your_cupon_text.text = "Mineralvann - Verdikuppong"
+                            mDialogView.textView_display_given_cupon.text = "Mineralvann-kupong til en av våre maskiner eller togets cafe"
                         }else if (view.textView_display_new_item.text.toString().contains("smoothie")){
                             mDialogView.textView_your_cupon_text.text = "Smoothie - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "Smoothie-kupong til togets cafe"
@@ -237,7 +237,7 @@ class UsedPointsFragment : Fragment() {
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
 //                rootView.textView_display_used_history_price.text = "-100"
-            } else if (rootView.textView_display_new_item.text.toString().contains("vann")){
+            } else if (rootView.textView_display_new_item.text.toString().contains("vannrensing")){
                 val plasticDrawable = R.drawable.ic_plast
                 rootView.imageView_used_history_image.setImageResource(plasticDrawable)
                 //rootView.textView_display_used_history_price.text = "-100"
@@ -253,7 +253,7 @@ class UsedPointsFragment : Fragment() {
             }else if (rootView.textView_display_new_item.text.toString().contains("sandwich")) {
                 rootView.imageView_used_history_image.setImageResource(eatLogo)
                 rootView.textView_display_used_history_price.text = "-520"
-            }else if (rootView.textView_display_new_item.text.toString().contains("brus")) {
+            }else if (rootView.textView_display_new_item.text.toString().contains("mineralvann")) {
                 rootView.imageView_used_history_image.setImageResource(coldDrinkLogo)
                 rootView.textView_display_used_history_price.text = "-420"
             }else if (rootView.textView_display_new_item.text.toString().contains("smoothie")) {
