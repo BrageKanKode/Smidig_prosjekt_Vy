@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.User
-import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -110,8 +108,85 @@ object CombinedFunctionsClass {
         }
     }
 
-    fun leveledUp(): Boolean{
-        return leveledUp
+    fun createPopup(price: Int, logo: Int, header: String?, desc: String?, historyName: String, context: Context) {
+
+        //Firebase reference
+        val ref
+                = FirebaseDatabase.getInstance().getReference("/users")
+            .child(FirebaseAuth.getInstance().currentUser!!.uid)
+
+        val btnText = "Betal"
+
+        //Inflate popup
+        var mDialogView = LayoutInflater.from(context)
+            .inflate(R.layout.before_scan_dialog, null)
+        var mBuilder = AlertDialog.Builder(context)
+            .setView(mDialogView)
+        val mAlertDialog2 = mBuilder.show()
+
+        val usedHistory =
+            "Du kjøpte 1 $historyName på togturen"
+
+        mDialogView.imageView_scanable_image.setImageResource(logo)
+        mDialogView.textView_scanable_title.text = header
+        mDialogView.textView_item_desc_scan.text = desc
+        mDialogView.textView_before_scan_price.text = price.toString()
+        mDialogView.button_scan_dialog.text = btnText
+
+
+
+
+        val menuListener = object : ValueEventListener {
+            override fun onDataChange(p0: DataSnapshot) {
+                user = p0.getValue(User::class.java)
+                var balance = CombinedFunctionsClass.user?.balance
+
+                //Set users balance on screen
+                mDialogView.textView_balance_current_before_scan.text = balance?.toString()
+
+
+                mDialogView.button_scan_dialog.setOnClickListener {
+                    mAlertDialog2.dismiss()
+                    if(balance!! >= price) {
+                        mDialogView = LayoutInflater.from(context)
+                            .inflate(R.layout.purchase_done_dialog, null)
+                        mBuilder = AlertDialog.Builder(context)
+                            .setView(mDialogView)
+                        val mAlertDialog = mBuilder.show()
+
+                        /*
+                        mDialogView.button_purchase_view_cupon.setOnClickListener {
+                            requireActivity().startActivity(
+                                Intent(requireActivity(), HistoryActivity::class.java)
+                            )
+                        }
+
+                         */
+
+                        mDialogView.button_purchase_keep_shopping_shop.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+
+                        mDialogView.imageView_close_purchase_dialog.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+
+                        var refUsedHistory = ref.child("/usedHistory")
+                        refUsedHistory.push().setValue(usedHistory)
+
+                        balance = balance?.minus(price)
+                        ref.child("/balance").setValue(balance)
+                    } else {
+                        Toast.makeText(context, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+
+            override fun onCancelled(p0: DatabaseError) {
+
+            }
+        }
+        ref.addListenerForSingleValueEvent(menuListener)
     }
 
     //Checks with the Firebase Authentication if user is logged in or not

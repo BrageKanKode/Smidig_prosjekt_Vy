@@ -1,13 +1,17 @@
 package com.example.leafly_application_git.fragments.use_points
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
+import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -129,6 +133,141 @@ class DuringTripFragment : Fragment() {
             createPopup(4200, eatLogo, getStringRes?.getString(R.string.during_curry), getStringRes?.getString(R.string.during_curry_desc))
         }
         return root
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val eatLogo = R.drawable.ic_restaurant_24px
+        val warmDrinkLogo = R.drawable.ic_local_cafe_24px
+        val coldDrinkLogo = R.drawable.ic_local_drink_24px
+
+        val intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+        //If it doesn't recognise a QR code
+        if(intentResult != null) {
+            //If the content of the QR code has anything
+            if(intentResult.contents != null) {
+                //If the QR code has a text content of
+                when (intentResult.contents) {
+                    "Kaffe" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            320,
+                            warmDrinkLogo,
+                            getStringRes?.getString(R.string.during_coffe),
+                            getStringRes?.getString(R.string.during_coffe_desc),
+                            "kaffe",
+                            activity as UsePointsActivity
+                        )
+                    }
+
+                    "Wrap" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            890,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_wrap),
+                            getStringRes?.getString(R.string.during_wrap_desc),
+                            "wrap",
+                            activity as UsePointsActivity
+                        )
+                    }
+
+                    "Te" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            320,
+                            warmDrinkLogo,
+                            getStringRes?.getString(R.string.during_tea),
+                            getStringRes?.getString(R.string.during_tea_desc),
+                            "te",
+                            activity as UsePointsActivity
+                        )
+                    }
+                    "Sandwich" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            890,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_sandwich),
+                            getStringRes?.getString(R.string.during_sandwich_desc),
+                            "sandwich",
+                            activity as UsePointsActivity
+                        )
+                    }
+                    "Mineralvann" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            420,
+                            coldDrinkLogo,
+                            getStringRes?.getString(R.string.during_soda),
+                            getStringRes?.getString(R.string.during_soda_desc),
+                            "mineralvann",
+                            activity as UsePointsActivity
+                        )
+                    }
+                    "Smoothie" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            520,
+                            coldDrinkLogo,
+                            getStringRes?.getString(R.string.during_smoothie),
+                            getStringRes?.getString(R.string.during_smoothie_desc),
+                            "smoothie",
+                            activity as UsePointsActivity
+                        )
+                    }
+                    "Falafel" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            1390,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_falafel),
+                            getStringRes?.getString(R.string.during_falafel_desc),
+                            "falafel",
+                            activity as UsePointsActivity
+                        )
+                    }
+                    "Kjøttkaker" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            1690,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_meatcakes),
+                            getStringRes?.getString(R.string.during_meatcakes_desc),
+                            "kjøttkaker",
+                            activity as UsePointsActivity
+                        )
+                    }
+                    "Pulled Oumph" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            1790,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_oumph),
+                            getStringRes?.getString(R.string.during_oumph_desc),
+                            "Pulled Oumph",
+                            activity as UsePointsActivity
+                        )
+                    }
+                    "Indisk Curry" -> {
+                        val getStringRes = activity?.applicationContext?.resources
+                        CombinedFunctionsClass.createPopup(
+                            1790,
+                            eatLogo,
+                            getStringRes?.getString(R.string.during_curry),
+                            getStringRes?.getString(R.string.during_curry_desc),
+                            "indisk curry",
+                            activity as UsePointsActivity
+                        )
+                    } else -> {
+                    Toast.makeText(activity as UsePointsActivity, "Ikke gjenkjent Vy kode", Toast.LENGTH_SHORT).show()
+                }
+                }
+            } else {
+                Toast.makeText(activity as UsePointsActivity, "Ikke gjenkjent QR kode", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
     }
 
 
