@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView_logo_splash"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
