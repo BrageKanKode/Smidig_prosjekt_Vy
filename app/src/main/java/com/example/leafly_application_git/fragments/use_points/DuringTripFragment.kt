@@ -81,57 +81,57 @@ class DuringTripFragment : Fragment() {
 
         root.cardview_coffe.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(3200, warmDrinkLogo, getStringRes?.getString(R.string.during_coffe), getStringRes?.getString(R.string.during_coffe_desc))
+            createPopup(320, warmDrinkLogo, getStringRes?.getString(R.string.during_coffe), getStringRes?.getString(R.string.during_coffe_desc))
         }
 
 
         root.cardview_wrap.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(8900, eatLogo, getStringRes?.getString(R.string.during_wrap), getStringRes?.getString(R.string.during_wrap_desc))
+            createPopup(890, eatLogo, getStringRes?.getString(R.string.during_wrap), getStringRes?.getString(R.string.during_wrap_desc))
         }
 
 
         root.cardview_tea.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(4200, warmDrinkLogo, getStringRes?.getString(R.string.during_tea), getStringRes?.getString(R.string.during_tea_desc))
+            createPopup(420, warmDrinkLogo, getStringRes?.getString(R.string.during_tea), getStringRes?.getString(R.string.during_tea_desc))
         }
 
 
         root.cardview_sandwich.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(5200, eatLogo, getStringRes?.getString(R.string.during_sandwich), getStringRes?.getString(R.string.during_sandwich_desc))
+            createPopup(520, eatLogo, getStringRes?.getString(R.string.during_sandwich), getStringRes?.getString(R.string.during_sandwich_desc))
         }
 
         root.cardview_soda.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(4200, coldDrinkLogo, getStringRes?.getString(R.string.during_soda), getStringRes?.getString(R.string.during_soda_desc))
+            createPopup(420, coldDrinkLogo, getStringRes?.getString(R.string.during_soda), getStringRes?.getString(R.string.during_soda_desc))
         }
 
         root.cardview_smoothie.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(5200, coldDrinkLogo, getStringRes?.getString(R.string.during_smoothie), getStringRes?.getString(R.string.during_smoothie_desc))
+            createPopup(520, coldDrinkLogo, getStringRes?.getString(R.string.during_smoothie), getStringRes?.getString(R.string.during_smoothie_desc))
         }
 
         root.cardview_falafel.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(13900, eatLogo, getStringRes?.getString(R.string.during_falafel), getStringRes?.getString(R.string.during_falafel_desc))
+            createPopup(1390, eatLogo, getStringRes?.getString(R.string.during_falafel), getStringRes?.getString(R.string.during_falafel_desc))
         }
 
         root.cardview_meatcakes.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(4200, eatLogo, getStringRes?.getString(R.string.during_meatcakes), getStringRes?.getString(R.string.during_meatcakes_desc))
+            createPopup(1690, eatLogo, getStringRes?.getString(R.string.during_meatcakes), getStringRes?.getString(R.string.during_meatcakes_desc))
         }
 
 
         root.cardview_oumph.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(17900, eatLogo, getStringRes?.getString(R.string.during_oumph), getStringRes?.getString(R.string.during_oumph_desc))
+            createPopup(1790, eatLogo, getStringRes?.getString(R.string.during_oumph), getStringRes?.getString(R.string.during_oumph_desc))
         }
 
 
         root.cardview_curry.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
-            createPopup(4200, eatLogo, getStringRes?.getString(R.string.during_curry), getStringRes?.getString(R.string.during_curry_desc))
+            createPopup(1790, eatLogo, getStringRes?.getString(R.string.during_curry), getStringRes?.getString(R.string.during_curry_desc))
         }
         return root
     }
