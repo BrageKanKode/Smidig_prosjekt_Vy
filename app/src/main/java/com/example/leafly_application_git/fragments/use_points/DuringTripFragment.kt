@@ -472,7 +472,7 @@ class DuringTripFragment : Fragment() {
 
 
     fun scanFromFragment() {
-        IntentIntegrator.forSupportFragment(this).initiateScan();
+        IntentIntegrator.forSupportFragment(this).setBeepEnabled(false).initiateScan()
     }
 
 
