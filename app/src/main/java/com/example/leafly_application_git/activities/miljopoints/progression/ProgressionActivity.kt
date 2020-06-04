@@ -77,7 +77,7 @@ class ProgressionActivity : AppCompatActivity() {
                     textView_progression_show_level.text = "Tre"
                 }
 
-                textView_display_remaining_points_to_next_level.text = "Poeng til neste nivå: \n" + remainingPointToLevel.toString()
+                textView_display_remaining_points_to_next_level.text = remainingPointToLevel.toString() + " poeng\ntil neste nivå"
 
                 if (level == 3){
                     textView_display_remaining_points_to_next_level.text = "Høyeste nivå!"
