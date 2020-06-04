@@ -17,6 +17,7 @@ import com.example.leafly_application_git.activities.authentication.SignUpActivi
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.explanation.ExplanationActivity
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
+import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.example.leafly_application_git.fragments.history.UsedPointsFragment
@@ -32,7 +33,9 @@ import kotlinx.android.synthetic.main.before_scan_dialog.view.button_scan_dialog
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
 import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 import kotlinx.android.synthetic.main.fragment_not_logged_in.view.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.*
 import kotlinx.android.synthetic.main.purchase_done_dialog.view.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.view.button_purchase_keep_shopping_shop
 
 
 class MiljopointsFragment : Fragment() {
@@ -193,6 +196,16 @@ class MiljopointsFragment : Fragment() {
                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
                         val mAlertDialog = mBuilder.show()
+
+                        mDialogView.button_purchase_view_cupon.setOnClickListener {
+                            requireActivity().startActivity(
+                                Intent(requireActivity(), HistoryActivity::class.java)
+                            )
+                        }
+
+                        mDialogView.button_purchase_keep_shopping_shop.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
 
                         mDialogView.imageView_close_purchase_dialog.setOnClickListener {
                             mAlertDialog.dismiss()
