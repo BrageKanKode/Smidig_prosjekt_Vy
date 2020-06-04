@@ -64,7 +64,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_display"
-                android:text="18000"
                 android:textColor="#3A846F"
                 android:textSize="18sp"
                 android:textStyle="bold"
