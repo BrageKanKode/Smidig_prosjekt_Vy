@@ -137,6 +137,10 @@ object CombinedFunctionsClass {
         mDialogView.textView_before_scan_price.text = price.toString()
         mDialogView.button_scan_dialog.text = btnText
 
+        mDialogView.imageView_dismiss_scan_dialog.setOnClickListener {
+            mAlertDialog2.dismiss()
+        }
+
 
 
 
@@ -159,6 +163,7 @@ object CombinedFunctionsClass {
                         val mAlertDialog = mBuilder.show()
 
                         mDialogView.button_purchase_view_cupon.setOnClickListener {
+                            mAlertDialog.dismiss()
                             val intent = Intent (context, HistoryActivity::class.java)
                             context.startActivity(intent)
                         }
