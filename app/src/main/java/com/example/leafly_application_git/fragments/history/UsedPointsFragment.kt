@@ -222,13 +222,13 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("Te")) {
                 rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
                 rootView.textView_display_used_history_price.text = "-???"
-            }else if (rootView.textView_display_new_item.text.toString().contains("Sandwich")) {
+            }else if (rootView.textView_display_new_item.text.toString().contains("sandwich")) {
                 rootView.imageView_used_history_image.setImageResource(eatLogo)
                 rootView.textView_display_used_history_price.text = "-???"
             }else if (rootView.textView_display_new_item.text.toString().contains("brus")) {
                 rootView.imageView_used_history_image.setImageResource(coldDrinkLogo)
                 rootView.textView_display_used_history_price.text = "-???"
-            }else if (rootView.textView_display_new_item.text.toString().contains("Smoothie")) {
+            }else if (rootView.textView_display_new_item.text.toString().contains("smoothie")) {
                 rootView.imageView_used_history_image.setImageResource(coldDrinkLogo)
                 rootView.textView_display_used_history_price.text = "-???"
             }else if (rootView.textView_display_new_item.text.toString().contains("Falafel")) {
@@ -240,7 +240,7 @@ class UsedPointsFragment : Fragment() {
             }else if (rootView.textView_display_new_item.text.toString().contains("Pulled Oumph")) {
                 rootView.imageView_used_history_image.setImageResource(eatLogo)
                 rootView.textView_display_used_history_price.text = "-???"
-            }else if (rootView.textView_display_new_item.text.toString().contains("Indisk Curry")) {
+            }else if (rootView.textView_display_new_item.text.toString().contains("indisk curry")) {
                 rootView.imageView_used_history_image.setImageResource(eatLogo)
                 rootView.textView_display_used_history_price.text = "-???"
             }

@@ -236,8 +236,8 @@ class MiljopointsFragment : Fragment() {
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 3200
                         mDialogView.imageView_scanable_image.setImageResource(warmDrinkLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_coffe)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_coffe_desc)
+                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_wrap)
+                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_wrap_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
                         mDialogView.button_scan_dialog.text = btnText
 
@@ -296,8 +296,8 @@ class MiljopointsFragment : Fragment() {
                         val getStringRes = activity?.applicationContext?.resources
                         val price = 3200
                         mDialogView.imageView_scanable_image.setImageResource(warmDrinkLogo)
-                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_coffe)
-                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_coffe_desc)
+                        mDialogView.textView_scanable_title.text = getStringRes?.getString(R.string.during_tea)
+                        mDialogView.textView_item_desc_scan.text = getStringRes?.getString(R.string.during_tea_desc)
                         mDialogView.textView_before_scan_price.text = price.toString()
                         mDialogView.button_scan_dialog.text = btnText
 
@@ -474,7 +474,7 @@ class MiljopointsFragment : Fragment() {
                                 user = p0.getValue(User::class.java)
                                 var balance = user?.balance
                                 val usedHistory =
-                                    "Du kjøpte 1 smoothie på togturen"
+                                    "Du kjøpte 1 Smoothie på togturen"
 
                                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
