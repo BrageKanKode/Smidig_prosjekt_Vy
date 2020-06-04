@@ -123,6 +123,7 @@ class PlantTreeActivity : AppCompatActivity() {
                         val mAlertDialog = mBuilder.show()
 
                         mDialogView2.button_see_my_purchases_tree.setOnClickListener {
+                            mAlertDialog.dismiss()
                             val intent = Intent(this@PlantTreeActivity, HistoryActivity::class.java)
                             startActivity(intent)
                         }
@@ -140,7 +141,7 @@ class PlantTreeActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(
                             this@PlantTreeActivity,
-                            "You need more more money, fool!",
+                            "Not enough points",
                             Toast.LENGTH_LONG
                         ).show()
                     }

@@ -106,6 +106,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         val mAlertDialog = mBuilder.show()
 
                         mDialogView2.button_redirect_to_purchase_ocean.setOnClickListener {
+                            mAlertDialog.dismiss()
                             val intent = Intent(this@CleanOceanActivity, HistoryActivity::class.java)
                             startActivity(intent)
                         }
@@ -120,7 +121,7 @@ class CleanOceanActivity : AppCompatActivity() {
 
 
                     } else {
-                        Toast.makeText(this@CleanOceanActivity, "You need more money, fool!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@CleanOceanActivity, "Not enough points", Toast.LENGTH_LONG).show()
                     }
 
                 }
