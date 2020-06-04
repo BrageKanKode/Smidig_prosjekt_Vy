@@ -54,12 +54,11 @@
         android:id="@+id/imageView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_total_collected"
-        app:layout_constraintTop_toBottomOf="@+id/textview_currency_show"
-        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/textView_total_collected"
+        app:layout_constraintTop_toBottomOf="@+id/topbarbg"
         app:srcCompat="@drawable/ic_plant_a_tree" />
 
     <FrameLayout
@@ -79,7 +78,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprodisplay_semibold"
         android:text="@string/plant_et_tre"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +113,7 @@
         android:layout_marginLeft="20dp"
         android:fontFamily="@font/sf_display"
         android:text="@string/progression_disponibelt"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +131,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toEndOf="@+id/textView_top_text_string_disponibelt"
         app:layout_constraintTop_toTopOf="@+id/textView_top_text_string_disponibelt" />
 
@@ -145,7 +145,7 @@
         android:layout_marginLeft="20dp"
         android:text="@string/totalsum"
         android:textColor="@color/colorBlack"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
         app:layout_constraintEnd_toStartOf="@+id/imageView_plant_leaf"
@@ -161,7 +161,7 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/sfprotext_bold"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
         app:layout_constraintEnd_toEndOf="@+id/btn_do_plant_tree" />
 
@@ -183,7 +183,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/plant_a_tree_dialog"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView_total_collected"
         app:layout_constraintTop_toBottomOf="@+id/textView_total_collected" />
@@ -194,7 +194,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprodisplay_semibold"
         android:text="@string/velg_antall"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="24sp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -276,17 +276,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_plant_tree_minus" />
 
-    <ImageView
-        android:id="@+id/imageView_three_divider_line"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/line"
-        app:layout_constraintBottom_toTopOf="@+id/textView_total_amount_three"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/mainBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_plant_tree_amount"
-        app:layout_constraintVertical_bias="0.666"
-        app:layout_constraintHorizontal_bias="0"
-        app:srcCompat="@drawable/ic_line" />
+        app:layout_constraintTop_toTopOf="@+id/whitebg">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
