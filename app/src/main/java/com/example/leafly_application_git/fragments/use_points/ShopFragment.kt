@@ -58,7 +58,7 @@ class ShopFragment : Fragment() {
             val dplayPurchasePrice = 500
 
             mDialogView.textView_price_dplay.text = "Pris: $dplayPurchasePrice"
-            mDialogView.textView_dplay_dialog_dplay.text = "Leie av 1 film på Viaplay"
+            mDialogView.textView_dplay_dialog_dplay.text = "Veksle inn Miljøpoeng mot leie av utvalgte filmer hos Viaplay."
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
                 .child(FirebaseAuth.getInstance().currentUser!!.uid)
@@ -158,7 +158,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textView_price_netflix.text = "Pris: $netflixPurchasePrice"
-            mDialogView.textView_netflix_dialog.text = "3 måneder gratis Netflix"
+            mDialogView.textView_netflix_dialog.text = "Netflix tilbyr et mektig omfang av serier. Med Miljøpoeng kan du få 3 mnd'er med tilgang til dine favoritt serier"
 
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -253,7 +253,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textView_price_odeon.text = "Pris: $odeonPurchasePrice"
-            mDialogView.textView_odeon_dialog.text = "Få 2 billetter til prisen av 1"
+            mDialogView.textView_odeon_dialog.text = "Ønsker du å se den nyeste filmen på kino? Her kan du kjøpe kinobillett hos Odeon kino og få med 1 billett på kjøpet"
 
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -349,7 +349,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textview_price_narvesen.text = "Pris: $narvesenPurchasePrice"
-            mDialogView.textview_narvesen_dialog.text = "Få en gratis pølse fra en Narvesen"
+            mDialogView.textview_narvesen_dialog.text = "Litt sulten? Bruk Miljøpoeng på en pølse hos Narvesen langs reisen din"
 
 
             val ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -444,7 +444,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textview_price_starbucks.text = "Pris: $starbucksPurchasePrice"
-            mDialogView.textview_starbucks_dialog.text = "Velg en valgfri kaffe fra Starbucks"
+            mDialogView.textview_starbucks_dialog.text = "Bruk dine Miljøpoeng på noe varmt eller kaldt i koppen hos Starbucks"
 
 
             val ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -538,7 +538,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textview_price_voi.text = "Pris: $voiPurchasePrice"
-            mDialogView.textview_voi_dialog.text = "Ingen start-avgift for en Voi-tur"
+            mDialogView.textview_voi_dialog.text = "Reis miljøvennlig fra A til Å med Voi sine sparkesykler"
 
 
             val ref = FirebaseDatabase.getInstance().getReference("/users")
