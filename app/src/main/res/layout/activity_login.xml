@@ -9,9 +9,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout_profile_title">
@@ -20,7 +21,7 @@
             android:id="@+id/button_login"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/sfprotext_bold"
             android:text="@string/log_in"
             android:textColor="@color/colorBlack"
@@ -34,37 +35,39 @@
             android:id="@+id/editText_email_login"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="32dp"
             android:autofillHints=""
+            android:paddingLeft="10dp"
+            android:background="@drawable/ic_input_style"
             android:ems="10"
             android:fontFamily="@font/sf_text"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:background="@drawable/ic_input_style"
+            android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         <EditText
             android:id="@+id/editText_password_login"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
             android:autofillHints=""
+            android:background="@drawable/ic_input_style"
             android:ems="10"
             android:fontFamily="@font/sf_text"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:background="@drawable/ic_input_style"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_email_login" />
+            app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
         <Button
             android:id="@+id/button_register"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/sfprotext_bold"
             android:text="Opprett ny profil"
             android:textColor="@color/colorBlack"
@@ -85,6 +88,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_register" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-post"
+            android:textColor="@color/mainBlack"
+            android:fontFamily="@font/sfprotext_bold"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Passord"
+            android:textSize="16dp"
+            android:textColor="@color/mainBlack"
+            android:fontFamily="@font/sfprotext_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_email_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -116,7 +142,7 @@
             android:layout_marginTop="10dp"
             android:text="Logg inn"
             android:textColor="@color/mainBlack"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:fontFamily="@font/sfprodisplay_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
