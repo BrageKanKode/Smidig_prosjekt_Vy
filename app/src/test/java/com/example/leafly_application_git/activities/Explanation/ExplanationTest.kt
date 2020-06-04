@@ -1,4 +1,4 @@
-package com.example.leafly_application_git.activities
+package com.example.leafly_application_git.activities.Explanation
 
 import android.content.Intent
 import android.view.View
@@ -71,3 +71,5 @@ class TestTesting {
     }
 
 }
+
+

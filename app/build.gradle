@@ -79,4 +79,7 @@ dependencies {
 
     //testing
     testImplementation 'org.robolectric:robolectric:4.3'
+    def fragment_version = "1.2.4"
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
+
 }

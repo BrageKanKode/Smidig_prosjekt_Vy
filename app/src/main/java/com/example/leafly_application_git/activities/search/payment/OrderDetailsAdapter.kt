@@ -44,7 +44,7 @@ class OrderDetailsAdapter(
 
             val testAlertDialog = diaBuilder.show()
 
-            val ticketPurchasePrice = 18000
+            val ticketPurchasePrice = price.toInt()*10
 
             payment_points.textView_price_in_points.text = ticketPurchasePrice.toString()
             payment_points.textView_from_to_values.text = "Fra $departure til $arrival"
