@@ -233,29 +233,29 @@ class MiljopointsFragment : Fragment() {
                 when (intentResult.contents) {
                     "Kaffe" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(3200, warmDrinkLogo, getStringRes?.getString(R.string.during_coffe), getStringRes?.getString(R.string.during_coffe_desc), "kaffe")
+                        createPopup(320, warmDrinkLogo, getStringRes?.getString(R.string.during_coffe), getStringRes?.getString(R.string.during_coffe_desc), "kaffe")
                     }
 
                     "Wrap" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(3200, eatLogo, getStringRes?.getString(R.string.during_wrap), getStringRes?.getString(R.string.during_wrap_desc), "wrap")
+                        createPopup(890, eatLogo, getStringRes?.getString(R.string.during_wrap), getStringRes?.getString(R.string.during_wrap_desc), "wrap")
                     }
 
                     "Te" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(3200, warmDrinkLogo, getStringRes?.getString(R.string.during_tea), getStringRes?.getString(R.string.during_tea_desc), "te")
+                        createPopup(320, warmDrinkLogo, getStringRes?.getString(R.string.during_tea), getStringRes?.getString(R.string.during_tea_desc), "te")
                     }
                     "Sandwich" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(5200, eatLogo, getStringRes?.getString(R.string.during_sandwich), getStringRes?.getString(R.string.during_sandwich_desc), "sandwich")
+                        createPopup(890, eatLogo, getStringRes?.getString(R.string.during_sandwich), getStringRes?.getString(R.string.during_sandwich_desc), "sandwich")
                     }
                     "Mineralvann" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(4200, coldDrinkLogo, getStringRes?.getString(R.string.during_soda), getStringRes?.getString(R.string.during_soda_desc), "brus")
+                        createPopup(420, coldDrinkLogo, getStringRes?.getString(R.string.during_soda), getStringRes?.getString(R.string.during_soda_desc), "brus")
                     }
                     "Smoothie" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(5200, coldDrinkLogo, getStringRes?.getString(R.string.during_smoothie), getStringRes?.getString(R.string.during_smoothie_desc), "smoothie")
+                        createPopup(520, coldDrinkLogo, getStringRes?.getString(R.string.during_smoothie), getStringRes?.getString(R.string.during_smoothie_desc), "smoothie")
                     }
                     "Falafel" -> {
                         val getStringRes = activity?.applicationContext?.resources
@@ -263,7 +263,7 @@ class MiljopointsFragment : Fragment() {
                     }
                     "Kjøttkaker" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(4200, eatLogo, getStringRes?.getString(R.string.during_meatcakes), getStringRes?.getString(R.string.during_meatcakes_desc), "kjøttkaker")
+                        createPopup(1690, eatLogo, getStringRes?.getString(R.string.during_meatcakes), getStringRes?.getString(R.string.during_meatcakes_desc), "kjøttkaker")
                     }
                     "Pulled Oumph" -> {
                         val getStringRes = activity?.applicationContext?.resources
@@ -271,7 +271,7 @@ class MiljopointsFragment : Fragment() {
                     }
                     "Indisk Curry" -> {
                         val getStringRes = activity?.applicationContext?.resources
-                        createPopup(4200, eatLogo, getStringRes?.getString(R.string.during_curry), getStringRes?.getString(R.string.during_curry_desc), "indisk curry")
+                        createPopup(1790, eatLogo, getStringRes?.getString(R.string.during_curry), getStringRes?.getString(R.string.during_curry_desc), "indisk curry")
                     } else -> {
                         Toast.makeText(activity as MainActivity, "Ikke gjenkjent Vy kode", Toast.LENGTH_SHORT).show()
                     }

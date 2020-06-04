@@ -34,7 +34,7 @@ object CombinedFunctionsClass {
                 user = p0.getValue(User::class.java)
                 var progress = user?.progress
                 var level = user?.level
-                val maxXp = 300
+                val maxXp = 8200
                 leveledUp = false
 
                 val convertedToPercent = progressAmount.div(maxXp) * 100.00

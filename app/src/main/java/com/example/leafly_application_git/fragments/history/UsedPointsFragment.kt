@@ -109,10 +109,10 @@ class UsedPointsFragment : Fragment() {
                         } else if (view.textView_display_new_item.text.toString().contains("kaffe på togturen")){
                             mDialogView.textView_your_cupon_text.text = "Kaffe - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "Kaffe-kupong til en av våre maskiner"
-                        }else if (view.textView_display_new_item.text.toString().contains("Wrap")){
+                        }else if (view.textView_display_new_item.text.toString().contains("wrap")){
                             mDialogView.textView_your_cupon_text.text = "Wrap - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "Wrap-kupong til en av våre maskiner eller togets cafe"
-                        }else if (view.textView_display_new_item.text.toString().contains("Te")){
+                        }else if (view.textView_display_new_item.text.toString().contains("Du kjøpte 1 te")){
                             mDialogView.textView_your_cupon_text.text = "Te - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "Te-kupong til en av våre maskiner eller togets cafe"
                         }else if (view.textView_display_new_item.text.toString().contains("sandwich")){
@@ -244,10 +244,10 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("kaffe på togturen")){
                 rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
                 rootView.textView_display_used_history_price.text = "-320"
-            } else if (rootView.textView_display_new_item.text.toString().contains("Wrap")){
+            } else if (rootView.textView_display_new_item.text.toString().contains("wrap")){
                 rootView.imageView_used_history_image.setImageResource(eatLogo)
                 rootView.textView_display_used_history_price.text = "-890"
-            } else if (rootView.textView_display_new_item.text.toString().contains("Te")) {
+            } else if (rootView.textView_display_new_item.text.toString().contains("Du kjøpte 1 te")) {
                 rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
                 rootView.textView_display_used_history_price.text = "-420"
             }else if (rootView.textView_display_new_item.text.toString().contains("sandwich")) {
