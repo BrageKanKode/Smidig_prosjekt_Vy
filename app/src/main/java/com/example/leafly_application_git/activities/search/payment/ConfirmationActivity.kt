@@ -101,7 +101,7 @@ class ConfirmationActivity : AppCompatActivity() {
                 var progress = CombinedFunctionsClass.user?.progress
                 var level = CombinedFunctionsClass.user?.level
                 val maxXp = 8200
-                val progressAmount = 50.00
+                val progressAmount = intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY).toDouble()
 
                 incrementProgress(progressAmount)
 
