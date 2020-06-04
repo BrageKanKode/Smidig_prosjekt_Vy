@@ -4,19 +4,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/textView_explanation_use_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/sf_display"
+        android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/hvordan_bruke_milj_poeng"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,10 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/sf_display"
+        android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/contribute_title"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
+        android:textColor="@color/mainBlack"
         app:layout_constraintStart_toStartOf="@+id/textView_explanation_use_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_explanation_use_title" />
 
@@ -37,9 +37,9 @@
         android:layout_width="334dp"
         android:layout_height="125dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_regular"
         android:text="@string/contribute_dialog"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         app:layout_constraintStart_toStartOf="@+id/textView_explanation_use_under_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_explanation_use_under_title" />
 
@@ -48,11 +48,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/sf_display"
+        android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/niv_basert_poeng"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView_explanation_use_dialog"
         app:layout_constraintTop_toBottomOf="@+id/textView_explanation_use_dialog" />
 
@@ -61,10 +60,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_bold"
         android:text="@string/plant_et_tre"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
+        android:textColor="@color/mainBlack"
         app:layout_constraintStart_toStartOf="@+id/textView_explanation_second_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_explanation_second_title" />
 
@@ -73,10 +71,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_bold"
         android:text="@string/rydd_plast"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
+        android:textColor="@color/mainBlack"
         app:layout_constraintStart_toStartOf="@+id/textView_explanation_plant_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_explanation_plant_title" />
 
@@ -92,7 +89,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_4_800_poeng"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
+        android:fontFamily="@font/sfprotext_regular"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_plant_title"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_plant_title" />
@@ -102,7 +100,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_5_700_poeng"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
+        android:fontFamily="@font/sfprotext_regular"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_clean_title"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_clean_title" />
