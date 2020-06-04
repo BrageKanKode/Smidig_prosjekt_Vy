@@ -23,7 +23,7 @@ class TestTesting {
 
         val carView = com.example.leafly_application_git.R.id.cardView_explanation_how_many
 
-        activity.findViewById<View>(carView).performClick();
+        activity.findViewById<View>(carView).performClick()
 
         val expectedIntent = Intent(activity, ExplanationEarningActivity::class.java)
         val actual: Intent = Shadows.shadowOf(RuntimeEnvironment.application).nextStartedActivity
@@ -37,7 +37,7 @@ class TestTesting {
 
         val carView = com.example.leafly_application_git.R.id.cardView_explanation_use_points
 
-        activity.findViewById<View>(carView).performClick();
+        activity.findViewById<View>(carView).performClick()
 
         val expectedIntent = Intent(activity, ExplanationUseActivity::class.java)
         val actual: Intent = Shadows.shadowOf(RuntimeEnvironment.application).nextStartedActivity
@@ -50,7 +50,7 @@ class TestTesting {
 
         val carView = com.example.leafly_application_git.R.id.carView_explanation_spend_on
 
-        activity.findViewById<View>(carView).performClick();
+        activity.findViewById<View>(carView).performClick()
 
         val expectedIntent = Intent(activity, ExplanationQuestionActivity::class.java)
         val actual: Intent = Shadows.shadowOf(RuntimeEnvironment.application).nextStartedActivity
