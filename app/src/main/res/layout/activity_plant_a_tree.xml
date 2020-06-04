@@ -13,6 +13,7 @@
         android:text="@string/plant_et_tre"
         android:textColor="@color/colorBlack"
         android:textSize="36sp"
+        android:fontFamily="@font/sfprodisplay_semibold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
@@ -30,6 +31,8 @@
         android:backgroundTint="@color/colorPrimary"
         android:text="@string/plant_a_tree"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/sfprodisplay_semibold"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -102,6 +105,7 @@
         android:text="@string/plant_a_tree_dialog"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
+        android:fontFamily="@font/sfprotext_regular"
         app:layout_constraintStart_toStartOf="@+id/textView_total_collected"
         app:layout_constraintTop_toBottomOf="@+id/textView_total_collected" />
 
@@ -109,7 +113,7 @@
         android:id="@+id/textView_prefixed_string_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_display"
+        android:fontFamily="@font/sfprodisplay_semibold"
         android:text="@string/velg_antall"
         android:textColor="@color/colorBlack"
         android:textSize="24sp"
@@ -183,87 +187,11 @@
         android:text="1"
         android:textColor="@color/colorBlack"
         android:textSize="48sp"
+        android:fontFamily="@font/sfprodisplay_semibold"
         app:layout_constraintBottom_toBottomOf="@+id/btn_plant_tree_minus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_plant_tree_minus" />
-
-    <ImageView
-        android:id="@+id/imageView_background_forrest"
-        android:layout_width="181dp"
-        android:layout_height="173dp"
-        android:layout_marginTop="28dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_currency_show"
-        app:srcCompat="@drawable/ic_hill_green_background" />
-
-    <ImageView
-        android:id="@+id/imageView_stem_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_background_forrest"
-        app:layout_constraintStart_toStartOf="@+id/imageView_background_forrest"
-        app:layout_constraintTop_toTopOf="@+id/textView_prefix_text_string"
-        app:srcCompat="@drawable/ic_tree_stem" />
-
-    <ImageView
-        android:id="@+id/imageView_stem_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintStart_toEndOf="@+id/imageView_stem_one"
-        app:layout_constraintTop_toTopOf="@+id/imageView_stem_one"
-        app:srcCompat="@drawable/ic_tree_stem" />
-
-    <ImageView
-        android:id="@+id/imageView_stem_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_two"
-        app:layout_constraintStart_toEndOf="@+id/imageView_stem_two"
-        app:srcCompat="@drawable/ic_tree_stem" />
-
-    <ImageView
-        android:id="@+id/imageView_three_top_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_one"
-        app:layout_constraintStart_toEndOf="@+id/textView_prefix_text_string"
-        app:srcCompat="@drawable/ic_tree_top_one" />
-
-    <ImageView
-        android:id="@+id/imageView_three_top_two"
-        android:layout_width="41dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_three"
-        app:layout_constraintStart_toEndOf="@+id/imageView_three_top_one"
-        app:srcCompat="@drawable/ic_tree_top_three" />
-
-    <ImageView
-        android:id="@+id/imageView_three_top_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_two"
-        app:layout_constraintStart_toEndOf="@+id/textView_prefix_text_string"
-        app:srcCompat="@drawable/ic_tree_top_two" />
 
     <ImageView
         android:id="@+id/imageView_three_divider_line"
@@ -276,5 +204,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_plant_tree_amount"
         app:layout_constraintVertical_bias="0.666"
         app:srcCompat="@drawable/ic_line" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_plant_a_tree"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="80dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
