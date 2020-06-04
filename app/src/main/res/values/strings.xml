@@ -262,6 +262,7 @@
     <string name="tree_cupon_info_box">Ved å plante et tre har du donert til treplanting i Regnskogen. Takk for ditt viktige bidrag. Les mer om prosessen på: www.example.com</string>
     <string name="ocean_clean_info_box">Ved å rydde plast i havet har du donert til sjørensing i verdens hav. Takk for ditt viktige bidrag. Les mer om prosessen på: www.example.com</string>
     <string name="gratulerer">Gratulerer!</string>
+    <string name="disp_poeng_text">Disp. poeng</string>
 
 
 </resources>
