@@ -91,7 +91,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:text="Kupongen brukes i til bestilling blabla i den nettbutikken du har kjøpt verdi hos. Kan kun brukes 1 gang."
+        android:text="@string/kupongen_brukes_i_til_bestilling_blabla_i_den_nettbutikken_du_har_kj_pt_verdi_hos_kan_kun_brukes_1_gang"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

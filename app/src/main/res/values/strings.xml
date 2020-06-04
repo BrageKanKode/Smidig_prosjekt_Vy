@@ -264,6 +264,7 @@
     <string name="gratulerer">Gratulerer!</string>
     <string name="disp_poeng_text">Disp. poeng</string>
     <string name="ditt_medlemsniv">Ditt medlemsnivå</string>
+    <string name="kupongen_brukes_i_til_bestilling_blabla_i_den_nettbutikken_du_har_kj_pt_verdi_hos_kan_kun_brukes_1_gang">Kupongen innløses hos valgt forhandler når du handler i nettbutikken. Kan kun brukes en gang</string>
 
 
 </resources>
