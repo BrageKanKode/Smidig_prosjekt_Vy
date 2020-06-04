@@ -14,21 +14,16 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
-import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.cupon_dialog.*
 import kotlinx.android.synthetic.main.cupon_dialog.view.*
 import kotlinx.android.synthetic.main.tree_cupon_dialog.view.*
-import kotlinx.android.synthetic.main.used_history_row.*
 import kotlinx.android.synthetic.main.used_history_row.view.*
 import kotlinx.android.synthetic.main.used_history_row.view.textView_display_new_item
-import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -45,7 +40,7 @@ class UsedPointsFragment : Fragment() {
         val usedHistoryList = ArrayList<String>()
 
 
-        var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid).child("/usedHistory/")
+        val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid).child("/usedHistory/")
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
 

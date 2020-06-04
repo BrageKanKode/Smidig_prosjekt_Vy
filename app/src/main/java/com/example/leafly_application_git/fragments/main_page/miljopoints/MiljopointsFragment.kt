@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProviders
+import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass.verifyIfUserIsLoggedIn
 import com.example.leafly_application_git.activities.MainActivity
@@ -19,14 +20,12 @@ import com.example.leafly_application_git.activities.explanation.ExplanationActi
 import com.example.leafly_application_git.activities.miljopoints.MembershipBenefitsActivity
 import com.example.leafly_application_git.activities.miljopoints.progression.ProgressionActivity
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
-import com.example.leafly_application_git.fragments.history.UsedPointsFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.before_scan_dialog.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.button_scan_dialog
 import kotlinx.android.synthetic.main.fragment_miljopoints.*
@@ -158,7 +157,7 @@ class MiljopointsFragment : Fragment() {
         val btnText = "Betal"
 
         //Inflate popup
-        var mDialogView = LayoutInflater.from(activity as MainActivity)
+        var mDialogView = LayoutInflater.from(context)
             .inflate(R.layout.before_scan_dialog, null)
         var mBuilder = AlertDialog.Builder(activity as MainActivity)
             .setView(mDialogView)
@@ -178,8 +177,8 @@ class MiljopointsFragment : Fragment() {
 
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
-                user = p0.getValue(User::class.java)
-                var balance = user?.balance
+                CombinedFunctionsClass.user = p0.getValue(User::class.java)
+                var balance = CombinedFunctionsClass.user?.balance
 
                 //Set users balance on screen
                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
@@ -188,7 +187,7 @@ class MiljopointsFragment : Fragment() {
                 mDialogView.button_scan_dialog.setOnClickListener {
                     mAlertDialog2.dismiss()
                     if(balance!! >= price) {
-                        mDialogView = LayoutInflater.from(activity as MainActivity)
+                        mDialogView = LayoutInflater.from(context)
                             .inflate(R.layout.purchase_done_dialog, null)
                         mBuilder = AlertDialog.Builder(activity as MainActivity)
                             .setView(mDialogView)
@@ -204,7 +203,7 @@ class MiljopointsFragment : Fragment() {
                         balance = balance?.minus(price)
                         ref.child("/balance").setValue(balance)
                     } else {
-                        Toast.makeText(activity as MainActivity, "Not enough points to do that", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Not enough points to do that", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -214,7 +213,6 @@ class MiljopointsFragment : Fragment() {
             }
         }
         ref.addListenerForSingleValueEvent(menuListener)
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -227,8 +225,6 @@ class MiljopointsFragment : Fragment() {
         if(intentResult != null) {
             //If the content of the QR code has anything
             if(intentResult.contents != null) {
-                val ref = FirebaseDatabase.getInstance().getReference("/users")
-                    .child(FirebaseAuth.getInstance().currentUser!!.uid)
                 //If the QR code has a text content of
                 when (intentResult.contents) {
                     "Kaffe" -> {

@@ -1,9 +1,12 @@
 package com.example.leafly_application_git
 
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -15,8 +18,10 @@ import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.textView_points
+import kotlinx.android.synthetic.main.before_scan_dialog.view.*
 import kotlinx.android.synthetic.main.list_choose_time_row.view.*
 import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
+import kotlinx.android.synthetic.main.purchase_done_dialog.view.*
 
 
 object CombinedFunctionsClass {
@@ -28,7 +33,7 @@ object CombinedFunctionsClass {
 
 
     fun incrementProgress(progressAmount : Double) {
-    var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
+    val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
@@ -103,8 +108,6 @@ object CombinedFunctionsClass {
             view.textView_confirmation_points_new.visibility = View.GONE
             view.textView_points_text.visibility = View.GONE
         }
-
-
     }
 
     fun leveledUp(): Boolean{
