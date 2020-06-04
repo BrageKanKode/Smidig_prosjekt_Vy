@@ -44,7 +44,7 @@ class PlantTreeActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
-                val treePrice = 50
+                val treePrice = 100
                 var treeAmount = 1
                 var totalTreeSum = treePrice
 
