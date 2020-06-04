@@ -12,7 +12,9 @@
         android:theme="@style/AppTheme">
 
         <!-- The below is for the splash screen and we need no action bar and the default theme -->
-        <activity android:name=".activities.SplashScreenActivity"
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +23,12 @@
         </activity>
 
 
-
         <!-- Main page with bottom navigation bar -->
         <activity
             android:name=".activities.MainActivity"
-            android:label="@string/app_name" android:launchMode="singleTop">
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -33,141 +36,212 @@
 
         <!-- Explanation on points -->
         <activity
-            android:name=".activities.explanation.ExplanationActivity" android:label="Points Explanation" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+            android:name=".activities.explanation.ExplanationActivity"
+            android:label="Points Explanation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
         <activity
-            android:name=".activities.explanation.ExplanationQuestionActivity" android:label="@string/hva_kan_jeg_bruke_poengene_p" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.explanation.ExplanationActivity"/>
+            android:name=".activities.explanation.ExplanationQuestionActivity"
+            android:label="@string/hva_kan_jeg_bruke_poengene_p"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity" />
         </activity>
 
         <activity
-            android:name=".activities.explanation.ExplanationEarningActivity" android:label="@string/hvor_mange_poeng_f_r_jeg" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.explanation.ExplanationActivity"/>
+            android:name=".activities.explanation.ExplanationEarningActivity"
+            android:label="@string/hvor_mange_poeng_f_r_jeg"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity" />
         </activity>
 
         <activity
-            android:name=".activities.explanation.ExplanationTravelActivity" android:label="@string/reise_med_poengene" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.explanation.ExplanationActivity"/>
+            android:name=".activities.explanation.ExplanationTravelActivity"
+            android:label="@string/reise_med_poengene"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity" />
         </activity>
 
         <activity
-            android:name=".activities.explanation.ExplanationUseActivity" android:label="@string/hvordan_bruke_milj_poeng" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.explanation.ExplanationActivity"/>
+            android:name=".activities.explanation.ExplanationUseActivity"
+            android:label="@string/hvordan_bruke_milj_poeng"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explanation.ExplanationActivity" />
         </activity>
-
 
 
         <!-- Select travel page -->
         <activity
-            android:name=".activities.search.SelectTravelActivity" android:label="@string/choose_from" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+            android:name=".activities.search.SelectTravelActivity"
+            android:label="@string/choose_from"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
         <!-- Select travel time page -->
         <activity
-            android:name="com.example.leafly_application_git.activities.search.trip.SelectTimeActivity" android:label="@string/choose_time" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.search.SelectTravelActivity"/>
+            android:name="com.example.leafly_application_git.activities.search.trip.SelectTimeActivity"
+            android:label="@string/choose_time"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.search.SelectTravelActivity" />
 
         </activity>
 
 
         <!-- Travel details page -->
         <activity
-            android:name="com.example.leafly_application_git.activities.search.trip.TravelDetailActivity" android:label="@string/title_travel_details" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.leafly_application_git.activities.search.trip.SelectTimeActivity"/>
+            android:name="com.example.leafly_application_git.activities.search.trip.TravelDetailActivity"
+            android:label="@string/title_travel_details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.leafly_application_git.activities.search.trip.SelectTimeActivity" />
         </activity>
 
         <!-- Payment page -->
         <activity
-            android:name="com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity" android:label="@string/order_detail_label" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity"/>
+            android:name="com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity"
+            android:label="@string/order_detail_label"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.leafly_application_git.activities.search.payment.OrderDetailsActivity" />
 
         </activity>
 
         <!-- Payment Splashscreen -->
-        <activity android:name="com.example.leafly_application_git.activities.search.payment.SplashScreenPaymentActivity"
-            android:theme="@style/SplashTheme">
-        </activity>
+        <activity
+            android:name="com.example.leafly_application_git.activities.search.payment.SplashScreenPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
 
         <!-- Payment comfirmation -->
         <activity
-            android:name="com.example.leafly_application_git.activities.search.payment.ConfirmationActivity" android:label="@string/finished_purchase_label" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+            android:name="com.example.leafly_application_git.activities.search.payment.ConfirmationActivity"
+            android:label="@string/finished_purchase_label"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
         <!-- Membership benefits overview -->
         <activity
-            android:name=".activities.miljopoints.MembershipBenefitsActivity" android:label="@string/member_benefits_label" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+            android:name=".activities.miljopoints.MembershipBenefitsActivity"
+            android:label="@string/member_benefits_label"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
 
         </activity>
 
         <!-- Use points activity with fragments attatched -->
         <activity
-            android:name=".activities.miljopoints.usePoints.UsePointsActivity" android:label="@string/use_points_label" android:launchMode="singleTop">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+            android:name=".activities.miljopoints.usePoints.UsePointsActivity"
+            android:label="@string/use_points_label"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
 
         <!-- Plant a tree page -->
         <activity
-            android:name=".activities.miljopoints.usePoints.saveTheWorld.PlantTreeActivity" android:label="@string/plant_a_tree_label">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.usePoints.UsePointsActivity"/>
+            android:name=".activities.miljopoints.usePoints.saveTheWorld.PlantTreeActivity"
+            android:label="@string/plant_a_tree_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.usePoints.UsePointsActivity" />
         </activity>
 
         <!-- Clean the ocean page -->
         <activity
-            android:name=".activities.miljopoints.usePoints.saveTheWorld.CleanOceanActivity" android:label="@string/clean_the_ocean_label">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.usePoints.UsePointsActivity"/>
+            android:name=".activities.miljopoints.usePoints.saveTheWorld.CleanOceanActivity"
+            android:label="@string/clean_the_ocean_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.usePoints.UsePointsActivity" />
         </activity>
 
         <!-- Progression details page -->
         <activity
-            android:name=".activities.miljopoints.progression.ProgressionActivity" android:label="@string/progression_label">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+            android:name=".activities.miljopoints.progression.ProgressionActivity"
+            android:label="@string/progression_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
         <!-- See the tree grow page -->
         <activity
-            android:name=".activities.miljopoints.progression.GrowingTreeActivity" android:label="@string/growing_tree_label">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.progression.ProgressionActivity"/>
+            android:name=".activities.miljopoints.progression.GrowingTreeActivity"
+            android:label="@string/growing_tree_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.progression.ProgressionActivity" />
         </activity>
 
         <!-- History activity with fragments attached -->
         <activity
-            android:name=".activities.miljopoints.progression.HistoryActivity" android:label="@string/history_label">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.progression.ProgressionActivity"/>
+            android:name=".activities.miljopoints.progression.HistoryActivity"
+            android:label="@string/history_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.miljopoints.progression.ProgressionActivity" />
         </activity>
 
         <!-- Sign up page -->
-        <activity android:name=".activities.authentication.SignUpActivity" android:label="Sign Up">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+        <activity
+            android:name=".activities.authentication.SignUpActivity"
+            android:label="Sign Up"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
         <!-- Log in page -->
-        <activity android:name=".activities.authentication.LoginActivity" android:label="Log in">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+        <activity
+            android:name=".activities.authentication.LoginActivity"
+            android:label="Log in"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
         <!-- QR code page -->
@@ -175,8 +249,9 @@
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
 
         <meta-data
