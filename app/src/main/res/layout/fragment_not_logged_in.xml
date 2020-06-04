@@ -112,7 +112,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView8"
+        android:id="@+id/cardView_fragment_membership_benefits"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -158,9 +158,9 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="7dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView8"
-        app:layout_constraintStart_toStartOf="@+id/cardView8"
-        app:layout_constraintTop_toBottomOf="@+id/cardView8">
+        app:layout_constraintEnd_toEndOf="@+id/cardView_fragment_membership_benefits"
+        app:layout_constraintStart_toStartOf="@+id/cardView_fragment_membership_benefits"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_fragment_membership_benefits">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

@@ -111,6 +111,12 @@ class MiljopointsFragment : Fragment() {
                     Intent(requireActivity(), ExplanationActivity::class.java)
                 )
             }
+
+            root.cardView_fragment_membership_benefits.setOnClickListener {
+                requireActivity().startActivity(
+                    Intent(requireActivity(), MembershipBenefitsActivity::class.java)
+                )
+            }
         }
 
 
