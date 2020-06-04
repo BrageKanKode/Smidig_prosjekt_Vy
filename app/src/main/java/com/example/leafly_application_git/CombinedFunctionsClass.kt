@@ -2,11 +2,15 @@ package com.example.leafly_application_git
 
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat.startActivity
+import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.User
+import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -162,6 +166,13 @@ object CombinedFunctionsClass {
                         }
 
                          */
+
+                        mDialogView.button_purchase_view_cupon.setOnClickListener {
+                            val intent = Intent (context, HistoryActivity::class.java)
+                            context.startActivity(intent)
+                        }
+
+
 
                         mDialogView.button_purchase_keep_shopping_shop.setOnClickListener {
                             mAlertDialog.dismiss()

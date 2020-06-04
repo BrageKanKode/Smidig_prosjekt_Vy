@@ -47,6 +47,7 @@ class DuringTripFragment : Fragment() {
 
         mDialogView.button_scan_dialog.setOnClickListener {
             scanFromFragment()
+            mAlertDialog.dismiss()
         }
 
         val ref = FirebaseDatabase.getInstance().getReference("/users")
