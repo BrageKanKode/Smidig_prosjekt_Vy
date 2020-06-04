@@ -253,7 +253,7 @@ class ShopFragment : Fragment() {
 
 
             mDialogView.textView_price_odeon.text = "Pris: $odeonPurchasePrice"
-            mDialogView.textView_odeon_dialog.text = "Ønsker du å se den nyeste filmen på kino? Her kan du kjøpe kinobillett hos Odeon kino og få med 1 billett på kjøpet"
+            mDialogView.textView_odeon_dialog.text = "Ønsker du å se den nyeste filmen på kino? Her kan du kjøpe kinobillett hos Odeon kino"
 
 
             var ref = FirebaseDatabase.getInstance().getReference("/users")
@@ -263,7 +263,7 @@ class ShopFragment : Fragment() {
                     user = p0.getValue(User::class.java)
                     var balance = user?.balance
                     var usedHistory =
-                        "Du kjøpte Odeon 2-for-1 kinobilett"
+                        "Du kjøpte Odeon kinobilett"
                     mDialogView.textView_currency_odeon.text = "Saldo: " + balance.toString()
 
 
@@ -439,7 +439,7 @@ class ShopFragment : Fragment() {
 
             val mAlertDialog = mBuilder.show()
 
-            val starbucksPurchasePrice = 200
+            val starbucksPurchasePrice = 450
 
 
 
