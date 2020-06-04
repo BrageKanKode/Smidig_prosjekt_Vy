@@ -135,7 +135,7 @@ class SearchFragment : Fragment() {
             @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
-                textView_search_fragmen_headline_text?.text = "God Dag " + user?.username
+                textView_search_fragmen_headline_text?.text = "God dag " + user?.username
 
             }
 
