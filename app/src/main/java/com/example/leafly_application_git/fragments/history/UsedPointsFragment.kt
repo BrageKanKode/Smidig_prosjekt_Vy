@@ -42,6 +42,7 @@ class UsedPointsFragment : Fragment() {
 
         val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid).child("/usedHistory/")
         val menuListener = object : ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
 
                 for (childSnapshot: DataSnapshot in p0.children){
@@ -192,7 +193,7 @@ class UsedPointsFragment : Fragment() {
         val coldDrinkLogo = R.drawable.ic_local_drink_24px
 
         //rendering out each row
-        @SuppressLint("ViewHolder")
+        @SuppressLint("ViewHolder", "SetTextI18n")
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val rootView: View = LayoutInflater.from(mContext).inflate(R.layout.used_history_row, parent, false)
             val usedPointsList = rootView.findViewById<TextView>(R.id.textView_display_new_item)
@@ -231,11 +232,15 @@ class UsedPointsFragment : Fragment() {
             } else if (rootView.textView_display_new_item.text.toString().contains("tre") || rootView.textView_display_new_item.text.toString().contains("trær")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
-//                rootView.textView_display_used_history_price.text = "-100"
+                val value = usedPointsList.text.toString().replace("[^0-9]".toRegex(), "")
+                val intvalue = value.substring(1)
+                rootView.textView_display_used_history_price.text = "-$intvalue"
             } else if (rootView.textView_display_new_item.text.toString().contains("vannrensing")){
                 val plasticDrawable = R.drawable.ic_plast
                 rootView.imageView_used_history_image.setImageResource(plasticDrawable)
-                //rootView.textView_display_used_history_price.text = "-100"
+                val value = usedPointsList.text.toString().replace("[^0-9]".toRegex(), "")
+                val intvalue = value.substring(1)
+                rootView.textView_display_used_history_price.text = "-$intvalue"
             } else if (rootView.textView_display_new_item.text.toString().contains("kaffe på togturen")){
                 rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
                 rootView.textView_display_used_history_price.text = "-320"

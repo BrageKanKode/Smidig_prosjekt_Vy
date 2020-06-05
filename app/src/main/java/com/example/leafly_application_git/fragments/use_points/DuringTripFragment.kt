@@ -63,9 +63,6 @@ class DuringTripFragment : Fragment() {
 
                 mDialogView.textView_balance_current_before_scan.text = balance
 
-
-
-
             }
 
             override fun onCancelled(p0: DatabaseError) {
@@ -280,16 +277,9 @@ class DuringTripFragment : Fragment() {
     }
 
 
-
-
-
-
     private fun scanFromFragment() {
         IntentIntegrator.forSupportFragment(this).setBeepEnabled(false).initiateScan()
     }
-
-
-
 
 
 }

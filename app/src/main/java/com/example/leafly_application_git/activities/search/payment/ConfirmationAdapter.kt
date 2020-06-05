@@ -10,15 +10,12 @@ import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.MainActivity
 import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
-import java.text.SimpleDateFormat
-import java.time.Month
 import java.util.*
 
 class ConfirmationAdapter (
     private val departure: String,
     private val arrival: String,
     private val departureTime: String,
-    private val price: String,
     private val points: String
 ): RecyclerView.Adapter<ViewConfirmation>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewConfirmation {
@@ -40,7 +37,6 @@ class ConfirmationAdapter (
     override fun onBindViewHolder(holder: ViewConfirmation, position: Int) {
 
         val date = Calendar.getInstance()
-        val year = date.get(Calendar.YEAR)
         val month = date.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale("NOR"))
         val dayInNumber = date.get(Calendar.DAY_OF_MONTH)
         val dayString = date.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale("NOR"))
