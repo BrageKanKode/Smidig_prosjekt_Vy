@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey">
 
 <!--    <include-->
 <!--        android:id="@+id/nav_view"-->
@@ -17,170 +18,207 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:menu="@menu/bottom_nav_menu" />-->
 
-
-    <Button
-        android:id="@+id/btnToPayment"
-        android:layout_width="0dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#00957A"
-        android:text="@string/til_betaling"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_travel_order_rectangle" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView_from"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView_departure_time"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_from"
-        app:layout_constraintTop_toBottomOf="@+id/textView_from" />
+            <!-- reiseinfo -->
+            <TextView
+                android:id="@+id/textView_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sfprotext_regular"
+                android:textColor="@color/mainBlack"
+                android:textSize="20sp"
+                android:text="Fra x til x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_price_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/pt_sans"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toEndOf="@+id/textView_travel_detail_voksen_string"
-        app:layout_constraintTop_toTopOf="@+id/textView_travel_detail_voksen_string" />
+            <TextView
+                android:id="@+id/textView_departure_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sf_text"
+                android:textColor="@color/colorBlack"
+                android:text="Tid her"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView_from"
+                app:layout_constraintTop_toBottomOf="@+id/textView_from" />
 
-    <ImageView
-        android:id="@+id/imageView_travel_order_line_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/line"
-        app:layout_constraintStart_toStartOf="@+id/textView_departure_time"
-        app:layout_constraintTop_toBottomOf="@+id/textView_departure_time"
-        app:srcCompat="@drawable/ic_line" />
+            <!-- line seperator -->
+            <FrameLayout
+                android:id="@+id/line_seperator1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/greyShadeDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_departure_time" />
 
-    <ImageView
-        android:id="@+id/imageView_not_logged_in_arrow_two"
-        android:layout_width="49dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/vy_logo_splash"
-        app:layout_constraintStart_toStartOf="@+id/imageView_travel_order_line_one"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_travel_order_line_one"
-        app:srcCompat="@drawable/ic_vy_logo_final_primary" />
+            <!-- enkeltbillett med logo -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_seperator1">
 
-    <TextView
-        android:id="@+id/textView_travel_order_headline_string"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/sf_display"
-        android:text="@string/enkeltbillet"
-        android:textColor="@color/colorBlack"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView_not_logged_in_arrow_two"
-        app:layout_constraintTop_toTopOf="@+id/imageView_not_logged_in_arrow_two" />
+                <ImageView
+                    android:id="@+id/imageView_not_logged_in_arrow_two"
+                    android:layout_width="49dp"
+                    android:layout_height="38dp"
+                    android:contentDescription="@string/vy_logo_splash"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_vy_logo_final_primary" />
 
-    <ImageView
-        android:id="@+id/imageView_travel_order_line_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/line"
-        app:layout_constraintStart_toStartOf="@+id/imageView_travel_order_line_one"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_not_logged_in_arrow_two"
-        app:srcCompat="@drawable/ic_line" />
+                <TextView
+                    android:id="@+id/textView_travel_order_headline_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/sfprotext_semibold"
+                    android:text="@string/enkeltbillet"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_not_logged_in_arrow_two"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_travel_detail_travelers_string"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
-        android:text="@string/travelers"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/imageView_travel_order_line_two"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_travel_order_line_two" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView_travel_detail_voksen_string"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/sf_text"
-        android:text="@string/voksen"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_travel_detail_travelers_string"
-        app:layout_constraintTop_toBottomOf="@+id/textView_travel_detail_travelers_string" />
+            <!-- line seperator -->
+            <FrameLayout
+                android:id="@+id/line_seperator2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/greyShadeDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 
-    <TextView
-        android:id="@+id/textView_travel_order_ticket_type_string"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
-        android:text="@string/enkeltbillet"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_travel_detail_voksen_string"
-        app:layout_constraintTop_toBottomOf="@+id/textView_travel_detail_voksen_string" />
 
-    <ImageView
-        android:id="@+id/imageView_travel_order_line_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/line"
-        app:layout_constraintStart_toStartOf="@+id/textView_travel_order_ticket_type_string"
-        app:layout_constraintTop_toBottomOf="@+id/textView_travel_order_ticket_type_string"
-        app:srcCompat="@drawable/ic_line" />
+            <TextView
+                android:id="@+id/textView_travel_detail_travelers_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sfprotext_regular"
+                android:text="@string/travelers"
+                android:textColor="@color/mainBlack"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_seperator2" />
 
-    <TextView
-        android:id="@+id/textView_travel_order_totalpris_string"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
-        android:text="@string/total_pris"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView_travel_order_line_three"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_travel_order_line_three" />
+            <TextView
+                android:id="@+id/textView_travel_detail_voksen_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sfprotext_regular"
+                android:text="@string/voksen"
+                android:textColor="@color/mainBlack"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textView_travel_detail_travelers_string"
+                app:layout_constraintTop_toBottomOf="@+id/textView_travel_detail_travelers_string" />
 
+            <TextView
+                android:id="@+id/textView_travel_order_ticket_type_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/sfprotext_regular"
+                android:text="@string/enkeltbillet"
+                android:textColor="@color/mainBlack"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView_travel_detail_voksen_string"
+                app:layout_constraintTop_toBottomOf="@+id/textView_travel_detail_voksen_string" />
+
+            <TextView
+                android:id="@+id/textView_price_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprotext_regular"
+                android:textColor="@color/mainBlack"
+                android:text="120"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_travel_detail_voksen_string" />
+
+            <!-- line seperator -->
+            <FrameLayout
+                android:id="@+id/line_seperator3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/greyShadeDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_travel_order_ticket_type_string" />
+
+            <!-- total price -->
+            <TextView
+                android:id="@+id/textView_travel_order_totalpris_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sfprotext_semibold"
+                android:text="@string/total_pris"
+                android:textColor="@color/mainBlack"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_seperator3" />
+
+            <TextView
+                android:id="@+id/textView_price_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprotext_semibold"
+                android:textColor="@color/mainBlack"
+                android:textSize="20dp"
+                android:text="120"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_travel_order_totalpris_string"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_travel_order_totalpris_string" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <!-- eco points -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_confirmation"
         android:layout_width="413dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        app:cardBackgroundColor="#CBEAE4"
+        android:layout_height="45dp"
+        app:cardBackgroundColor="@color/greenShade"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_travel_order_totalpris_string">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="411dp"
@@ -190,109 +228,125 @@
                 android:id="@+id/textView_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/sf_text"
-                android:textColor="#00685E"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView_travel_order_leaf"
-                app:layout_constraintStart_toEndOf="@+id/imageView_travel_order_leaf" />
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/sfprotext_regular"
+                android:textColor="@color/mainBlack"
+                android:text="Du oppnår x poeng for denne reisen"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView_travel_order_leaf"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView_travel_order_leaf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="20dp"
                 android:contentDescription="@string/leaf_image"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.642"
-                app:srcCompat="@drawable/ic_vector_leaf" />
+                app:srcCompat="@drawable/ic_eco_black_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/textView_price_two"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/pt_sans"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_travel_order_totalpris_string"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.823"
-        app:layout_constraintStart_toEndOf="@+id/textView_travel_order_totalpris_string" />
-
-    <ImageView
-        android:id="@+id/imageView_travel_order_rectangle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/rectangle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_travel_order_payment_method_text"
-        app:srcCompat="@drawable/ic_rectangle_197" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView_confirmation">
 
-    <ImageView
-        android:id="@+id/imageView_travel_order_vipps_option"
-        android:layout_width="139dp"
-        android:layout_height="76dp"
-        android:contentDescription="@string/vipps_logo_option"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_travel_order_rectangle"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_travel_order_rectangle"
-        app:layout_constraintStart_toStartOf="@+id/imageView_travel_order_rectangle"
-        app:layout_constraintTop_toTopOf="@+id/imageView_travel_order_rectangle"
-        app:srcCompat="@mipmap/ic_vipps_foreground" />
+        <TextView
+            android:id="@+id/textView_travel_order_payment_method_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:text="@string/payment_option"
+            android:textColor="@color/mainBlack"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_travel_order_payment_method_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_display"
-        android:text="@string/payment_option"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        <!-- vipps payment -->
+        <ImageView
+            android:id="@+id/imageView_travel_order_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/rectangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_travel_order_payment_method_text"
+            app:srcCompat="@drawable/ic_rectangle_197" />
+
+        <ImageView
+            android:id="@+id/imageView_travel_order_vipps_option"
+            android:layout_width="139dp"
+            android:layout_height="76dp"
+            android:contentDescription="@string/vipps_logo_option"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_travel_order_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_travel_order_rectangle"
+            app:layout_constraintStart_toStartOf="@+id/imageView_travel_order_rectangle"
+            app:layout_constraintTop_toTopOf="@+id/imageView_travel_order_rectangle"
+            app:srcCompat="@mipmap/ic_vipps_foreground" />
+
+        <!-- points payment -->
+        <ImageView
+            android:id="@+id/imageView_pay_with_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/rectangle"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_travel_order_rectangle"
+            app:layout_constraintStart_toEndOf="@+id/imageView_travel_order_rectangle"
+            app:srcCompat="@drawable/ic_rectangle_197" />
+
+        <ImageView
+            android:id="@+id/imageView_travel_order_leaf_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/leaf_image"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_pay_with_points"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_pay_with_points"
+            app:layout_constraintStart_toStartOf="@+id/imageView_pay_with_points"
+            app:layout_constraintTop_toTopOf="@+id/imageView_pay_with_points"
+            app:srcCompat="@drawable/ic_vector_leaf" />
+
+        <TextView
+            android:id="@+id/textView_travel_order_point_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:textSize="18dp"
+            android:text="@string/enviorment_points"
+            android:textColor="#3A846F"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_pay_with_points"
+            app:layout_constraintStart_toStartOf="@+id/imageView_pay_with_points"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_travel_order_leaf_box" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- payment btn -->
+    <Button
+        android:id="@+id/btnToPayment"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_button_green"
+        android:text="@string/til_betaling"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sfprotext_bold"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView_confirmation" />
-
-    <ImageView
-        android:id="@+id/imageView_pay_with_points"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:contentDescription="@string/rectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_travel_order_rectangle"
-        app:layout_constraintStart_toEndOf="@+id/imageView_travel_order_rectangle"
-        app:srcCompat="@drawable/ic_rectangle_197" />
-
-    <ImageView
-        android:id="@+id/imageView_travel_order_leaf_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/leaf_image"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_pay_with_points"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_pay_with_points"
-        app:layout_constraintStart_toStartOf="@+id/imageView_pay_with_points"
-        app:layout_constraintTop_toTopOf="@+id/imageView_pay_with_points"
-        app:srcCompat="@drawable/ic_vector_leaf" />
-
-    <TextView
-        android:id="@+id/textView_travel_order_point_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
-        android:text="@string/enviorment_points"
-        android:textColor="#3A846F"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_pay_with_points"
-        app:layout_constraintStart_toStartOf="@+id/imageView_pay_with_points"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_travel_order_leaf_box" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

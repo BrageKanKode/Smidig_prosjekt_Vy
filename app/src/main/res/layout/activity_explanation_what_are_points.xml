@@ -4,15 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_explanation_how_many"
         android:layout_width="0dp"
         android:layout_height="125dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView_explanation_travel">
@@ -27,11 +30,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_display"
+                android:fontFamily="@font/sfprodisplay_bold"
                 android:text="@string/hvor_mange_poeng_f_r_jeg"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,9 +42,9 @@
                 android:layout_width="249dp"
                 android:layout_height="37dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_text"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/du_f_r_forskjellige_poeng_avhengig_av_hva_du_kj_per"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 app:layout_constraintStart_toStartOf="@+id/textView_how_many_i_get_headline"
                 app:layout_constraintTop_toBottomOf="@+id/textView_how_many_i_get_headline" />
 
@@ -64,9 +66,11 @@
         android:layout_width="0dp"
         android:layout_height="125dp"
         android:layout_marginTop="16dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView_explanation_how_many"
         app:layout_constraintStart_toStartOf="@+id/cardView_explanation_how_many"
-        app:layout_constraintTop_toBottomOf="@+id/cardView_explanation_how_many" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView_explanation_how_many">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -78,11 +82,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_display"
+                android:fontFamily="@font/sfprodisplay_bold"
                 android:text="@string/hvordan_bruke_milj_poeng"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,9 +94,9 @@
                 android:layout_width="243dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_text"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/her_kan_du_finne_ut_hvordan_du_bruker_dine_oppsamlede_poeng"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 app:layout_constraintStart_toStartOf="@+id/textView_how_spend_points_title"
                 app:layout_constraintTop_toBottomOf="@+id/textView_how_spend_points_title" />
 
@@ -115,6 +118,8 @@
         android:layout_width="0dp"
         android:layout_height="125dp"
         android:layout_marginTop="16dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView_explanation_use_points"
         app:layout_constraintStart_toStartOf="@+id/cardView_explanation_use_points"
         app:layout_constraintTop_toTopOf="parent">
@@ -129,11 +134,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_display"
+                android:fontFamily="@font/sfprodisplay_bold"
                 android:text="@string/reise_med_poengene"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -142,9 +146,9 @@
                 android:layout_width="236dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_text"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/informasjon_om_hvordan_du_kan_reise_med_poengene_dine"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 app:layout_constraintStart_toStartOf="@+id/textView_explanation_travel_with_points_title"
                 app:layout_constraintTop_toBottomOf="@+id/textView_explanation_travel_with_points_title" />
 
@@ -166,6 +170,8 @@
         android:layout_width="0dp"
         android:layout_height="125dp"
         android:layout_marginTop="16dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView_explanation_travel"
         app:layout_constraintStart_toStartOf="@+id/cardView_explanation_travel"
         app:layout_constraintTop_toBottomOf="@+id/cardView_explanation_use_points">
@@ -180,11 +186,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_display"
+                android:fontFamily="@font/sfprodisplay_bold"
                 android:text="@string/hva_kan_jeg_bruke_poengene_p"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -193,9 +198,9 @@
                 android:layout_width="236dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_text"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/alt_du_trenger_vite_om_hva_du_kan_bruke_poengene_dine_p"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 app:layout_constraintStart_toStartOf="@+id/textView_explanation_spending_points_title"
                 app:layout_constraintTop_toBottomOf="@+id/textView_explanation_spending_points_title" />
 

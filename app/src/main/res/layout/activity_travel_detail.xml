@@ -12,6 +12,9 @@
         android:layout_width="0dp"
         android:layout_height="342dp"
         android:layout_marginTop="64dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,12 +27,10 @@
                 android:id="@+id/textView_departure_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/sf_display"
+                android:fontFamily="@font/sfprodisplay_bold"
                 android:text="@string/departure_time"
-                android:textColor="@color/colorBlack"
-                android:textSize="24sp"
-                android:textStyle="bold"
+                android:textColor="@color/mainBlack"
+                android:textSize="30dp"
                 app:layout_constraintStart_toStartOf="@+id/textView_departure"
                 app:layout_constraintTop_toBottomOf="@+id/textView_departure" />
 
@@ -42,8 +43,8 @@
                 android:layout_marginEnd="231dp"
                 android:fontFamily="@font/sf_text"
                 android:text="@string/departure"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
+                android:textColor="@color/mainBlack"
+                android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.08"
                 app:layout_constraintStart_toStartOf="parent"
@@ -53,12 +54,10 @@
                 android:id="@+id/textView_arrival_time"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/sf_display"
+                android:fontFamily="@font/sfprodisplay_bold"
                 android:text="@string/arrival_time"
-                android:textColor="@color/colorBlack"
-                android:textSize="24sp"
-                android:textStyle="bold"
+                android:textColor="@color/mainBlack"
+                android:textSize="30dp"
                 app:layout_constraintStart_toStartOf="@+id/textView_arrival"
                 app:layout_constraintTop_toBottomOf="@+id/textView_arrival" />
 
@@ -67,12 +66,24 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="132dp"
-                android:fontFamily="@font/sf_text"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/arrival"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
+                android:textColor="@color/mainBlack"
+                android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="@+id/textView_departure"
                 app:layout_constraintTop_toBottomOf="@+id/imageView_detail_line_divider" />
+
+            <View
+                android:id="@+id/view_travel_detail_green_line"
+                android:layout_width="5dp"
+                android:layout_height="225dp"
+                android:background="@color/mainGreen"
+                app:layout_constraintBottom_toTopOf="@+id/imageView_detail_point"
+                app:layout_constraintEnd_toStartOf="@+id/imageView_detail_wifi"
+                app:layout_constraintHorizontal_bias="0.573"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_travel_detail_train_logo"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/imageView_travel_detail_train_logo"
@@ -154,18 +165,6 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView_detail_silence_volum"
                 app:srcCompat="@drawable/ic_restaurant_24px" />
 
-            <View
-                android:id="@+id/view_travel_detail_green_line"
-                android:layout_width="5dp"
-                android:layout_height="212dp"
-                android:background="#3A846F"
-                app:layout_constraintBottom_toTopOf="@+id/imageView_detail_point"
-                app:layout_constraintEnd_toStartOf="@+id/imageView_detail_wifi"
-                app:layout_constraintHorizontal_bias="0.573"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView_travel_detail_train_logo"
-                app:layout_constraintVertical_bias="0.0" />
-
             <ImageView
                 android:id="@+id/imageView_travel_detail_small_line"
                 android:layout_width="wrap_content"
@@ -178,15 +177,17 @@
 
             <TextView
                 android:id="@+id/textView_travel_detail_number_of_stops"
-                android:layout_width="60dp"
-                android:layout_height="21dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:background="#DADADA"
-                android:fontFamily="@font/sf_display"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_button_grey"
+                android:fontFamily="@font/sfprotext_bold"
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:textColor="@color/mainBlack"
                 android:text="@string/number_of_stops"
                 android:textAlignment="center"
-                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView_travel_detail_small_line"
                 app:layout_constraintTop_toBottomOf="@+id/imageView_detail_wifi" />
 
@@ -210,53 +211,53 @@
                 android:id="@+id/textView_detail_number_of_traveler_and_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/_1_voksen"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
+                android:textColor="@color/mainBlack"
+                android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.08"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.197" />
+                app:layout_constraintVertical_bias="0.215" />
 
             <TextView
                 android:id="@+id/textView_details_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:text="@string/price"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainGreen"
                 android:textSize="18sp"
+                android:fontFamily="@font/sfprotext_bold"
                 app:layout_constraintStart_toStartOf="@+id/textView_detail_number_of_traveler_and_type"
                 app:layout_constraintTop_toBottomOf="@+id/textView_detail_number_of_traveler_and_type" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/button_til_bestilling"
-                android:layout_width="199dp"
-                android:layout_height="42dp"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="62dp"
-                android:layout_marginTop="17dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="48dp"
-                app:cardBackgroundColor="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.773"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_detail_number_of_traveler_and_type"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.55">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_button_green">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfprotext_bold"
                         android:text="@string/videre"
                         android:textColor="@android:color/white"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -270,7 +271,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
         android:layout_width="0dp"
-        android:layout_height="25dp"
+        android:layout_height="45dp"
         app:cardBackgroundColor="@color/colorLightGreen"
         app:layout_constraintBottom_toTopOf="@+id/cardView4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -283,10 +284,12 @@
             <TextView
                 android:id="@+id/textView_details_points"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/points"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/mainBlack"
+                android:fontFamily="@font/sfprotext_regular"
+                android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView_detail_leaf_green"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -300,7 +303,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_eco_black_18dp" />
+                app:srcCompat="@drawable/ic_eco_black_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -313,15 +316,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#040303">
+            android:background="@color/mainBlack">
 
             <TextView
                 android:id="@+id/textView_travel_detail_i_dag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_text"
+                android:fontFamily="@font/sfprotext_bold"
                 android:text="@string/i_dag"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

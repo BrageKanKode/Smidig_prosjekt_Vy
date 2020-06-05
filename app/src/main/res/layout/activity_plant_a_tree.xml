@@ -4,34 +4,105 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="409dp"
+        android:layout_height="280dp"
+        android:background="@color/greyShade"
+        app:layout_constraintBottom_toTopOf="@+id/textView_prefixed_string_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_currency_show"
+        app:layout_constraintVertical_bias="0"/>
+
+    <FrameLayout
+        android:id="@+id/topbarbg"
+        android:layout_width="409dp"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.91"/>
+
+    <FrameLayout
+        android:layout_width="409dp"
+        android:layout_height="313dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_prefix_text_string"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <FrameLayout
+        android:id="@+id/whitebg"
+        android:layout_width="409dp"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_total_amount_three" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/textView_total_collected"
+        app:layout_constraintTop_toBottomOf="@+id/topbarbg"
+        app:srcCompat="@drawable/ic_plant_a_tree" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="600dp"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        android:rotation="7"
+        app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
 
     <TextView
         android:id="@+id/textView_total_collected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/sfprodisplay_semibold"
         android:text="@string/plant_et_tre"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_top_text_string_disponibelt"
+        app:layout_constraintVertical_bias="0.07" />
 
     <Button
         android:id="@+id/btn_do_plant_tree"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/sfprodisplay_semibold"
+        android:padding="20sp"
         android:text="@string/plant_a_tree"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -39,13 +110,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
         android:fontFamily="@font/sf_display"
         android:text="@string/progression_disponibelt"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,11 +125,13 @@
         android:id="@+id/textview_currency_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/sfprotext_regular"
         android:textColor="@color/colorBlack"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toEndOf="@+id/textView_top_text_string_disponibelt"
         app:layout_constraintTop_toTopOf="@+id/textView_top_text_string_disponibelt" />
 
@@ -65,21 +139,29 @@
         android:id="@+id/textView_total_amount_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="207dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:text="@string/totalsum"
         android:textColor="@color/colorBlack"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
-        app:layout_constraintStart_toStartOf="@+id/btn_do_plant_tree" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView_plant_leaf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout2" />
 
     <TextView
         android:id="@+id/textView_total_tree_sum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/sfprotext_bold"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_do_plant_tree"
         app:layout_constraintEnd_toEndOf="@+id/btn_do_plant_tree" />
 
@@ -99,8 +181,9 @@
         android:layout_width="215dp"
         android:layout_height="78dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/sfprotext_regular"
         android:text="@string/plant_a_tree_dialog"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView_total_collected"
         app:layout_constraintTop_toBottomOf="@+id/textView_total_collected" />
@@ -109,14 +192,18 @@
         android:id="@+id/textView_prefixed_string_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_display"
+        android:fontFamily="@font/sfprodisplay_semibold"
         android:text="@string/velg_antall"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
         android:textSize="24sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView_total_amount_three"
-        app:layout_constraintStart_toStartOf="@+id/textView_prefix_text_string"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_prefix_text_string"
-        app:layout_constraintVertical_bias="0.26" />
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintHorizontal_bias="0"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_plant_tree_minus"
@@ -124,7 +211,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="43dp"
         android:layout_marginEnd="74dp"
-        app:cardBackgroundColor="#E1D9D9"
+        app:cardBackgroundColor="@color/greyShade"
         app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toStartOf="@+id/textView_plant_tree_amount"
         app:layout_constraintTop_toBottomOf="@+id/textView_prefixed_string_number">
@@ -138,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/minus"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +239,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="74dp"
-        android:backgroundTint="#E1D9D9"
+        android:backgroundTint="@color/greyShade"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView_plant_tree_amount"
         app:layout_constraintStart_toEndOf="@+id/textView_plant_tree_amount"
@@ -167,7 +254,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pluss"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -183,98 +270,20 @@
         android:text="1"
         android:textColor="@color/colorBlack"
         android:textSize="48sp"
+        android:fontFamily="@font/sfprodisplay_semibold"
         app:layout_constraintBottom_toBottomOf="@+id/btn_plant_tree_minus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_plant_tree_minus" />
-
-    <ImageView
-        android:id="@+id/imageView_background_forrest"
-        android:layout_width="181dp"
-        android:layout_height="173dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/tree"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/mainBlack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_currency_show"
-        app:srcCompat="@drawable/ic_hill_green_background" />
-
-    <ImageView
-        android:id="@+id/imageView_stem_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_background_forrest"
-        app:layout_constraintStart_toStartOf="@+id/imageView_background_forrest"
-        app:layout_constraintTop_toTopOf="@+id/textView_prefix_text_string"
-        app:srcCompat="@drawable/ic_tree_stem" />
-
-    <ImageView
-        android:id="@+id/imageView_stem_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintStart_toEndOf="@+id/imageView_stem_one"
-        app:layout_constraintTop_toTopOf="@+id/imageView_stem_one"
-        app:srcCompat="@drawable/ic_tree_stem" />
-
-    <ImageView
-        android:id="@+id/imageView_stem_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_two"
-        app:layout_constraintStart_toEndOf="@+id/imageView_stem_two"
-        app:srcCompat="@drawable/ic_tree_stem" />
-
-    <ImageView
-        android:id="@+id/imageView_three_top_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_one"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_stem_one"
-        app:layout_constraintStart_toStartOf="@+id/imageView_stem_one"
-        app:srcCompat="@drawable/ic_tree_top_one" />
-
-    <ImageView
-        android:id="@+id/imageView_three_top_two"
-        android:layout_width="41dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_three"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_stem_three"
-        app:layout_constraintStart_toStartOf="@+id/imageView_stem_three"
-        app:srcCompat="@drawable/ic_tree_top_three" />
-
-    <ImageView
-        android:id="@+id/imageView_three_top_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/tree"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_stem_two"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_stem_two"
-        app:layout_constraintStart_toStartOf="@+id/imageView_stem_two"
-        app:srcCompat="@drawable/ic_tree_top_two" />
-
-    <ImageView
-        android:id="@+id/imageView_three_divider_line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:contentDescription="@string/line"
-        app:layout_constraintBottom_toTopOf="@+id/textView_total_amount_three"
-        app:layout_constraintStart_toStartOf="@+id/textView_total_amount_three"
-        app:layout_constraintTop_toBottomOf="@+id/textView_plant_tree_amount"
-        app:layout_constraintVertical_bias="0.666"
-        app:srcCompat="@drawable/ic_line" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/whitebg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

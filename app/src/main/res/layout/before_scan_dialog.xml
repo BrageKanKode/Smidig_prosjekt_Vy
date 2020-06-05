@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_card_rounded">
 
     <ImageView
         android:id="@+id/imageView_scanable_image"
@@ -21,9 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textColor="#000000"
+        android:textColor="@color/mainBlack"
         android:textSize="48sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/sfprodisplay_bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView_scanable_image"
         app:layout_constraintStart_toStartOf="@+id/imageView_scanable_image"
         app:layout_constraintTop_toBottomOf="@+id/imageView_scanable_image" />
@@ -36,7 +37,8 @@
         android:layout_marginEnd="16dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="@color/mainBlack"
+        android:fontFamily="@font/sfprodisplay_medium"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_scanable_title"
         app:layout_constraintStart_toStartOf="@+id/textView_scanable_title"
@@ -44,107 +46,114 @@
 
     <TextView
         android:id="@+id/textView34"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
         android:text="@string/qr_info"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="@color/mainBlack"
+        android:textSize="18dp"
+        android:fontFamily="@font/sfprotext_regular"
         app:layout_constraintEnd_toEndOf="@+id/textView_item_desc_scan"
         app:layout_constraintStart_toStartOf="@+id/textView_item_desc_scan"
         app:layout_constraintTop_toBottomOf="@+id/textView_item_desc_scan" />
 
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/price_onboard"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
-
-    <ImageView
-        android:id="@+id/imageView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:paddingBottom="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
-        app:srcCompat="@drawable/ic_line" />
+        app:layout_constraintTop_toBottomOf="@+id/textView34">
 
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/your_balance"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/price_onboard"
+            android:textColor="@color/mainBlack"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_scan_dialog"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="#41927B"
-        android:text="@string/scan_with_camera"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
-    <ImageView
-        android:id="@+id/imageView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_before_scan_price"
-        app:layout_constraintEnd_toStartOf="@+id/textView_before_scan_price"
-        app:layout_constraintTop_toTopOf="@+id/textView_before_scan_price"
-        app:srcCompat="@drawable/ic_eco_black_18dp" />
+        <FrameLayout
+            android:id="@+id/line_seperator2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/greyShadeDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView42"/>
 
-    <TextView
-        android:id="@+id/textView_before_scan_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="16dp"
-        android:textColor="#41927B"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView44"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/your_balance"
+            android:textColor="@color/mainBlack"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_seperator2" />
 
-    <ImageView
-        android:id="@+id/imageView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_balance_current_before_scan"
-        app:layout_constraintEnd_toStartOf="@+id/textView_balance_current_before_scan"
-        app:layout_constraintTop_toTopOf="@+id/textView_balance_current_before_scan"
-        app:srcCompat="@drawable/ic_eco_black_18dp" />
 
-    <TextView
-        android:id="@+id/textView_balance_current_before_scan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        android:textColor="#41927B"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+        <ImageView
+            android:id="@+id/imageView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_before_scan_price"
+            app:layout_constraintEnd_toStartOf="@+id/textView_before_scan_price"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_eco_green_24" />
+
+        <TextView
+            android:id="@+id/textView_before_scan_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprotext_bold"
+            android:textAlignment="textEnd"
+            android:textColor="@color/mainGreen"
+            android:text="0000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView42"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_balance_current_before_scan"
+            app:layout_constraintEnd_toStartOf="@+id/textView_balance_current_before_scan"
+            app:layout_constraintTop_toTopOf="@+id/textView_balance_current_before_scan"
+            app:srcCompat="@drawable/ic_eco_green_24" />
+
+        <TextView
+            android:id="@+id/textView_balance_current_before_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sfprotext_bold"
+            android:textAlignment="textEnd"
+            android:textColor="@color/mainGreen"
+            android:text="0000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView43"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_seperator2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <ImageView
         android:id="@+id/imageView_dismiss_scan_dialog"
@@ -154,5 +163,23 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_clear_24px" />
+        app:srcCompat="@drawable/ic_close_icon" />
+
+    <Button
+        android:id="@+id/button_scan_dialog"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ic_button_green"
+        android:fontFamily="@font/sfprodisplay_bold"
+        android:text="@string/scan_with_camera"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
