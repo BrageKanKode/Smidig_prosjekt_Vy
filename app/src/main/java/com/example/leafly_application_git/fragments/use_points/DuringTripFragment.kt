@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
+import kotlinx.android.synthetic.main.activity_use_points.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.imageView_dismiss_scan_dialog
 import kotlinx.android.synthetic.main.fragment_during_trip.view.*
@@ -45,6 +46,9 @@ class DuringTripFragment : Fragment() {
         mDialogView.textView_item_desc_scan.text = desc
         mDialogView.textView_before_scan_price.text = price.toString()
 
+
+
+
         mDialogView.button_scan_dialog.setOnClickListener {
             scanFromFragment()
             mAlertDialog.dismiss()
@@ -58,6 +62,10 @@ class DuringTripFragment : Fragment() {
                 val balance = user?.balance?.toString()
 
                 mDialogView.textView_balance_current_before_scan.text = balance
+
+
+
+
             }
 
             override fun onCancelled(p0: DatabaseError) {

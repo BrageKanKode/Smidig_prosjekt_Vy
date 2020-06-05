@@ -67,6 +67,18 @@ class UsePointsActivity : AppCompatActivity() {
         //----------------End of tab code------------------
 
 
+
+
+
+
+
+
+
+    }
+
+
+    override fun onResume() {
+        super.onResume()
         val ref = FirebaseDatabase.getInstance().getReference("/users")
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
@@ -88,12 +100,6 @@ class UsePointsActivity : AppCompatActivity() {
 
         }
         ref.addListenerForSingleValueEvent(menuListener)
-
-
-
-
-
-
     }
 
 

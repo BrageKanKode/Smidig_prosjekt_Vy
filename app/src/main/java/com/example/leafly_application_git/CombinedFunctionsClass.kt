@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat.startActivity
 import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.progression.HistoryActivity
+import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -20,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
 import kotlinx.android.synthetic.main.activity_travel_detail.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.textView_points
+import kotlinx.android.synthetic.main.activity_use_points.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.*
 import kotlinx.android.synthetic.main.list_choose_time_row.view.*
 import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
@@ -149,6 +151,7 @@ object CombinedFunctionsClass {
                 user = p0.getValue(User::class.java)
                 var balance = CombinedFunctionsClass.user?.balance
 
+
                 //Set users balance on screen
                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
@@ -161,6 +164,8 @@ object CombinedFunctionsClass {
                         mBuilder = AlertDialog.Builder(context)
                             .setView(mDialogView)
                         val mAlertDialog = mBuilder.show()
+
+
 
                         mDialogView.button_purchase_view_cupon.setOnClickListener {
                             mAlertDialog.dismiss()
