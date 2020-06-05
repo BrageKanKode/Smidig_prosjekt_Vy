@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp">
 
     <TextView
         android:id="@+id/textView_dplay_dialog_dplay"
@@ -13,26 +14,28 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprodisplay_semibold"
         android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textColor="@color/mainBlack"
+        android:text="BESKRIVELSE"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView53" />
 
     <Button
         android:id="@+id/button_buy_dplay"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
-        android:background="#CBEAE4"
-        android:fontFamily="@font/sf_display"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_button_green"
+        android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/buy"
-        android:textColor="@color/colorBlack"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_currency_dplay" />
@@ -42,9 +45,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_regular"
+        android:text="PRIS"
         android:textAlignment="center"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/textView_dplay_dialog_dplay"
         app:layout_constraintStart_toStartOf="@+id/textView_dplay_dialog_dplay"
         app:layout_constraintTop_toBottomOf="@+id/textView_dplay_dialog_dplay" />
@@ -54,9 +59,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_regular"
+        android:text="SALDO"
         android:textAlignment="center"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/textView_price_dplay"
         app:layout_constraintStart_toStartOf="@+id/textView_price_dplay"
         app:layout_constraintTop_toBottomOf="@+id/textView_price_dplay" />
@@ -65,12 +72,12 @@
         android:id="@+id/imageView_dplay_close"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:contentDescription="@string/close_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_clear_24px" />
+        app:srcCompat="@drawable/ic_close_icon" />
 
     <ImageView
         android:id="@+id/imageView53"
