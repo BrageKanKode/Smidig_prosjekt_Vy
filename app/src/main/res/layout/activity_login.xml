@@ -44,10 +44,10 @@
             android:fontFamily="@font/sf_text"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_activity_use_points" />
 
         <EditText
             android:id="@+id/editText_password_login"
@@ -60,7 +60,7 @@
             android:fontFamily="@font/sf_text"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView44" />
@@ -72,7 +72,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/ic_button_secondary"
             android:fontFamily="@font/sfprotext_bold"
-            android:text="Opprett ny profil"
+            android:text="@string/opprett_ny_profil"
             android:textColor="@color/colorBlack"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,13 +92,13 @@
             app:layout_constraintTop_toBottomOf="@+id/button_register" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/textView_activity_use_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfprotext_bold"
-            android:text="E-post"
+            android:text="@string/e_post"
             android:textColor="@color/mainBlack"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,9 +108,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/sfprotext_bold"
-            android:text="Passord"
+            android:text="@string/password"
             android:textColor="@color/mainBlack"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_email_login" />
 
@@ -129,6 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:contentDescription="@string/profile_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -141,9 +142,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/sfprodisplay_bold"
-            android:text="Logg inn"
+            android:text="@string/logg_inn"
             android:textColor="@color/mainBlack"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView_login_icon" />

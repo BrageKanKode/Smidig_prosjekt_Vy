@@ -17,11 +17,11 @@
         android:fontFamily="@font/sfprodisplay_semibold"
         android:textAlignment="center"
         android:textColor="@color/mainBlack"
-        android:text="BESKRIVELSE"
+        android:text="@string/beskrivelse"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView53" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_dplay_logo" />
 
     <Button
         android:id="@+id/button_buy_dplay"
@@ -46,10 +46,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sfprotext_regular"
-        android:text="PRIS"
+        android:text="@string/pris"
         android:textAlignment="center"
         android:textColor="@color/mainBlack"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_dplay_dialog_dplay"
         app:layout_constraintStart_toStartOf="@+id/textView_dplay_dialog_dplay"
         app:layout_constraintTop_toBottomOf="@+id/textView_dplay_dialog_dplay" />
@@ -60,10 +60,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sfprotext_regular"
-        android:text="SALDO"
+        android:text="@string/saldo"
         android:textAlignment="center"
         android:textColor="@color/mainBlack"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_price_dplay"
         app:layout_constraintStart_toStartOf="@+id/textView_price_dplay"
         app:layout_constraintTop_toBottomOf="@+id/textView_price_dplay" />
@@ -80,10 +80,11 @@
         app:srcCompat="@drawable/ic_close_icon" />
 
     <ImageView
-        android:id="@+id/imageView53"
+        android:id="@+id/imageView_dplay_logo"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/viaplay_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

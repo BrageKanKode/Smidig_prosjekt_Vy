@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:contentDescription="@string/profile_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,9 +31,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/sfprodisplay_bold"
-            android:text="Ny profil"
+            android:text="@string/ny_profil"
             android:textColor="@color/mainBlack"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,9 +58,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfprotext_bold"
-            android:text="Brukernavn"
+            android:text="@string/brukernavn"
             android:textColor="@color/mainBlack"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,9 +89,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/sfprotext_bold"
-            android:text="E-postadresse"
+            android:text="@string/e_postadresse"
             android:textColor="@color/mainBlack"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_username_signup" />
 
@@ -146,9 +147,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/sfprotext_bold"
-            android:text="Passord"
+            android:text="@string/passord"
             android:textColor="@color/mainBlack"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_email_signup" />
 

@@ -265,6 +265,38 @@
     <string name="disp_poeng_text">Disp. poeng</string>
     <string name="ditt_medlemsniv">Ditt medlemsnivå</string>
     <string name="kupongen_brukes_i_til_bestilling_blabla_i_den_nettbutikken_du_har_kj_pt_verdi_hos_kan_kun_brukes_1_gang">Kupongen innløses hos valgt forhandler når du handler i nettbutikken. Kan kun brukes en gang</string>
+    <string name="opprett_ny_profil">Opprett ny profil</string>
+    <string name="e_post">E-post</string>
+    <string name="profile_image">profile image</string>
+    <string name="ny_profil">Ny profil</string>
+    <string name="brukernavn">Brukernavn</string>
+    <string name="e_postadresse">E-postadresse</string>
+    <string name="passord">Passord</string>
+    <string name="fra_x_til_x">Fra x til x</string>
+    <string name="tid_her">Tid her</string>
+    <string name="_120">120</string>
+    <string name="du_oppn_r_x_poeng_for_denne_reisen">Du oppnår x poeng for denne reisen</string>
+    <string name="textview">textview</string>
+    <string name="pluss_image">pluss image</string>
+    <string name="_0000">0000</string>
+    <string name="verdikupong">VerdiKupong</string>
+    <string name="din_kupongkode">Din kupongkode</string>
+    <string name="_dialog_cupon_">Kupongen brukes i til bestilling blabla i den nettbutikken du har kjøpt verdi hos. Kan kun brukes 1 gang.</string>
+    <string name="qrcode">qrCode</string>
+    <string name="beskrivelse">BESKRIVELSE</string>
+    <string name="pris">PRIS</string>
+    <string name="saldo">SALDO</string>
+    <string name="viaplay_logo">viaplay_logo</string>
+    <string name="beskrivelse_små">Beskrivelse</string>
+    <string name="_420">420</string>
+    <string name="_520">520</string>
+    <string name="_1390">1390</string>
+    <string name="drikke_image">drikke_image</string>
+    <string name="_1690">1690</string>
+    <string name="_320">320</string>
+    <string name="_890">890</string>
+    <string name="logg_ut">Logg ut</string>
+    <string name="_27605">27605</string>
 
 
 </resources>

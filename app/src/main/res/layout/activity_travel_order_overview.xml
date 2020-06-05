@@ -46,7 +46,7 @@
                 android:fontFamily="@font/sfprotext_regular"
                 android:textColor="@color/mainBlack"
                 android:textSize="20sp"
-                android:text="Fra x til x"
+                android:text="@string/fra_x_til_x"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,7 +57,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/sf_text"
                 android:textColor="@color/colorBlack"
-                android:text="Tid her"
+                android:text="@string/tid_her"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="@+id/textView_from"
                 app:layout_constraintTop_toBottomOf="@+id/textView_from" />
@@ -97,11 +97,11 @@
                     android:id="@+id/textView_travel_order_headline_string"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:fontFamily="@font/sfprotext_semibold"
                     android:text="@string/enkeltbillet"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView_not_logged_in_arrow_two"
@@ -129,7 +129,7 @@
                 android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/travelers"
                 android:textColor="@color/mainBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line_seperator2" />
 
@@ -141,7 +141,7 @@
                 android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/voksen"
                 android:textColor="@color/mainBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/textView_travel_detail_travelers_string"
                 app:layout_constraintTop_toBottomOf="@+id/textView_travel_detail_travelers_string" />
 
@@ -163,8 +163,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sfprotext_regular"
                 android:textColor="@color/mainBlack"
-                android:text="120"
-                android:textSize="20dp"
+                android:text="@string/_120"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView_travel_detail_voksen_string" />
 
@@ -188,7 +188,7 @@
                 android:fontFamily="@font/sfprotext_semibold"
                 android:text="@string/total_pris"
                 android:textColor="@color/mainBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line_seperator3" />
 
@@ -198,8 +198,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sfprotext_semibold"
                 android:textColor="@color/mainBlack"
-                android:textSize="20dp"
-                android:text="120"
+                android:textSize="20sp"
+                android:text="@string/_120"
                 app:layout_constraintBottom_toBottomOf="@+id/textView_travel_order_totalpris_string"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView_travel_order_totalpris_string" />
@@ -231,8 +231,8 @@
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/sfprotext_regular"
                 android:textColor="@color/mainBlack"
-                android:text="Du oppnår x poeng for denne reisen"
-                android:textSize="16dp"
+                android:text="@string/du_oppn_r_x_poeng_for_denne_reisen"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView_travel_order_leaf"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -324,7 +324,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/sfprodisplay_bold"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="@string/enviorment_points"
             android:textColor="#3A846F"
             app:layout_constraintEnd_toEndOf="@+id/imageView_pay_with_points"
@@ -344,7 +344,7 @@
         android:text="@string/til_betaling"
         android:textColor="@color/white"
         android:fontFamily="@font/sfprotext_bold"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

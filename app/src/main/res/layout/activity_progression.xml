@@ -140,9 +140,9 @@
                     android:id="@+id/textView_current_currency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:fontFamily="@font/sfprodisplay_bold"
-                    android:text="-"
+                    android:text="@string/minus"
                     android:textAlignment="center"
                     android:textColor="@color/mainBlack"
                     android:textSize="36sp"
@@ -154,12 +154,12 @@
                     android:id="@+id/textView_disponibelt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/sfprotext_bold"
                     android:text="@string/progression_disponibelt"
                     android:textColor="@color/blackShade"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -184,12 +184,12 @@
                     android:id="@+id/textView_progression_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/sfprotext_bold"
                     android:text="@string/progression_total_points"
                     android:textColor="@color/blackShade"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -197,9 +197,9 @@
                     android:id="@+id/textView_total_collected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:fontFamily="@font/sf_text"
-                    android:text="-"
+                    android:text="@string/minus"
                     android:textAlignment="center"
                     android:textColor="@color/colorBlack"
                     android:textSize="36sp"
@@ -248,7 +248,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageView_before_scan_dialog_leaf_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"

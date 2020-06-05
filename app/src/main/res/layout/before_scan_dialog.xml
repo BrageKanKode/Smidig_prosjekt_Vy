@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/pluss_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,10 +22,9 @@
         android:id="@+id/textView_scanable_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:fontFamily="@font/sfprodisplay_bold"
         android:textColor="@color/mainBlack"
         android:textSize="48sp"
-        android:fontFamily="@font/sfprodisplay_bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView_scanable_image"
         app:layout_constraintStart_toStartOf="@+id/imageView_scanable_image"
         app:layout_constraintTop_toBottomOf="@+id/imageView_scanable_image" />
@@ -35,17 +35,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:fontFamily="@font/sfprodisplay_medium"
         android:textAlignment="center"
         android:textColor="@color/mainBlack"
-        android:fontFamily="@font/sfprodisplay_medium"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_scanable_title"
         app:layout_constraintStart_toStartOf="@+id/textView_scanable_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_scanable_title" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/textView_scan_dialog_second_under_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -54,7 +53,7 @@
         android:text="@string/qr_info"
         android:textAlignment="center"
         android:textColor="@color/mainBlack"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:fontFamily="@font/sfprotext_regular"
         app:layout_constraintEnd_toEndOf="@+id/textView_item_desc_scan"
         app:layout_constraintStart_toStartOf="@+id/textView_item_desc_scan"
@@ -70,10 +69,10 @@
         android:paddingBottom="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView34">
+        app:layout_constraintTop_toBottomOf="@+id/textView_scan_dialog_second_under_title">
 
         <TextView
-            android:id="@+id/textView42"
+            android:id="@+id/textView_scan_dialog_pris"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfprotext_regular"
@@ -92,10 +91,10 @@
             android:background="@color/greyShadeDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView42"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView_scan_dialog_pris"/>
 
         <TextView
-            android:id="@+id/textView43"
+            android:id="@+id/textView_scan_dialog_din_saldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -108,10 +107,11 @@
 
 
         <ImageView
-            android:id="@+id/imageView45"
+            android:id="@+id/imageView_before_scan_leaf_image_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/leaf_image"
             app:layout_constraintBottom_toBottomOf="@+id/textView_before_scan_price"
             app:layout_constraintEnd_toStartOf="@+id/textView_before_scan_price"
             app:layout_constraintTop_toTopOf="parent"
@@ -124,16 +124,17 @@
             android:fontFamily="@font/sfprotext_bold"
             android:textAlignment="textEnd"
             android:textColor="@color/mainGreen"
-            android:text="0000"
+            android:text="@string/_0000"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView42"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_scan_dialog_pris"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView46"
+            android:id="@+id/imageView_before_scan_dialog_leaf_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/leaf_image"
             app:layout_constraintBottom_toBottomOf="@+id/textView_balance_current_before_scan"
             app:layout_constraintEnd_toStartOf="@+id/textView_balance_current_before_scan"
             app:layout_constraintTop_toTopOf="@+id/textView_balance_current_before_scan"
@@ -147,9 +148,9 @@
             android:fontFamily="@font/sfprotext_bold"
             android:textAlignment="textEnd"
             android:textColor="@color/mainGreen"
-            android:text="0000"
+            android:text="@string/_0000"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView43"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_scan_dialog_din_saldo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/line_seperator2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -161,6 +162,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/close_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_close_icon" />
@@ -176,7 +178,7 @@
         android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/scan_with_camera"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -66,14 +66,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="500"
+                        android:text="@string/_500"
                         android:textColor="@color/colorPrimaryDark"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView_shop_leaf_one" />
 
                     <ImageView
-                        android:id="@+id/imageView43"
+                        android:id="@+id/imageView_plant_a_tree_background_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"

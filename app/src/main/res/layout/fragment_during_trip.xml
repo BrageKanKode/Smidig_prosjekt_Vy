@@ -28,7 +28,7 @@
                 android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/during_trip_info"
                 android:textColor="@color/mainBlack"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
                 android:id="@+id/cardview_coffe"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="0dp"
@@ -83,6 +83,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/kaffe"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -108,7 +109,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -127,6 +128,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -134,7 +136,7 @@
 
                         <TextView
                             android:id="@+id/textView11"
-                            android:text="320"
+                            android:text="@string/_320"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
@@ -149,6 +151,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -187,6 +190,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/mat_og_drikke"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -212,7 +216,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -232,6 +236,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -243,7 +248,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
-                            android:text="890"
+                            android:text="@string/_890"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView16"
                             app:layout_constraintStart_toEndOf="@+id/imageView16"
@@ -255,6 +260,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:srcCompat="@drawable/ic_add_24px" />
@@ -267,7 +273,7 @@
                 android:id="@+id/cardview_tea"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -292,6 +298,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/kaffe"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -317,7 +324,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -332,11 +339,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView19"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -346,7 +355,7 @@
                             android:id="@+id/textView17"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="420"
+                            android:text="@string/_420"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
                             android:textColor="@color/mainGreen"
@@ -359,6 +368,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -371,7 +381,7 @@
                 android:id="@+id/cardview_sandwich"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -388,6 +398,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView22"
                             android:layout_width="wrap_content"
@@ -395,6 +406,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/mat_og_drikke"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -418,7 +430,7 @@
                             android:text="@string/during_sandwich_desc"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -430,11 +442,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView23"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -443,18 +457,20 @@
                             android:id="@+id/textView21"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="520"
+                            android:text="@string/_520"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView23"
                             app:layout_constraintStart_toEndOf="@+id/imageView23"
                             app:layout_constraintTop_toTopOf="@+id/imageView23" />
+
                         <ImageView
                             android:id="@+id/imageView24"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -467,7 +483,7 @@
                 android:id="@+id/cardview_soda"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -482,6 +498,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView25"
                             android:layout_width="wrap_content"
@@ -489,6 +506,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/drikke_image"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -512,7 +530,7 @@
                             android:text="@string/during_soda_desc"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -525,31 +543,36 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView26"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/ic_eco_green_24" />
+
                         <TextView
                             android:id="@+id/textView25"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="420"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
+                            android:text="@string/_420"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView26"
                             app:layout_constraintStart_toEndOf="@+id/imageView26"
                             app:layout_constraintTop_toTopOf="@+id/imageView26" />
+
                         <ImageView
                             android:id="@+id/imageView33"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -562,7 +585,7 @@
                 android:id="@+id/cardview_smoothie"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -577,6 +600,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView27"
                             android:layout_width="wrap_content"
@@ -584,6 +608,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/drikke_image"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -607,7 +632,7 @@
                             android:text="@string/during_smoothie_desc"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -619,11 +644,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView28"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -635,16 +662,18 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
-                            android:text="520"
+                            android:text="@string/_520"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView28"
                             app:layout_constraintStart_toEndOf="@+id/imageView28"
                             app:layout_constraintTop_toTopOf="@+id/imageView28" />
+
                         <ImageView
                             android:id="@+id/imageView34"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -657,7 +686,7 @@
                 android:id="@+id/cardview_falafel"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -672,6 +701,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView29"
                             android:layout_width="wrap_content"
@@ -679,6 +709,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/mat_og_drikke"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -702,7 +733,7 @@
                             android:text="@string/during_falafel_desc"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -714,11 +745,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView30"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -729,16 +762,18 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
-                            android:text="1390"
+                            android:text="@string/_1390"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView30"
                             app:layout_constraintStart_toEndOf="@+id/imageView30"
                             app:layout_constraintTop_toTopOf="@+id/imageView30" />
+
                         <ImageView
                             android:id="@+id/imageView31"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -751,7 +786,7 @@
                 android:id="@+id/cardview_meatcakes"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -766,6 +801,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView32"
                             android:layout_width="wrap_content"
@@ -773,6 +809,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/mat_og_drikke"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -796,7 +833,7 @@
                             android:text="@string/during_meatcakes_desc"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -808,11 +845,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView36"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -823,16 +862,18 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
-                            android:text="1690"
+                            android:text="@string/_1690"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView36"
                             app:layout_constraintStart_toEndOf="@+id/imageView36"
                             app:layout_constraintTop_toTopOf="@+id/imageView36" />
+
                         <ImageView
                             android:id="@+id/imageView35"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -845,7 +886,7 @@
                 android:id="@+id/cardview_oumph"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -860,6 +901,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView37"
                             android:layout_width="wrap_content"
@@ -867,6 +909,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/mat_og_drikke"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -890,7 +933,7 @@
                             android:text="@string/during_oumph_desc"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -902,11 +945,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView38"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -918,16 +963,18 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
-                            android:text="1690"
+                            android:text="@string/_1690"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView38"
                             app:layout_constraintStart_toEndOf="@+id/imageView38"
                             app:layout_constraintTop_toTopOf="@+id/imageView38" />
+
                         <ImageView
                             android:id="@+id/imageView39"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -940,7 +987,7 @@
                 android:id="@+id/cardview_curry"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="2dp"
@@ -955,6 +1002,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView40"
                             android:layout_width="wrap_content"
@@ -962,6 +1010,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/mat_og_drikke"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -985,7 +1034,7 @@
                             android:text="@string/during_curry_desc"
                             android:fontFamily="@font/sfprotext_regular"
                             android:textColor="@color/mainBlack"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -997,11 +1046,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
+
                         <ImageView
                             android:id="@+id/imageView41"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
+                            android:contentDescription="@string/leaf_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -1012,16 +1063,18 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:fontFamily="@font/sfprodisplay_bold"
-                            android:text="1690"
+                            android:text="@string/_1690"
                             android:textColor="@color/mainGreen"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView41"
                             app:layout_constraintStart_toEndOf="@+id/imageView41"
                             app:layout_constraintTop_toTopOf="@+id/imageView41" />
+
                         <ImageView
                             android:id="@+id/imageView42"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:contentDescription="@string/pluss_image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
