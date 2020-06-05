@@ -10,6 +10,9 @@ import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.MainActivity
 import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
+import java.text.SimpleDateFormat
+import java.time.Month
+import java.util.*
 
 class ConfirmationAdapter (
     private val departure: String,
@@ -36,11 +39,34 @@ class ConfirmationAdapter (
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewConfirmation, position: Int) {
 
+        val date = Calendar.getInstance()
+        val year = date.get(Calendar.YEAR)
+        val month = date.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault())
+        val dayInNumber = date.get(Calendar.DAY_OF_MONTH)
+        val dayString = date.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault())
+
+
+
         holder.view.textView_new_confirmation_from.text = "Fra $departure til"
         holder.view.textView_new_confirmation_to.text = arrival
         holder.view.textView_new_confirmation_departure_time.text = departureTime
         holder.view.textView_confirmation_points_new.text = "+ $points"
+        holder.view.textView_confirmation_date.text = "$dayInNumber $month"
+        holder.view.textView_new_confirmation_day.text = dayString
     }
+
+    /*
+    fun DateToString(format: String, locale: Locale = Locale.getDefault()): String {
+        val formatter = SimpleDateFormat(format, locale)
+        return formatter.format(this)
+    }
+
+    fun getCurrentDateTime(): Date {
+        return Calendar.getInstance().time
+    }
+
+     */
+
 }
 
 class ViewConfirmation(val view: View): RecyclerView.ViewHolder(view){
