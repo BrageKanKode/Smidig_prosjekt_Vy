@@ -97,6 +97,7 @@ class ShopFragment : Fragment() {
                             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
                                 .setView(mDialogView2)
 
+                            (activity as UsePointsActivity).textView_display_currency_header.text = balance.toString()
 
 
                             mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
