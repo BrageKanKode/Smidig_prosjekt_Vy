@@ -21,6 +21,8 @@ class UsePointsActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager
 
+    lateinit var updatedBalance: String
+
     internal var user: User? = null
 
     override fun onCreate(savedInstanceState: Bundle?)  {
@@ -55,20 +57,41 @@ class UsePointsActivity : AppCompatActivity() {
 
             }
             override fun onTabReselected(tab: TabLayout.Tab) {
-
             }
+
         })
+
+
+
 
         //----------------End of tab code------------------
 
 
+
+
+
+
+
+
+
+    }
+
+
+    override fun onResume() {
+        super.onResume()
         val ref = FirebaseDatabase.getInstance().getReference("/users")
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
+                var balance = user?.balance
 
-                textView_display_currency_header.text = user?.balance?.toString()
+
+                textView_display_currency_header.text = balance.toString()
+
+
+
+
             }
 
             override fun onCancelled(p0: DatabaseError) {
@@ -77,9 +100,9 @@ class UsePointsActivity : AppCompatActivity() {
 
         }
         ref.addListenerForSingleValueEvent(menuListener)
-
-
     }
+
+
 
 
 

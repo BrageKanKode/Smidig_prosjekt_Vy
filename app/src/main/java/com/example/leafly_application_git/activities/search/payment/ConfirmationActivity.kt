@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.CombinedFunctionsClass.incrementProgress
-import com.example.leafly_application_git.CombinedFunctionsClass.leveledUp
 import com.example.leafly_application_git.activities.authentication.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -17,11 +16,12 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
-import kotlinx.android.synthetic.main.level_up_dialog.*
 import kotlinx.android.synthetic.main.level_up_dialog.view.*
 
 
-@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS",
+    "RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS"
+)
 class ConfirmationActivity : AppCompatActivity() {
 
     internal var user: User? = null
@@ -39,7 +39,7 @@ class ConfirmationActivity : AppCompatActivity() {
         val departureTime: String = intent.getStringExtra(SplashScreenPaymentActivity.DEPARTURE_TIME_KEY)
         val price: String = intent.getStringExtra(SplashScreenPaymentActivity.PRICE_KEY)
         val points: String = intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)
-        dataPassClass(departure ,arrival ,departureTime ,price ,points)
+        dataPassClass(departure ,arrival ,departureTime, points)
 
 
         recycler_view_confirmation.layoutManager = LinearLayoutManager(this)
@@ -53,14 +53,13 @@ class ConfirmationActivity : AppCompatActivity() {
     private fun dataPassClass(departure: String,
                               arrival: String,
                               departureTime: String,
-                              price: String,
                               points: String){
 
-        recycler_view_confirmation.adapter = ConfirmationAdapter(departure, arrival, departureTime, price, points)
+        recycler_view_confirmation.adapter = ConfirmationAdapter(departure, arrival, departureTime, points)
 
         runOnUiThread{
             recycler_view_confirmation.adapter =
-                ConfirmationAdapter(departure, arrival, departureTime, price, points)
+                ConfirmationAdapter(departure, arrival, departureTime, points)
         }
     }
 

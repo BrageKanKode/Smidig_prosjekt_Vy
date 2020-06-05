@@ -71,7 +71,7 @@
     <string name="progression_disponibelt">Saldo</string>
     <string name="netflix_title">3 måneder med Netflix</string>
     <string name="dplay_title">Leie av film på Viaplay</string>
-    <string name="odeon_title">2-for-1 Kinobiletter</string>
+    <string name="odeon_title">Odeon Kinobiletter</string>
     <string name="til_betaling">Fullfør betaling</string>
     <string name="confirmation_message">Takk for kjøpet!</string>
     <string name="hjem">Hjem</string>
@@ -122,7 +122,7 @@
     <string name="rydd_x_antall_kilo_plast">Rydd X antall Kilo plast</string>
     <string name="ocean">ocean</string>
     <string name="_100_pr_tre">100 / pr tre</string>
-    <string name="_100_pr_kg">100 / pr kg</string>
+    <string name="_100_pr_kg">50 / pr kg</string>
     <string name="to">To</string>
     <string name="from">From</string>
     <string name="god_dag">God dag</string>
@@ -264,6 +264,7 @@
     <string name="gratulerer">Gratulerer!</string>
     <string name="disp_poeng_text">Disp. poeng</string>
     <string name="ditt_medlemsniv">Ditt medlemsnivå</string>
+    <string name="kupongen_brukes_i_til_bestilling_blabla_i_den_nettbutikken_du_har_kj_pt_verdi_hos_kan_kun_brukes_1_gang">Kupongen innløses hos valgt forhandler når du handler i nettbutikken. Kan kun brukes en gang</string>
 
 
 </resources>

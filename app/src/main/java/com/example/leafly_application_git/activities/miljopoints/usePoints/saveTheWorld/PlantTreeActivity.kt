@@ -44,7 +44,7 @@ class PlantTreeActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance
-                val treePrice = 50
+                val treePrice = 100
                 var treeAmount = 1
                 var totalTreeSum = treePrice
 
@@ -96,6 +96,11 @@ class PlantTreeActivity : AppCompatActivity() {
 
 
                         var usedHistory = "Du har reddet $treeAmount antall tre! \nFor $totalTreeSum miljøpoeng"
+                        if(treeAmount == 1){
+                            usedHistory = "Du har reddet $treeAmount tre! \nFor $totalTreeSum miljøpoeng"
+                        } else {
+                            usedHistory = "Du har reddet $treeAmount trær! \nFor $totalTreeSum miljøpoeng"
+                        }
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)
@@ -123,6 +128,7 @@ class PlantTreeActivity : AppCompatActivity() {
                         val mAlertDialog = mBuilder.show()
 
                         mDialogView2.button_see_my_purchases_tree.setOnClickListener {
+                            mAlertDialog.dismiss()
                             val intent = Intent(this@PlantTreeActivity, HistoryActivity::class.java)
                             startActivity(intent)
                         }
@@ -140,7 +146,7 @@ class PlantTreeActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(
                             this@PlantTreeActivity,
-                            "You need more more money, fool!",
+                            "Not enough points",
                             Toast.LENGTH_LONG
                         ).show()
                     }

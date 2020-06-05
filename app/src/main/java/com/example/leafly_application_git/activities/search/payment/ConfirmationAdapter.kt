@@ -10,12 +10,12 @@ import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.MainActivity
 import kotlinx.android.synthetic.main.activity_confirmation_v_2.view.*
+import java.util.*
 
 class ConfirmationAdapter (
     private val departure: String,
     private val arrival: String,
     private val departureTime: String,
-    private val price: String,
     private val points: String
 ): RecyclerView.Adapter<ViewConfirmation>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewConfirmation {
@@ -36,11 +36,20 @@ class ConfirmationAdapter (
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewConfirmation, position: Int) {
 
+        val date = Calendar.getInstance()
+        val month = date.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale("NOR"))
+        val dayInNumber = date.get(Calendar.DAY_OF_MONTH)
+        val dayString = date.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale("NOR"))
+
+
         holder.view.textView_new_confirmation_from.text = "Fra $departure til"
         holder.view.textView_new_confirmation_to.text = arrival
         holder.view.textView_new_confirmation_departure_time.text = departureTime
         holder.view.textView_confirmation_points_new.text = "+ $points"
+        holder.view.textView_confirmation_date.text = "$dayInNumber $month"
+        holder.view.textView_new_confirmation_day.text = dayString
     }
+
 }
 
 class ViewConfirmation(val view: View): RecyclerView.ViewHolder(view){
