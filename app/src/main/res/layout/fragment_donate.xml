@@ -43,7 +43,7 @@
             <TextView
                 android:id="@+id/textView_donate_forrest_dialog"
                 android:layout_width="0dp"
-                android:layout_height="83dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="100dp"
                 android:fontFamily="@font/sf_text"
@@ -194,7 +194,7 @@
             <TextView
                 android:id="@+id/textView_donate_ocean_dialog"
                 android:layout_width="0dp"
-                android:layout_height="81dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="100dp"
                 android:fontFamily="@font/sf_text"
