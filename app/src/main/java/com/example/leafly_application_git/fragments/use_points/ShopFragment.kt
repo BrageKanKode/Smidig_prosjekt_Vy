@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.fragments.use_points
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,7 +20,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_use_points.*
-import kotlinx.android.synthetic.main.activity_use_points.view.*
 import kotlinx.android.synthetic.main.dplay_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_shop.view.*
 import kotlinx.android.synthetic.main.narvesen_dialog.view.*
@@ -30,10 +30,12 @@ import kotlinx.android.synthetic.main.purchase_done_dialog.view.imageView_close_
 import kotlinx.android.synthetic.main.starbucks_dialog.view.*
 import kotlinx.android.synthetic.main.voi_dialog.view.*
 
+@Suppress("NAME_SHADOWING")
 class ShopFragment : Fragment() {
 
     internal var user: User? = null
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -73,7 +75,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textView_currency_dplay.text = "Saldo: " + balance.toString()
 
 
-                    mDialogView.button_buy_dplay.setText("Kjøp for $dplayPurchasePrice poeng")
+                    mDialogView.button_buy_dplay.text = "Kjøp for $dplayPurchasePrice poeng"
                     mDialogView.button_buy_dplay.setOnClickListener {
 
 
@@ -178,7 +180,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textView_currency_netflix.text = "Saldo: " + balance.toString()
 
 
-                    mDialogView.button_buy_netflix.setText("Kjøp for $netflixPurchasePrice poeng")
+                    mDialogView.button_buy_netflix.text = "Kjøp for $netflixPurchasePrice poeng"
                     mDialogView.button_buy_netflix.setOnClickListener {
 
                         if (balance!! >= netflixPurchasePrice) {
@@ -275,7 +277,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textView_currency_odeon.text = "Saldo: " + balance.toString()
 
 
-                    mDialogView.button_buy_odeon.setText("Kjøp for $odeonPurchasePrice poeng")
+                    mDialogView.button_buy_odeon.text = "Kjøp for $odeonPurchasePrice poeng"
                     mDialogView.button_buy_odeon.setOnClickListener {
 
                         if (balance!! >= odeonPurchasePrice) {
@@ -373,7 +375,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textview_currency_narvesen.text = "Saldo: " + balance.toString()
 
 
-                    mDialogView.button_buy_narvsesen.setText("Kjøp for $narvesenPurchasePrice poeng")
+                    mDialogView.button_buy_narvsesen.text = "Kjøp for $narvesenPurchasePrice poeng"
                     mDialogView.button_buy_narvsesen.setOnClickListener {
 
                         if (balance!! >= narvesenPurchasePrice) {
@@ -470,7 +472,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textview_currency_starbucks.text = "Saldo: " + balance.toString()
 
 
-                    mDialogView.button_buy_starbucks.setText("Kjøp for $starbucksPurchasePrice poeng")
+                    mDialogView.button_buy_starbucks.text = "Kjøp for $starbucksPurchasePrice poeng"
                     mDialogView.button_buy_starbucks.setOnClickListener {
 
                         if (balance!! >= starbucksPurchasePrice) {
@@ -566,7 +568,7 @@ class ShopFragment : Fragment() {
                     mDialogView.textview_voi_currency.text = "Saldo: " + balance.toString()
 
 
-                    mDialogView.button_buy_voi.setText("Kjøp for $voiPurchasePrice poeng")
+                    mDialogView.button_buy_voi.text = "Kjøp for $voiPurchasePrice poeng"
                     mDialogView.button_buy_voi.setOnClickListener {
 
                         if (balance!! >= voiPurchasePrice) {
