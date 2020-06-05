@@ -96,6 +96,11 @@ class PlantTreeActivity : AppCompatActivity() {
 
 
                         var usedHistory = "Du har reddet $treeAmount antall tre! \nFor $totalTreeSum miljøpoeng"
+                        if(treeAmount == 1){
+                            usedHistory = "Du har reddet $treeAmount tre! \nFor $totalTreeSum miljøpoeng"
+                        } else {
+                            usedHistory = "Du har reddet $treeAmount trær! \nFor $totalTreeSum miljøpoeng"
+                        }
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)

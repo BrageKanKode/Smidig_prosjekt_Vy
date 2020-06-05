@@ -91,7 +91,7 @@ class UsedPointsFragment : Fragment() {
                         } else if(view.textView_display_new_item.text.toString().contains("Voi")) {
                             mDialogView.textView_your_cupon_text.text = "Voi - Verdikuppong"
                             mDialogView.textView_display_given_cupon.text = "Ingen oppstarts-avgift på en Voi sparkesykkel"
-                        } else if (view.textView_display_new_item.text.toString().contains("tre")){
+                        } else if (view.textView_display_new_item.text.toString().contains("tre") || view.textView_display_new_item.text.toString().contains("trær")){
                             mBuilder.setView(mDialogView2)
                             mDialogView2.textView_tree_cupon_title.text = "Planting av trær"
                             mDialogView2.textView_cupon_desc.text = "Planting av trær som hjelper miljøet"
@@ -228,7 +228,7 @@ class UsedPointsFragment : Fragment() {
                 val voiDrawable = R.drawable.ic_logotype_red
                 rootView.imageView_used_history_image.setImageResource(voiDrawable)
                 rootView.textView_display_used_history_price.text = "-100"
-            } else if (rootView.textView_display_new_item.text.toString().contains("tre")){
+            } else if (rootView.textView_display_new_item.text.toString().contains("tre") || rootView.textView_display_new_item.text.toString().contains("trær")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
 //                rootView.textView_display_used_history_price.text = "-100"
