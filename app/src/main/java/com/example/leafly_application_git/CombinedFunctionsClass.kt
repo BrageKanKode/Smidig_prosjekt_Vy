@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.startActivity
@@ -22,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_travel_detail.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.textView_points
 import kotlinx.android.synthetic.main.activity_use_points.*
+import kotlinx.android.synthetic.main.activity_use_points.view.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.*
 import kotlinx.android.synthetic.main.list_choose_time_row.view.*
 import kotlinx.android.synthetic.main.list_choose_trip_place_row.view.*
@@ -123,6 +125,7 @@ object CombinedFunctionsClass {
 
         val btnText = "Betal"
 
+
         //Inflate popup
         var mDialogView = LayoutInflater.from(context)
             .inflate(R.layout.before_scan_dialog, null)
@@ -156,6 +159,7 @@ object CombinedFunctionsClass {
                 mDialogView.textView_balance_current_before_scan.text = balance?.toString()
 
 
+
                 mDialogView.button_scan_dialog.setOnClickListener {
                     mAlertDialog2.dismiss()
                     if(balance!! >= price) {
@@ -164,6 +168,10 @@ object CombinedFunctionsClass {
                         mBuilder = AlertDialog.Builder(context)
                             .setView(mDialogView)
                         val mAlertDialog = mBuilder.show()
+
+
+
+
 
 
 
