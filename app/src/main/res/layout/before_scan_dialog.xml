@@ -124,6 +124,7 @@
             android:fontFamily="@font/sfprotext_bold"
             android:textAlignment="textEnd"
             android:textColor="@color/mainGreen"
+            android:text="0000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView42"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -146,6 +147,7 @@
             android:fontFamily="@font/sfprotext_bold"
             android:textAlignment="textEnd"
             android:textColor="@color/mainGreen"
+            android:text="0000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView43"
             app:layout_constraintEnd_toEndOf="parent"

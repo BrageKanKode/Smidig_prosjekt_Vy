@@ -46,6 +46,7 @@
                 android:fontFamily="@font/sfprotext_regular"
                 android:textColor="@color/mainBlack"
                 android:textSize="20sp"
+                android:text="Fra x til x"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,6 +57,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/sf_text"
                 android:textColor="@color/colorBlack"
+                android:text="Tid her"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="@+id/textView_from"
                 app:layout_constraintTop_toBottomOf="@+id/textView_from" />
@@ -161,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sfprotext_regular"
                 android:textColor="@color/mainBlack"
+                android:text="120"
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView_travel_detail_voksen_string" />
@@ -196,6 +199,7 @@
                 android:fontFamily="@font/sfprotext_semibold"
                 android:textColor="@color/mainBlack"
                 android:textSize="20dp"
+                android:text="120"
                 app:layout_constraintBottom_toBottomOf="@+id/textView_travel_order_totalpris_string"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView_travel_order_totalpris_string" />
@@ -208,7 +212,7 @@
         android:id="@+id/cardView_confirmation"
         android:layout_width="413dp"
         android:layout_height="45dp"
-        app:cardBackgroundColor="#CBEAE4"
+        app:cardBackgroundColor="@color/greenShade"
         app:cardCornerRadius="0dp"
         app:cardElevation="0dp"
         app:cardMaxElevation="0dp"
@@ -226,7 +230,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/sfprotext_regular"
-                android:textColor="@color/darkGreen"
+                android:textColor="@color/mainBlack"
+                android:text="Du oppnår x poeng for denne reisen"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView_travel_order_leaf"
@@ -241,7 +246,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_eco_green_24" />
+                app:srcCompat="@drawable/ic_eco_black_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
