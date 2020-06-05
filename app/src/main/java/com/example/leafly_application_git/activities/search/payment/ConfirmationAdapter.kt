@@ -41,10 +41,9 @@ class ConfirmationAdapter (
 
         val date = Calendar.getInstance()
         val year = date.get(Calendar.YEAR)
-        val month = date.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault())
+        val month = date.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale("NOR"))
         val dayInNumber = date.get(Calendar.DAY_OF_MONTH)
-        val dayString = date.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault())
-
+        val dayString = date.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale("NOR"))
 
 
         holder.view.textView_new_confirmation_from.text = "Fra $departure til"
@@ -54,18 +53,6 @@ class ConfirmationAdapter (
         holder.view.textView_confirmation_date.text = "$dayInNumber $month"
         holder.view.textView_new_confirmation_day.text = dayString
     }
-
-    /*
-    fun DateToString(format: String, locale: Locale = Locale.getDefault()): String {
-        val formatter = SimpleDateFormat(format, locale)
-        return formatter.format(this)
-    }
-
-    fun getCurrentDateTime(): Date {
-        return Calendar.getInstance().time
-    }
-
-     */
 
 }
 

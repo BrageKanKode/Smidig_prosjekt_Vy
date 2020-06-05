@@ -18,6 +18,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_use_points.*
+import kotlinx.android.synthetic.main.activity_use_points.view.*
 import kotlinx.android.synthetic.main.dplay_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_shop.view.*
 import kotlinx.android.synthetic.main.narvesen_dialog.view.*
@@ -94,6 +96,8 @@ class ShopFragment : Fragment() {
                                 .inflate(R.layout.purchase_done_dialog, null)
                             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
                                 .setView(mDialogView2)
+
+                            (activity as UsePointsActivity).textView_display_currency_header.text = balance.toString()
 
                             mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
 
@@ -193,6 +197,8 @@ class ShopFragment : Fragment() {
                             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
                                 .setView(mDialogView2)
 
+                            (activity as UsePointsActivity).textView_display_currency_header.text = balance.toString()
+
                             mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
 
                             mDialogView2.button_purchase_view_cupon.setOnClickListener {
@@ -287,6 +293,8 @@ class ShopFragment : Fragment() {
                                 .inflate(R.layout.purchase_done_dialog, null)
                             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
                                 .setView(mDialogView2)
+
+                            (activity as UsePointsActivity).textView_display_currency_header.text = balance.toString()
 
                             mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
 
@@ -384,6 +392,8 @@ class ShopFragment : Fragment() {
                             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
                                 .setView(mDialogView2)
 
+                            (activity as UsePointsActivity).textView_display_currency_header.text = balance.toString()
+
                             mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
 
                             mDialogView2.button_purchase_view_cupon.setOnClickListener {
@@ -478,6 +488,8 @@ class ShopFragment : Fragment() {
                             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
                                 .setView(mDialogView2)
 
+                            (activity as UsePointsActivity).textView_display_currency_header.text = balance.toString()
+
                             mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
 
                             mDialogView2.button_purchase_view_cupon.setOnClickListener {
@@ -561,6 +573,8 @@ class ShopFragment : Fragment() {
                             ref.child("/balance").setValue(balance)
 
 
+
+
                             val refUsedHistory = ref.child("/usedHistory")
                             refUsedHistory.push().setValue(usedHistory)
 
@@ -572,6 +586,8 @@ class ShopFragment : Fragment() {
                                 .inflate(R.layout.purchase_done_dialog, null)
                             val mBuilder = AlertDialog.Builder(activity as UsePointsActivity)
                                 .setView(mDialogView2)
+
+                            (activity as UsePointsActivity).textView_display_currency_header.text = balance.toString()
 
                             mDialogView2.textView_thanks_for_purchase_info.text = usedHistory
 
