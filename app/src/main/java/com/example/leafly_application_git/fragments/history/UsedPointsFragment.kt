@@ -75,63 +75,65 @@ class UsedPointsFragment : Fragment() {
                         mDialogView.textView_cupon_code_example.text = getRandomString(8)
 
                         if (view.textView_display_new_item.text.toString().contains("Netflix")){
-                            mDialogView.textView_your_cupon_text.text = "Netflix - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "3 måneder Netflix abbonnement"
+                            createPopup(mDialogView, "Netflix - Verdikuppong", "3 måneder Netflix abbonnement")
+
                         } else if (view.textView_display_new_item.text.toString().contains("Viaplay")){
-                            mDialogView.textView_your_cupon_text.text = "Viaplay - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Leie av 1 film på Viaplay"
+                            createPopup(mDialogView, "Viaplay - Verdikuppong", "Leie av 1 film på Viaplay")
+
                         } else if(view.textView_display_new_item.text.toString().contains("Odeon")){
-                            mDialogView.textView_your_cupon_text.text = "Odeon - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "2 for 1 på Odeon kinobilletter"
+                            createPopup(mDialogView, "Odeon - Verdikuppong", "2 for 1 på Odeon kinobilletter")
+
                         } else if(view.textView_display_new_item.text.toString().contains("Narvesen")){
-                            mDialogView.textView_your_cupon_text.text = "Narvesen - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "1 gratis pølse hos en Narvesen forhandler"
+                            createPopup(mDialogView, "Narvesen - Verdikuppong", "1 gratis pølse hos en Narvesen forhandler")
+
                         } else if (view.textView_display_new_item.text.toString().contains("Starbucks")){
-                            mDialogView.textView_your_cupon_text.text = "Starbucks - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "En gratis valgfri kaffe hos en Starbucks forhandler"
+                            createPopup(mDialogView, "Starbucks - Verdikuppong", "En gratis valgfri kaffe hos en Starbucks forhandler")
+
                         } else if(view.textView_display_new_item.text.toString().contains("Voi")) {
-                            mDialogView.textView_your_cupon_text.text = "Voi - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Ingen oppstarts-avgift på en Voi sparkesykkel"
+                            createPopup(mDialogView, "Voi - Verdikuppong", "Ingen oppstarts-avgift på en Voi sparkesykkel")
+
                         } else if (view.textView_display_new_item.text.toString().contains("tre") || view.textView_display_new_item.text.toString().contains("trær")){
                             mBuilder.setView(mDialogView2)
                             mDialogView2.textView_tree_cupon_title.text = "Planting av trær"
                             mDialogView2.textView_cupon_desc.text = "Planting av trær som hjelper miljøet"
                             mDialogView2.textView_tree_info.text = activity?.applicationContext?.resources?.getString(R.string.tree_cupon_info_box)
+
                         } else if (view.textView_display_new_item.text.toString().contains("vannrensing")){
                             mBuilder.setView(mDialogView2)
                             mDialogView2.textView_tree_cupon_title.text = "Rydding av plast"
                             mDialogView2.textView_cupon_desc.text = "Rydding av plast i havet som hjelper miljøet"
                             mDialogView2.textView_tree_info.text = activity?.applicationContext?.resources?.getString(R.string.ocean_clean_info_box)
+
                         } else if (view.textView_display_new_item.text.toString().contains("kaffe på togturen")){
-                            mDialogView.textView_your_cupon_text.text = "Kaffe - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Kaffe-kupong til en av våre maskiner"
+                            createPopup(mDialogView, "Kaffe - Verdikuppong", "Kaffe-kupong til en av våre maskiner")
+
                         }else if (view.textView_display_new_item.text.toString().contains("wrap")){
-                            mDialogView.textView_your_cupon_text.text = "Wrap - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Wrap-kupong til en av våre maskiner eller togets cafe"
+                            createPopup(mDialogView, "Wrap - Verdikuppong", "Wrap-kupong til en av våre maskiner eller togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("Du kjøpte 1 te")){
-                            mDialogView.textView_your_cupon_text.text = "Te - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Te-kupong til en av våre maskiner eller togets cafe"
+                            createPopup(mDialogView, "Te - Verdikuppong", "Te-kupong til en av våre maskiner eller togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("sandwich")){
-                            mDialogView.textView_your_cupon_text.text = "Sandwich - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Sandwich-kupong til en av våre maskiner eller togets cafe"
+                            createPopup(mDialogView, "Sandwich - Verdikuppong", "Sandwich-kupong til en av våre maskiner eller togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("mineralvann")){
-                            mDialogView.textView_your_cupon_text.text = "Mineralvann - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Mineralvann-kupong til en av våre maskiner eller togets cafe"
+                            createPopup(mDialogView, "Mineralvann - Verdikuppong", "Mineralvann-kupong til en av våre maskiner eller togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("smoothie")){
-                            mDialogView.textView_your_cupon_text.text = "Smoothie - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Smoothie-kupong til togets cafe"
+                            createPopup(mDialogView, "Smoothie - Verdikuppong", "Smoothie-kupong til togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("falafel")){
-                            mDialogView.textView_your_cupon_text.text = "Falafel - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Falafel-kupong til togets cafe"
+                            createPopup(mDialogView, "Falafel - Verdikuppong", "Falafel-kupong til togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("kjøttkake")){
-                            mDialogView.textView_your_cupon_text.text = "Kjøttkake - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Kjøttkake-kupong til togets cafe"
+                            createPopup(mDialogView, "Kjøttkake - Verdikuppong", "Kjøttkake-kupong til togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("indisk curry")){
-                            mDialogView.textView_your_cupon_text.text = "Indisk Curry - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Indisk Curry-kupong til togets cafe"
+                            createPopup(mDialogView, "Indisk Curry - Verdikuppong", "Indisk Curry-kupong til togets cafe")
+
                         }else if (view.textView_display_new_item.text.toString().contains("Pulled Oumph")){
-                            mDialogView.textView_your_cupon_text.text = "Pulled Oumph - Verdikuppong"
-                            mDialogView.textView_display_given_cupon.text = "Pulled Oumph-kupong til togets cafe"
+                            createPopup(mDialogView, "Pulled Oumph - Verdikuppong", "Pulled Oumph-kupong til togets cafe")
+
                         }
 
                         val mAlertDialog = mBuilder.show()
@@ -142,28 +144,24 @@ class UsedPointsFragment : Fragment() {
                         mDialogView2.imageView_close_tree_ocean_cupon.setOnClickListener {
                             mAlertDialog.dismiss()
                         }
-
                     }
-
-
                 }
-
-
             }
 
             override fun onCancelled(p0: DatabaseError) {
                 TODO("Not yet implemented")
             }
         }
-
         ref.addListenerForSingleValueEvent(menuListener)
-
-
 
         Log.d("Tag", usedHistoryList.toString())
 
-
         return root
+    }
+
+    fun createPopup(mDialogView: View, header: String, information: String) {
+        mDialogView.textView_your_cupon_text.text = header
+        mDialogView.textView_display_given_cupon.text = information
     }
 
 
@@ -187,6 +185,11 @@ class UsedPointsFragment : Fragment() {
             return mUsedHistoryList[position]
         }
 
+        fun setHistoryRowInformation(rootView: View, logo: Int, price: String) {
+            rootView.imageView_used_history_image.setImageResource(logo)
+            rootView.textView_display_used_history_price.text = price
+        }
+
 
         val eatLogo = R.drawable.ic_restaurant_24px
         val warmDrinkLogo = R.drawable.ic_local_cafe_24px
@@ -206,29 +209,23 @@ class UsedPointsFragment : Fragment() {
 
             //Checks what type of item that has been purchased. Displays the corresponding image to each picture
             if (rootView.textView_display_new_item.text.toString().contains("Netflix")){
-                val netflixDrawable = R.drawable.ic_netflix_2015_logo
-                rootView.imageView_used_history_image.setImageResource(netflixDrawable)
-                rootView.textView_display_used_history_price.text = "-3300"
+                setHistoryRowInformation(rootView, R.drawable.ic_netflix_2015_logo, "-3300")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("Viaplay")){
-                val dplayDrawable = R.drawable.ic_viaplay
-                rootView.imageView_used_history_image.setImageResource(dplayDrawable)
-                rootView.textView_display_used_history_price.text = "-500"
+                setHistoryRowInformation(rootView, R.drawable.ic_viaplay, "-500")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("Odeon")){
-                val odeonDrawable = R.drawable.ic_odeon_logo
-                rootView.imageView_used_history_image.setImageResource(odeonDrawable)
-                rootView.textView_display_used_history_price.text = "-1350"
+                setHistoryRowInformation(rootView, R.drawable.ic_odeon_logo, "-1350")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("Narvesen")){
-                val narvesenDrawable = R.drawable.ic_narvesen_logo
-                rootView.imageView_used_history_image.setImageResource(narvesenDrawable)
-                rootView.textView_display_used_history_price.text = "-350"
+                setHistoryRowInformation(rootView, R.drawable.ic_narvesen_logo, "-350")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("Starbucks")){
-                val starbucksDrawable = R.drawable.ic_starbucks_coffee
-                rootView.textView_display_used_history_price.text = "-450"
-                rootView.imageView_used_history_image.setImageResource(starbucksDrawable)
+                setHistoryRowInformation(rootView, R.drawable.ic_starbucks_coffee, "-450")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("Voi")){
-                val voiDrawable = R.drawable.ic_logotype_red
-                rootView.imageView_used_history_image.setImageResource(voiDrawable)
-                rootView.textView_display_used_history_price.text = "-100"
+                setHistoryRowInformation(rootView, R.drawable.ic_logotype_red, "-100")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("tre") || rootView.textView_display_new_item.text.toString().contains("trær")){
                 val treeDrawable = R.drawable.ic_trer
                 rootView.imageView_used_history_image.setImageResource(treeDrawable)
@@ -242,35 +239,35 @@ class UsedPointsFragment : Fragment() {
                 val intvalue = value.substring(1)
                 rootView.textView_display_used_history_price.text = "-$intvalue"
             } else if (rootView.textView_display_new_item.text.toString().contains("kaffe på togturen")){
-                rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
-                rootView.textView_display_used_history_price.text = "-320"
+                setHistoryRowInformation(rootView, warmDrinkLogo, "-320")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("wrap")){
-                rootView.imageView_used_history_image.setImageResource(eatLogo)
-                rootView.textView_display_used_history_price.text = "-890"
+                setHistoryRowInformation(rootView, eatLogo, "-890")
+
             } else if (rootView.textView_display_new_item.text.toString().contains("Du kjøpte 1 te")) {
-                rootView.imageView_used_history_image.setImageResource(warmDrinkLogo)
-                rootView.textView_display_used_history_price.text = "-420"
+                setHistoryRowInformation(rootView, warmDrinkLogo, "-420")
+
             }else if (rootView.textView_display_new_item.text.toString().contains("sandwich")) {
-                rootView.imageView_used_history_image.setImageResource(eatLogo)
-                rootView.textView_display_used_history_price.text = "-520"
+                setHistoryRowInformation(rootView, eatLogo, "-520")
+
             }else if (rootView.textView_display_new_item.text.toString().contains("mineralvann")) {
-                rootView.imageView_used_history_image.setImageResource(coldDrinkLogo)
-                rootView.textView_display_used_history_price.text = "-420"
+                setHistoryRowInformation(rootView, coldDrinkLogo, "-420")
+
             }else if (rootView.textView_display_new_item.text.toString().contains("smoothie")) {
-                rootView.imageView_used_history_image.setImageResource(coldDrinkLogo)
-                rootView.textView_display_used_history_price.text = "-520"
+                setHistoryRowInformation(rootView, coldDrinkLogo, "-520")
+
             }else if (rootView.textView_display_new_item.text.toString().contains("falafel")) {
-                rootView.imageView_used_history_image.setImageResource(eatLogo)
-                rootView.textView_display_used_history_price.text = "-1390"
+                setHistoryRowInformation(rootView, eatLogo, "-1390")
+
             }else if (rootView.textView_display_new_item.text.toString().contains("kjøttkake")) {
-                rootView.imageView_used_history_image.setImageResource(eatLogo)
-                rootView.textView_display_used_history_price.text = "-1690"
+                setHistoryRowInformation(rootView, eatLogo, "-1690")
+
             }else if (rootView.textView_display_new_item.text.toString().contains("Pulled Oumph")) {
-                rootView.imageView_used_history_image.setImageResource(eatLogo)
-                rootView.textView_display_used_history_price.text = "-1790"
+                setHistoryRowInformation(rootView, eatLogo, "-1790")
+
             }else if (rootView.textView_display_new_item.text.toString().contains("indisk curry")) {
-                rootView.imageView_used_history_image.setImageResource(eatLogo)
-                rootView.textView_display_used_history_price.text = "-1790"
+                setHistoryRowInformation(rootView, eatLogo, "-1790")
+
             }
 
             return rootView
