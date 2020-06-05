@@ -1,186 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_editor_absoluteX="145dp"
+    tools:layout_editor_absoluteY="125dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginRight="20dp"
-    android:layout_marginLeft="20dp"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView_explanation_earn_title"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/sfprodisplay_bold"
-        android:text="@string/hvor_mange_poeng_f_r_jeg"
-        android:textColor="@color/mainBlack"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textView_explanation_under_title"
-        android:layout_width="278dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/du_f_r_forskjellige_poeng_avhengig_av_hva_du_kj_per"
-        android:textColor="@color/mainBlack"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_earn_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_earn_title" />
+        <TextView
+            android:id="@+id/textView_explanation_earn_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:text="@string/hvor_mange_poeng_f_r_jeg"
+            android:textColor="@color/mainBlack"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_explanation_earnings_second_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/niv_basert_poeng"
-        android:textColor="@color/mainBlack"
-        android:fontFamily="@font/sfprodisplay_bold"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_under_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_under_title" />
+        <TextView
+            android:id="@+id/textView_explanation_under_title"
+            android:layout_width="278dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/du_f_r_forskjellige_poeng_avhengig_av_hva_du_kj_per"
+            android:textColor="@color/mainBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_earn_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_earn_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_second_under_title"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfprotext_regular"
-        android:layout_marginEnd="24dp"
-        android:text="@string/gjelder_hvis_du_register_ditt_medlemsnummer_i_forbindelse_med_kj_p"
-        android:textColor="@color/mainBlack"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_earnings_second_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_earnings_second_title" />
+        <TextView
+            android:id="@+id/textView_explanation_earnings_second_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:text="@string/niv_basert_poeng"
+            android:textColor="@color/mainBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_under_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_under_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_with_vy_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/sfprotext_bold"
-        android:text="@string/reiser_med_vy"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_second_under_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_second_under_title" />
+        <TextView
+            android:id="@+id/textView_explanation_second_under_title"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/gjelder_hvis_du_register_ditt_medlemsnummer_i_forbindelse_med_kj_p"
+            android:textColor="@color/mainBlack"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_earnings_second_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_earnings_second_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_ordinary_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/sfprotext_bold"
-        android:text="@string/ordinary_purchases"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_with_vy_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_with_vy_title" />
+        <TextView
+            android:id="@+id/textView_explanation_with_vy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/reiser_med_vy"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_second_under_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_second_under_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_season_sead_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfprotext_bold"
-        android:text="@string/season_sead"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_ordinary_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_ordinary_title" />
+        <TextView
+            android:id="@+id/textView_explanation_ordinary_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/ordinary_purchases"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_with_vy_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_with_vy_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_season_spire_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfprotext_bold"
-        android:text="@string/season_spire"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_season_sead_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_season_sead_title" />
+        <TextView
+            android:id="@+id/textView_explanation_season_sead_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/season_sead"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_ordinary_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_ordinary_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_season_tre_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfprotext_bold"
-        android:text="@string/season_tree"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_season_spire_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_season_spire_title" />
+        <TextView
+            android:id="@+id/textView_explanation_season_spire_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/season_spire"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_season_sead_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_season_sead_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_with_vy_dialog"
-        android:layout_width="153dp"
-        android:layout_height="38dp"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_1_poeng_per_krone_eks_bestillingsgebyr"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_with_vy_title"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_second_under_title"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/textView_explanation_with_vy_title" />
+        <TextView
+            android:id="@+id/textView_explanation_season_tre_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/season_tree"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintStart_toStartOf="@+id/textView_explanation_season_spire_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_explanation_season_spire_title" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="194dp" />
+        <TextView
+            android:id="@+id/textView_explanation_with_vy_dialog"
+            android:layout_width="153dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/_1_poeng_per_krone_eks_bestillingsgebyr"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_with_vy_title"
+            app:layout_constraintEnd_toEndOf="@+id/textView_explanation_second_under_title"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/textView_explanation_with_vy_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_ordinary_dialog"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_1_poeng_per_krone"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_ordinary_title"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_with_vy_dialog"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/textView_explanation_ordinary_title" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="194dp" />
 
-    <TextView
-        android:id="@+id/textView_explanation_season_sead_dialog"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_48_000_poeng"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_sead_title"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_ordinary_dialog"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_sead_title" />
+        <TextView
+            android:id="@+id/textView_explanation_ordinary_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/_1_poeng_per_krone"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_ordinary_title"
+            app:layout_constraintEnd_toEndOf="@+id/textView_explanation_with_vy_dialog"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/textView_explanation_ordinary_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_season_spire_dialog"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_70_000_poeng"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_spire_title"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_season_sead_dialog"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_spire_title" />
+        <TextView
+            android:id="@+id/textView_explanation_season_sead_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/_48_000_poeng"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_sead_title"
+            app:layout_constraintEnd_toEndOf="@+id/textView_explanation_ordinary_dialog"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_sead_title" />
 
-    <TextView
-        android:id="@+id/textView_explanation_season_tre_dialog"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_81_000_poeng"
-        android:textAllCaps="false"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_tre_title"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_season_spire_dialog"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_tre_title" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView_explanation_season_spire_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/_70_000_poeng"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_spire_title"
+            app:layout_constraintEnd_toEndOf="@+id/textView_explanation_season_sead_dialog"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_spire_title" />
+
+        <TextView
+            android:id="@+id/textView_explanation_season_tre_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprotext_regular"
+            android:text="@string/_81_000_poeng"
+            android:textAllCaps="false"
+            android:textColor="@color/mainBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_season_tre_title"
+            app:layout_constraintEnd_toEndOf="@+id/textView_explanation_season_spire_dialog"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/textView_explanation_season_tre_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
