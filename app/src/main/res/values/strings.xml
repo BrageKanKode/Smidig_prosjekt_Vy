@@ -268,6 +268,9 @@
     <string name="kupongen_brukes_i_til_bestilling_blabla_i_den_nettbutikken_du_har_kj_pt_verdi_hos_kan_kun_brukes_1_gang">Kupongen innløses hos valgt forhandler når du handler i nettbutikken. Kan kun brukes en gang</string>
     <string name="startpage_name">navn</string>
     <string name="illustration_of_woods">illustration of woods</string>
+    <string name="registrer_bruker">Registrer bruker</string>
+    <string name="velkommen_til_milj_poeng">Velkommen til Miljøpoeng</string>
+    <string name="miljopoeng_ingress">Du må være innlogget for å opptjene og se dine miljøpoeng.</string>
 
 
 </resources>
