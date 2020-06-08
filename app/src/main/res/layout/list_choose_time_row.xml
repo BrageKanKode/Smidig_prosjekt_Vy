@@ -8,12 +8,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="141dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,11 +25,12 @@
                 android:id="@+id/textView_From"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/sf_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/sfprotext_regular"
+                android:textSize="16sp"
                 android:text="@string/from"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,11 +38,12 @@
                 android:id="@+id/textView_to"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="32dp"
-                android:fontFamily="@font/sf_text"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/to"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/mainBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,19 +51,22 @@
                 android:id="@+id/textView_price_one"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/colorBlack"
-                app:layout_constraintEnd_toEndOf="@+id/textView_time_arrival"
-                app:layout_constraintTop_toBottomOf="@+id/textView_time_arrival" />
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/sfprotext_bold"
+                android:text="000 kr"
+                android:textColor="@color/mainGreen"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
 
             <TextView
                 android:id="@+id/textView_time_arrival"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_display"
-                android:text="@string/arrival"
-                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/sfprodisplay_bold"
+                android:text="00:00"
+                android:textColor="@color/mainBlack"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView_to"
                 app:layout_constraintTop_toBottomOf="@+id/textView_to" />
@@ -72,10 +75,9 @@
                 android:id="@+id/textView_time_departure"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/sf_display"
-                android:text="@string/departure"
-                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/sfprodisplay_bold"
+                android:text="00:00"
+                android:textColor="@color/mainBlack"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="@+id/textView_From"
                 app:layout_constraintTop_toBottomOf="@+id/textView_From" />
@@ -83,7 +85,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
                 android:layout_width="0dp"
-                android:layout_height="25dp"
+                android:layout_height="38dp"
                 app:cardBackgroundColor="@color/colorLightGreen"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -96,24 +98,26 @@
                     <TextView
                         android:id="@+id/textView_points"
                         android:layout_width="wrap_content"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:fontFamily="@font/sf_text"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/sfprotext_medium"
+                        android:text="Du oppnår x miljøpoeng"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView_row_leaf"
                         app:layout_constraintStart_toEndOf="@+id/imageView_row_leaf"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="@+id/imageView_row_leaf" />
 
                     <ImageView
                         android:id="@+id/imageView_row_leaf"
-                        android:layout_width="25dp"
-                        android:layout_height="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
                         android:contentDescription="@string/leaf_image"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_eco_black_18dp" />
+                        app:srcCompat="@drawable/ic_eco_black_24" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -123,10 +127,37 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/line"
                 app:layout_constraintBottom_toBottomOf="@+id/textView_time_arrival"
-                app:layout_constraintEnd_toStartOf="@+id/textView_time_arrival"
-                app:layout_constraintStart_toEndOf="@+id/textView_time_departure"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView_time_departure"
-                app:srcCompat="@drawable/ic_arrow_right_alt_24px" />
+                app:srcCompat="@drawable/ic_from_to_icon" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/greyShadeDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_time_arrival">
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ikke startet"
+                android:textColor="@color/mainBlack"
+                android:fontFamily="@font/sfprotext_regular"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
