@@ -10,21 +10,21 @@
         android:id="@+id/imageView_popup_logo"
         android:layout_width="77dp"
         android:layout_height="68dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/leaf_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_vector_leaf" />
+        app:srcCompat="@drawable/ic_eco_black_24" />
 
     <TextView
         android:id="@+id/textView_text_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/sf_display"
         android:text="@string/betal_med"
-        android:textColor="#3A846F"
+        android:textColor="@color/mainBlack"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_display"
-        android:text="@string/title_miljopoints"
-        android:textColor="#3A846F"
+        android:text="@string/milj_poeng"
+        android:textColor="@color/mainBlack"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView_text_first"
@@ -46,27 +46,32 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView9"
-        android:layout_width="200dp"
-        android:layout_height="75dp"
+        android:layout_width="260dp"
+        android:layout_height="65dp"
         android:layout_marginTop="32dp"
         app:cardBackgroundColor="#CBEAE4"
-        app:cardCornerRadius="25dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@+id/textView_text_second"
         app:layout_constraintStart_toStartOf="@+id/textView_text_second"
         app:layout_constraintTop_toBottomOf="@+id/textView_text_second">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textView_price_in_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_display"
-                android:textColor="#3A846F"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/sfprodisplay_bold"
+                android:text="@string/example_text"
+                android:textColor="@color/mainBlack"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -74,14 +79,14 @@
 
             <ImageView
                 android:id="@+id/imageView_leaf_numbersomething"
-                android:layout_width="17dp"
-                android:layout_height="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:contentDescription="@string/line"
                 app:layout_constraintBottom_toBottomOf="@+id/textView_price_in_points"
                 app:layout_constraintEnd_toStartOf="@+id/textView_price_in_points"
-                app:srcCompat="@drawable/ic_vector_leaf" />
+                app:layout_constraintTop_toTopOf="@+id/textView_price_in_points"
+                app:srcCompat="@drawable/ic_eco_black_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -89,58 +94,52 @@
         android:id="@+id/textView_from_to_values"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_text"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sfprotext_medium"
         android:text="@string/fra_oslo_s_til_fredrikstad"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/cardView9"
+        android:textColor="@color/mainBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView9" />
-
-    <ImageView
-        android:id="@+id/imageView_popupp_line"
-        android:layout_width="200dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/line"
-        app:layout_constraintEnd_toEndOf="@+id/textView_from_to_values"
-        app:layout_constraintStart_toStartOf="@+id/textView_from_to_values"
-        app:layout_constraintTop_toBottomOf="@+id/textView_from_to_values"
-        app:srcCompat="@drawable/ic_line" />
 
     <TextView
         android:id="@+id/textView_your_saldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_regular"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
         android:text="@string/din_saldo"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="@+id/imageView_popupp_line"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_popupp_line" />
+        android:textColor="@color/mainBlack"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout6" />
 
     <TextView
         android:id="@+id/textView_after_purchase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_regular"
         android:text="@string/etter_kj_p"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView_your_saldo"
         app:layout_constraintTop_toBottomOf="@+id/textView_your_saldo" />
 
     <Button
         android:id="@+id/button_pay"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#41927B"
+        android:background="@drawable/ic_button_green"
         android:text="@string/betal"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sfprodisplay_bold"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -152,21 +151,36 @@
         android:id="@+id/textView_current_saldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_regular"
+        android:textSize="18sp"
         android:text="@string/_27605"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_popupp_line"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_popupp_line" />
+        android:textColor="@color/mainBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_your_saldo"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout6"
+        app:layout_constraintTop_toTopOf="@+id/textView_your_saldo" />
 
     <TextView
         android:id="@+id/textView_new_saldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sf_text"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/sfprotext_regular"
+        android:textSize="18sp"
         android:text="@string/_9605"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/mainBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_after_purchase"
         app:layout_constraintEnd_toEndOf="@+id/textView_current_saldo"
-        app:layout_constraintTop_toBottomOf="@+id/textView_current_saldo" />
+        app:layout_constraintTop_toTopOf="@+id/textView_after_purchase" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout6"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blackShade"
+        app:layout_constraintEnd_toEndOf="@+id/textView_from_to_values"
+        app:layout_constraintStart_toStartOf="@+id/textView_from_to_values"
+        app:layout_constraintTop_toBottomOf="@+id/textView_from_to_values">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
