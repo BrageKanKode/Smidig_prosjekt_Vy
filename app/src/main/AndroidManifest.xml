@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
+
         <!-- The below is for the splash screen and we need no action bar and the default theme -->
         <activity
             android:name=".activities.SplashScreenActivity"
