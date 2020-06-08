@@ -16,7 +16,7 @@
         android:textAlignment="center"
         android:textColor="@color/mainBlack"
         android:textSize="18sp"
-        android:text="Example text"
+        android:text="@string/example_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_narvesen_logo" />
@@ -30,7 +30,7 @@
         android:textAlignment="center"
         android:textColor="@color/mainBlack"
         android:textSize="18sp"
-        android:text="Example text"
+        android:text="@string/example_text"
         app:layout_constraintEnd_toEndOf="@+id/textview_narvesen_dialog"
         app:layout_constraintStart_toStartOf="@+id/textview_narvesen_dialog"
         app:layout_constraintTop_toBottomOf="@+id/textview_narvesen_dialog" />
@@ -43,7 +43,7 @@
         android:fontFamily="@font/sfprotext_regular"
         android:textColor="@color/mainBlack"
         android:textSize="18sp"
-        android:text="Example text"
+        android:text="@string/example_text"
         app:layout_constraintEnd_toEndOf="@+id/textview_price_narvesen"
         app:layout_constraintStart_toStartOf="@+id/textview_price_narvesen"
         app:layout_constraintTop_toBottomOf="@+id/textview_price_narvesen" />

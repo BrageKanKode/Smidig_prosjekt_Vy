@@ -222,7 +222,7 @@
     <string name="_200">1350</string>
     <string name="_15_minutter_gratis">Ingen start-avgift for en Voi-tur</string>
     <string name="voi_logo">voi logo</string>
-    <string name="_500">100</string>
+    <string name="_500">500</string>
     <string name="_9605">9605</string>
     <string name="sign_out">Sign out</string>
     <string name="background_points">background_points</string>
@@ -310,5 +310,6 @@
     <string name="_50_poeng">50 poeng</string>
     <string name="_12_300">12 300</string>
     <string name="_1">1</string>
+    <string name="example_text">Example text</string>
 
 </resources>
