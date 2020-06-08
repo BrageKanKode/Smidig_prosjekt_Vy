@@ -229,7 +229,7 @@
         <!-- Log in page -->
         <activity
             android:name=".activities.authentication.LoginActivity"
-            android:label="string/logg_inn"
+            android:label="@string/logg_inn"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
