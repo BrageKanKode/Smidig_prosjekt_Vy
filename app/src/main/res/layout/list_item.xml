@@ -27,6 +27,7 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
+        android:contentDescription="@string/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

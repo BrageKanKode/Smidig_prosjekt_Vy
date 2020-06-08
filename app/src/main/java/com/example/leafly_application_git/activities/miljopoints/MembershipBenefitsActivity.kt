@@ -1,7 +1,6 @@
 package com.example.leafly_application_git.activities.miljopoints
 
 import android.os.Bundle
-import android.widget.ExpandableListView.OnGroupCollapseListener
 import androidx.appcompat.app.AppCompatActivity
 import com.example.leafly_application_git.ExpandableListAdapter
 import com.example.leafly_application_git.R

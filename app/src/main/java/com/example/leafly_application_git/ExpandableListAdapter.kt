@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import android.widget.ExpandableListView
 import androidx.appcompat.widget.AppCompatTextView
 import kotlinx.android.synthetic.main.list_header.view.*
 
@@ -44,7 +43,6 @@ class ExpandableListAdapter(val context: Context, private val listOfHeaderData: 
         listHeaderText.text = headerTitle
 
 
-
         if (listHeaderText.text.toString().contains("Frø")) {
             val froDrawable = R.drawable.ic_fro_membership
             view.imageView_membership_logo_level.setImageResource(froDrawable)
@@ -58,9 +56,6 @@ class ExpandableListAdapter(val context: Context, private val listOfHeaderData: 
             val defaultDrawable = R.drawable.ic_clear_24px
             view.imageView_membership_logo_level.setImageResource(defaultDrawable)
         }
-
-
-
 
 
         return view
@@ -105,8 +100,4 @@ class ExpandableListAdapter(val context: Context, private val listOfHeaderData: 
     override fun getGroupCount(): Int {
         return listOfHeaderData.size
     }
-
-
-
-
 }

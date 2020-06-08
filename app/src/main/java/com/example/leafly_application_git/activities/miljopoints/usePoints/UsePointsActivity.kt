@@ -1,7 +1,6 @@
 package com.example.leafly_application_git.activities.miljopoints.usePoints
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.leafly_application_git.R
@@ -20,8 +19,6 @@ class UsePointsActivity : AppCompatActivity() {
 
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager
-
-    lateinit var updatedBalance: String
 
     internal var user: User? = null
 
@@ -61,17 +58,7 @@ class UsePointsActivity : AppCompatActivity() {
 
         })
 
-
-
-
         //----------------End of tab code------------------
-
-
-
-
-
-
-
 
 
     }

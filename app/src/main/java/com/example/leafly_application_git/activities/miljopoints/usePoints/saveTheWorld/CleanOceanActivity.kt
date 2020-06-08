@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.miljopoints.usePoints.saveTheWorld
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -42,6 +43,7 @@ class CleanOceanActivity : AppCompatActivity() {
     private fun decrementBalance(){
         var ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 var balance = user?.balance

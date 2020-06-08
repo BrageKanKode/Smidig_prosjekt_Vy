@@ -79,19 +79,6 @@
             app:layout_constraintTop_toBottomOf="@+id/button_login" />
 
         <TextView
-            android:id="@+id/textView_back_to_registration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/sf_text"
-            android:text="@string/back_to_registration"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_register" />
-
-        <TextView
             android:id="@+id/textView_activity_use_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
