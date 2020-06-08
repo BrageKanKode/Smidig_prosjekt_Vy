@@ -86,8 +86,8 @@
 
     <TextView
         android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_two"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
+        android:layout_width="290dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/good_to_know_dialog_two"
@@ -108,8 +108,8 @@
 
     <TextView
         android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_three"
-        android:layout_width="0dp"
-        android:layout_height="59dp"
+        android:layout_width="297dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/good_to_know_dialog_three"
@@ -161,28 +161,6 @@
         app:layout_constraintEnd_toEndOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_four"
         app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_five"
         app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_five" />
-
-    <ImageView
-        android:id="@+id/imageView_good_to_know_arrow_six"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/closing_bracket"
-        app:layout_constraintStart_toStartOf="@+id/imageView_good_to_know_arrow_five"
-        app:layout_constraintTop_toBottomOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_five"
-        app:srcCompat="@drawable/ic_chevron_right_24px" />
-
-    <TextView
-        android:id="@+id/textViewtextView_explanation_travel_good_to_know_dialog_six"
-        android:layout_width="0dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/good_to_know_dialog_six"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintEnd_toEndOf="@+id/textViewtextView_explanation_travel_good_to_know_dialog_five"
-        app:layout_constraintStart_toEndOf="@+id/imageView_good_to_know_arrow_six"
-        app:layout_constraintTop_toTopOf="@+id/imageView_good_to_know_arrow_six" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

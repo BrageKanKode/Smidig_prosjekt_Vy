@@ -93,9 +93,9 @@
         android:id="@+id/textView_explanation_plant_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_4_800_poeng"
-        android:textColor="@color/mainBlack"
         android:fontFamily="@font/sfprotext_regular"
+        android:text="@string/_100_poeng"
+        android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_plant_title"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_plant_title" />
@@ -104,9 +104,9 @@
         android:id="@+id/textView_explanation_clean_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_5_700_poeng"
-        android:textColor="@color/mainBlack"
         android:fontFamily="@font/sfprotext_regular"
+        android:text="@string/_50_poeng"
+        android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_clean_title"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_clean_title" />
