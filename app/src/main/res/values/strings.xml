@@ -44,6 +44,7 @@
     <string name="use_points_label">Bruk poeng</string>
     <string name="membership_level">Medlemsnivå</string>
     <string name="welcome_title_miljopoint">Velkommen, <br/> Navn!</string>
+    <string name="log_out_u">Logg ut</string>
     <string name="benefits_title">Medlems-fordeler</string>
     <string name="scan_title">Scan Kode</string>
     <string name="use_points_title">Bruk poeng</string>
@@ -265,6 +266,16 @@
     <string name="disp_poeng_text">Disp. poeng</string>
     <string name="ditt_medlemsniv">Ditt medlemsnivå</string>
     <string name="kupongen_brukes_i_til_bestilling_blabla_i_den_nettbutikken_du_har_kj_pt_verdi_hos_kan_kun_brukes_1_gang">Kupongen innløses hos valgt forhandler når du handler i nettbutikken. Kan kun brukes en gang</string>
+    <string name="startpage_name">navn</string>
+    <string name="illustration_of_woods">illustration of woods</string>
+    <string name="registrer_bruker">Registrer bruker</string>
+    <string name="velkommen_til_milj_poeng">Velkommen til Miljøpoeng</string>
+    <string name="miljopoeng_ingress">Du må være innlogget for å opptjene og se dine miljøpoeng.</string>
+    <string name="_000_kr">000 kr</string>
+    <string name="_00_00">00:00</string>
+    <string name="_00_00">00:00</string>
+    <string name="du_oppn_r_x_milj_poeng">Du oppnår x miljøpoeng</string>
+    <string name="ikke_startet">Ikke startet</string>
     <string name="opprett_ny_profil">Opprett ny profil</string>
     <string name="e_post">E-post</string>
     <string name="profile_image">profile image</string>

@@ -11,8 +11,7 @@
         android:id="@+id/imageView_search_vylogo"
         android:layout_width="96dp"
         android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="@string/vy_logo_splash"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,13 +22,12 @@
         android:id="@+id/textView_search_fragmen_headline_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_display"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/god_dag"
-        android:textColor="#000000"
+        android:textColor="@color/mainBlack"
         android:textSize="36sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_search_vylogo" />
 
@@ -52,31 +50,31 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_clickable_search"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:cardBackgroundColor="#DADADA"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_search_fragmen_headline_text">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_input_search">
 
             <TextView
                 android:id="@+id/textView_search_refix_string"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/sf_text"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/sfprotext_regular"
                 android:text="@string/hvor_reiser_du_fra"
-                android:textColor="@color/colorBlack"
-                android:textSize="24sp"
-
-                android:textStyle="bold"
+                android:textColor="@color/blackShade"
+                android:textSize="28sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -88,52 +86,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_medium"
         android:text="@string/stasjoner_close_by"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textColor="@color/blackShade"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/card_view_clickable_search"
         app:layout_constraintTop_toBottomOf="@+id/card_view_clickable_search" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_clickable_stations"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textView_search_string_stations"
         app:layout_constraintTop_toBottomOf="@+id/textView_search_string_stations">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_station_button">
 
             <TextView
                 android:id="@+id/textView_search_city_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:fontFamily="@font/sf_text"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/sfprotext_bold"
                 android:text="@string/oslo_s"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/imageView_search_train_one"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView_search_train_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginStart="10dp"
                 android:contentDescription="@string/train_logo_white"
                 android:src="@drawable/ic_train_white_24px"
                 app:layout_constraintBottom_toBottomOf="@+id/textView_search_city_one"
                 app:layout_constraintEnd_toStartOf="@+id/textView_search_city_one"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView_search_city_one" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -143,52 +142,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/sf_text"
+        android:fontFamily="@font/sfprotext_medium"
         android:text="@string/hurtigvalg"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textColor="@color/blackShade"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/card_view_clickable_stations"
         app:layout_constraintTop_toBottomOf="@+id/card_view_clickable_stations" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_cliclable_speedy"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="@+id/textView_search_text_string_hurtigvalg"
         app:layout_constraintTop_toBottomOf="@+id/textView_search_text_string_hurtigvalg">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_station_button">
 
             <TextView
                 android:id="@+id/textView_search_city_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:fontFamily="@font/sf_text"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/sfprotext_bold"
                 android:text="@string/oslo_s"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/imageView_search_train_two"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView_search_train_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginStart="10dp"
                 android:contentDescription="@string/train_logo_white"
                 android:src="@drawable/ic_train_white_24px"
                 app:layout_constraintBottom_toBottomOf="@+id/textView_search_city_two"
                 app:layout_constraintEnd_toStartOf="@+id/textView_search_city_two"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView_search_city_two" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
