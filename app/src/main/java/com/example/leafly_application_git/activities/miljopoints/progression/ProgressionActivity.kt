@@ -29,11 +29,7 @@ class ProgressionActivity : AppCompatActivity() {
         }
     }
 
-    //buttons to new activities
-    private fun toGrowingTree() {
-        val intent = Intent(this, GrowingTreeActivity::class.java)
-        startActivity(intent)
-    }
+
     private fun toHistory() {
         val intent = Intent(this, HistoryActivity::class.java)
         startActivity(intent)
@@ -77,7 +73,8 @@ class ProgressionActivity : AppCompatActivity() {
                     textView_progression_show_level.text = "Tre"
                 }
 
-                textView_display_remaining_points_to_next_level.text = remainingPointToLevel.toString() + " poeng\ntil neste nivå"
+                textView_display_remaining_points_to_next_level.text =
+                    "$remainingPointToLevel poeng\ntil neste nivå"
 
                 if (level == 3){
                     textView_display_remaining_points_to_next_level.text = "Høyeste nivå!"
