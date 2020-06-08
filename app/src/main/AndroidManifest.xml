@@ -39,7 +39,7 @@
         <!-- Explanation on points -->
         <activity
             android:name=".activities.explanation.ExplanationActivity"
-            android:label="Points Explanation"
+            android:label="@string/reise_med_poengene"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <meta-data
@@ -206,16 +206,6 @@
                 android:value=".activities.MainActivity" />
         </activity>
 
-        <!-- See the tree grow page -->
-        <activity
-            android:name=".activities.miljopoints.progression.GrowingTreeActivity"
-            android:label="@string/growing_tree_label"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.miljopoints.progression.ProgressionActivity" />
-        </activity>
-
         <!-- History activity with fragments attached -->
         <activity
             android:name=".activities.miljopoints.progression.HistoryActivity"
@@ -229,7 +219,7 @@
         <!-- Sign up page -->
         <activity
             android:name=".activities.authentication.SignUpActivity"
-            android:label="Sign Up"
+            android:label= "@string/registrer_Deg"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -239,7 +229,7 @@
         <!-- Log in page -->
         <activity
             android:name=".activities.authentication.LoginActivity"
-            android:label="Log in"
+            android:label="string/logg_inn"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
