@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.91"/>
+        app:layout_constraintVertical_bias="0.91" />
 
     <FrameLayout
         android:layout_width="409dp"
@@ -91,15 +91,14 @@
     <Button
         android:id="@+id/btn_do_plant_tree"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:fontFamily="@font/sfprodisplay_semibold"
-        android:padding="20sp"
+        android:background="@drawable/ic_button_green"
+        android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/plant_a_tree"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,10 +129,8 @@
         android:fontFamily="@font/sfprotext_regular"
         android:textColor="@color/colorBlack"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_top_text_string_disponibelt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.74"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintStart_toEndOf="@+id/textView_top_text_string_disponibelt"
         app:layout_constraintTop_toTopOf="@+id/textView_top_text_string_disponibelt" />
 
     <TextView

@@ -28,7 +28,7 @@
         android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/takk_for_ditt_bidrag"
         android:textColor="@color/mainBlack"
-        android:textSize="36sp"
+        android:textSize="38sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_purchase_check_marker" />
