@@ -129,7 +129,7 @@ class OrderDetailsAdapter(
         holder.view.textView_departure_time.text = "I dag, $departureTime"
         holder.view.textView_price_one.text = "$price,-"
         holder.view.textView_price_two.text = "$price,-"
-        holder.view.textView_points.text = "du oppnår $points miljøpoeng for denne reisen"
+        holder.view.textView_points.text = "Du oppnår $points miljøpoeng for denne reisen"
 
         holder.departure = departure
         holder.arrival = arrival
