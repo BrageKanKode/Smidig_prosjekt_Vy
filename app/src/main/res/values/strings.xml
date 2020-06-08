@@ -312,14 +312,11 @@
     <string name="_12_300">12 300</string>
     <string name="_1">1</string>
     <string name="example_text">Example text</string>
-<<<<<<< HEAD
     <string name="milj_poeng">miljøpoeng</string>
-=======
     <string name="_450">450</string>
     <string name="fra">Fra</string>
     <string name="destinasjon">destinasjon</string>
     <string name="til">Til</string>
     <string name="oslo">Oslo</string>
->>>>>>> cfca67afcb41cf5a558211971c8de94aea6fd487
 
 </resources>
