@@ -10,10 +10,11 @@
         android:id="@+id/textView_level_up_congratulations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/sf_text"
         android:textAlignment="center"
+        android:text="Example text"
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,25 +26,24 @@
         android:id="@+id/imageView_close_level_up"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:contentDescription="@string/close_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_clear_24px" />
+        app:srcCompat="@drawable/ic_close_icon" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sf_display"
+        android:fontFamily="@font/sfprodisplay_bold"
+        android:layout_marginTop="20dp"
         android:text="@string/gratulerer"
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_close_level_up" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
