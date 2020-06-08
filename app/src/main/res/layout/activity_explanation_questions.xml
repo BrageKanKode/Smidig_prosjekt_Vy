@@ -73,18 +73,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_second_title" />
 
     <TextView
-        android:id="@+id/textView_explanation_question_example_title_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/sfprotext_bold"
-        android:text="@string/mat_og_drikke"
-        android:textColor="@color/mainBlack"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_example_title_one"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_example_title_one" />
-
-    <TextView
         android:id="@+id/textView_explanation_question_example_title_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,8 +81,8 @@
         android:text="@string/kaffe"
         android:textColor="@color/mainBlack"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_example_title_two"
-        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_example_title_two" />
+        app:layout_constraintStart_toStartOf="@+id/textView_explanation_question_example_title_one"
+        app:layout_constraintTop_toBottomOf="@+id/textView_explanation_question_example_title_one" />
 
     <TextView
         android:id="@+id/textView_explanation_question_example_title_four"
@@ -131,9 +119,9 @@
         android:id="@+id/textView_explanation_question_example_dialog_one"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprotext_regular"
         android:layout_marginEnd="24dp"
-        android:text="@string/_5_000_poeng"
+        android:fontFamily="@font/sfprotext_regular"
+        android:text="@string/oppgradering_billett_pris"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_one"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,26 +129,13 @@
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_one" />
 
     <TextView
-        android:id="@+id/textView_explanation_question_example_dialog_two"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_1_500_2_400_poeng"
-        android:textColor="@color/mainBlack"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_two"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_one"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_two" />
-
-    <TextView
         android:id="@+id/textView_explanation_question_example_dialog_three"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_1_200_poeng"
+        android:text="@string/kaffee_pris"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_three"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_two"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_three" />
 
@@ -169,10 +144,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_5_500_poeng"
+        android:text="@string/dplay_pris"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_four"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_three"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_four" />
 
@@ -181,10 +155,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sfprotext_regular"
-        android:text="@string/_6000_poeng"
+        android:text="@string/Odeon_kino_pris"
         android:textColor="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="@+id/textView_explanation_question_example_title_five"
-        app:layout_constraintEnd_toEndOf="@+id/textView_explanation_question_example_dialog_four"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/textView_explanation_question_example_title_five" />
 

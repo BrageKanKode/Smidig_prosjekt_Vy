@@ -185,7 +185,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/sfprodisplay_bold"
-                        android:text="@string/_100_pr_tre"
+                        android:text="@string/_100_pr_kg"
                         android:textColor="@color/mainBlack"
                         app:layout_constraintBottom_toBottomOf="@+id/imageView_donate_ocean_leaf"
                         app:layout_constraintStart_toEndOf="@+id/imageView_donate_ocean_leaf"
