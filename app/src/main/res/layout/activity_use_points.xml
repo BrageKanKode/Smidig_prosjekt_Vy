@@ -19,14 +19,14 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/textView_activity_use_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="@string/disp_poeng_text"
                 android:textColor="@color/mainBlack"
                 android:fontFamily="@font/sfprotext_bold"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -36,11 +36,11 @@
                 android:layout_width="0dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="20dp"
-                android:text="textview"
+                android:text="@string/textview"
                 android:textAlignment="textEnd"
                 android:textColor="@color/mainBlack"
                 android:fontFamily="@font/sfprotext_regular"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

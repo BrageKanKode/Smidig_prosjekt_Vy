@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/sf_text"
-        android:text="27605"
+        android:text="@string/_27605"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@+id/imageView_popupp_line"
         app:layout_constraintTop_toBottomOf="@+id/imageView_popupp_line" />

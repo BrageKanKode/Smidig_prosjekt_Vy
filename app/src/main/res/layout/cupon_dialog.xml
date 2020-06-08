@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/sfprodisplay_bold"
-        android:text="VerdiKupong"
+        android:text="@string/verdikupong"
         android:textColor="@color/mainBlack"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,18 +26,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/sfprodisplay_semibold"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textColor="@color/blackShade"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_your_cupon_text" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView_cupon_dialog_qr_code"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/qrcode"
         app:layout_constraintStart_toStartOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
         app:srcCompat="@drawable/ic_qr_code_example" />
@@ -46,19 +47,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6">
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_cupon_dialog_qr_code"
+        app:layout_constraintStart_toEndOf="@+id/imageView_cupon_dialog_qr_code"
+        app:layout_constraintTop_toTopOf="@+id/imageView_cupon_dialog_qr_code">
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfprodisplay_regular"
-            android:text="Din kupongkode"
+            android:text="@string/din_kupongkode"
             android:textColor="@color/mainBlack"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfprodisplay_bold"
-            android:text="TextView"
+            android:text="@string/textview"
             android:textColor="@color/mainBlack"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,6 +81,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/line_logo_svg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_display_given_cupon"
@@ -90,9 +92,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/line_logo_svg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_cupon_dialog_qr_code"
         app:srcCompat="@drawable/ic_line" />
 
     <TextView
@@ -105,7 +108,7 @@
         android:layout_marginBottom="32dp"
         android:fontFamily="@font/sfprotext_regular"
         android:textColor="@color/blackShade"
-        android:text="Kupongen brukes i til bestilling blabla i den nettbutikken du har kjøpt verdi hos. Kan kun brukes 1 gang."
+        android:text="@string/_dialog_cupon_"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +120,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="12dp"
+        android:contentDescription="@string/close_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_close_icon" />

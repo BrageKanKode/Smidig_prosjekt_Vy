@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.leafly_application_git.R
 
+@Suppress("DEPRECATION")
 class TripsFragment : Fragment() {
 
     private lateinit var tripsViewModel: TripsViewModel

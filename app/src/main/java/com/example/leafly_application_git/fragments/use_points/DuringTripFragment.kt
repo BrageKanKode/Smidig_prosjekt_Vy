@@ -80,6 +80,8 @@ class DuringTripFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_during_trip, container, false)
 
+
+
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
 
@@ -87,6 +89,7 @@ class DuringTripFragment : Fragment() {
         root.cardview_coffe.setOnClickListener {
             val getStringRes = activity?.applicationContext?.resources
             createPopup(320, warmDrinkLogo, getStringRes?.getString(R.string.during_coffe), getStringRes?.getString(R.string.during_coffe_desc))
+
         }
 
 
@@ -277,9 +280,16 @@ class DuringTripFragment : Fragment() {
     }
 
 
+
+
+
+
     private fun scanFromFragment() {
         IntentIntegrator.forSupportFragment(this).setBeepEnabled(false).initiateScan()
     }
+
+
+
 
 
 }

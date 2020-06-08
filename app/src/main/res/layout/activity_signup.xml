@@ -7,7 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
-        android:layout_width="408dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:contentDescription="@string/profile_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,10 +30,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Ny profil"
-            android:textColor="@color/mainBlack"
-            android:textSize="20dp"
             android:fontFamily="@font/sfprodisplay_bold"
+            android:text="@string/ny_profil"
+            android:textColor="@color/mainBlack"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,9 +43,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
@@ -54,10 +57,10 @@
             android:id="@+id/textView46"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Brukernavn"
-            android:textSize="16dp"
-            android:textColor="@color/mainBlack"
             android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/brukernavn"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,11 +87,11 @@
             android:id="@+id/textView47"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="E-postadresse"
             android:layout_marginTop="20dp"
-            android:textSize="16dp"
-            android:textColor="@color/mainBlack"
             android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/e_postadresse"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_username_signup" />
 
@@ -113,11 +116,11 @@
             android:id="@+id/button_register"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:text="@string/register"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/sfprotext_bold"
-            android:textColor="@color/colorBlack"
             android:background="@drawable/ic_button_grey"
+            android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/register"
+            android:textColor="@color/colorBlack"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/editText_password_signup"
             app:layout_constraintStart_toStartOf="@+id/editText_password_signup"
@@ -142,11 +145,11 @@
             android:id="@+id/textView48"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Passord"
             android:layout_marginTop="20dp"
-            android:textSize="16dp"
-            android:textColor="@color/mainBlack"
             android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/passord"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_email_signup" />
 
@@ -167,8 +170,6 @@
             app:layout_constraintEnd_toEndOf="@+id/editText_email_signup"
             app:layout_constraintStart_toStartOf="@+id/editText_email_signup"
             app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

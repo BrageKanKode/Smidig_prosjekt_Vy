@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leafly_application_git.R
 import com.example.leafly_application_git.activities.search.trip.ViewTravelDetails
 import kotlinx.android.synthetic.main.activity_confirmation_recycler.*
-import kotlinx.android.synthetic.main.activity_select_time.*
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class OrderDetailsActivity : AppCompatActivity() {

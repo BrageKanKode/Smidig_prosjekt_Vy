@@ -37,7 +37,6 @@ class ConfirmationActivity : AppCompatActivity() {
         val departure: String = intent.getStringExtra(SplashScreenPaymentActivity.FROM_KEY)
         val arrival: String = intent.getStringExtra(SplashScreenPaymentActivity.TO_KEY)
         val departureTime: String = intent.getStringExtra(SplashScreenPaymentActivity.DEPARTURE_TIME_KEY)
-        val price: String = intent.getStringExtra(SplashScreenPaymentActivity.PRICE_KEY)
         val points: String = intent.getStringExtra(SplashScreenPaymentActivity.POINTS_KEY)
         dataPassClass(departure ,arrival ,departureTime, points)
 

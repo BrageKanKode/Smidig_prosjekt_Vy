@@ -1,5 +1,8 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.leafly_application_git.fragments.main_page.miljopoints
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
@@ -30,6 +33,7 @@ import kotlinx.android.synthetic.main.fragment_miljopoints.view.*
 import kotlinx.android.synthetic.main.fragment_not_logged_in.view.*
 
 
+@Suppress("DEPRECATION")
 class MiljopointsFragment : Fragment() {
 
     private lateinit var miljopointsViewModel: MiljopointsViewModel
@@ -78,7 +82,7 @@ class MiljopointsFragment : Fragment() {
             }
             root.btn_do_logout.setOnClickListener {
                 FirebaseAuth.getInstance().signOut()
-                val ft: FragmentTransaction = this.fragmentManager!!.beginTransaction()
+                val ft: FragmentTransaction = this.requireFragmentManager().beginTransaction()
                 ft.detach(this)
                 ft.attach(this)
                 ft.commit()
@@ -120,7 +124,7 @@ class MiljopointsFragment : Fragment() {
         }
 
 
-        setHasOptionsMenu(true);
+        setHasOptionsMenu(true)
 
 
         //CONNECTED TO MiljopointsViewModel
@@ -299,6 +303,7 @@ class MiljopointsFragment : Fragment() {
         val ref = FirebaseDatabase.getInstance().getReference("/users")
             .child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 //To display the username

@@ -44,7 +44,6 @@ class SelectTimeActivity : AppCompatActivity() {
 
         val time = gson.fromJson(json, Json::class.java)
 
-        //RecyclerView_main.adapter = SelectTravelAdapter(location)
         recycler_view_confirmation.adapter = ChooseTravelAdapter(time, from,to,price,points)
 
         runOnUiThread {
