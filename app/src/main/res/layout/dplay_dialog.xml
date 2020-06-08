@@ -26,10 +26,11 @@
     <Button
         android:id="@+id/button_buy_dplay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/ic_button_green"
         android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/buy"
