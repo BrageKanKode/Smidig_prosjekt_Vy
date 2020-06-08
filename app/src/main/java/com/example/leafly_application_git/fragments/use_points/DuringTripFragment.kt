@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.leafly_application_git.CombinedFunctionsClass
 import com.example.leafly_application_git.R
-import com.example.leafly_application_git.activities.MainActivity
 import com.example.leafly_application_git.activities.authentication.User
 import com.example.leafly_application_git.activities.miljopoints.usePoints.UsePointsActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -20,7 +19,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.activity_use_points.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.*
 import kotlinx.android.synthetic.main.before_scan_dialog.view.imageView_dismiss_scan_dialog
 import kotlinx.android.synthetic.main.fragment_during_trip.view.*

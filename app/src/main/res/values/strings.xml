@@ -68,6 +68,7 @@
     <string name="during_trip_coffee">Kjøp kaffe</string>
     <string name="during_trip_food_drinks">Kjøp mat og drikke</string>
     <string name="membership_level_spire">Frø</string>
+    <string name="membership_spire">Spire</string>
     <string name="progression_total_points">Totalt oppsamlet</string>
     <string name="progression_disponibelt">Saldo</string>
     <string name="netflix_title">3 måneder med Netflix</string>
@@ -310,5 +311,10 @@
     <string name="_50_poeng">50 poeng</string>
     <string name="_12_300">12 300</string>
     <string name="_1">1</string>
+    <string name="_450">450</string>
+    <string name="fra">Fra</string>
+    <string name="destinasjon">destinasjon</string>
+    <string name="til">Til</string>
+    <string name="oslo">Oslo</string>
 
 </resources>

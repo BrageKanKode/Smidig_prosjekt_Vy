@@ -19,12 +19,6 @@ class TripsFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_trips, container, false)
 
-//        val textView: TextView = root.findViewById(R.id.text_view_test)
-//
-//        tripsViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
-
         //Shows actionbar
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 

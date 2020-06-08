@@ -1,5 +1,6 @@
 package com.example.leafly_application_git.activities.miljopoints.progression
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -46,6 +47,7 @@ class ProgressionActivity : AppCompatActivity() {
     private fun displayCurrentBalance(){
         val ref = FirebaseDatabase.getInstance().getReference("/users").child(FirebaseAuth.getInstance().currentUser!!.uid)
         val menuListener = object : ValueEventListener {
+            @SuppressLint("SetTextI18n")
             override fun onDataChange(p0: DataSnapshot) {
                 user = p0.getValue(User::class.java)
                 val balance = user?.balance

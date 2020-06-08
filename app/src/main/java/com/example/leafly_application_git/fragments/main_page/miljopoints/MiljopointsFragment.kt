@@ -123,17 +123,7 @@ class MiljopointsFragment : Fragment() {
             }
         }
 
-
         setHasOptionsMenu(true)
-
-
-        //CONNECTED TO MiljopointsViewModel
-//        val textView: TextView = root.findViewById(R.id.text_miljopoints)
-//
-//        miljopointsViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
-
 
         return root
     }
@@ -315,22 +305,15 @@ class MiljopointsFragment : Fragment() {
                 //Siple if/else to level up user when certain amount of progress is achieved
                 if (user?.level!! == 1) {
                     textView_level_points.text = "Frø"
-                    val froDrawable = R.drawable.ic_fro_membership
-                    //imageView_display_level_icon.setImageResource(froDrawable)
                 }
 
                 if (user?.level!! == 2) {
                     textView_level_points.text = "Spire"
-                    val spireDrawable = R.drawable.ic_spire_membership
-                    //imageView_display_level_icon.setImageResource(spireDrawable)
                 }
 
                 if (user?.level!! == 3) {
                     textView_level_points.text = "Tre"
-                    val treDrawable = R.drawable.ic_tre_membership
-                    //imageView_display_level_icon.setImageResource(treDrawable)
                 }
-
 
             }
 
