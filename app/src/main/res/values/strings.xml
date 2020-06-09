@@ -120,11 +120,12 @@
     <string name="plant_a_tree">Plant a Tree</string>
     <string name="rydd_plast_i_havet">Rydd plast i havet</string>
     <string name="rydd_plast_dialog">Bruk poengene til å bidra med rydding av plast som blir kastet i havet.</string>
-    <string name="velg_antall_kg">Velg antall (kg)</string>
-    <string name="rydd_x_antall_kilo_plast">Rydd X antall Kilo plast</string>
+    <string name="rydd_plas_dialog_2">Støtt ocean cleanup med rydding av plast i havet. Her kan du gi dagsstøtte</string>
+    <string name="velg_antall_kg">Velg antall dager</string>
+    <string name="rydd_x_antall_kilo_plast">Gi X dager med støtte</string>
     <string name="ocean">ocean</string>
     <string name="_100_pr_tre">100 / pr tre</string>
-    <string name="_100_pr_kg">50 / pr kg</string>
+    <string name="_100_pr_kg">50 / pr dag</string>
     <string name="to">To</string>
     <string name="from">From</string>
     <string name="god_dag">God dag</string>

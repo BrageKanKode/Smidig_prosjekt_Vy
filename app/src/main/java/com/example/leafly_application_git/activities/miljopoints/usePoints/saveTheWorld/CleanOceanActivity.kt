@@ -55,7 +55,7 @@ class CleanOceanActivity : AppCompatActivity() {
 
                 textView_clean_ocean_amount.text = cleanAmount.toString()
                 textView_total_ocean_sum.text = totalCleanSum.toString()
-                btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
+                btn_do_clean_ocean.text = "Doner $cleanAmount dager med støtte"
 
                 btn_clean_ocean_btn_minus.setOnClickListener {
                     if(cleanAmount > 1) {
@@ -63,7 +63,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         totalCleanSum -= cleanOceanPrice
                         textView_total_ocean_sum.text = totalCleanSum.toString()
-                        btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
+                        btn_do_clean_ocean.text = "Doner $cleanAmount dager med støtte"
                     }
                 }
 
@@ -73,7 +73,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         totalCleanSum += cleanOceanPrice
                         textView_total_ocean_sum.text = totalCleanSum.toString()
-                        btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
+                        btn_do_clean_ocean.text = "Doner $cleanAmount dager med støtte"
                     }
                 }
 
@@ -85,7 +85,7 @@ class CleanOceanActivity : AppCompatActivity() {
                         ref.child("/balance").setValue(balance)
 
 
-                        var usedHistory = "Kjøpt $cleanAmount L av vannrensing \nFor $totalCleanSum miljøpoeng"
+                        var usedHistory = "Donert $cleanAmount dager med vannrensing \nFor $totalCleanSum miljøpoeng"
 
                         val refUsedHistory = ref.child("/usedHistory")
                         refUsedHistory.push().setValue(usedHistory)
@@ -102,13 +102,13 @@ class CleanOceanActivity : AppCompatActivity() {
 
 
 
-                        mDialogView2.textView_confirmation_ocean_info.text = "Gratulerer! Du har ryddet $cleanAmount kg fra havet!"
+                        mDialogView2.textView_confirmation_ocean_info.text = "Gratulerer! Du har donert $cleanAmount dager til rensing av havet!"
 
                         cleanAmount = 1
                         totalCleanSum = cleanOceanPrice
                         textView_clean_ocean_amount.text = cleanAmount.toString()
                         textView_total_ocean_sum.text = totalCleanSum.toString()
-                        btn_do_clean_ocean.text = "Rydd $cleanAmount kg plast i havet"
+                        btn_do_clean_ocean.text = "Doner $cleanAmount dager med støtte"
 
                         val mAlertDialog = mBuilder.show()
 
