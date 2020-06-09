@@ -67,7 +67,7 @@
         <EditText
             android:id="@+id/editText_username_signup"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/ic_input_style"
@@ -98,7 +98,7 @@
         <EditText
             android:id="@+id/editText_email_signup"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:autofillHints=""
             android:background="@drawable/ic_input_style"
@@ -117,11 +117,11 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/ic_button_grey"
-            android:fontFamily="@font/sfprotext_bold"
+            android:background="@drawable/ic_button_green"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:textSize="20dp"
             android:text="@string/register"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/editText_password_signup"
             app:layout_constraintStart_toStartOf="@+id/editText_password_signup"
             app:layout_constraintTop_toBottomOf="@+id/editText_password_signup" />
@@ -156,9 +156,8 @@
         <EditText
             android:id="@+id/editText_password_signup"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
-
             android:autofillHints=""
             android:background="@drawable/ic_input_style"
             android:ems="10"
