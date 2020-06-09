@@ -539,7 +539,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:fontFamily="@font/sfprotext_bold"
-                        android:text="@string/_500"
+                        android:text="@string/string_100"
                         android:textColor="@color/mainGreen"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="@+id/imageView_shop_leaf_six"
