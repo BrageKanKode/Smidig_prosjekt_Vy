@@ -55,6 +55,7 @@
         android:textSize="18sp"
         android:text="@string/se_kupong"
         android:textColor="@color/white"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_thanks_for_purchase_info" />
@@ -69,6 +70,7 @@
         android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/fortsett_handle"
         android:textSize="18sp"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_purchase_view_cupon"
         app:layout_constraintStart_toStartOf="@+id/button_purchase_view_cupon"

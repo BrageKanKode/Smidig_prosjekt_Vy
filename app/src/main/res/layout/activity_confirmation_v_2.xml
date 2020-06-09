@@ -208,6 +208,7 @@
         android:elevation="0dp"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_headline_title_two" />
@@ -225,6 +226,7 @@
         android:textColor="@color/mainBlack"
         android:elevation="0dp"
         android:textSize="20sp"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
