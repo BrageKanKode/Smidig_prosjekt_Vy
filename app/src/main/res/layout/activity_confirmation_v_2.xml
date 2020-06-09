@@ -213,23 +213,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_confirmation_headline_title_two" />
 
-    <Button
-        android:id="@+id/button_to_miljopoeng"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/ic_button_secondary"
-        android:fontFamily="@font/sfprodisplay_bold"
-        android:text="@string/g_til_milj_poeng"
-        android:textColor="@color/mainBlack"
-        android:elevation="0dp"
-        android:textSize="20sp"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_to_points_overview" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
