@@ -30,10 +30,11 @@
 
     <TextView
         android:id="@+id/textView_explanation_travel_dialog"
-        android:layout_width="294dp"
-        android:layout_height="86dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/sfprotext_regular"
+        android:textSize="16sp"
         android:text="@string/explanation_travel_dialog"
         android:textColor="@color/mainBlack"
         app:layout_constraintStart_toStartOf="@+id/textView_explanation_travel_title"

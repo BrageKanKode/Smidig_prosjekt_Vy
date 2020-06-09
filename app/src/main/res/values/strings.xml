@@ -101,7 +101,7 @@
     <string name="mandag">Mandag</string>
     <string name="avgang">Avgang</string>
     <string name="billetten_er_lastet_ned">Billetten er lastet ned.</string>
-    <string name="god_tur">God Tur</string>
+    <string name="god_tur">God tur!</string>
     <string name="til_billettoversikt">Hjem</string>
     <string name="til_milj_poeng">Gå til miljøpoeng</string>
     <string name="buy_returbillett">Kjøp returbillett</string>
@@ -317,5 +317,7 @@
     <string name="destinasjon">destinasjon</string>
     <string name="til">Til</string>
     <string name="oslo">Oslo</string>
+    <string name="g_til_milj_poeng">Gå til miljøpoeng</string>
+    <string name="g_til_billettoversikt">Gå til billettoversikt</string>
 
 </resources>
