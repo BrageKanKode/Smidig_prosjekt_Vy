@@ -28,7 +28,7 @@
         android:fontFamily="@font/sfprodisplay_bold"
         android:text="@string/takk_for_ditt_bidrag"
         android:textColor="@color/mainBlack"
-        android:textSize="38sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_purchase_check_marker" />
@@ -44,7 +44,7 @@
         android:fontFamily="@font/sfprotext_regular"
         android:text="@string/gratulerer_du_har_ryddet_x_kg_plast_i_havet"
         android:textColor="@color/colorBlack"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_thanks_ocean" />
