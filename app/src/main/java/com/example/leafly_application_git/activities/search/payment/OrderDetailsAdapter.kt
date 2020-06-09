@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.*
 import kotlinx.android.synthetic.main.payment_with_points_popup.view.*
 import kotlinx.android.synthetic.main.activity_travel_order_overview.view.textView_points
+import kotlinx.android.synthetic.main.payment_with_points_popup.*
+import kotlinx.android.synthetic.main.payment_with_points_popup.view.imageView_close_point_pay_popup
 
 class OrderDetailsAdapter(
     private val departure: String,
@@ -43,6 +45,11 @@ class OrderDetailsAdapter(
                 AlertDialog.Builder(parent.context).setView(payment_points)
 
             val testAlertDialog = diaBuilder.show()
+
+            payment_points.imageView_close_point_pay_popup.setOnClickListener {
+                testAlertDialog.dismiss()
+            }
+
 
             val ticketPurchasePrice = price.toInt()*10
 
@@ -92,6 +99,7 @@ class OrderDetailsAdapter(
 
 
                             view.context.startActivity(intent)
+
 
                             testAlertDialog.dismiss()
                         } else {
