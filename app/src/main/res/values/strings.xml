@@ -319,5 +319,7 @@
     <string name="oslo">Oslo</string>
     <string name="g_til_milj_poeng">Gå til miljøpoeng</string>
     <string name="g_til_billettoversikt">Gå til billettoversikt</string>
+    <string name="example">Example</string>
+    <string name="_50">50</string>
 
 </resources>

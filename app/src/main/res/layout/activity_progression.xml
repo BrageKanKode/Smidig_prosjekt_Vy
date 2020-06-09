@@ -10,7 +10,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/CardView_progression_bar_area"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="390dp"
         app:cardCornerRadius="0dp"
         app:cardElevation="0dp"
@@ -18,96 +18,111 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_progression_show_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:text="@string/example"
+            android:textColor="@color/mainGreen"
+            android:textSize="64sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:lineHeight="40dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sfprotext_bold"
+            android:text="@string/ditt_medlemsniv"
+            android:textAllCaps="true"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/constraintLayout"
+            android:layout_width="249dp"
+            android:layout_height="249dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_progression_show_level">
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:progress="0"
+                android:progressDrawable="@drawable/circle_progress"
+                android:rotation="90"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/progressBar2">
 
             <TextView
-                android:id="@+id/textView_progression_show_level"
+                android:id="@+id/textView_progressbar_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sfprodisplay_bold"
+                android:text="@string/_50"
                 android:textColor="@color/mainGreen"
-                android:textSize="64sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView5"
-                app:layout_constraintStart_toStartOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                app:lineHeight="40dp" />
+                android:textSize="50sp"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout_data"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout_data" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="249dp"
-                android:layout_height="249dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_progression_show_level">
 
-                <ProgressBar
-                    android:id="@+id/progressBar2"
-                    style="?android:progressBarStyleHorizontal"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/circle_progress"
-                    android:rotation="90"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView_progressbar_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplay_bold"
-                    android:textColor="@color/mainGreen"
-                    android:textSize="50sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.39"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/progressBar2" />
-
-                <TextView
-                    android:id="@+id/textView_progrssion_prosent_sign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplay_bold"
-                    android:text="@string/prosent_sign"
-                    android:textColor="@color/mainGreen"
-                    android:textSize="50sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView_progressbar_status"
-                    app:layout_constraintStart_toEndOf="@+id/textView_progressbar_status"
-                    app:layout_constraintTop_toTopOf="@+id/textView_progressbar_status"
-                    app:layout_constraintVertical_bias="0" />
-
-                <TextView
-                    android:id="@+id/textView_display_remaining_points_to_next_level"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprotext_regular"
-                    android:textAlignment="center"
-                    android:textColor="@color/blackShade"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_progrssion_prosent_sign"
-                    app:lineHeight="20dp" />
+            <TextView
+                android:id="@+id/textView_progrssion_prosent_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplay_bold"
+                android:text="@string/prosent_sign"
+                android:textColor="@color/mainGreen"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_progressbar_status"
+                app:layout_constraintStart_toEndOf="@+id/textView_progressbar_status"
+                app:layout_constraintTop_toTopOf="@+id/textView_progressbar_status"
+                app:layout_constraintVertical_bias="0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textView_display_remaining_points_to_next_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/sfprotext_bold"
-                android:textAllCaps="true"
-                android:textColor="@color/mainBlack"
+                android:fontFamily="@font/sfprotext_regular"
+                android:text="@string/example_text"
+                android:textAlignment="center"
+                android:textColor="@color/blackShade"
                 android:textSize="16sp"
-                android:text="@string/ditt_medlemsniv"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout_data"
+                app:lineHeight="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
