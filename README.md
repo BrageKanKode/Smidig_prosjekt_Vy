@@ -7,7 +7,7 @@ This is the repository for the Agile Project (Smidig Prosjekt) course on Høysko
 
 ## How to install and run project on emulator
 1. Clone/Download project and open in Android Studio
-2. Use/Download a virtual device (emulator) with API-level 29. (In development emulator Pixel 2 was primarily used)
+2. Use/Download a virtual device (emulator) with minimum API-level of 25 (Nougat). (In development emulator Pixel 2 was primarily used with API-level 29)
 3. Click the "Run app" button with the chosen emulator
 
 ## How to use the QR-camera scanner
